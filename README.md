@@ -2,6 +2,8 @@
 
 Quasar v2 | SPA | Vue 3 | Vite | SCSS | Eslint | Pinia | Axios | Vue-i18n | Prettier
 
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/iyQgtj?referralCode=yavAI)
+
 ## Install the dependencies
 
 ```bash
