@@ -1,6 +1,6 @@
 # Quasar starter app (quasar-starter)
 
-Quasar starter app
+Quasar v2 | SPA | Vue 3 | Vite | SCSS | Eslint | Pinia | Axios | Vue-i18n | Prettier
 
 ## Install the dependencies
 
