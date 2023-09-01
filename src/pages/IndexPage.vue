@@ -8,10 +8,8 @@
   </q-page>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { ref } from 'vue'
 
-export default defineComponent({
-  name: 'IndexPage'
-})
+  const name = 'IndexPage'
 </script>
