@@ -167,8 +167,8 @@ import { useUserStore } from '../../stores/user-store'
     'Female'
   ]
   const optionsUserType = [
-    '$Admin',
-    'Front-Desk',
+    'Super_Admin',
+    'Front_Desk',
     'Presser',
     'Washer',
     'Maketer',
