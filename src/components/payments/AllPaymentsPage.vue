@@ -259,7 +259,7 @@ const onUpdate = (intakeID) => {
         icon: "thumb_up",
         message: "User paid in full and saved",
       });
-      fixed0.value = true;
+      // fixed0.value = true;
       window.location.reload();
     })
     .catch(() => {
