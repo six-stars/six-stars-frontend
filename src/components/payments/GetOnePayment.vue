@@ -6,7 +6,13 @@
       <div class="row q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
           <div class="col-12 col-md-12 q-pl-md">
-            <q-input label="Intake ID" class="" outlined v-model="intake_id" hint="" />
+            <q-input
+              label="Intake ID"
+              class=""
+              outlined
+              v-model="intake_id"
+              hint=""
+            />
           </div>
           <div class="col-12 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
@@ -14,11 +20,12 @@
         </q-form>
       </div>
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
-        <q-card class="my-card"  >
+        <q-card class="my-card">
           <q-card-section class="bg-primary text-white">
             <div class="text-h6">{{ data.customer }}</div>
             <!-- <div class="text-subtitle1">₦{{ data.final_amount }}</div> -->
-            <div class="text-subtitle2">Collection Date:
+            <div class="text-subtitle2">
+              Collection Date:
               {{ formatDate(data.collected_on) }}
             </div>
           </q-card-section>
@@ -33,125 +40,125 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-            <q-card class="my-card-2 bg-primary text-white">
-              <q-card-section>
-                  <div class="row q-pt-sm">
-                    <!-- <div class="col-12 col-md-6 q-pl-md">
+        <q-card class="my-card-2 bg-primary text-white">
+          <q-card-section>
+            <div class="row q-pt-sm">
+              <!-- <div class="col-12 col-md-6 q-pl-md">
                       <div class="text-subtitle2 bg-grey">Created At</div>
                       <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
                     </div> -->
-                    <div class="col-12 col-md-12 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Customer Phone</div>
-                      <div class="text-h6">{{ data.customer_phone }}</div>
-                    </div>
-                  </div>
-                  <div class="row q-pt-sm">
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Collected On</div>
-                      <div class="text-h6">{{ data.collected_on }}</div>
-                    </div>
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Collection Date</div>
-                      <div class="text-h6">{{ data.collection_date }}</div>
-                    </div>
-                  </div>
-                  <div class="row q-pt-sm">
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Customer</div>
-                      <div class="text-h6">{{ data.customer }}</div>
-                    </div>
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Intake ID</div>
-                      <div class="text-h6">{{ data.intake_id }}</div>
-                    </div>
-                  </div>
-                  <div class="row q-pt-sm">
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Quantity</div>
-                      <div class="text-h6">{{ data.quantity }}</div>
-                    </div>
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Staff</div>
-                      <div class="text-h6">{{ data.staff_name }}</div>
-                    </div>
-                  </div>
-                  <div class="row q-pt-sm">
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Deposit</div>
-                      <div class="text-h6">₦{{ data.deposit }}</div>
-                    </div>
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Balance</div>
-                      <div class="text-h6">₦{{ data.balance }}</div>
-                    </div>
-                  </div>
-                  <div class="row q-pt-sm">
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Total Amount</div>
-                      <div class="text-h6">₦{{ data.total_amount }}</div>
-                    </div>
-                    <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey" >Paid?</div>
-                      <div class="text-h6">{{ data.paid }}</div>
-                    </div>
-                  </div>
-              </q-card-section>
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-h6">{{ data.customer_phone }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Collected On</div>
+                <div class="text-h6">{{ data.collected_on }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Collection Date</div>
+                <div class="text-h6">{{ data.collection_date }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer</div>
+                <div class="text-h6">{{ data.customer }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Intake ID</div>
+                <div class="text-h6">{{ data.intake_id }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Quantity</div>
+                <div class="text-h6">{{ data.quantity }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Staff</div>
+                <div class="text-h6">{{ data.staff_name }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Deposit</div>
+                <div class="text-h6">₦{{ data.deposit }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Balance</div>
+                <div class="text-h6">₦{{ data.balance }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Total Amount</div>
+                <div class="text-h6">₦{{ data.total_amount }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Paid?</div>
+                <div class="text-h6">{{ data.paid }}</div>
+              </div>
+            </div>
+          </q-card-section>
 
-              <q-separator dark />
+          <q-separator dark />
 
-              <q-card-actions align="right" v-show="show4">
-                <q-btn @click="onUpdate(data.intake_id)" flat>Complete Payment</q-btn>
-              </q-card-actions>
-            </q-card>
-          </div>
-
+          <q-card-actions align="right" v-show="show4">
+            <q-btn @click="onUpdate(data.intake_id)" flat
+              >Complete Payment</q-btn
+            >
+          </q-card-actions>
+        </q-card>
+      </div>
     </div>
   </q-page>
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue'
-import { axios, api, base } from 'boot/axios'
-import { copyToClipboard, useQuasar } from 'quasar'
-import { useUserStore } from '../../stores/user-store'
-import { useRouter } from 'vue-router'
+import { onMounted, reactive, ref } from "vue";
+import { axios, api, base } from "boot/axios";
+import { copyToClipboard, useQuasar } from "quasar";
+import { useUserStore } from "../../stores/user-store";
+import { useRouter } from "vue-router";
 
-const name= 'GetOneUserPage'
+const name = "GetOneUserPage";
 
-const fixed0 = ref(false)
-const fixed1 = ref(false)
-const $q = useQuasar()
-const data = ref([])
-const intake_id = ref("")
-const show4 = ref(false)
+const fixed0 = ref(false);
+const fixed1 = ref(false);
+const $q = useQuasar();
+const data = ref([]);
+const intake_id = ref("");
+const show4 = ref(false);
 
-const $router = useRouter()
-const useStore = useUserStore()
-const selectedCustomer = reactive([])
-const selectedCustomerPopup1 = ref({})
-const selectedCustomerPopup2 = ref({})
+const $router = useRouter();
+const useStore = useUserStore();
+const selectedCustomer = reactive([]);
+const selectedCustomerPopup1 = ref({});
+const selectedCustomerPopup2 = ref({});
 
-
-function copyTo(ID){
+function copyTo(ID) {
   copyToClipboard(ID)
-  .then(() => {
-    // success!
-    $q.notify({
-      color: 'green-4',
-      position: 'bottom',
-      message: 'Intake ID copied to Clipboard',
-      icon: 'thumb_up'
+    .then(() => {
+      // success!
+      $q.notify({
+        color: "green-4",
+        position: "bottom",
+        message: "Intake ID copied to Clipboard",
+        icon: "thumb_up",
+      });
     })
-  })
-  .catch(() => {
-    // fail
-    $q.notify({
-      color: 'negative',
-      position: 'bottom',
-      message: 'Please refresh page',
-      icon: 'report_problem'
-    })
-  })
+    .catch(() => {
+      // fail
+      $q.notify({
+        color: "negative",
+        position: "bottom",
+        message: "Please refresh page",
+        icon: "report_problem",
+      });
+    });
 }
 
 function formatDate(date) {
@@ -165,27 +172,28 @@ function formatDate(date) {
 }
 
 function popup1(selectedCustomer) {
-  fixed1.value = true
+  fixed1.value = true;
   // console.log(selectedCustomer, 'selectedCustomer')
-  selectedCustomerPopup1.value = selectedCustomer
+  selectedCustomerPopup1.value = selectedCustomer;
   // console.log(selectedCustomerPopup1.value, 'selectedCustomerpopup1 value')
 }
 
-
 const onSubmit = () => {
-  const token = useStore.getToken
+  const token = useStore.getToken;
 
-  axios.get(`${base}/payment/${intake_id.value}`,
-    { headers: { "Authorization": `Bearer ${token}` }, })
+  axios
+    .get(`${base}/payment/${intake_id.value}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
-      data.value = response.data.data
-      console.log(data.value)
+      data.value = response.data.data;
+      console.log(data.value);
       $q.notify({
-        color: 'green-4',
-        textColor: 'white',
-        icon: 'thumb_up',
-        message: 'Payment Found'
-      })
+        color: "green-4",
+        textColor: "white",
+        icon: "thumb_up",
+        message: "Payment Found",
+      });
       fixed0.value = true;
       if (data.value.paid == "") {
         show4.value = true;
@@ -193,19 +201,18 @@ const onSubmit = () => {
     })
     .catch(() => {
       $q.notify({
-        color: 'negative',
-        position: 'bottom',
-        message: 'Payment not found',
-        icon: 'report_problem'
-      })
-    })
-}
-
+        color: "negative",
+        position: "bottom",
+        message: "Payment not found",
+        icon: "report_problem",
+      });
+    });
+};
 
 const onUpdate = (intakeID) => {
-  const token = useStore.getToken
-  const firstName = useStore.getFirst_name
-  const lastName = useStore.getLast_name
+  const token = useStore.getToken;
+  const firstName = useStore.getFirst_name;
+  const lastName = useStore.getLast_name;
 
   const now = new Date(Date.now());
   const year = now.getFullYear();
@@ -217,38 +224,46 @@ const onUpdate = (intakeID) => {
   const timeDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
   const formData = {
-    paid: firstName + " " + lastName + " (" + intakeID + ") Done " + timeDate,
+    paid:
+      intakeID +
+      " Payment Completed and logged in by " +
+      firstName +
+      " " +
+      lastName +
+      " on " +
+      timeDate,
   };
+  // paid: firstName + " " + lastName + " (" + intakeID + ") Done " + timeDate,
 
-  axios.patch(`${base}/payment/${intakeID}`, formData,
-    { headers: { "Authorization": `Bearer ${token}` }, })
+  axios
+    .patch(`${base}/payment/${intakeID}`, formData, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
       // data.value = response.data.data
       // console.log(data.value)
       $q.notify({
-        color: 'green-4',
-        textColor: 'white',
-        icon: 'thumb_up',
-        message: 'User paid in full and saved'
-      })
+        color: "green-4",
+        textColor: "white",
+        icon: "thumb_up",
+        message: "User paid in full and saved",
+      });
       fixed0.value = true;
       window.location.reload();
     })
     .catch(() => {
       $q.notify({
-        color: 'negative',
-        position: 'bottom',
-        message: 'Something went wrong',
-        icon: 'report_problem'
-      })
-    })
-}
+        color: "negative",
+        position: "bottom",
+        message: "Something went wrong",
+        icon: "report_problem",
+      });
+    });
+};
 
 const onReset = () => {
-  intake_id.value = null
-}
-
-
+  intake_id.value = null;
+};
 </script>
 
 <style lang="sass" scoped>
