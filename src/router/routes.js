@@ -1,25 +1,27 @@
-import LoginPage from 'pages/LoginPage.vue'
+import LoginPage from "pages/LoginPage.vue";
 // import SignUpPage from 'pages/SignUpPage.vue'
 // import ResetPassword from 'pages/ResetPassword.vue'
 // import ProfilePage from 'pages/ProfilePage.vue'
 // import EditProfilePage from 'pages/EditProfilePage.vue'
-import IntakePages from 'src/pages/IntakePages.vue'
-import CreateIntakesPage from 'src/pages/CreateIntakesPage.vue'
-import ProcessPages from 'src/pages/ProcessPages.vue'
-import PaymentPages from 'src/pages/PaymentPages.vue'
-import CustomerPages from 'src/pages/CustomerPages.vue'
-import PricePages from 'src/pages/PricePages.vue'
-import AdminPages from 'src/pages/AdminPages.vue'
+import IntakePages from "src/pages/IntakePages.vue";
+import CreateIntakesPage from "src/pages/CreateIntakesPage.vue";
+import ProcessPages from "src/pages/ProcessPages.vue";
+import PaymentPages from "src/pages/PaymentPages.vue";
+import CustomerPages from "src/pages/CustomerPages.vue";
+import PricePages from "src/pages/PricePages.vue";
+import ResendMessagePage from "src/pages/ResendMessagePage.vue";
+import GeneralMessagePage from "src/pages/GeneralMessagePage.vue";
+import AdminPages from "src/pages/AdminPages.vue";
 
 const routes = [
   {
-    path: '/main',
-    component: () => import('layouts/MainLayout.vue'),
+    path: "/main",
+    component: () => import("layouts/MainLayout.vue"),
     children: [
       {
-        path: '',
-        component: () => import('pages/ProfilePage.vue'),
-        meta: { requireLogin: true }
+        path: "",
+        component: () => import("pages/ProfilePage.vue"),
+        meta: { requireLogin: true },
       },
       // {
       //   path: '/profile',
@@ -32,49 +34,59 @@ const routes = [
       //   meta: { requireLogin: true }
       // },
       {
-        path: '/customer',
+        path: "/customer",
         component: CustomerPages,
-        meta: { requireLogin: true }
+        meta: { requireLogin: true },
       },
       {
         // path: '/createIntake',
-        path: '/createIntake/:first/:last/:phone',
+        path: "/createIntake/:first/:last/:phone",
         // path: '/createIntake/:first',
         component: CreateIntakesPage,
-        name: 'CreateIntakesPage',
+        name: "CreateIntakesPage",
         meta: { requireLogin: true },
-        params: true
+        params: true,
       },
       {
-        path: '/intake',
+        path: "/intake",
         component: IntakePages,
-        meta: { requireLogin: true }
+        meta: { requireLogin: true },
       },
       {
-        path: '/process',
+        path: "/process",
         component: ProcessPages,
-        meta: { requireLogin: true }
+        meta: { requireLogin: true },
       },
       {
-        path: '/payment',
+        path: "/payment",
         component: PaymentPages,
-        meta: { requireLogin: true }
+        meta: { requireLogin: true },
       },
       {
-        path: '/price',
+        path: "/price",
         component: PricePages,
-        meta: { requireLogin: true }
+        meta: { requireLogin: true },
       },
       {
-        path: '/admin',
-        component: AdminPages,
-        meta: { requireLogin: true }
+        path: "/message",
+        component: ResendMessagePage,
+        meta: { requireLogin: true },
       },
-    ]
+      {
+        path: "/general_message",
+        component: GeneralMessagePage,
+        meta: { requireLogin: true },
+      },
+      {
+        path: "/admin",
+        component: AdminPages,
+        meta: { requireLogin: true },
+      },
+    ],
   },
   {
-    path: '/',
-    name: 'Login',
+    path: "/",
+    name: "Login",
     component: LoginPage,
   },
   // {
@@ -92,9 +104,9 @@ const routes = [
   // Always leave this as last one,
   // but you can also remove it
   {
-    path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
-]
+    path: "/:catchAll(.*)*",
+    component: () => import("pages/ErrorNotFound.vue"),
+  },
+];
 
-export default routes
+export default routes;

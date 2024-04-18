@@ -7,10 +7,10 @@
         <q-form @submit="onSubmit" @reset="onReset" class="">
           <div class="col-12 col-md-12 q-pl-md">
             <q-input
-              label="User Phone Number"
+              label="Resend ID"
               class=""
               outlined
-              v-model="phone_number"
+              v-model="resend_id"
               hint=""
             />
           </div>
@@ -19,74 +19,69 @@
           </div>
         </q-form>
       </div>
-
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
+        <q-card class="my-card">
+          <q-card-section class="bg-primary text-white">
+            <div class="text-h6">{{ data.customer_phone }}</div>
+            <!-- <div class="text-subtitle1">₦{{ data.final_amount }}</div> -->
+            <div class="text-subtitle2">
+              Resent:
+              {{ formatDate(data.resent) }}
+            </div>
+          </q-card-section>
+
+          <q-separator />
+
+          <q-card-actions align="right">
+            <q-btn flat @click="popup1(data)">See Details</q-btn>
+            <!-- <q-btn flat>Action 2</q-btn> -->
+          </q-card-actions>
+        </q-card>
+      </div>
+
+      <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
         <q-card class="my-card-2 bg-primary text-white">
           <q-card-section>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
-                <div class="text-subtitle2">Created At</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.user_id }}</div>
-                <div class="text-subtitle2">User ID</div>
-              </div>
-            </div>
-            <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.first_name }}</div>
-                <div class="text-subtitle2">First Name</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.last_name }}</div>
-                <div class="text-subtitle2">Last Name</div>
+              <!-- <div class="col-12 col-md-6 q-pl-md">
+                      <div class="text-subtitle2 bg-grey">Created At</div>
+                      <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
+                    </div> -->
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Resend ID</div>
+                <div class="text-h6">{{ data.resend_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.email }}</div>
-                <div class="text-subtitle2">Email</div>
+                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-h6">{{ data.customer_phone }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.username }}</div>
-                <div class="text-subtitle2">Username</div>
+                <div class="text-subtitle2 bg-grey">Customer Other Phone</div>
+                <div class="text-h6">{{ data.customer_other_phone }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Message</div>
+                <div class="text-h6">{{ data.message }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.user_type }}</div>
-                <div class="text-subtitle2">User Type</div>
+                <div class="text-subtitle2 bg-grey">Sent</div>
+                <div class="text-h6">{{ data.sent }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.phone_number }}</div>
-                <div class="text-subtitle2">Phone Number</div>
-              </div>
-            </div>
-            <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.gender }}</div>
-                <div class="text-subtitle2">Gender</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.dob }}</div>
-                <div class="text-subtitle2">Date of Birth</div>
+                <div class="text-subtitle2 bg-grey">Resent</div>
+                <div class="text-h6">{{ data.resent }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.address }}</div>
-                <div class="text-subtitle2">Address</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.state }}</div>
-                <div class="text-subtitle2">State</div>
-              </div>
-            </div>
-            <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-h6">{{ data.country }}</div>
-                <div class="text-subtitle2">Country</div>
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Resent Date</div>
+                <div class="text-h6">{{ data.resent_date }}</div>
               </div>
             </div>
           </q-card-section>
@@ -94,9 +89,8 @@
           <q-separator dark />
 
           <q-card-actions align="right">
-            <q-btn @click="onDelete()" flat>Delete User</q-btn>
-            <q-btn @click="copyTo(data.phone_number)" flat
-              >Copy Phone Number</q-btn
+            <q-btn color="primary" @click="onResend(data.resend_id)" flat
+              >Resend</q-btn
             >
           </q-card-actions>
         </q-card>
@@ -112,27 +106,19 @@ import { copyToClipboard, useQuasar } from "quasar";
 import { useUserStore } from "../../stores/user-store";
 import { useRouter } from "vue-router";
 
-const name = "GetOneUserPage";
+const name = "GetOneResendMessage";
 
 const fixed0 = ref(false);
 const fixed1 = ref(false);
 const $q = useQuasar();
 const data = ref([]);
-const phone_number = ref("");
+const resend_id = ref("");
+
+const $router = useRouter();
 const useStore = useUserStore();
 const selectedCustomer = reactive([]);
 const selectedCustomerPopup1 = ref({});
 const selectedCustomerPopup2 = ref({});
-
-function formatDate(date) {
-  const dateObj = new Date(date);
-  const day = dateObj.getDate();
-  const month = dateObj.getMonth() + 1;
-  const year = dateObj.getFullYear();
-  const hours = dateObj.getHours();
-  const minutes = dateObj.getMinutes();
-  return `${day}/${month}/${year} ${hours}:${minutes}`;
-}
 
 function copyTo(ID) {
   copyToClipboard(ID)
@@ -141,7 +127,7 @@ function copyTo(ID) {
       $q.notify({
         color: "green-4",
         position: "bottom",
-        message: "User ID copied to Clipboard",
+        message: "Intake ID copied to Clipboard",
         icon: "thumb_up",
       });
     })
@@ -156,78 +142,98 @@ function copyTo(ID) {
     });
 }
 
+function formatDate(date) {
+  const dateObj = new Date(date);
+  const day = dateObj.getDate();
+  const month = dateObj.getMonth() + 1;
+  const year = dateObj.getFullYear();
+  const hours = dateObj.getHours();
+  const minutes = dateObj.getMinutes();
+  return `${day}/${month}/${year} ${hours}:${minutes}`;
+}
+
 function popup1(selectedCustomer) {
   fixed1.value = true;
-  console.log(selectedCustomer, "selectedCustomer");
+  // console.log(selectedCustomer, 'selectedCustomer')
   selectedCustomerPopup1.value = selectedCustomer;
-  console.log(selectedCustomerPopup1.value, "selectedCustomerpopup1 value");
+  // console.log(selectedCustomerPopup1.value, 'selectedCustomerpopup1 value')
 }
 
 const onSubmit = () => {
   const token = useStore.getToken;
 
   axios
-    .get(`${base}/user/one/${phone_number.value}`, {
+    .get(`${base}/resend/messsage/${resend_id.value}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
       data.value = response.data.data;
       console.log(data.value);
-      if (data.value.ID != null) {
-        $q.notify({
-          color: "green-4",
-          textColor: "white",
-          icon: "thumb_up",
-          message: "User Found",
-        });
-        fixed0.value = true;
-      } else {
-        fixed0.value = false;
-      }
+      $q.notify({
+        color: "green-4",
+        textColor: "white",
+        icon: "thumb_up",
+        message: "Message Found",
+      });
+      fixed0.value = true;
     })
     .catch(() => {
       $q.notify({
         color: "negative",
         position: "bottom",
-        message: "Please Refresh",
+        message: "Message not found",
         icon: "report_problem",
       });
     });
 };
 
-const onDelete = () => {
-  // const formData = {
-  //   user_id: user_id.value,
-  // }
+const onResend = (resend_id) => {
   const token = useStore.getToken;
+  const firstName = useStore.getFirst_name;
+  const lastName = useStore.getLast_name;
+
+  const now = new Date(Date.now());
+  const year = now.getFullYear();
+  const month = now.getMonth() + 1;
+  const day = now.getDate();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  const timeDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
+  const formData = {
+    resent: true,
+    resent_date: timeDate,
+  };
 
   axios
-    .delete(`${base}/user/${phone_number.value}`, {
+    .patch(`${base}/resend/message/${resend_id}`, formData, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data;
-      console.log(data.value);
+      // data.value = response.data.data
+      // console.log(data.value)
       $q.notify({
         color: "green-4",
         textColor: "white",
         icon: "thumb_up",
-        message: "User Deleted",
+        message: "Message Sent",
       });
-      // fixed0.value = true;
+      fixed0.value = true;
+      window.location.reload();
     })
     .catch(() => {
       $q.notify({
         color: "negative",
         position: "bottom",
-        message: "User not found",
+        message: "Something went wrong",
         icon: "report_problem",
       });
     });
 };
 
 const onReset = () => {
-  phone_number.value = null;
+  resend_id.value = null;
 };
 </script>
 

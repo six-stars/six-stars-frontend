@@ -8,11 +8,13 @@
         title="All Customers"
         :columns="columns"
         :rows="data"
-        row-key="name"
+        row-key="customer_id"
         flat
         bordered
         :loading="true"
         :filter="filter"
+        :pagination="pagination"
+        @request="handleTableRequest"
       >
         <template v-slot:body="props">
           <q-tr :props="props" @click="onRowClick(props.row)">
@@ -74,6 +76,23 @@
           </q-input>
         </template>
       </q-table>
+
+      <div class="text-right full-width q-pl-md">
+        <q-btn
+          v-if="pagination.page > 1"
+          rounded
+          color="secondary"
+          label="Previous Page"
+          @click="handlePreviousPage"
+        />
+        <q-btn
+          v-if="pageEnd == true"
+          rounded
+          color="primary"
+          label="Next Page"
+          @click="handleNextPage"
+        />
+      </div>
     </div>
 
     <q-dialog v-model="moreDetails">
@@ -197,6 +216,7 @@ const selectedCustomer = reactive([]);
 const selectedCustomerPopup1 = ref({});
 const moreDetails = ref(false);
 const isloading = ref(false);
+const pageEnd = ref(false);
 
 function formatDate(date) {
   const dateObj = new Date(date);
@@ -260,14 +280,24 @@ function copyTo(ID) {
     });
 }
 
-const loadData = () => {
+const pagination = ref({
+  sortBy: "userid", // Set default sort field
+  descending: false,
+  page: 1,
+  rowsPerPage: 10,
+});
+
+const loadData = (pageNumber) => {
   // axios.get(`${base}/coearnlist/`)
   const token = useStore.getToken;
   // console.log(token, "token");
   api
-    .get(`/customer/all`, { headers: { Authorization: `Bearer ${token}` } })
+    .get(`/customer/all/${pageNumber}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
       data.value = response.data.data.reverse();
+      pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
       // success!
       // $q.notify({
@@ -287,6 +317,25 @@ const loadData = () => {
     });
 };
 
+const handleTableRequest = (params) => {
+  pagination.value = { ...params.pagination, rowsPerPage: 10 }; // Ensure rowsPerPage is 10
+  fetchData(pagination.value.page);
+};
+
+const handlePreviousPage = () => {
+  if (pagination.value.page > 1) {
+    pagination.value.page--;
+    loadData(pagination.value.page);
+  }
+};
+
+const handleNextPage = () => {
+  if (pageEnd.value == true) {
+    pagination.value.page++;
+    loadData(pagination.value.page);
+  }
+};
+
 function popup1(selectedCustomer) {
   fixed1.value = true;
   // console.log(selectedCustomer, 'selectedCustomer')
@@ -295,7 +344,7 @@ function popup1(selectedCustomer) {
 }
 
 onMounted(() => {
-  loadData();
+  loadData(pagination.value.page);
 });
 </script>
 

@@ -78,6 +78,29 @@
             <q-item-label class="bg-white text-teal">Process</q-item-label>
           </q-item-section>
         </q-item>
+        <q-item class="q-pt-xl q-ml-sm" to="/message" clickable v-show="show3">
+          <q-item-section avatar>
+            <q-avatar icon="inbox" class="bg-white text-teal" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="bg-white text-teal">Messages</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item
+          class="q-pt-xl q-ml-sm"
+          to="/general_message"
+          clickable
+          v-show="show"
+        >
+          <q-item-section avatar>
+            <q-avatar icon="inbox" class="bg-white text-teal" />
+          </q-item-section>
+          <q-item-section>
+            <q-item-label class="bg-white text-teal"
+              >General Messages</q-item-label
+            >
+          </q-item-section>
+        </q-item>
         <q-item class="q-pt-xl q-ml-sm" to="/admin" clickable v-show="show">
           <q-item-section avatar>
             <q-avatar icon="man" class="bg-white text-teal" />
@@ -133,6 +156,28 @@
           />
           <!-- <q-fab-action square external-label label-position="left" label="Referral" color="primary"
             icon="fas fa-user-friends" to="/referral" /> -->
+          <q-fab-action
+            square
+            external-label
+            label-position="left"
+            label="Messages"
+            color="teal"
+            icon="inbox"
+            to="/message"
+            clickable
+            v-show="show3"
+          />
+          <q-fab-action
+            square
+            external-label
+            label-position="left"
+            label="General Messages"
+            color="teal"
+            icon="inbox"
+            to="/general_message"
+            clickable
+            v-show="show3"
+          />
           <q-fab-action
             square
             external-label
@@ -224,6 +269,12 @@ const linksList = [
     icon: "payments",
     link: "/payment",
   },
+  // {
+  //   title: "Messages",
+  //   // caption: 'github.com/quasarframework',
+  //   icon: "inbox",
+  //   link: "/message",
+  // },
 ];
 
 export default defineComponent({
@@ -285,12 +336,14 @@ export default defineComponent({
     const show = ref(false);
     const show1 = ref(true);
     const show2 = ref(false);
+    const show3 = ref(false);
     let userType = ref("");
 
     const check = () => {
       userType.value = useStore.getUser_type;
       if (userType.value == "Super_Admin") {
         show.value = true;
+        show3.value = true;
       }
     };
     const check1 = () => {
@@ -298,6 +351,14 @@ export default defineComponent({
       if (userType.value == "Presser" || userType.value == "Washer") {
         show1.value = false;
         show2.value = true;
+      }
+    };
+    const check3 = () => {
+      userType.value = useStore.getUser_type;
+      if (userType.value == "Manager") {
+        show1.value = true;
+        show2.value = false;
+        show3.value = true;
       }
     };
     // const check2 = () => {
@@ -309,7 +370,7 @@ export default defineComponent({
 
     onMounted(() => {
       // loadData()
-      check(), check1();
+      check(), check1(), check3();
       // check2()
     });
 
@@ -317,9 +378,10 @@ export default defineComponent({
       show,
       show1,
       show2,
+      show3,
       check,
       check1,
-      // check2,
+      check3,
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer() {

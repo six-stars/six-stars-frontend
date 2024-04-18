@@ -4,12 +4,14 @@
       class="my-sticky-header-table"
       title="All Processes"
       :rows="data"
-      row-key="name"
+      row-key="process_id"
       flat
       bordered
       :columns="columns"
       :loading="true"
       :filter="filter"
+      :pagination="pagination"
+      @request="handleTableRequest"
     >
       <template v-slot:body="props">
         <q-tr :props="props" @click="onRowClick(props.row)">
@@ -62,6 +64,23 @@
       </template>
     </q-table>
     <!-- :visible-columns="['created_at', 'updated_at', 'deleted_at']" -->
+
+    <div class="text-right full-width q-pl-md">
+      <q-btn
+        v-if="pagination.page > 1"
+        rounded
+        color="secondary"
+        label="Previous Page"
+        @click="handlePreviousPage"
+      />
+      <q-btn
+        v-if="pageEnd == true"
+        rounded
+        color="primary"
+        label="Next Page"
+        @click="handleNextPage"
+      />
+    </div>
 
     <q-dialog v-model="moreDetails">
       <div class="my-card-2">
@@ -188,6 +207,7 @@ const show1 = ref(false);
 const show2 = ref(false);
 const show3 = ref(false);
 const show4 = ref(false);
+const pageEnd = ref(false);
 
 function formatDate(date) {
   const now = new Date(date);
@@ -239,13 +259,23 @@ const onRowClick = (row) => {
   }
 };
 
-const loadData = () => {
+const pagination = ref({
+  sortBy: "userid", // Set default sort field
+  descending: false,
+  page: 1,
+  rowsPerPage: 10,
+});
+
+const loadData = (pageNumber) => {
   const token = useStore.getToken;
   console.log(token, "token");
   api
-    .get(`/process/all`, { headers: { Authorization: `Bearer ${token}` } })
+    .get(`/process/all/${pageNumber}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
       data.value = response.data.data.reverse();
+      pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })
     .catch(() => {
@@ -256,6 +286,25 @@ const loadData = () => {
         icon: "report_problem",
       });
     });
+};
+
+const handleTableRequest = (params) => {
+  pagination.value = { ...params.pagination, rowsPerPage: 10 }; // Ensure rowsPerPage is 10
+  fetchData(pagination.value.page);
+};
+
+const handlePreviousPage = () => {
+  if (pagination.value.page > 1) {
+    pagination.value.page--;
+    loadData(pagination.value.page);
+  }
+};
+
+const handleNextPage = () => {
+  if (pageEnd.value == true) {
+    pagination.value.page++;
+    loadData(pagination.value.page);
+  }
 };
 
 const onUpdate = (process, stage) => {
@@ -390,7 +439,7 @@ const onUpdate = (process, stage) => {
 };
 
 onMounted(() => {
-  loadData();
+  loadData(pagination.value.page);
 });
 </script>
 

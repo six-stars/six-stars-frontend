@@ -6,54 +6,143 @@
       <q-form @submit="onSubmit" @reset="onReset">
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" outlined v-model="formData.first_name" hint="First Name" />
+            <q-input
+              required
+              class=""
+              outlined
+              v-model="formData.first_name"
+              hint="First Name"
+            />
           </div>
           <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" outlined v-model="formData.last_name" hint="Last Name" />
-          </div>
-        </div>
-        <div class="row q-pt-sm">
-          <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" v-model="formData.email" outlined type="email" hint="Email" />
-          </div>
-          <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" v-model="formData.username" outlined type="text" hint="Username" />
-          </div>
-        </div>
-        <div class="row q-pt-sm">
-          <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" v-model="formData.password" outlined type="password" hint="Password" />
-          </div>
-          <div class="col-12 col-md-6 q-pl-md">
-            <q-select required outlined v-model="formData.user_type" :options="optionsUserType" hint="User Type" />
+            <q-input
+              required
+              class=""
+              outlined
+              v-model="formData.last_name"
+              hint="Last Name"
+            />
           </div>
         </div>
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" v-model="formData.dob" outlined type="date" hint="Date of Birth" />
+            <q-input
+              required
+              class=""
+              v-model="formData.email"
+              outlined
+              type="email"
+              hint="Email"
+            />
           </div>
           <div class="col-12 col-md-6 q-pl-md">
-            <q-select required outlined v-model="formData.gender" :options="optionsGender" hint="Gender" />
+            <q-input
+              required
+              class=""
+              v-model="formData.username"
+              outlined
+              type="text"
+              hint="Username"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="formData.password"
+              outlined
+              type="password"
+              hint="Password"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-select
+              required
+              outlined
+              v-model="formData.user_type"
+              :options="optionsUserType"
+              hint="User Type"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="formData.dob"
+              outlined
+              type="date"
+              hint="Date of Birth"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-select
+              required
+              outlined
+              v-model="formData.gender"
+              :options="optionsGender"
+              hint="Gender"
+            />
           </div>
         </div>
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
             <div class="column">
               <div class="col">
-                <q-input required class="" v-model="formData.phone_number" type="tel" outlined hint="Phone number" label="234814585375"/>
+                <q-input
+                  required
+                  class=""
+                  v-model="formData.phone_number"
+                  type="tel"
+                  outlined
+                  hint="Phone number"
+                  label="234814585375"
+                />
               </div>
               <div class="col">
-                <q-select required class="" outlined :options="optionsState" v-model="formData.state" hint="State" />
+                <q-select
+                  required
+                  class=""
+                  outlined
+                  :options="optionsState"
+                  v-model="formData.state"
+                  hint="State"
+                />
               </div>
             </div>
           </div>
           <div class="col-12 col-md-6 q-pl-md">
-            <q-input required class="" v-model="formData.address" outlined type="textarea" hint="Home Address" />
+            <q-input
+              required
+              class=""
+              v-model="formData.address"
+              outlined
+              type="textarea"
+              hint="Home Address"
+            />
           </div>
         </div>
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
-            <q-select required outlined v-model="formData.country" :options="optionsCountry" hint="Country" />
+            <q-select
+              required
+              outlined
+              v-model="formData.country"
+              :options="optionsCountry"
+              hint="Country"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-select
+              required
+              outlined
+              v-model="formData.active"
+              :options="optionsActive"
+              hint="Active"
+            />
           </div>
         </div>
 
@@ -76,14 +165,17 @@
           </div>
         </div> -->
 
-
         <div class="row q-pt-lg">
           <div class="text-center full-width q-pl-md">
-            <q-btn label="Submit" type="submit" color="primary" style="width: 260px" />
+            <q-btn
+              label="Submit"
+              type="submit"
+              color="primary"
+              style="width: 260px"
+            />
           </div>
           <!-- <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" /> -->
         </div>
-
       </q-form>
 
       <!-- <div class="row items-start">
@@ -153,74 +245,71 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
-import { axios, api, base } from 'boot/axios'
-import { useQuasar } from 'quasar'
-import { useUserStore } from '../../stores/user-store'
+import { ref, computed } from "vue";
+import { axios, api, base } from "boot/axios";
+import { useQuasar } from "quasar";
+import { useUserStore } from "../../stores/user-store";
 
-  name: 'CreateUsersPage'
-  const optionsCountry = [
-    'Nigeria'
-  ]
-  const optionsGender = [
-    'Male',
-    'Female'
-  ]
-  const optionsUserType = [
-    'Super_Admin',
-    'Front_Desk',
-    'Presser',
-    'Washer',
-    'Maketer',
-    'Driver',
-  ]
-  const optionsState = [
-    "Abia",
-    "Adamawa",
-    "Akwa Ibom",
-    "Anambra",
-    "Bauchi",
-    "Bayelsa",
-    "Benue",
-    "Borno",
-    "Cross River",
-    "Delta",
-    "Ebonyi",
-    "Edo",
-    "Ekiti",
-    "Enugu",
-    "Federal Capital Territory",
-    "Gombe",
-    "Imo",
-    "Jigawa",
-    "Kaduna",
-    "Kano",
-    "Katsina",
-    "Kebbi",
-    "Kogi",
-    "Kwara",
-    "Lagos",
-    "Nasarawa",
-    "Niger",
-    "Ogun",
-    "Ondo",
-    "Osun",
-    "Oyo",
-    "Plateau",
-    "Rivers",
-    "Sokoto",
-    "Taraba",
-    "Yobe",
-    "Zamfara",
-  ]
+name: "CreateUsersPage";
+const optionsCountry = ["Nigeria"];
+const optionsGender = ["Male", "Female"];
+const optionsActive = ["False", "True"];
+const optionsUserType = [
+  "Super_Admin",
+  "Manager",
+  "Front_Desk",
+  "Presser",
+  "Washer",
+  "Maketer",
+  "Driver",
+];
+const optionsState = [
+  "Abia",
+  "Adamawa",
+  "Akwa Ibom",
+  "Anambra",
+  "Bauchi",
+  "Bayelsa",
+  "Benue",
+  "Borno",
+  "Cross River",
+  "Delta",
+  "Ebonyi",
+  "Edo",
+  "Ekiti",
+  "Enugu",
+  "Federal Capital Territory",
+  "Gombe",
+  "Imo",
+  "Jigawa",
+  "Kaduna",
+  "Kano",
+  "Katsina",
+  "Kebbi",
+  "Kogi",
+  "Kwara",
+  "Lagos",
+  "Nasarawa",
+  "Niger",
+  "Ogun",
+  "Ondo",
+  "Osun",
+  "Oyo",
+  "Plateau",
+  "Rivers",
+  "Sokoto",
+  "Taraba",
+  "Yobe",
+  "Zamfara",
+];
 
-const $q = useQuasar()
-const data = ref([])
-const formData = ref({})
-const useStore = useUserStore()
+const $q = useQuasar();
+const data = ref([]);
+const formData = ref({});
+const useStore = useUserStore();
 
 const onSubmit = () => {
-  const token = useStore.getToken
+  const token = useStore.getToken;
   // const id = useStore.getEmail
   // console.log(id, 'id')
   // let value = $q.localStorage.getItem('profile')
@@ -231,34 +320,34 @@ const onSubmit = () => {
   // formData.append("first_name", profile.first_name);
   // formData.append("last_name", profile.last_name);
   // formData.append("email", profile.email);
-  console.log(formData.value, 'formData')
-  axios.post(`${base}/users/signup/`, formData.value)
+  console.log(formData.value, "formData");
+  axios
+    .post(`${base}/users/signup/`, formData.value)
     .then((response) => {
-      data.value = response.data
-      console.log(data.value, "user")
+      data.value = response.data;
+      console.log(data.value, "user");
       // onReset()
       $q.notify({
-        color: 'green',
-        position: 'bottom',
-        message: 'Saved',
-        icon: 'check'
-      })
+        color: "green",
+        position: "bottom",
+        message: "Saved",
+        icon: "check",
+      });
       window.location.reload();
     })
     .catch(() => {
       $q.notify({
-        color: 'negative',
-        position: 'bottom',
-        message: 'Loading failed',
-        icon: 'report_problem'
-      })
-    })
-}
+        color: "negative",
+        position: "bottom",
+        message: "Loading failed",
+        icon: "report_problem",
+      });
+    });
+};
 
 const onReset = () => {
-  formData.value = {}
-}
-
+  formData.value = {};
+};
 </script>
 
 <style lang="sass" scoped>

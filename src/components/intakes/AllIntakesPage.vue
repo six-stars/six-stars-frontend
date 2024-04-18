@@ -5,11 +5,13 @@
       title="All Intakes"
       :columns="columns"
       :rows="data"
-      row-key="name"
+      row-key="intake_id"
       flat
       bordered
       :loading="true"
       :filter="filter"
+      :pagination="pagination"
+      @request="handleTableRequest"
     >
       <!-- :visible-columns="[
         'collected_on',
@@ -607,6 +609,23 @@
       </template>
     </q-table>
 
+    <div class="text-right full-width q-pl-md">
+      <q-btn
+        v-if="pagination.page > 1"
+        rounded
+        color="secondary"
+        label="Previous Page"
+        @click="handlePreviousPage"
+      />
+      <q-btn
+        v-if="pageEnd == true"
+        rounded
+        color="primary"
+        label="Next Page"
+        @click="handleNextPage"
+      />
+    </div>
+
     <q-dialog v-model="moreDetails">
       <div class="my-card-2">
         <q-card>
@@ -657,6 +676,7 @@ const beforeDataMore = ref([]);
 const dataMore = ref([]);
 const anotherColumns = ref([]);
 const moreDetails = ref(false);
+const pageEnd = ref(false);
 
 const columns = [
   { name: "collected_on", label: "Collected On", field: "collected_on" },
@@ -1298,13 +1318,23 @@ const onRowClick = (row) => {
   dataMore.value = beforeDataMore.value;
 };
 
-const loadData = () => {
+const pagination = ref({
+  sortBy: "userid", // Set default sort field
+  descending: false,
+  page: 1,
+  rowsPerPage: 10,
+});
+
+const loadData = (pageNumber) => {
   const token = useStore.getToken;
   console.log(token, "token");
   api
-    .get(`/intake/all`, { headers: { Authorization: `Bearer ${token}` } })
+    .get(`/intake/all/${pageNumber}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
       data.value = response.data.data.reverse();
+      pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })
     .catch(() => {
@@ -1317,8 +1347,27 @@ const loadData = () => {
     });
 };
 
+const handleTableRequest = (params) => {
+  pagination.value = { ...params.pagination, rowsPerPage: 10 }; // Ensure rowsPerPage is 10
+  fetchData(pagination.value.page);
+};
+
+const handlePreviousPage = () => {
+  if (pagination.value.page > 1) {
+    pagination.value.page--;
+    loadData(pagination.value.page);
+  }
+};
+
+const handleNextPage = () => {
+  if (pageEnd.value == true) {
+    pagination.value.page++;
+    loadData(pagination.value.page);
+  }
+};
+
 onMounted(() => {
-  loadData();
+  loadData(pagination.value.page);
 });
 </script>
 
