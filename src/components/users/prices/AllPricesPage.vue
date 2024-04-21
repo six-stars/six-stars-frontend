@@ -24,7 +24,7 @@
         class="my-sticky-header-table"
         title="All Price"
         :rows="data"
-        row-key="price_id"
+        row-key="CreatedAt"
         flat
         bordered
         :visible-columns="[
@@ -195,7 +195,7 @@ function popup1(selectedCustomer) {
 }
 
 const pagination = ref({
-  sortBy: "userid", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -209,7 +209,7 @@ const loadData = (pageNumber) => {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })

@@ -384,6 +384,12 @@ const onSubmit = () => {
   // formData.append("email", profile.email);
   const token = useStore.getToken;
   console.log(formData2.value, "formData");
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
+
   axios
     .post(`${base}/customer/`, formData2.value, {
       headers: { Authorization: `Bearer ${token}` },
@@ -392,6 +398,7 @@ const onSubmit = () => {
       data.value = response.data;
       console.log(data.value, "customer yello!");
       // onReset()
+      $q.loading.hide();
       $q.notify({
         color: "green",
         position: "bottom",
@@ -405,6 +412,7 @@ const onSubmit = () => {
       // not_visible.value = false;
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="text-black text-h4">Payments</div>
+    <div class="text-black text-h4">General Message Page</div>
     <div class="q-gutter-y-md" full-width>
       <q-card>
         <q-tabs
@@ -11,6 +11,7 @@
           align="left"
           narrow-indicator
         >
+          <q-tab name="send_general_message" label="Send a General Message" />
           <q-tab
             name="see_general_message"
             label="See all General Message Sent"
@@ -24,6 +25,9 @@
         <q-separator />
 
         <q-tab-panels v-model="tab" animated>
+          <q-tab-panel name="send_general_message">
+            <SendGeneralMessagePage />
+          </q-tab-panel>
           <q-tab-panel name="see_general_message">
             <AllGeneralMessagePage />
           </q-tab-panel>
@@ -38,6 +42,7 @@
 
 <script setup>
 import { watch, ref } from "vue";
+import SendGeneralMessagePage from "src/components/generalmessage/SendGeneralMessagePage.vue";
 import AllGeneralMessagePage from "src/components/generalmessage/AllGeneralMessagePage.vue";
 import GetOneGeneralMessage from "src/components/generalmessage/GetOneGeneralMessage.vue";
 // import CreateIntakesPage from 'src/components/intakes/CreateIntakesPage.vue'
@@ -64,7 +69,7 @@ watch(() => {
 });
 
 const name = "GeneralMessagePage";
-const tab = ref("see_general_message");
+const tab = ref("send_general_message");
 </script>
 
 <style lang="sass" scoped></style>

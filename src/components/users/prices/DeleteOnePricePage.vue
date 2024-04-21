@@ -6,64 +6,74 @@
       <div class="row q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
           <div class="col-12 col-md-12 q-pl-md">
-            <q-input label="Price ID" class="" outlined v-model="price_id" hint="" />
+            <q-input
+              label="Price ID"
+              class=""
+              outlined
+              v-model="price_id"
+              hint=""
+            />
           </div>
           <div class="col-12 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Delete</q-btn>
           </div>
         </q-form>
       </div>
-
     </div>
   </q-page>
 </template>
 
 <script setup>
-import { onMounted, reactive, ref } from 'vue'
-import { axios, api, base } from 'boot/axios'
-import { copyToClipboard, useQuasar } from 'quasar'
-import { useUserStore } from '../../../stores/user-store'
-import { useRouter } from 'vue-router'
+import { onMounted, reactive, ref } from "vue";
+import { axios, api, base } from "boot/axios";
+import { copyToClipboard, useQuasar } from "quasar";
+import { useUserStore } from "../../../stores/user-store";
+import { useRouter } from "vue-router";
 
-const name= 'DeleteOneUserPage'
+const name = "DeleteOneUserPage";
 
-const $q = useQuasar()
-const data = ref(null)
-const price_id = ref("")
-const useStore = useUserStore()
-
+const $q = useQuasar();
+const data = ref(null);
+const price_id = ref("");
+const useStore = useUserStore();
 
 const onSubmit = () => {
-  const token = useStore.getToken
-
-  axios.delete(`${base}/price/${price_id.value}`,
-    { headers: { "Authorization": `Bearer ${token}` }, })
+  const token = useStore.getToken;
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
+  axios
+    .delete(`${base}/price/${price_id.value}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    })
     .then((response) => {
-      data.value = response.data
-      console.log(data.value)
+      data.value = response.data;
+      console.log(data.value);
+      $q.loading.hide();
       $q.notify({
-        color: 'green-4',
-        textColor: 'white',
-        icon: 'thumb_up',
-        message: 'Price Deleted'
-      })
+        color: "green-4",
+        textColor: "white",
+        icon: "thumb_up",
+        message: "Price Deleted",
+      });
       // fixed0.value = true;
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
-        color: 'negative',
-        position: 'bottom',
-        message: 'Price not found',
-        icon: 'report_problem'
-      })
-    })
-}
+        color: "negative",
+        position: "bottom",
+        message: "Price not found",
+        icon: "report_problem",
+      });
+    });
+};
 
 const onReset = () => {
-  price_id.value = null
-}
-
-
+  price_id.value = null;
+};
 </script>
 
 <style lang="sass" scoped>

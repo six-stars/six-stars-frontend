@@ -2966,7 +2966,11 @@ watch(total_final_amount, () => {});
 
 const onSubmit = () => {
   const token = useStore.getToken;
-
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const first_name = useStore.getFirst_name;
   const last_name = useStore.getLast_name;
   // console.log(first_name.value, "customer name"),
@@ -3245,6 +3249,7 @@ const onSubmit = () => {
       data.value = response.data;
       console.log(data.value, "intake yello!");
       // onReset()
+      $q.loading.hide();
       $q.notify({
         color: "green",
         position: "bottom",
@@ -3254,6 +3259,7 @@ const onSubmit = () => {
       window.location.reload();
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

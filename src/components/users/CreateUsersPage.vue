@@ -310,6 +310,11 @@ const useStore = useUserStore();
 
 const onSubmit = () => {
   const token = useStore.getToken;
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   // const id = useStore.getEmail
   // console.log(id, 'id')
   // let value = $q.localStorage.getItem('profile')
@@ -327,6 +332,7 @@ const onSubmit = () => {
       data.value = response.data;
       console.log(data.value, "user");
       // onReset()
+      $q.loading.hide();
       $q.notify({
         color: "green",
         position: "bottom",
@@ -336,6 +342,7 @@ const onSubmit = () => {
       window.location.reload();
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

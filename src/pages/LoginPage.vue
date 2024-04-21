@@ -201,6 +201,11 @@ const itemsLength = computed(() => {
 
 const $router = useRouter();
 const onSubmit = async () => {
+  $q.loading.show({
+    message: "Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   isloading.value = true;
   // Get the token/cookie
   // await useStore.getSanctumCookie()
@@ -211,6 +216,7 @@ const onSubmit = async () => {
   useStore.setUser(user.data);
   // routing to the dashboard
   $router.replace("/main");
+  $q.loading.hide();
   $q.notify({
     color: "green-4",
     textColor: "white",
@@ -218,12 +224,12 @@ const onSubmit = async () => {
     message: "Welcome to your Dashboard",
   });
 
-  console.log(useStore.getUser_type);
-  console.log(useStore.getEmail);
-  console.log(useStore.getFirst_name);
-  console.log(useStore.getLast_name);
-  console.log(useStore.getToken);
-  console.log(useStore.getPhoneNumber);
+  // console.log(useStore.getUser_type);
+  // console.log(useStore.getEmail);
+  // console.log(useStore.getFirst_name);
+  // console.log(useStore.getLast_name);
+  // console.log(useStore.getToken);
+  // console.log(useStore.getPhoneNumber);
   // axios.post(`${base}/users/login/`, formData)
   // .then((response) => {
   //   // const authStore = useAuthStore()
@@ -259,6 +265,11 @@ const resetResponds = ref(null);
 
 const postReset = () => {
   // console.log(this.resetEmail, "reset Email");
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const formData = {
     email: resetEmail.value,
   };
@@ -267,6 +278,7 @@ const postReset = () => {
     .then((response) => {
       resetResponds.value = response.data;
       console.log(resetResponds.value, "resetResponds");
+      $q.loading.hide();
       $q.notify({
         color: "green-4",
         textColor: "white",
@@ -277,6 +289,7 @@ const postReset = () => {
     })
     .catch((error) => {
       // console.log(error);
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         textColor: "white",

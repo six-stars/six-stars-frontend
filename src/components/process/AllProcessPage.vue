@@ -4,7 +4,7 @@
       class="my-sticky-header-table"
       title="All Processes"
       :rows="data"
-      row-key="process_id"
+      row-key="CreatedAt"
       flat
       bordered
       :columns="columns"
@@ -260,7 +260,7 @@ const onRowClick = (row) => {
 };
 
 const pagination = ref({
-  sortBy: "userid", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -274,7 +274,7 @@ const loadData = (pageNumber) => {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })
@@ -308,6 +308,11 @@ const handleNextPage = () => {
 };
 
 const onUpdate = (process, stage) => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const token = useStore.getToken;
   const firstName = useStore.getFirst_name;
   const lastName = useStore.getLast_name;
@@ -334,6 +339,7 @@ const onUpdate = (process, stage) => {
       .then((response) => {
         // data.value = response.data.data
         // console.log(data.value)
+        $q.loading.hide();
         $q.notify({
           color: "green-4",
           textColor: "white",
@@ -343,6 +349,7 @@ const onUpdate = (process, stage) => {
         window.location.reload();
       })
       .catch(() => {
+        $q.loading.hide();
         $q.notify({
           color: "negative",
           position: "bottom",
@@ -363,6 +370,7 @@ const onUpdate = (process, stage) => {
       .then((response) => {
         // data.value = response.data.data
         // console.log(data.value)
+        $q.loading.hide();
         $q.notify({
           color: "green-4",
           textColor: "white",
@@ -372,6 +380,7 @@ const onUpdate = (process, stage) => {
         window.location.reload();
       })
       .catch(() => {
+        $q.loading.hide();
         $q.notify({
           color: "negative",
           position: "bottom",
@@ -391,6 +400,7 @@ const onUpdate = (process, stage) => {
       .then((response) => {
         // data.value = response.data.data
         // console.log(data.value)
+        $q.loading.hide();
         $q.notify({
           color: "green-4",
           textColor: "white",
@@ -400,6 +410,7 @@ const onUpdate = (process, stage) => {
         window.location.reload();
       })
       .catch(() => {
+        $q.loading.hide();
         $q.notify({
           color: "negative",
           position: "bottom",
@@ -419,6 +430,7 @@ const onUpdate = (process, stage) => {
       .then((response) => {
         // data.value = response.data.data
         // console.log(data.value)
+        $q.loading.hide();
         $q.notify({
           color: "green-4",
           textColor: "white",
@@ -428,6 +440,7 @@ const onUpdate = (process, stage) => {
         window.location.reload();
       })
       .catch(() => {
+        $q.loading.hide();
         $q.notify({
           color: "negative",
           position: "bottom",

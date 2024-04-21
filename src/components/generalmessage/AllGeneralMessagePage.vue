@@ -4,7 +4,7 @@
       class="my-sticky-header-table"
       title="All General Message"
       :rows="data"
-      row-key="general_id"
+      row-key="CreatedAt"
       flat
       bordered
       :columns="columns"
@@ -23,7 +23,7 @@
           <q-td key="title" :props="props">
             {{ props.row.title }}
           </q-td>
-          <q-td key="message" :props="props">
+          <q-td ellipsis key="message" :props="props">
             {{ props.row.message }}
           </q-td>
           <q-td key="sent" :props="props">
@@ -151,7 +151,7 @@ const onRowClick = (row) => {
 };
 
 const pagination = ref({
-  sortBy: "general_id", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -159,15 +159,17 @@ const pagination = ref({
 
 const loadData = (pageNumber) => {
   const token = useStore.getToken;
-  console.log(token, "token");
+  // console.log(token, "token");
   api
     .get(`/general/all/${pageNumber}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
+      console.log(response.data.data.reverse(), "reversed!");
+      console.log(response.data.data, "not reversed!");
     })
     .catch(() => {
       $q.notify({

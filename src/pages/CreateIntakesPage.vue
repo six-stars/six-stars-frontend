@@ -4842,7 +4842,11 @@ watch(total_final_amount, () => {});
 const onSubmit = () => {
   isloading.value = true;
   const token = useStore.getToken;
-
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const first_name = useStore.getFirst_name;
   const last_name = useStore.getLast_name;
   // console.log(first_name.value, "customer name"),
@@ -5123,6 +5127,7 @@ const onSubmit = () => {
       data.value = response.data;
       console.log(data.value, "intake yello!");
       // onReset()
+      $q.loading.hide();
       $q.notify({
         color: "green",
         position: "bottom",
@@ -5133,6 +5138,7 @@ const onSubmit = () => {
       isloading.value = false;
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",
@@ -5178,7 +5184,7 @@ const loadPrice = () => {
   const token = useStore.getToken;
   console.log(token, "token");
   api
-    .get(`/price/all`, { headers: { Authorization: `Bearer ${token}` } })
+    .get(`/price/all/1`, { headers: { Authorization: `Bearer ${token}` } })
     .then((response) => {
       lastPrice.value = response.data.data.reverse().shift();
       console.log(lastPrice.value, "last price");
@@ -5212,9 +5218,9 @@ onMounted(() => {
   // console.log($route.query)
 });
 
-onMounted(() => {
-  loadPrice();
-});
+// onMounted(() => {
+//   loadPrice();
+// });
 
 const onReset = () => {
   // formData.customer_phone.value = null

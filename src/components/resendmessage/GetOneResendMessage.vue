@@ -188,6 +188,11 @@ const onSubmit = () => {
 };
 
 const onResend = (resend_id) => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const token = useStore.getToken;
   const firstName = useStore.getFirst_name;
   const lastName = useStore.getLast_name;
@@ -213,6 +218,7 @@ const onResend = (resend_id) => {
     .then((response) => {
       // data.value = response.data.data
       // console.log(data.value)
+      $q.loading.hide();
       $q.notify({
         color: "green-4",
         textColor: "white",
@@ -223,6 +229,7 @@ const onResend = (resend_id) => {
       window.location.reload();
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

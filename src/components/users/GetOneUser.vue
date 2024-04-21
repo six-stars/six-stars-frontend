@@ -200,7 +200,11 @@ const onDelete = () => {
   //   user_id: user_id.value,
   // }
   const token = useStore.getToken;
-
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   axios
     .delete(`${base}/user/${phone_number.value}`, {
       headers: { Authorization: `Bearer ${token}` },
@@ -208,6 +212,7 @@ const onDelete = () => {
     .then((response) => {
       data.value = response.data;
       console.log(data.value);
+      $q.loading.hide();
       $q.notify({
         color: "green-4",
         textColor: "white",
@@ -217,6 +222,7 @@ const onDelete = () => {
       // fixed0.value = true;
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

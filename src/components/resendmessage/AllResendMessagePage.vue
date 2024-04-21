@@ -4,7 +4,7 @@
       class="my-sticky-header-table"
       title="All Payments"
       :rows="data"
-      row-key="resend_id"
+      row-key="CreatedAt"
       flat
       bordered
       :columns="columns"
@@ -20,23 +20,26 @@
               {{ props.row.resend_id }}
             </q-badge>
           </q-td>
+          <q-td key="title" :props="props">
+            {{ props.row.title }}
+          </q-td>
           <q-td key="customer_phone" :props="props">
             {{ props.row.customer_phone }}
           </q-td>
-          <q-td key="customer_other_phone" :props="props">
-            {{ props.row.customer_other_phone }}
-          </q-td>
-          <q-td key="message" :props="props">
-            {{ props.row.message }}
-          </q-td>
-          <q-td key="sent" :props="props">
+          <q-td text-capitalize key="sent" :props="props">
             {{ props.row.sent }}
           </q-td>
-          <q-td key="resent" :props="props">
+          <q-td text-capitalize key="resent" :props="props">
             {{ props.row.resent }}
           </q-td>
           <q-td key="resent_date" :props="props">
             {{ props.row.resent_date }}
+          </q-td>
+          <q-td ellipsis key="message" :props="props">
+            {{ props.row.message }}
+          </q-td>
+          <q-td key="customer_other_phone" :props="props">
+            {{ props.row.customer_other_phone }}
           </q-td>
         </q-tr>
       </template>
@@ -153,20 +156,21 @@ const pageEnd = ref(false);
 
 const columns = [
   { name: "resend_id", label: "Resend ID", field: "resend_id" },
+  { name: "title", label: "Title", field: "title" },
   {
     name: "customer_phone",
     label: "Customer Phone",
     field: "customer_phone",
   },
+  { name: "sent", label: "Sent", field: "sent" },
+  { name: "resent", label: "Resent", field: "resent" },
+  { name: "resent_date", label: "Resent Date", field: "resent_date" },
+  { name: "message", label: "Message", field: "message" },
   {
     name: "customer_other_phone",
     label: "Customer Other Phone",
     field: "customer_other_phone",
   },
-  { name: "message", label: "Message", field: "message" },
-  { name: "sent", label: "Sent", field: "sent" },
-  { name: "resent", label: "Resent", field: "resent" },
-  { name: "resent_date", label: "Resent Date", field: "resent_date" },
 ];
 
 const onRowClick = (row) => {
@@ -175,7 +179,7 @@ const onRowClick = (row) => {
 };
 
 const pagination = ref({
-  sortBy: "resend_id", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -183,13 +187,13 @@ const pagination = ref({
 
 const loadData = (pageNumber) => {
   const token = useStore.getToken;
-  console.log(token, "token");
+  // console.log(token, "token");
   api
     .get(`/resend/message/all/${pageNumber}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })
@@ -223,22 +227,34 @@ const handleNextPage = () => {
 };
 
 const onResend = (resendID) => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   const token = useStore.getToken;
   const firstName = useStore.getFirst_name;
   const lastName = useStore.getLast_name;
 
-  const now = new Date(Date.now());
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
-  const day = now.getDate();
-  const hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
-  const timeDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+  const today = new Date();
+
+  // Get current date in DD/MM/YYYY format
+  const date = today.toLocaleDateString("en-GB", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  });
+
+  // Get current time in 10:47 AM/PM format
+  const time = today.toLocaleTimeString("en-US", {
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: true,
+  });
 
   const formData = {
     resent: true,
-    resent_date: timeDate,
+    resent_date: date + " " + time,
   };
 
   axios
@@ -248,6 +264,7 @@ const onResend = (resendID) => {
     .then((response) => {
       data.value = response.data.data;
       console.log(data.value);
+      $q.loading.hide();
       $q.notify({
         color: "green-4",
         textColor: "white",
@@ -258,6 +275,7 @@ const onResend = (resendID) => {
       window.location.reload();
     })
     .catch(() => {
+      $q.loading.hide();
       $q.notify({
         color: "negative",
         position: "bottom",

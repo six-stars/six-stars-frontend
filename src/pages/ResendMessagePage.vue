@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="text-black text-h4">Payments</div>
+    <div class="text-black text-h4">Resend Message Page</div>
     <div class="q-gutter-y-md" full-width>
       <q-card>
         <q-tabs

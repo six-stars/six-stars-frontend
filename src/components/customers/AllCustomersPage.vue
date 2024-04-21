@@ -8,7 +8,7 @@
         title="All Customers"
         :columns="columns"
         :rows="data"
-        row-key="customer_id"
+        row-key="CreatedAt"
         flat
         bordered
         :loading="true"
@@ -281,7 +281,7 @@ function copyTo(ID) {
 }
 
 const pagination = ref({
-  sortBy: "userid", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -296,7 +296,7 @@ const loadData = (pageNumber) => {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
       // success!
