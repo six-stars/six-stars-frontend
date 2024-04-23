@@ -215,14 +215,23 @@ const onSubmit = async () => {
   // set user data to localstorage()
   useStore.setUser(user.data);
   // routing to the dashboard
-  $router.replace("/main");
-  $q.loading.hide();
-  $q.notify({
-    color: "green-4",
-    textColor: "white",
-    icon: "thumb_up",
-    message: "Welcome to your Dashboard",
-  });
+  if (useStore.getActive == "True") {
+    $router.replace("/main");
+    $q.loading.hide();
+    $q.notify({
+      color: "green-4",
+      textColor: "white",
+      icon: "thumb_up",
+      message: "Welcome to your Dashboard",
+    });
+  } else {
+    $q.notify({
+      color: "negative",
+      textColor: "white",
+      icon: "report_problem",
+      message: "You don't have access to this platform",
+    });
+  }
 
   // console.log(useStore.getUser_type);
   // console.log(useStore.getEmail);

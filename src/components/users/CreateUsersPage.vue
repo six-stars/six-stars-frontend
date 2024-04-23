@@ -323,7 +323,11 @@ const onSubmit = () => {
   // console.log(profile.first_name, 'first_name')
   // const formData = new FormData();
   // formData.append("first_name", profile.first_name);
-  // formData.append("last_name", profile.last_name);
+  const firstName = useStore.getFirst_name;
+  const lastName = useStore.getLast_name;
+  const _code = useStore.getCode;
+  formData.value.append("created_by", firstName + " " + lastName);
+  formData.value.append("code", _code);
   // formData.append("email", profile.email);
   console.log(formData.value, "formData");
   axios

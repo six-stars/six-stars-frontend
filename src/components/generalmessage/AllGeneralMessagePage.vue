@@ -168,8 +168,8 @@ const loadData = (pageNumber) => {
       data.value = response.data.data;
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
-      console.log(response.data.data.reverse(), "reversed!");
-      console.log(response.data.data, "not reversed!");
+      // console.log(response.data.data.reverse(), "reversed!");
+      // console.log(response.data.data, "not reversed!");
     })
     .catch(() => {
       $q.notify({

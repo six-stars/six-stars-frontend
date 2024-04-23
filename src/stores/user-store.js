@@ -11,6 +11,8 @@ export const useUserStore = defineStore("user", {
     token: null,
     user_id: null,
     phone_number: null,
+    active: null,
+    code: null,
   }),
   // persist: true, // Note that we are using a persisted state here
   getters: {
@@ -21,6 +23,8 @@ export const useUserStore = defineStore("user", {
     getToken: (state) => state.token,
     getUserId: (state) => state.user_id,
     getPhoneNumber: (state) => state.phone_number,
+    getActive: (state) => state.active,
+    getCode: (state) => state.code,
   },
   actions: {
     async getSanctumCookie() {
@@ -56,6 +60,8 @@ export const useUserStore = defineStore("user", {
       if (payload.token) this.token = payload.token;
       if (payload.user_id) this.user_id = payload.user_id;
       if (payload.phone_number) this.phone_number = payload.phone_number;
+      if (payload.active) this.active = payload.active;
+      if (payload.code) this.code = payload.code;
     },
 
     clearUser() {
@@ -66,6 +72,8 @@ export const useUserStore = defineStore("user", {
         (this.token = null),
         (this.user_id = null),
         (this.phone_number = null);
+      this.active = null;
+      this.code = null;
     },
 
     checkToken() {
@@ -91,6 +99,8 @@ export const useUserStore = defineStore("user", {
         (this.token = null),
         (this.user_id = null),
         (this.phone_number = null);
+      this.active = null;
+      this.code = null;
       // clearUser()
     },
   },

@@ -42,10 +42,27 @@
 
           <q-separator />
 
-          <!-- <q-card-actions align="right">
+          <q-card-actions align="right">
             <q-btn flat @click="popup1(user)">See Details</q-btn>
-          </q-card-actions> -->
+          </q-card-actions>
         </q-card>
+      </div>
+
+      <div class="text-right full-width q-pl-md">
+        <q-btn
+          v-if="pagination.page > 1"
+          rounded
+          color="secondary"
+          label="Previous Page"
+          @click="handlePreviousPage"
+        />
+        <q-btn
+          v-if="pageEnd == true"
+          rounded
+          color="primary"
+          label="Next Page"
+          @click="handleNextPage"
+        />
       </div>
 
       <div>
@@ -160,6 +177,26 @@
                   bg-color="primary"
                 />
                 <!-- avatar="https://cdn.quasar.dev/img/avatar5.jpg" -->
+                <q-chat-message
+                  name="Created By"
+                  :text="[selectedCustomerPopup1.created_by]"
+                  sent
+                  bg-color="amber-7"
+                />
+                <!-- avatar="https://cdn.quasar.dev/img/avatar5.jpg" -->
+                <q-chat-message
+                  name="Code"
+                  :text="[selectedCustomerPopup1.code]"
+                  text-color="white"
+                  bg-color="primary"
+                />
+                <!-- avatar="https://cdn.quasar.dev/img/avatar5.jpg" -->
+                <q-chat-message
+                  name="Active"
+                  :text="[selectedCustomerPopup1.active]"
+                  sent
+                  bg-color="amber-7"
+                />
               </div>
             </div>
 
@@ -201,6 +238,7 @@ const useStore = useUserStore();
 const selectedCustomer = reactive([]);
 const selectedCustomerPopup1 = ref({});
 const selectedCustomerPopup2 = ref({});
+const pageEnd = ref(false);
 
 function formatDate(date) {
   const dateObj = new Date(date);
@@ -242,7 +280,7 @@ function popup1(selectedCustomer) {
 }
 
 const pagination = ref({
-  sortBy: "userid", // Set default sort field
+  sortBy: "CreatedAt", // Set default sort field
   descending: false,
   page: 1,
   rowsPerPage: 10,
@@ -256,7 +294,8 @@ const loadData = (pageNumber) => {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data.reverse();
+      data.value = response.data.data;
+      pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })
     .catch(() => {
@@ -267,6 +306,25 @@ const loadData = (pageNumber) => {
         icon: "report_problem",
       });
     });
+};
+
+const handleTableRequest = (params) => {
+  pagination.value = { ...params.pagination, rowsPerPage: 10 }; // Ensure rowsPerPage is 10
+  fetchData(pagination.value.page);
+};
+
+const handlePreviousPage = () => {
+  if (pagination.value.page > 1) {
+    pagination.value.page--;
+    loadData(pagination.value.page);
+  }
+};
+
+const handleNextPage = () => {
+  if (pageEnd.value == true) {
+    pagination.value.page++;
+    loadData(pagination.value.page);
+  }
 };
 
 onMounted(() => {

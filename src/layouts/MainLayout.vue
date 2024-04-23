@@ -355,7 +355,7 @@ export default defineComponent({
     };
     const check3 = () => {
       userType.value = useStore.getUser_type;
-      if (userType.value == "Manager" || userType.value == "Front_Desk") {
+      if (userType.value == "Manager") {
         show1.value = true;
         show2.value = false;
         show3.value = true;

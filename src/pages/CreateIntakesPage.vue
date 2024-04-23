@@ -5186,7 +5186,7 @@ const loadPrice = () => {
   api
     .get(`/price/all/1`, { headers: { Authorization: `Bearer ${token}` } })
     .then((response) => {
-      lastPrice.value = response.data.data.reverse().shift();
+      lastPrice.value = response.data.data.shift();
       console.log(lastPrice.value, "last price");
       // const last_Price = allPrice.value.shift();
       // console.log(last_Price, "last_Price");
