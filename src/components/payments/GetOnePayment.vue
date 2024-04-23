@@ -26,7 +26,8 @@
             <!-- <div class="text-subtitle1">₦{{ data.final_amount }}</div> -->
             <div class="text-subtitle2">
               Collection Date:
-              {{ formatDate(data.collected_on) }}
+              {{ data.collected_on }}
+              <!-- {{ formatDate(data.collected_on) }} -->
             </div>
           </q-card-section>
 
@@ -40,7 +41,7 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 bg-white text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
@@ -102,14 +103,39 @@
                 <div class="text-h6">{{ data.paid }}</div>
               </div>
             </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-h6">{{ data.customer_collected }}</div>
+              </div>
+            </div>
           </q-card-section>
 
           <q-separator dark />
 
-          <q-card-actions align="right" v-show="show4">
-            <q-btn @click="onUpdate(data.intake_id)" flat
+          <q-card-actions class="q-pa-md" v-show="show4">
+            <!-- <q-btn @click="onUpdate(data.intake_id)" flat
               >Complete Payment</q-btn
-            >
+            > -->
+            <div class="row">
+              <div class="col-12 col-md-7 q-pl-md">
+                <q-input
+                  outlined
+                  v-model="customer_collected"
+                  label="Collected by?"
+                  style="width: 520px"
+                />
+              </div>
+              <div align="right" class="col-12 col-md-5 q-mt-sm">
+                <q-btn
+                  :disable="!customer_collected"
+                  color="primary"
+                  flat
+                  @click="onUpdate(data.intake_id)"
+                  >Complete Payment</q-btn
+                >
+              </div>
+            </div>
           </q-card-actions>
         </q-card>
       </div>
@@ -132,6 +158,7 @@ const $q = useQuasar();
 const data = ref([]);
 const intake_id = ref("");
 const show4 = ref(false);
+const customer_collected = ref("");
 
 const $router = useRouter();
 const useStore = useUserStore();
@@ -229,6 +256,8 @@ const onUpdate = (intakeID) => {
   const timeDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
   const formData = {
+    customer_collected:
+      "Collected by " + customer_collected.value + " on " + timeDate,
     paid:
       intakeID +
       " Payment Completed and logged in by " +

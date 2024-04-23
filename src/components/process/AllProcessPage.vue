@@ -47,6 +47,9 @@
           <q-td key="ready" :props="props">
             {{ props.row.ready }}
           </q-td>
+          <q-td key="customer_collected" :props="props">
+            {{ props.row.customer_collected }}
+          </q-td>
         </q-tr>
       </template>
       <template v-slot:top-right>
@@ -100,7 +103,7 @@
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Collected On</div>
                 <div class="text-h6">
-                  {{ formatDate(dataMore.collected_on) }}
+                  {{ dataMore.collected_on }}
                 </div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
@@ -146,6 +149,12 @@
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Ready?</div>
                 <div class="text-h6">{{ dataMore.ready }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-h6">{{ dataMore.customer_collected }}</div>
               </div>
             </div>
           </q-card-section>
@@ -235,9 +244,15 @@ const columns = [
   { name: "ironing_stage", label: "Ironing Stage", field: "ironing_stage" },
   { name: "packing_stage", label: "Packing Stage", field: "packing_stage" },
   { name: "ready", label: "Ready", field: "ready" },
+  {
+    name: "customer_collected",
+    label: "Customer Collected",
+    field: "customer_collected",
+  },
 ];
 
 const onRowClick = (row) => {
+  const user_type = useStore.getUser_type;
   show1.value = false;
   show2.value = false;
   show3.value = false;
@@ -254,7 +269,7 @@ const onRowClick = (row) => {
   if (dataMore.value.packing_stage == "") {
     show3.value = true;
   }
-  if (dataMore.value.ready == "") {
+  if ((dataMore.value.ready == "" && user_type == "Manager") || "Super_Admin") {
     show4.value = true;
   }
 };

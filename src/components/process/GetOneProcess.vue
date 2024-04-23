@@ -102,6 +102,12 @@
                 <div class="text-h6">{{ data4.ready }}</div>
               </div>
             </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-h6">{{ data4.customer_collected }}</div>
+              </div>
+            </div>
           </q-card-section>
 
           <q-separator dark />

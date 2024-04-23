@@ -59,11 +59,11 @@
 
           <q-separator dark />
 
-          <q-card-actions align="right" v-show="show4">
+          <!-- <q-card-actions align="right" v-show="show4">
             <q-btn @click="onUpdate(data.intake_id)" flat
               >Complete Payment</q-btn
             >
-          </q-card-actions>
+          </q-card-actions> -->
         </q-card>
       </div>
     </div>

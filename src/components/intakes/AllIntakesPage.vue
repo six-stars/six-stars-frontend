@@ -592,6 +592,9 @@
           <q-td key="final_amount" :props="props">
             {{ props.row.final_amount }}
           </q-td>
+          <q-td key="customer_collected" :props="props">
+            {{ props.row.customer_collected }}
+          </q-td>
         </q-tr>
       </template>
       <template v-slot:top-right>
@@ -1282,6 +1285,11 @@ const columns = [
   { name: "deposit", label: "Deposit", field: "deposit" },
   { name: "balance", label: "Balance", field: "balance" },
   { name: "final_amount", label: "Final Amount", field: "final_amount" },
+  {
+    name: "customer_collected",
+    label: "Customer Collected",
+    field: "customer_collected",
+  },
 ];
 
 const onRowClick = (row) => {

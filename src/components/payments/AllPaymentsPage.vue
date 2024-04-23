@@ -53,6 +53,9 @@
           <q-td key="paid" :props="props">
             {{ props.row.paid }}
           </q-td>
+          <q-td key="customer_collected" :props="props">
+            {{ props.row.customer_collected }}
+          </q-td>
         </q-tr>
       </template>
       <template v-slot:top-right>
@@ -161,14 +164,36 @@
                 <div class="text-h6">{{ dataMore.paid }}</div>
               </div>
             </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-h6">{{ dataMore.customer_collected }}</div>
+              </div>
+            </div>
           </q-card-section>
 
           <q-separator dark />
 
-          <q-card-actions align="right" v-show="show4">
-            <q-btn color="primary" @click="onUpdate(dataMore.intake_id)" flat
-              >Complete Payment</q-btn
-            >
+          <q-card-actions class="q-pa-md" v-show="show4">
+            <div class="row">
+              <div class="col-12 col-md-7 q-pl-md">
+                <q-input
+                  outlined
+                  v-model="customer_collected"
+                  label="Collected by?"
+                  style="width: 520px"
+                />
+              </div>
+              <div align="right" class="col-12 col-md-5 q-mt-sm">
+                <q-btn
+                  :disable="!customer_collected"
+                  color="primary"
+                  flat
+                  @click="onUpdate(dataMore.intake_id)"
+                  >Complete Payment</q-btn
+                >
+              </div>
+            </div>
           </q-card-actions>
         </q-card>
       </div>
@@ -194,6 +219,7 @@ const dataMore = ref([]);
 const moreDetails = ref(false);
 const show4 = ref(false);
 const pageEnd = ref(false);
+const customer_collected = ref("");
 
 const columns = [
   { name: "collected_on", label: "Collected On", field: "collected_on" },
@@ -212,6 +238,11 @@ const columns = [
   { name: "balance", label: "Balance", field: "balance" },
   { name: "total_amount", label: "Total Amount", field: "total_amount" },
   { name: "paid", label: "Paid", field: "paid" },
+  {
+    name: "customer_collected",
+    label: "Customer Collected",
+    field: "customer_collected",
+  },
 ];
 
 const onRowClick = (row) => {
@@ -290,6 +321,8 @@ const onUpdate = (intakeID) => {
   const timeDate = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
   const formData = {
+    customer_collected:
+      "Collected by " + customer_collected.value + " on " + timeDate,
     paid:
       intakeID +
       " Payment Completed and logged in by " +
