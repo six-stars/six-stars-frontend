@@ -72,18 +72,18 @@
         </q-item>
         <q-item class="q-pt-xl q-ml-sm" to="/process" clickable v-show="show2">
           <q-item-section avatar>
-            <q-avatar icon="fas fa-sync-alt" class="bg-white text-teal" />
+            <q-avatar icon="fas fa-sync-alt" class="bg-white text-primary" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="bg-white text-teal">Process</q-item-label>
+            <q-item-label class="bg-white text-primary">Process</q-item-label>
           </q-item-section>
         </q-item>
         <q-item class="q-pt-xl q-ml-sm" to="/message" clickable v-show="show3">
           <q-item-section avatar>
-            <q-avatar icon="inbox" class="bg-white text-teal" />
+            <q-avatar icon="inbox" class="bg-white text-primary" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="bg-white text-teal">Messages</q-item-label>
+            <q-item-label class="bg-white text-primary">Messages</q-item-label>
           </q-item-section>
         </q-item>
         <q-item
@@ -93,10 +93,10 @@
           v-show="show"
         >
           <q-item-section avatar>
-            <q-avatar icon="inbox" class="bg-white text-teal" />
+            <q-avatar icon="inbox" class="bg-white text-primary" />
           </q-item-section>
           <q-item-section>
-            <q-item-label class="bg-white text-teal"
+            <q-item-label class="bg-white text-primary"
               >General Messages</q-item-label
             >
           </q-item-section>
@@ -131,7 +131,7 @@
             external-label
             label-position="left"
             label="Logout"
-            color="blue"
+            color="red"
             icon="logout"
             to=""
             @click="logOut"
@@ -161,7 +161,7 @@
             external-label
             label-position="left"
             label="Messages"
-            color="teal"
+            color="primary"
             icon="inbox"
             to="/message"
             clickable
@@ -172,7 +172,7 @@
             external-label
             label-position="left"
             label="General Messages"
-            color="teal"
+            color="primary"
             icon="inbox"
             to="/general_message"
             clickable

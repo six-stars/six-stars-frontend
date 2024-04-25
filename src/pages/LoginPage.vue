@@ -102,13 +102,18 @@
                         <!-- <q-btn label="Reset" type="reset" color="primary" flat class="q-ml-sm" /> -->
                       </div>
                     </q-form>
-                    <!-- <div class="text-right q-pa-sm">
-                      <q-btn class="text-primary" @click="resetPassword = true" no-caps flat dense>
+                    <div class="text-right q-pa-sm">
+                      <q-btn
+                        class="text-primary"
+                        @click="resetPassword = true"
+                        no-caps
+                        flat
+                        dense
+                      >
                         Reset Password
                       </q-btn>
-
                     </div>
-                    <div class="text-primary q-pa-sm text-center">
+                    <!-- <div class="text-primary q-pa-sm text-center">
                       Don't have an account yet?
                       <router-link class="text-primary" to="/signup" style="text-decoration: none">
                         Sign up
@@ -129,15 +134,15 @@
                   <q-btn icon="close" flat round dense v-close-popup />
                 </q-card-section>
                 <q-card-section>
-                  <q-form @submit.prevent="postReset">
+                  <q-form @submit.prevent="postReset" @reset="on_Reset">
                     <div class="row text-center">
                       <div class="col-12">
                         <q-input
-                          type="email"
+                          type="number"
                           bottom-slots
-                          v-model="resetEmail"
-                          label="Email"
-                          hint="Your email address"
+                          v-model="phone"
+                          label="Phone"
+                          hint="Hint: format -  2349182746538, don't add '+'"
                           lazy-rules
                           :rules="[
                             (val) =>
@@ -146,15 +151,12 @@
                           ]"
                         >
                           <template v-slot:prepend>
-                            <q-icon name="fa-light fa-at" />
+                            <q-icon name="call" />
                           </template>
                         </q-input>
                       </div>
                       <div class="col-12 q-mt-md">
-                        <q-btn
-                          :loading="isloading"
-                          class="bg-primary text-white"
-                          type="submit"
+                        <q-btn class="bg-primary text-white" type="submit"
                           >Submit</q-btn
                         >
                       </div>
@@ -165,7 +167,6 @@
             </q-dialog>
           </div>
         </div>
-        <!-- </q-img> -->
       </div>
     </div>
   </div>
@@ -175,7 +176,7 @@
 import { useQuasar } from "quasar";
 import { ref, computed } from "vue";
 import { axios, api, base } from "boot/axios";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import { useUserStore } from "../stores/user-store";
 // import { useStore } from 'vuex'
 // import store from '../store/index.js'
@@ -188,7 +189,9 @@ const $q = useQuasar();
 const useStore = useUserStore();
 
 const email = ref("");
+const phone = ref("");
 const password = ref("");
+const confirm_password = ref("");
 const isloading = ref(false);
 const resetPassword = ref(false);
 
@@ -200,6 +203,7 @@ const itemsLength = computed(() => {
 });
 
 const $router = useRouter();
+const $route = useRoute();
 const onSubmit = async () => {
   $q.loading.show({
     message: "Please wait...",
@@ -217,7 +221,6 @@ const onSubmit = async () => {
   // routing to the dashboard
   if (useStore.getActive == "True") {
     $router.replace("/main");
-    $q.loading.hide();
     $q.notify({
       color: "green-4",
       textColor: "white",
@@ -232,6 +235,7 @@ const onSubmit = async () => {
       message: "You don't have access to this platform",
     });
   }
+  $q.loading.hide();
 
   // console.log(useStore.getUser_type);
   // console.log(useStore.getEmail);
@@ -279,11 +283,11 @@ const postReset = () => {
     boxClass: "bg-grey-2 text-grey-9",
     spinnerColor: "primary",
   });
-  const formData = {
-    email: resetEmail.value,
-  };
-  axios
-    .post(`${base}/auth/password/reset/`, formData)
+  // const formData = {
+  //   email: resetEmail.value,
+  // };
+  api
+    .patch(`${base}/users/phone/otp/${phone.value}`)
     .then((response) => {
       resetResponds.value = response.data;
       console.log(resetResponds.value, "resetResponds");
@@ -292,12 +296,16 @@ const postReset = () => {
         color: "green-4",
         textColor: "white",
         icon: "thumb_up",
-        message: "Password reset e-mail has been sent.",
+        message: "Password reset message has been sent.",
       });
       resetPassword.value = false;
+      $router.push({
+        name: "ResetPasswordPage",
+        params: { phone: phone.value },
+      });
     })
     .catch((error) => {
-      // console.log(error);
+      console.log(error, "error");
       $q.loading.hide();
       $q.notify({
         color: "negative",
@@ -311,6 +319,10 @@ const postReset = () => {
 const onReset = () => {
   email.value = null;
   password.value = null;
+};
+
+const on_Reset = () => {
+  phone.value = null;
 };
 </script>
 

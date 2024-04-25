@@ -269,7 +269,10 @@ const onRowClick = (row) => {
   if (dataMore.value.packing_stage == "") {
     show3.value = true;
   }
-  if ((dataMore.value.ready == "" && user_type == "Manager") || "Super_Admin") {
+  if (
+    (dataMore.value.ready == "" && user_type == "Manager") ||
+    (dataMore.value.ready == "" && user_type == "Super_Admin")
+  ) {
     show4.value = true;
   }
 };

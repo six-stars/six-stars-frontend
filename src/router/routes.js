@@ -11,6 +11,7 @@ import CustomerPages from "src/pages/CustomerPages.vue";
 import PricePages from "src/pages/PricePages.vue";
 import ResendMessagePage from "src/pages/ResendMessagePage.vue";
 import GeneralMessagePage from "src/pages/GeneralMessagePage.vue";
+import ResetPasswordPage from "src/pages/ResetPasswordPage.vue";
 import AdminPages from "src/pages/AdminPages.vue";
 
 const routes = [
@@ -88,6 +89,11 @@ const routes = [
     path: "/",
     name: "Login",
     component: LoginPage,
+  },
+  {
+    path: "/resetpassword/:phone",
+    name: "ResetPasswordPage",
+    component: ResetPasswordPage,
   },
   // {
   //   // path: '/reset',
