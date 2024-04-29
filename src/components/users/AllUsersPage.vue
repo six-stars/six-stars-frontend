@@ -314,17 +314,29 @@ const handleTableRequest = (params) => {
 };
 
 const handlePreviousPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pagination.value.page > 1) {
     pagination.value.page--;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 const handleNextPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pageEnd.value == true) {
     pagination.value.page++;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 onMounted(() => {

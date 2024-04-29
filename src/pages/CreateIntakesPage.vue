@@ -4,9 +4,2927 @@
     <!-- <q-separator /> -->
     <div class="q-pt-sm" v-show="main">
       <q-separator />
-      <div class="row">
+      <div class="row lt-md">
+        <!-- <q-scroll-area :style="{ height: '100vh' }"> -->
+        <div>
+          <!-- <q-form @submit="onSubmit" @reset="onReset"> -->
+          <!-- <p class="text-h6">Customer Name: </p> -->
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Native 2 Pcs
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_native_2_pcs }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_native_2_pcs"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_native_2_pcs =
+                    lastPrice.male_native_2_pcs * male_native_2_pcs)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Native 2 Pcs [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_native_2_pcs_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_native_2_pcs_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_native_2_pcs_hanging =
+                    lastPrice.male_native_2_pcs_hanging *
+                    male_native_2_pcs_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Native 3 Pcs (Not Agbada)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_native_3_pcs_notAgbada }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_native_3_pcs_notAgbada"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_native_3_pcs_notAgbada =
+                    lastPrice.male_native_3_pcs_notAgbada *
+                    male_native_3_pcs_notAgbada)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Native 3 Pcs (Not Agbada) [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_native_3_pcs_notAgbada_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_native_3_pcs_notAgbada_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_native_3_pcs_notAgbada_hanging =
+                    lastPrice.male_native_3_pcs_notAgbada_hanging *
+                    male_native_3_pcs_notAgbada_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Native Top Only
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.native_top_only }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="native_top_only"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_native_top_only =
+                    lastPrice.native_top_only * native_top_only)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Native Trouser Only
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.native_trouser_only }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="native_trouser_only"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_native_trouser_only =
+                    lastPrice.native_trouser_only * native_trouser_only)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Complete Male Agbada
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.complete_male_agbada }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="complete_male_agbada"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_complete_male_agbada =
+                    lastPrice.complete_male_agbada * complete_male_agbada)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Agbada Alone
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_agbada_alone }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_agbada_alone"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_agbada_alone =
+                    lastPrice.male_agbada_alone * male_agbada_alone)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Blouse
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.blouse }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="blouse"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_blouse = lastPrice.blouse * blouse) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Blouse [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.blouse_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="blouse_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_blouse_hanging =
+                    lastPrice.blouse_hanging * blouse_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Shirt
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.female_shirt }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_shirt"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_shirt = lastPrice.female_shirt * female_shirt)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Shirt [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_shirt_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_shirt_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_shirt_hanging =
+                    lastPrice.female_shirt_hanging * female_shirt_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Trouser/Jean
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_trouser_jeans }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_trouser_jeans"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_trouser_jeans =
+                    lastPrice.female_trouser_jeans * female_trouser_jeans)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Trouser/Jean [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_trouser_jeans_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_trouser_jeans_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_trouser_jeans_hanging =
+                    lastPrice.female_trouser_jeans_hanging *
+                    female_trouser_jeans_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Skirt & Blouse English
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.skirt_and_blouse_english }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="skirt_and_blouse_english"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_skirt_and_blouse_english =
+                    lastPrice.skirt_and_blouse_english *
+                    skirt_and_blouse_english)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Skirt & Blouse English [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.skirt_and_blouse_english_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="skirt_and_blouse_english_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_skirt_and_blouse_english_hanging =
+                    lastPrice.skirt_and_blouse_english_hanging *
+                    skirt_and_blouse_english_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Wrapper, Buba & Gele or Without Gele
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.wrapper_buba_gele }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="wrapper_buba_gele"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_wrapper_buba_gele =
+                    lastPrice.wrapper_buba_gele * wrapper_buba_gele)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Native Buba & Trouser
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_native_buba_trouser }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_native_buba_trouser"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_native_buba_trouser =
+                    lastPrice.female_native_buba_trouser *
+                    female_native_buba_trouser)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Gown English [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.gown_english_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="gown_english_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_gown_english_hanging =
+                    lastPrice.gown_english_hanging * gown_english_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Gown Native
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.gown_native }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="gown_native"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_gown_native = lastPrice.gown_native * gown_native) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Skirt & Blouse Native
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.skirt_and_blouse_native }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="skirt_and_blouse_native"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_skirt_and_blouse_native =
+                    lastPrice.skirt_and_blouse_native * skirt_and_blouse_native)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Aso-Oke Wrapper, Buba & Gele
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.aso_oke_wrapper_buba_gele }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="aso_oke_wrapper_buba_gele"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_aso_oke_wrapper_buba_gele =
+                    lastPrice.aso_oke_wrapper_buba_gele *
+                    aso_oke_wrapper_buba_gele)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Complete Aso-Oke
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_complete_aso_oke }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_complete_aso_oke"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_complete_aso_oke =
+                    lastPrice.male_complete_aso_oke * male_complete_aso_oke)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                T-Shirt/Polo (Medium)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_medium_t_shirt_or_polo }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_medium_t_shirt_or_polo"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_medium_t_shirt_or_polo =
+                    lastPrice.male_medium_t_shirt_or_polo *
+                    male_medium_t_shirt_or_polo)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                T-Shirt/Polo (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_big_t_shirt_or_polo }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_big_t_shirt_or_polo"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_big_t_shirt_or_polo =
+                    lastPrice.male_big_t_shirt_or_polo *
+                    male_big_t_shirt_or_polo)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                T-Shirt/Polo [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_t_shirt_or_polo_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_t_shirt_or_polo_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_t_shirt_or_polo_hanging =
+                    lastPrice.male_t_shirt_or_polo_hanging *
+                    male_t_shirt_or_polo_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shirt (Normal)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.shirt_normal }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shirt_normal"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_shirt_normal = lastPrice.shirt_normal * shirt_normal)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shirt (Normal) [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.shirt_normal_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shirt_normal_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_shirt_normal_hanging =
+                    lastPrice.shirt_normal_hanging * shirt_normal_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shirt (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.shirt_big }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shirt_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_shirt_big = lastPrice.shirt_big * shirt_big) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shirt (Big) [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.shirt_big_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shirt_big_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_shirt_big_hanging =
+                    lastPrice.shirt_big_hanging * shirt_big_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Plain Trouser
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.plain_trouser }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="plain_trouser"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_plain_trouser =
+                    lastPrice.plain_trouser * plain_trouser)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Plain Trouser [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.plain_trouser_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="plain_trouser_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_plain_trouser_hanging =
+                    lastPrice.plain_trouser_hanging * plain_trouser_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Jeans/Chinos Trouser
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.jeans_chinos_trouser }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="jeans_chinos_trouser"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_jeans_chinos_trouser =
+                    lastPrice.jeans_chinos_trouser * jeans_chinos_trouser)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Jeans/Chinos Trouser [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.jeans_chinos_trouser_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="jeans_chinos_trouser_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_jeans_chinos_trouser_hanging =
+                    lastPrice.jeans_chinos_trouser_hanging *
+                    jeans_chinos_trouser_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Waist Coat [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.waist_coat_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="waist_coat_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_waist_coat_hanging =
+                    lastPrice.waist_coat_hanging * waist_coat_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Tie
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.tie }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="tie"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_tie = lastPrice.tie * tie) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shorts
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.shorts }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shorts"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_shorts = lastPrice.shorts * shorts) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Shorts [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.shorts_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="shorts_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_shorts_hanging =
+                    lastPrice.shorts_hanging * shorts_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Singlet
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.singlet }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="singlet"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_singlet = lastPrice.singlet * singlet) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Boxer
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.boxer }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="boxer"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_boxer = lastPrice.boxer * boxer) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Two Pcs Suit [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_two_pcs_suit_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_two_pcs_suit_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_two_pcs_suit_hanging =
+                    lastPrice.male_two_pcs_suit_hanging *
+                    male_two_pcs_suit_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Three Pcs Suit [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_three_pcs_suit_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_three_pcs_suit_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_three_pcs_suit_hanging =
+                    lastPrice.male_three_pcs_suit_hanging *
+                    male_three_pcs_suit_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Two Pcs Suit [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_two_pcs_suit_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_two_pcs_suit_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_two_pcs_suit_hanging =
+                    lastPrice.female_two_pcs_suit_hanging *
+                    female_two_pcs_suit_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Three Pcs Suit [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_three_pcs_suit_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_three_pcs_suit_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_three_pcs_suit_hanging =
+                    lastPrice.female_three_pcs_suit_hanging *
+                    female_three_pcs_suit_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Male Jacket [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.male_jacket_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="male_jacket_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_male_jacket_hanging =
+                    lastPrice.male_jacket_hanging * male_jacket_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Jacket [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_jacket_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_jacket_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_jacket_hanging =
+                    lastPrice.female_jacket_hanging * female_jacket_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Jalamia
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.jalamia }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="jalamia"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_jalamia = lastPrice.jalamia * jalamia) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Camisole
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.camisole }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="camisole"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_camisole = lastPrice.camisole * camisole) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Wrapper Only
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.wrapper_only }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="wrapper_only"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_wrapper_only = lastPrice.wrapper_only * wrapper_only)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Female Inner Wear
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.female_inner_wear }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="female_inner_wear"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_female_inner_wear =
+                    lastPrice.female_inner_wear * female_inner_wear)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Normal Head Tie/Gele
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.head_tie_gele }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="head_tie_gele"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_head_tie_gele =
+                    lastPrice.head_tie_gele * head_tie_gele)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Small Wedding Gown [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.small_wedding_gown_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="small_wedding_gown_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_small_wedding_gown_hanging =
+                    lastPrice.small_wedding_gown_hanging *
+                    small_wedding_gown_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Big Wedding Gown [Hanging]
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.big_wedding_gown_hanging }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="big_wedding_gown_hanging"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_big_wedding_gown_hanging =
+                    lastPrice.big_wedding_gown_hanging *
+                    big_wedding_gown_hanging)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Aso-Oke Head Tie/Gele
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.asooke_head_tie }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="asooke_head_tie"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_asooke_head_tie =
+                    lastPrice.asooke_head_tie * asooke_head_tie)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Sweater (Normal)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.sweater_normal }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="sweater_normal"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_sweater_normal =
+                    lastPrice.sweater_normal * sweater_normal)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Sweater (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.sweater_big }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="sweater_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_sweater_big = lastPrice.sweater_big * sweater_big) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Towel (Normal)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.towel_normal }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="towel_normal"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_towel_normal = lastPrice.towel_normal * towel_normal)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Towel (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.towel_big }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="towel_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_towel_big = lastPrice.towel_big * towel_big) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Bed Spread (Normal)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.bed_spread_normal }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="bed_spread_normal"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_bed_spread_normal =
+                    lastPrice.bed_spread_normal * bed_spread_normal)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Bed Spread (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.bed_spread_big }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="bed_spread_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_bed_spread_big =
+                    lastPrice.bed_spread_big * bed_spread_big)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Duvet
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.duvet }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="duvet"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦ {{ (total_duvet = lastPrice.duvet * duvet) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Curtain (Normal)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.curtain_normal }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="curtain_normal"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_curtain_normal =
+                    lastPrice.curtain_normal * curtain_normal)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Curtain (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.curtain_big }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="curtain_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_curtain_big = lastPrice.curtain_big * curtain_big) }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Curtain (Very Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Price: {{ lastPrice.curtain_very_big }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="curtain_very_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_curtain_very_big =
+                    lastPrice.curtain_very_big * curtain_very_big)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Pyjamas (Small)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.pyjamas_small }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="pyjamas_small"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{
+                  (total_pyjamas_small =
+                    lastPrice.pyjamas_small * pyjamas_small)
+                }}
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-lg">
+            <div class="col-12 col-md-2 q-pl-md">
+              <p
+                class="text-h6 bg-primary q-pa-sm"
+                style="border-radius: 15%; color: white"
+              >
+                Pyjamas (Big)
+              </p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">Price: {{ lastPrice.pyjamas_big }}</p>
+              <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <q-slider
+                v-model="pyjamas_big"
+                color="teal"
+                thumb-color="black"
+                label-color="black"
+                label-text-color="white"
+                markers
+                switch-marker-labels-side
+                label-always
+                switch-label-side
+                :min="0"
+                :max="20"
+              />
+            </div>
+            <div class="col-12 col-md-2 q-pl-md">
+              <p class="text-subtitle1">
+                Total: ₦
+                {{ (total_pyjamas_big = lastPrice.pyjamas_big * pyjamas_big) }}
+              </p>
+            </div>
+          </div>
+          <div class="">
+            <q-separator />
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <p class="text-subtitle1 text-center">Comment:</p>
+                <q-input
+                  required
+                  class=""
+                  v-model="comment_section"
+                  outlined
+                  type="textarea"
+                  hint=""
+                />
+              </div>
+            </div>
+            <q-separator />
+            <div class="row q-pt-sm q-pb-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <p class="text-subtitle1 text-center">Collection Date:</p>
+                <q-input
+                  required
+                  class=""
+                  v-model="collection_date"
+                  :min="today"
+                  outlined
+                  type="date"
+                />
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <p class="text-subtitle1 text-center">Discount:</p>
+                <q-input class="" v-model="discount" outlined type="number" />
+              </div>
+            </div>
+            <q-separator />
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <p class="text-subtitle1 text-center">Deposit:</p>
+                <q-input
+                  required
+                  class=""
+                  v-model="deposit"
+                  outlined
+                  type="number"
+                  hint=""
+                />
+              </div>
+            </div>
+            <q-separator />
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-12 q-pl-md">
+                <p class="text-subtitle1 text-center">Deposit Type:</p>
+                <q-select
+                  outlined
+                  v-model="deposit_type"
+                  :options="optionsDepositType"
+                  hint="POS, Cash etc"
+                />
+              </div>
+            </div>
+            <q-separator />
+            <div class="row q-pt-sm">
+              <div class="text-center full-width q-pl-md">
+                <p class="text-h6">
+                  Final Total: ₦
+                  {{
+                    (total_final_amount =
+                      total_male_native_2_pcs +
+                      total_male_native_2_pcs_hanging +
+                      total_complete_male_agbada +
+                      total_native_trouser_only +
+                      total_native_top_only +
+                      total_male_native_3_pcs_notAgbada_hanging +
+                      total_male_native_3_pcs_notAgbada +
+                      total_female_jacket_hanging +
+                      total_male_agbada_alone +
+                      total_blouse +
+                      total_blouse_hanging +
+                      total_female_shirt +
+                      total_pyjamas_small +
+                      total_pyjamas_big +
+                      total_duvet +
+                      total_towel_big +
+                      total_sweater_big +
+                      total_boxer +
+                      total_skirt_and_blouse_english +
+                      total_female_trouser_jeans_hanging +
+                      total_female_trouser_jeans +
+                      total_female_shirt_hanging +
+                      total_curtain_normal +
+                      total_curtain_big +
+                      total_curtain_very_big +
+                      total_skirt_and_blouse_english_hanging +
+                      total_wrapper_buba_gele +
+                      total_female_native_buba_trouser +
+                      total_gown_english_hanging +
+                      total_gown_native +
+                      total_bed_spread_normal +
+                      total_bed_spread_big +
+                      total_skirt_and_blouse_native +
+                      total_aso_oke_wrapper_buba_gele +
+                      total_male_complete_aso_oke +
+                      total_male_medium_t_shirt_or_polo +
+                      total_male_big_t_shirt_or_polo +
+                      total_towel_normal +
+                      total_male_t_shirt_or_polo_hanging +
+                      total_shirt_normal +
+                      total_shirt_normal_hanging +
+                      total_shirt_big +
+                      total_shirt_big_hanging +
+                      total_plain_trouser +
+                      total_plain_trouser_hanging +
+                      total_jeans_chinos_trouser +
+                      total_jeans_chinos_trouser_hanging +
+                      total_waist_coat_hanging +
+                      total_tie +
+                      total_shorts +
+                      total_shorts_hanging +
+                      total_singlet +
+                      total_sweater_normal +
+                      total_male_three_pcs_suit_hanging +
+                      total_female_two_pcs_suit_hanging +
+                      total_male_two_pcs_suit_hanging +
+                      total_female_three_pcs_suit_hanging +
+                      total_male_jacket_hanging +
+                      total_asooke_head_tie +
+                      total_jalamia +
+                      total_camisole +
+                      total_wrapper_only +
+                      total_female_inner_wear +
+                      total_head_tie_gele +
+                      total_small_wedding_gown_hanging +
+                      total_big_wedding_gown_hanging)
+                  }}
+                </p>
+              </div>
+            </div>
+
+            <div class="row q-pt-md q-pb-md">
+              <div class="text-center full-width q-pl-md">
+                <q-btn
+                  :disabled="!collection_date"
+                  @click="continue_"
+                  label="Continue"
+                  type="submit"
+                  color="primary"
+                />
+                <!-- style="width: 260px" -->
+              </div>
+            </div>
+          </div>
+          <!-- </q-form> -->
+        </div>
+        <!-- </q-scroll-area> -->
+      </div>
+      <div class="row gt-sm">
         <div class="col-9">
-          <q-scroll-area :style="{ height: '650px' }">
+          <q-scroll-area :style="{ height: '100vh' }">
             <div>
               <!-- <q-form @submit="onSubmit" @reset="onReset"> -->
               <!-- <p class="text-h6">Customer Name: </p> -->
@@ -1664,7 +4582,8 @@
                 </div>
                 <div class="col-12 col-md-2 q-pl-md">
                   <p class="text-subtitle1">
-                    Total: ₦ {{ (total_singlet = lastPrice.singlet * singlet) }}
+                    Total: ₦
+                    {{ (total_singlet = lastPrice.singlet * singlet) }}
                   </p>
                   <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
                 </div>
@@ -2000,7 +4919,8 @@
                 </div>
                 <div class="col-12 col-md-2 q-pl-md">
                   <p class="text-subtitle1">
-                    Total: ₦ {{ (total_jalamia = lastPrice.jalamia * jalamia) }}
+                    Total: ₦
+                    {{ (total_jalamia = lastPrice.jalamia * jalamia) }}
                   </p>
                   <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
                 </div>
@@ -2802,76 +5722,14 @@
                       (total_pyjamas_big = lastPrice.pyjamas_big * pyjamas_big)
                     }}
                   </p>
-                  <!-- <q-checkbox size="lg" left-label v-model="left" label="Next Label on Left" /> -->
                 </div>
               </div>
-              <!-- <q-separator /> -->
-              <!-- <div class="row q-pt-xl">
-                <div class="col-12 col-md-6 q-pl-md">
-                  <p class="text-h6">Collected Date: </p>
-                  <q-input required class="" v-model="collected_on_date" :min="today" :max="today" outlined type="date" />
-                </div>
-                <div class="col-12 col-md-6 q-pl-md">
-                  <p class="text-h6">Collected Time: </p>
-                  <q-input required class="" v-model="collected_on_time" outlined type="time" />
-                </div>
-              </div>
-              <q-separator />
-              <div class="row q-pt-xl">
-                <div class="col-12 col-md-2 q-pl-md">
-                  <p class="text-h6">Collection Date: </p>
-                </div>
-                <div class="col-12 col-md-10 q-pl-md">
-                  <q-input required class="" v-model="collection_date"  :min="today" outlined type="date" />
-                </div>
-              </div>
-              <q-separator />
-              <div class="row q-pt-xl">
-                <div class="col-12 col-md-2 q-pl-md">
-                  <p class="text-h6">Comment: </p>
-                </div>
-                <div class="col-12 col-md-10 q-pl-md">
-                  <q-input required class="" v-model="comment_section" outlined type="textarea" hint="" />
-                </div>
-              </div>
-              <q-separator />
-              <div class="row q-pt-xl">
-                <div class="col-12 col-md-2 q-pl-md">
-                  <p class="text-h6">Deposit: </p>
-                </div>
-                <div class="col-12 col-md-10 q-pl-md">
-                  <q-input required class="" v-model="deposit" outlined type="text" hint="" />
-                </div>
-              </div>
-              <q-separator />
-              <div class="row q-pt-xl">
-                <div class="text-center full-width q-pl-md">
-                  <p class="text-h4">Final Total: ₦ {{ total_final_amount = total_male_native_2_pcs + total_male_native_2_pcs_hanging +
-                    total_complete_male_agbada + total_native_trouser_only + total_native_top_only + total_male_native_3_pcs_notAgbada_hanging + total_male_native_3_pcs_notAgbada + total_female_jacket_hanging +
-                    total_male_agbada_alone + total_blouse + total_blouse_hanging + total_female_shirt + total_pyjamas_small + total_pyjamas_big + total_duvet + total_towel_big + total_sweater_big + total_boxer +
-                    total_skirt_and_blouse_english + total_female_trouser_jeans_hanging + total_female_trouser_jeans + total_female_shirt_hanging + total_curtain_normal + total_curtain_big + total_curtain_very_big +
-                    total_skirt_and_blouse_english_hanging + total_wrapper_buba_gele + total_female_native_buba_trouser + total_gown_english_hanging + total_gown_native + total_bed_spread_normal + total_bed_spread_big +
-                    total_skirt_and_blouse_native + total_aso_oke_wrapper_buba_gele + total_male_complete_aso_oke + total_male_medium_t_shirt_or_polo + total_male_big_t_shirt_or_polo + total_towel_normal +
-                    total_male_t_shirt_or_polo_hanging + total_shirt_normal + total_shirt_normal_hanging + total_shirt_big + total_shirt_big_hanging + total_plain_trouser + total_plain_trouser_hanging +
-                    total_jeans_chinos_trouser + total_jeans_chinos_trouser_hanging + total_waist_coat_hanging + total_tie + total_shorts + total_shorts_hanging + total_singlet + total_sweater_normal  +
-                    total_male_three_pcs_suit_hanging + total_female_two_pcs_suit_hanging + total_male_two_pcs_suit_hanging + total_female_three_pcs_suit_hanging + total_male_jacket_hanging + total_asooke_head_tie +
-                    total_jalamia + total_camisole + total_wrapper_only + total_female_inner_wear + total_head_tie_gele + total_small_wedding_gown_hanging + total_big_wedding_gown_hanging }}</p>
-                </div>
-              </div>
-
-              <div class="row q-pt-lg q-pb-xl">
-                <div class="text-center full-width q-pl-md">
-                  <q-btn @click="onSubmit" label="Submit Intake" type="submit" color="primary" style="width: 260px" />
-                </div>
-              </div> -->
               <!-- </q-form> -->
             </div>
           </q-scroll-area>
         </div>
         <div class="col-3">
           <div class="row q-pt-sm">
-            <!-- <div class="col-12 col-md-2 q-pl-md">
-            </div> -->
             <div class="col-12 col-md-12 q-pl-md">
               <p class="text-subtitle1 text-center">Comment:</p>
               <q-input
@@ -2885,30 +5743,6 @@
             </div>
           </div>
           <q-separator />
-          <!-- <div class="row q-pt-sm">
-            <div class="col-12 col-md-6 q-pl-md">
-              <p class="text-subtitle1">Collected Date:</p>
-              <q-input
-                required
-                class=""
-                v-model="collected_on_date"
-                :min="today"
-                :max="today"
-                outlined
-                type="date"
-              />
-            </div>
-            <div class="col-12 col-md-6 q-pl-md">
-              <p class="text-subtitle1">Collected Time:</p>
-              <q-input
-                required
-                class=""
-                v-model="collected_on_time"
-                outlined
-                type="time"
-              />
-            </div>
-          </div> -->
           <div class="row q-pt-sm q-pb-sm">
             <div class="col-12 col-md-6 q-pl-md">
               <p class="text-subtitle1 text-center">Collection Date:</p>
@@ -2926,29 +5760,8 @@
               <q-input class="" v-model="discount" outlined type="number" />
             </div>
           </div>
-          <!-- <div class="row q-pt-sm">
-            <div class="col-12 col-md-12 q-pl-md">
-              <p class="text-subtitle1 text-center">Collection Date:</p>
-              <q-input
-                required
-                class=""
-                v-model="collection_date"
-                :min="today"
-                outlined
-                type="date"
-              />
-            </div>
-          </div>
-          <div class="row q-pt-sm">
-            <div class="col-12 col-md-12 q-pl-md">
-              <p class="text-subtitle1 text-center">Discount:</p>
-              <q-input class="" v-model="discount" outlined type="number" />
-            </div>
-          </div> -->
           <q-separator />
           <div class="row q-pt-sm">
-            <!-- <div class="col-12 col-md-2 q-pl-md">
-            </div> -->
             <div class="col-12 col-md-12 q-pl-md">
               <p class="text-subtitle1 text-center">Deposit:</p>
               <q-input
@@ -2958,6 +5771,18 @@
                 outlined
                 type="number"
                 hint=""
+              />
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-sm">
+            <div class="col-12 col-md-12 q-pl-md">
+              <p class="text-subtitle1 text-center">Deposit Type:</p>
+              <q-select
+                outlined
+                v-model="deposit_type"
+                :options="optionsDepositType"
+                hint="POS, Cash etc"
               />
             </div>
           </div>
@@ -3047,8 +5872,8 @@
                 label="Continue"
                 type="submit"
                 color="primary"
-                style="width: 260px"
               />
+              <!-- style="width: 260px" -->
             </div>
           </div>
         </div>
@@ -4483,13 +7308,17 @@
         </div>
       </div>
       <div class="row q-pt-md">
-        <div class="col-12 col-md-6 q-pl-md">
+        <div class="col-12 col-md-4 q-pl-md">
           <p class="text-h6">Discount:</p>
           {{ discount }}%
         </div>
-        <div class="col-12 col-md-6 q-pl-md">
+        <div class="col-12 col-md-4 q-pl-md">
           <p class="text-h6">Deposit:</p>
           ₦{{ deposit }}
+        </div>
+        <div class="col-12 col-md-4 q-pl-md">
+          <p class="text-h6">Deposit Type:</p>
+          {{ deposit_type }}
         </div>
       </div>
       <q-separator />
@@ -4623,6 +7452,8 @@ const collected_on_time = ref("");
 const comment_section = ref("");
 const discount = ref("");
 const deposit = ref("");
+const deposit_type = ref("");
+const optionsDepositType = ["POS", "CASH", "BANK TRANSFER"];
 
 const male_native_2_pcs = ref(0);
 const total_male_native_2_pcs = ref("");
@@ -5036,6 +7867,7 @@ const onSubmit = () => {
     comment_section: comment_section.value,
     discount: discount.value,
     deposit: deposit.value,
+    deposit_type: deposit_type.value,
     final_amount: total_final_amount.value.toString(),
   };
 
@@ -5100,6 +7932,7 @@ const onSubmit = () => {
   //   formData.append("comment_section" , comment_section.value);
   //   formData.append("discount" , discount.value);
   //   formData.append("deposit" , deposit.value);
+  //   formData.append("deposit_type" , deposit_type.value);
   //   formData.append("final_amount" , total_final_amount.value);
 
   // console.log(total_male_trouser, 'total_male_trouser')

@@ -43,11 +43,11 @@
                   <div class="q-pa-md">
                     <q-form @submit="onSubmit" @reset="onReset" class="">
                       <q-input
-                        type="email"
+                        type="number"
                         bottom-slots
-                        v-model="email"
-                        label="Email"
-                        hint="Your email address"
+                        v-model="phone_number"
+                        label="Phone Number"
+                        hint="Your phone number, using this format 234807538373"
                         lazy-rules
                         :rules="[
                           (val) =>
@@ -55,7 +55,7 @@
                         ]"
                       >
                         <template v-slot:prepend>
-                          <q-icon name="fa-light fa-at" />
+                          <q-icon name="call" />
                         </template>
                         <!-- <template v-slot:append>
                         <q-icon name="favorite" />
@@ -188,7 +188,8 @@ name: "LoginPage";
 const $q = useQuasar();
 const useStore = useUserStore();
 
-const email = ref("");
+// const email = ref("");
+const phone_number = ref("");
 const phone = ref("");
 const password = ref("");
 const confirm_password = ref("");
@@ -214,7 +215,7 @@ const onSubmit = async () => {
   // Get the token/cookie
   // await useStore.getSanctumCookie()
   // login user
-  const user = await useStore.login(email.value, password.value);
+  const user = await useStore.login(phone_number.value, password.value);
   console.log(user);
   // set user data to localstorage()
   useStore.setUser(user.data);
@@ -317,7 +318,7 @@ const postReset = () => {
 };
 
 const onReset = () => {
-  email.value = null;
+  phone_number.value = null;
   password.value = null;
 };
 

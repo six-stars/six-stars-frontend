@@ -1,9 +1,8 @@
 <template>
   <q-layout view="hHh LpR fFf">
     <!-- <q-layout view="lHh lpR lFf"> -->
-    <q-header class="bg-transparent">
+    <!-- <q-header class="bg-transparent">
       <q-toolbar class="text-primary bg-white">
-        <!-- <div class="bg-transparent"> -->
         <q-btn
           flat
           dense
@@ -36,10 +35,8 @@
             </q-item>
           </q-list>
         </q-btn-dropdown>
-
-        <!-- </div> -->
       </q-toolbar>
-    </q-header>
+    </q-header> -->
 
     <q-drawer
       v-model="leftDrawerOpen"
@@ -49,7 +46,7 @@
       :width="200"
     >
       <q-list>
-        <q-item header class="q-mb-xl" clickable v-ripple>
+        <q-item header class="q-mb-xs" clickable v-ripple>
           <q-item-section>
             <q-img
               class="absolute-top"
@@ -176,7 +173,7 @@
             icon="inbox"
             to="/general_message"
             clickable
-            v-show="show3"
+            v-show="show"
           />
           <q-fab-action
             square

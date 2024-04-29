@@ -89,18 +89,28 @@
                 <div class="text-h6">₦{{ data.deposit }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Balance</div>
-                <div class="text-h6">₦{{ data.balance }}</div>
+                <div class="text-subtitle2 bg-grey">Deposit Type</div>
+                <div class="text-h6">₦{{ data.deposit_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Total Amount</div>
-                <div class="text-h6">₦{{ data.total_amount }}</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Paid?</div>
                 <div class="text-h6">{{ data.paid }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Paid Type</div>
+                <div class="text-h6">{{ data.paid_type }}</div>
+              </div>
+            </div>
+            <div class="row q-pt-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Balance</div>
+                <div class="text-h6">₦{{ data.balance }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Total Amount</div>
+                <div class="text-h6">₦{{ data.total_amount }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -117,8 +127,16 @@
             <!-- <q-btn @click="onUpdate(data.intake_id)" flat
               >Complete Payment</q-btn
             > -->
-            <div class="row">
-              <div class="col-12 col-md-7 q-pl-md">
+            <div class="column">
+              <div class="col q-pl-md">
+                <q-select
+                  outlined
+                  v-model="paid_type"
+                  :options="optionsPaidType"
+                  hint="POS, Cash etc"
+                />
+              </div>
+              <div class="col q-pl-md q-mt-sm">
                 <q-input
                   outlined
                   v-model="customer_collected"
@@ -126,7 +144,7 @@
                   style="width: 520px"
                 />
               </div>
-              <div align="right" class="col-12 col-md-5 q-mt-sm">
+              <div class="col q-mt-sm">
                 <q-btn
                   :disable="!customer_collected"
                   color="primary"
@@ -159,6 +177,8 @@ const data = ref([]);
 const intake_id = ref("");
 const show4 = ref(false);
 const customer_collected = ref("");
+const paid_type = ref("");
+const optionsPaidType = ["POS", "CASH", "BANK TRANSFER"];
 
 const $router = useRouter();
 const useStore = useUserStore();
@@ -260,12 +280,14 @@ const onUpdate = (intakeID) => {
       "Collected by " + customer_collected.value + " on " + timeDate,
     paid:
       intakeID +
+      " Balance Paid," +
       " Payment Completed and logged in by " +
       firstName +
       " " +
       lastName +
       " on " +
       timeDate,
+    paid_type: paid_type.value,
   };
   // paid: firstName + " " + lastName + " (" + intakeID + ") Done " + timeDate,
 
@@ -299,6 +321,8 @@ const onUpdate = (intakeID) => {
 
 const onReset = () => {
   intake_id.value = null;
+  customer_collected.value = null;
+  paid_type.value = null;
 };
 </script>
 

@@ -38,9 +38,9 @@
             <q-td key="user_type" :props="props">
               {{ props.row.user_type }}
             </q-td>
-            <q-td key="phone2" :props="props">
+            <!-- <q-td key="phone2" :props="props">
               {{ props.row.phone2 }}
-            </q-td>
+            </q-td> -->
             <q-td key="gender" :props="props">
               {{ props.row.gender }}
             </q-td>
@@ -120,7 +120,7 @@
               </div>
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
+              <div class="col-12 col-md-12 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Email</div>
                 <div class="text-h6">{{ dataMore.email }}</div>
               </div>
@@ -128,20 +128,20 @@
                     <div class="text-h6">{{ dataMore.username }}</div>
                     <div class="text-subtitle2">Username</div>
                   </div> -->
-              <div class="col-12 col-md-6 q-pl-md">
+              <!-- <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Customer Type</div>
                 <div class="text-h6">{{ dataMore.user_type }}</div>
-              </div>
+              </div> -->
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Phone Number 1</div>
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Phone Number</div>
                 <div class="text-h6">{{ dataMore.phone1 }}</div>
               </div>
-              <div class="col-12 col-md-6 q-pl-md">
+              <!-- <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Phone Number 2</div>
                 <div class="text-h6">{{ dataMore.phone2 }}</div>
-              </div>
+              </div> -->
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
@@ -230,12 +230,12 @@ function formatDate(date) {
 
 const columns = [
   { name: "customer_id", label: "Customer ID", field: "customer_id" },
-  { name: "phone1", label: "Phone 1", field: "phone1" },
+  { name: "phone1", label: "Phone", field: "phone1" },
   { name: "first_name", label: "First Name", field: "first_name" },
   { name: "last_name", label: "Last Name", field: "last_name" },
   { name: "email", label: "Email", field: "email" },
   { name: "user_type", label: "User Type", field: "user_type" },
-  { name: "phone2", label: "Phone 2", field: "phone2" },
+  // { name: "phone2", label: "Phone 2", field: "phone2" },
   { name: "gender", label: "Gender", field: "gender" },
   { name: "dob", label: "Date of Birth", field: "dob" },
   { name: "address", label: "Address", field: "address" },
@@ -323,17 +323,29 @@ const handleTableRequest = (params) => {
 };
 
 const handlePreviousPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pagination.value.page > 1) {
     pagination.value.page--;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 const handleNextPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pageEnd.value == true) {
     pagination.value.page++;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 function popup1(selectedCustomer) {

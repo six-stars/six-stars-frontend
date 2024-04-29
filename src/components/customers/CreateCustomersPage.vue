@@ -11,7 +11,6 @@
               outlined
               v-model="formData.first_name"
               hint="First Name"
-              required
             />
           </div>
           <div class="col-12 col-md-6 q-pl-md">
@@ -19,7 +18,7 @@
               class=""
               outlined
               v-model="formData.last_name"
-              hint="Last Name"
+              hint="Last Name *"
               required
             />
           </div>
@@ -32,12 +31,8 @@
               outlined
               type="email"
               hint="Email"
-              required
             />
           </div>
-          <!-- <div class="col-12 col-md-6 q-pl-md">
-            <q-input class="" v-model="formData.username" outlined type="text" hint="Username" required/>
-          </div> -->
         </div>
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
@@ -54,14 +49,23 @@
               outlined
               v-model="formData.gender"
               :options="optionsGender"
-              hint="Gender"
+              hint="Gender *"
               required
             />
           </div>
         </div>
         <div class="row q-pt-sm">
           <div class="col-12 col-md-6 q-pl-md">
-            <div class="column">
+            <q-input
+              class=""
+              v-model="formData.phone1"
+              type="tel"
+              outlined
+              hint="Phone number *"
+              label="23481573763"
+              required
+            />
+            <!-- <div class="column">
               <div class="col">
                 <q-input
                   class=""
@@ -83,7 +87,7 @@
                   label="23481573763"
                 />
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="col-12 col-md-6 q-pl-md">
             <q-input
@@ -92,7 +96,6 @@
               outlined
               type="textarea"
               hint="Home Address"
-              required
             />
           </div>
         </div>
@@ -104,7 +107,6 @@
               :options="optionsState"
               v-model="formData.state"
               hint="State"
-              required
             />
           </div>
           <div class="col-12 col-md-6 q-pl-md">
@@ -113,7 +115,6 @@
               v-model="formData.country"
               :options="optionsCountry"
               hint="Country"
-              required
             />
           </div>
         </div>
@@ -258,11 +259,10 @@
               {{ formData2.phone1 }}
               <!-- <q-input class="" v-model="formData.phone1" type="tel" outlined hint="Phone number" label="23481573763" required/> -->
             </div>
-            <div class="col q-pt-xs">
+            <!-- <div class="col q-pt-xs">
               <q-chip color="primary" text-color="white"> Phone 2 </q-chip>
               {{ formData2.phone2 }}
-              <!-- <q-input class="" v-model="formData.phone2" type="tel" outlined hint="Other Phone number" label="23481573763"/> -->
-            </div>
+            </div> -->
           </div>
         </div>
         <div class="col-12 col-md-6 q-pl-md">

@@ -10,7 +10,7 @@
               required
               class=""
               outlined
-              v-model="formData.first_name"
+              v-model="first_name"
               hint="First Name"
             />
           </div>
@@ -19,7 +19,7 @@
               required
               class=""
               outlined
-              v-model="formData.last_name"
+              v-model="last_name"
               hint="Last Name"
             />
           </div>
@@ -29,7 +29,7 @@
             <q-input
               required
               class=""
-              v-model="formData.email"
+              v-model="email"
               outlined
               type="email"
               hint="Email"
@@ -39,7 +39,7 @@
             <q-input
               required
               class=""
-              v-model="formData.username"
+              v-model="username"
               outlined
               type="text"
               hint="Username"
@@ -51,7 +51,7 @@
             <q-input
               required
               class=""
-              v-model="formData.password"
+              v-model="password"
               outlined
               type="password"
               hint="Password"
@@ -61,7 +61,7 @@
             <q-select
               required
               outlined
-              v-model="formData.user_type"
+              v-model="user_type"
               :options="optionsUserType"
               hint="User Type"
             />
@@ -72,7 +72,7 @@
             <q-input
               required
               class=""
-              v-model="formData.dob"
+              v-model="dob"
               outlined
               type="date"
               hint="Date of Birth"
@@ -82,7 +82,7 @@
             <q-select
               required
               outlined
-              v-model="formData.gender"
+              v-model="gender"
               :options="optionsGender"
               hint="Gender"
             />
@@ -95,7 +95,7 @@
                 <q-input
                   required
                   class=""
-                  v-model="formData.phone_number"
+                  v-model="phone_number"
                   type="tel"
                   outlined
                   hint="Phone number"
@@ -108,7 +108,7 @@
                   class=""
                   outlined
                   :options="optionsState"
-                  v-model="formData.state"
+                  v-model="state"
                   hint="State"
                 />
               </div>
@@ -118,7 +118,7 @@
             <q-input
               required
               class=""
-              v-model="formData.address"
+              v-model="address"
               outlined
               type="textarea"
               hint="Home Address"
@@ -130,7 +130,7 @@
             <q-select
               required
               outlined
-              v-model="formData.country"
+              v-model="country"
               :options="optionsCountry"
               hint="Country"
             />
@@ -139,7 +139,7 @@
             <q-select
               required
               outlined
-              v-model="formData.active"
+              v-model="active"
               :options="optionsActive"
               hint="Active"
             />
@@ -303,6 +303,21 @@ const optionsState = [
   "Zamfara",
 ];
 
+const first_name = ref("");
+const last_name = ref("");
+const email = ref("");
+const username = ref("");
+const password = ref("");
+const user_type = ref("");
+const dob = ref("");
+const gender = ref("");
+const phone_number = ref("");
+const address = ref("");
+const state = ref("");
+const country = ref("");
+const active = ref("");
+const created_by = ref("");
+
 const $q = useQuasar();
 const data = ref([]);
 const formData = ref({});
@@ -315,23 +330,33 @@ const onSubmit = () => {
     boxClass: "bg-grey-2 text-grey-9",
     spinnerColor: "primary",
   });
-  // const id = useStore.getEmail
-  // console.log(id, 'id')
-  // let value = $q.localStorage.getItem('profile')
-  // let profile = JSON.parse(value)
-  // console.log(profile, 'profile')
-  // console.log(profile.first_name, 'first_name')
-  // const formData = new FormData();
-  // formData.append("first_name", profile.first_name);
+
   const firstName = useStore.getFirst_name;
   const lastName = useStore.getLast_name;
   const _code = useStore.getCode;
-  formData.value.append("created_by", firstName + " " + lastName);
-  formData.value.append("code", _code);
+
+  const formData = {
+    first_name: first_name.value,
+    last_name: last_name.value,
+    email: email.value,
+    username: username.value,
+    password: password.value,
+    user_type: user_type.value,
+    dob: dob.value,
+    gender: gender.value,
+    phone_number: phone_number.value,
+    address: address.value,
+    state: state.value,
+    country: country.value,
+    active: active.value,
+    created_by: firstName + " " + lastName + " with code = " + _code,
+  };
+
+  // formData.value.append("code", _code);
   // formData.append("email", profile.email);
-  console.log(formData.value, "formData");
+  // console.log(formData, "formData");
   axios
-    .post(`${base}/users/signup/`, formData.value)
+    .post(`${base}/users/signup/`, formData)
     .then((response) => {
       data.value = response.data;
       console.log(data.value, "user");

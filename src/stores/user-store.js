@@ -35,10 +35,10 @@ export const useUserStore = defineStore("user", {
       }
     },
 
-    async login(email, password) {
+    async login(phone_number, password) {
       try {
-        // return await axios.post('/users/login/', { email, password })
-        return await api.post("/users/login/", { email, password });
+        // return await axios.post('/users/login/', { phone_number, password })
+        return await api.post("/users/login/", { phone_number, password });
       } catch (error) {
         if (error) throw error;
       }

@@ -586,6 +586,9 @@
           <q-td key="deposit" :props="props">
             {{ props.row.deposit }}
           </q-td>
+          <q-td key="deposit_type" :props="props">
+            {{ props.row.deposit_type }}
+          </q-td>
           <q-td key="balance" :props="props">
             {{ props.row.balance }}
           </q-td>
@@ -1283,6 +1286,7 @@ const columns = [
   { name: "comment_section", label: "Comment", field: "comment_section" },
   { name: "discount", label: "Discount", field: "discount" },
   { name: "deposit", label: "Deposit", field: "deposit" },
+  { name: "deposit_type", label: "Deposit Type", field: "deposit_type" },
   { name: "balance", label: "Balance", field: "balance" },
   { name: "final_amount", label: "Final Amount", field: "final_amount" },
   {
@@ -1361,17 +1365,29 @@ const handleTableRequest = (params) => {
 };
 
 const handlePreviousPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pagination.value.page > 1) {
     pagination.value.page--;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 const handleNextPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pageEnd.value == true) {
     pagination.value.page++;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 onMounted(() => {

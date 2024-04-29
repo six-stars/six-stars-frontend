@@ -44,6 +44,9 @@
           <q-td key="deposit" :props="props">
             {{ props.row.deposit }}
           </q-td>
+          <q-td key="deposit_type" :props="props">
+            {{ props.row.deposit_type }}
+          </q-td>
           <q-td key="balance" :props="props">
             {{ props.row.balance }}
           </q-td>
@@ -52,6 +55,9 @@
           </q-td>
           <q-td key="paid" :props="props">
             {{ props.row.paid }}
+          </q-td>
+          <q-td key="paid_type" :props="props">
+            {{ props.row.paid_type }}
           </q-td>
           <q-td key="customer_collected" :props="props">
             {{ props.row.customer_collected }}
@@ -135,13 +141,17 @@
               </div>
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
+              <div class="col-12 col-md-4 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Discount</div>
                 <div class="text-h6">{{ dataMore.discount }}</div>
               </div>
-              <div class="col-12 col-md-6 q-pl-md">
+              <div class="col-12 col-md-4 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Deposit</div>
                 <div class="text-h6">₦{{ dataMore.deposit }}</div>
+              </div>
+              <div class="col-12 col-md-4 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Deposit Type</div>
+                <div class="text-h6">₦{{ dataMore.deposit_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -159,9 +169,13 @@
                       <div class="text-subtitle2 bg-grey">Total Amount</div>
                       <div class="text-h6">₦{{ dataMore.total_amount }}</div>
                     </div> -->
-              <div class="col-12 col-md-12 q-pl-md">
+              <div class="col-12 col-md-9 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Paid?</div>
                 <div class="text-h6">{{ dataMore.paid }}</div>
+              </div>
+              <div class="col-12 col-md-3 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Paid Type</div>
+                <div class="text-h6">{{ dataMore.paid_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -175,8 +189,16 @@
           <q-separator dark />
 
           <q-card-actions class="q-pa-md" v-show="show4">
-            <div class="row">
-              <div class="col-12 col-md-7 q-pl-md">
+            <div class="column">
+              <div class="col q-pl-md">
+                <q-select
+                  outlined
+                  v-model="paid_type"
+                  :options="optionsPaidType"
+                  hint="POS, Cash etc"
+                />
+              </div>
+              <div class="col q-pl-md q-mt-sm">
                 <q-input
                   outlined
                   v-model="customer_collected"
@@ -184,7 +206,7 @@
                   style="width: 520px"
                 />
               </div>
-              <div align="right" class="col-12 col-md-5 q-mt-sm">
+              <div class="col q-mt-sm">
                 <q-btn
                   :disable="!customer_collected"
                   color="primary"
@@ -220,6 +242,8 @@ const moreDetails = ref(false);
 const show4 = ref(false);
 const pageEnd = ref(false);
 const customer_collected = ref("");
+const paid_type = ref("");
+const optionsPaidType = ["POS", "CASH", "BANK TRANSFER"];
 
 const columns = [
   { name: "collected_on", label: "Collected On", field: "collected_on" },
@@ -235,9 +259,11 @@ const columns = [
   { name: "quantity", label: "Quantity", field: "quantity" },
   { name: "discount", label: "Discount", field: "discount" },
   { name: "deposit", label: "Deposit", field: "deposit" },
+  { name: "deposit_type", label: "Deposit Type", field: "deposit_type" },
   { name: "balance", label: "Balance", field: "balance" },
   { name: "total_amount", label: "Total Amount", field: "total_amount" },
   { name: "paid", label: "Paid", field: "paid" },
+  { name: "paid_type", label: "Paid Type", field: "paid_type" },
   {
     name: "customer_collected",
     label: "Customer Collected",
@@ -288,17 +314,29 @@ const handleTableRequest = (params) => {
 };
 
 const handlePreviousPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pagination.value.page > 1) {
     pagination.value.page--;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 const handleNextPage = () => {
+  $q.loading.show({
+    message: "Loading. Please wait...",
+    boxClass: "bg-grey-2 text-grey-9",
+    spinnerColor: "primary",
+  });
   if (pageEnd.value == true) {
     pagination.value.page++;
     loadData(pagination.value.page);
   }
+  $q.loading.hide();
 };
 
 const onUpdate = (intakeID) => {
@@ -325,12 +363,14 @@ const onUpdate = (intakeID) => {
       "Collected by " + customer_collected.value + " on " + timeDate,
     paid:
       intakeID +
+      " Balance Paid," +
       " Payment Completed and logged in by " +
       firstName +
       " " +
       lastName +
       " on " +
       timeDate,
+    paid_type: paid_type.value,
   };
 
   axios
