@@ -210,6 +210,7 @@ const fixed1 = ref(false);
 const $q = useQuasar();
 const $router = useRouter();
 const data = ref([]);
+let filter = ref("");
 const dataMore = ref([]);
 const useStore = useUserStore();
 const selectedCustomer = reactive([]);

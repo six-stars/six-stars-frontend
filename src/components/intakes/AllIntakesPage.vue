@@ -13,149 +13,6 @@
       :pagination="pagination"
       @request="handleTableRequest"
     >
-      <!-- :visible-columns="[
-        'collected_on',
-        'collection_date',
-        'customer',
-        'customer_phone',
-        'intake_id',
-        'staff',
-        'quantity_male_native_2_pcs',
-        'male_native_2_pcs',
-        'quantity_male_native_2_pcs_hanging',
-        'male_native_2_pcs_hanging',
-        'quantity_male_native_3_pcs_notAgbada',
-        'male_native_3_pcs_notAgbada',
-        'quantity_male_native_3_pcs_notAgbada_hanging',
-        'male_native_3_pcs_notAgbada_hanging',
-        'quantity_native_top_only',
-        'native_top_only',
-        'quantity_native_trouser_only',
-        'native_trouser_only',
-        'quantity_complete_male_agbada',
-        'complete_male_agbada',
-        'quantity_male_agbada_alone',
-        'male_agbada_alone',
-        'quantity_blouse',
-        'blouse',
-        'quantity_blouse_hanging',
-        'blouse_hanging',
-        'quantity_female_shirt',
-        'female_shirt',
-        'quantity_female_shirt_hanging',
-        'female_shirt_hanging',
-        'quantity_female_trouser_jeans',
-        'female_trouser_jeans',
-        'quantity_female_trouser_jeans_hanging',
-        'female_trouser_jeans_hanging',
-        'quantity_skirt_and_blouse_english',
-        'skirt_and_blouse_english',
-        'quantity_skirt_and_blouse_english_hanging',
-        'skirt_and_blouse_english_hanging',
-        'quantity_wrapper_buba_gele',
-        'wrapper_buba_gele',
-        'quantity_female_native_buba_trouser',
-        'female_native_buba_trouser',
-        'quantity_gown_english_hanging',
-        'gown_english_hanging',
-        'quantity_gown_native',
-        'gown_native',
-        'quantity_skirt_and_blouse_native',
-        'skirt_and_blouse_native',
-        'quantity_aso_oke_wrapper_buba_gele',
-        'aso_oke_wrapper_buba_gele',
-        'quantity_male_complete_aso_oke',
-        'male_complete_aso_oke',
-        'quantity_male_medium_t_shirt_or_polo',
-        'male_medium_t_shirt_or_polo',
-        'quantity_male_big_t_shirt_or_polo',
-        'male_big_t_shirt_or_polo',
-        'quantity_male_t_shirt_or_polo_hanging',
-        'male_t_shirt_or_polo_hanging',
-        'quantity_shirt_normal',
-        'shirt_normal',
-        'quantity_shirt_normal_hanging',
-        'shirt_normal_hanging',
-        'quantity_shirt_big',
-        'shirt_big',
-        'quantity_shirt_big_hanging',
-        'shirt_big_hanging',
-        'quantity_plain_trouser',
-        'plain_trouser',
-        'quantity_plain_trouser_hanging',
-        'plain_trouser_hanging',
-        'quantity_jeans_chinos_trouser',
-        'jeans_chinos_trouser',
-        'quantity_jeans_chinos_trouser_hanging',
-        'jeans_chinos_trouser_hanging',
-        'quantity_waist_coat_hanging',
-        'waist_coat_hanging',
-        'quantity_tie',
-        'tie',
-        'quantity_shorts',
-        'shorts',
-        'quantity_shorts_hanging',
-        'shorts_hanging',
-        'quantity_singlet',
-        'singlet',
-        'quantity_boxer',
-        'boxer',
-        'quantity_male_two_pcs_suit_hanging',
-        'male_two_pcs_suit_hanging',
-        'quantity_male_three_pcs_suit_hanging',
-        'male_three_pcs_suit_hanging',
-        'quantity_female_two_pcs_suit_hanging',
-        'female_two_pcs_suit_hanging',
-        'quantity_female_three_pcs_suit_hanging',
-        'female_three_pcs_suit_hanging',
-        'quantity_male_jacket_hanging',
-        'male_jacket_hanging',
-        'quantity_female_jacket_hanging',
-        'female_jacket_hanging',
-        'quantity_jalamia',
-        'jalamia',
-        'quantity_camisole',
-        'camisole',
-        'quantity_wrapper_only',
-        'wrapper_only',
-        'quantity_female_inner_wear',
-        'female_inner_wear',
-        'quantity_head_tie_gele',
-        'head_tie_gele',
-        'quantity_small_wedding_gown_hanging',
-        'small_wedding_gown_hanging',
-        'quantity_big_wedding_gown_hanging',
-        'big_wedding_gown_hanging',
-        'quantity_asooke_head_tie',
-        'asooke_head_tie',
-        'quantity_sweater_normal',
-        'sweater_normal',
-        'quantity_sweater_big',
-        'sweater_big',
-        'quantity_towel_normal',
-        'towel_normal',
-        'quantity_towel_big',
-        'towel_big',
-        'quantity_bed_spread_normal',
-        'bed_spread_normal',
-        'quantity_bed_spread_big',
-        'bed_spread_big',
-        'quantity_duvet',
-        'duvet',
-        'quantity_curtain_normal',
-        'curtain_normal',
-        'quantity_curtain_big',
-        'curtain_big',
-        'quantity_curtain_very_big',
-        'curtain_very_big',
-        'quantity_pyjamas_small',
-        'pyjamas_small',
-        'quantity_pyjamas_big',
-        'pyjamas_big',
-        'comment_section',
-        'balance',
-        'final_amount',
-      ]" -->
       <template v-slot:body="props">
         <q-tr :props="props" @click="onRowClick(props.row)">
           <q-td key="collected_on" :props="props">
@@ -178,404 +35,1148 @@
           <q-td key="staff" :props="props">
             {{ props.row.staff }}
           </q-td>
-          <q-td key="quantity_male_native_2_pcs" :props="props">
-            {{ props.row.quantity_male_native_2_pcs }}
+          <q-td key="quantity_male_native_2pcs_folding_colored" :props="props">
+            {{ props.row.quantity_male_native_2pcs_folding_colored }}
           </q-td>
-          <q-td key="male_native_2_pcs" :props="props">
-            {{ props.row.male_native_2_pcs }}
+          <q-td key="male_native_2pcs_folding_colored" :props="props">
+            {{ props.row.male_native_2pcs_folding_colored }}
           </q-td>
-          <q-td key="quantity_male_native_2_pcs_hanging" :props="props">
-            {{ props.row.quantity_male_native_2_pcs_hanging }}
+          <q-td key="quantity_male_native_2pcs_hanging_colored" :props="props">
+            {{ props.row.quantity_male_native_2pcs_hanging_colored }}
           </q-td>
-          <q-td key="male_native_2_pcs_hanging" :props="props">
-            {{ props.row.male_native_2_pcs_hanging }}
+          <q-td key="male_native_2pcs_hanging_colored" :props="props">
+            {{ props.row.male_native_2pcs_hanging_colored }}
           </q-td>
-          <q-td key="quantity_male_native_3_pcs_notAgbada" :props="props">
-            {{ props.row.quantity_male_native_3_pcs_notAgbada }}
+          <q-td key="quantity_male_native_2pcs_folding_white" :props="props">
+            {{ props.row.quantity_male_native_2pcs_folding_white }}
           </q-td>
-          <q-td key="male_native_3_pcs_notAgbada" :props="props">
-            {{ props.row.male_native_3_pcs_notAgbada }}
+          <q-td key="male_native_2pcs_folding_white" :props="props">
+            {{ props.row.male_native_2pcs_folding_white }}
+          </q-td>
+          <q-td key="quantity_male_native_2pcs_hanging_white" :props="props">
+            {{ props.row.quantity_male_native_2pcs_hanging_white }}
+          </q-td>
+          <q-td key="male_native_2pcs_hanging_white" :props="props">
+            {{ props.row.male_native_2pcs_hanging_white }}
           </q-td>
           <q-td
-            key="quantity_male_native_3_pcs_notAgbada_hanging"
+            key="quantity_male_native_3pcs_notAgbada_folding_colored"
             :props="props"
           >
-            {{ props.row.quantity_male_native_3_pcs_notAgbada_hanging }}
+            {{ props.row.quantity_male_native_3pcs_notAgbada_folding_colored }}
           </q-td>
-          <q-td key="male_native_3_pcs_notAgbada_hanging" :props="props">
-            {{ props.row.male_native_3_pcs_notAgbada_hanging }}
+          <q-td key="male_native_3pcs_notAgbada_folding_colored" :props="props">
+            {{ props.row.male_native_3pcs_notAgbada_folding_colored }}
           </q-td>
-          <q-td key="quantity_native_top_only" :props="props">
-            {{ props.row.quantity_native_top_only }}
+          <q-td
+            key="quantity_male_native_3pcs_notAgbada_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_male_native_3pcs_notAgbada_hanging_colored }}
           </q-td>
-          <q-td key="native_top_only" :props="props">
-            {{ props.row.native_top_only }}
+          <q-td key="male_native_3pcs_notAgbada_hanging_colored" :props="props">
+            {{ props.row.male_native_3pcs_notAgbada_hanging_colored }}
           </q-td>
-          <q-td key="quantity_native_trouser_only" :props="props">
-            {{ props.row.quantity_native_trouser_only }}
+          <q-td
+            key="quantity_male_native_3pcs_notAgbada_folding_white"
+            :props="props"
+          >
+            {{ props.row.quantity_male_native_3pcs_notAgbada_folding_white }}
           </q-td>
-          <q-td key="native_trouser_only" :props="props">
-            {{ props.row.native_trouser_only }}
+          <q-td key="male_native_3pcs_notAgbada_folding_white" :props="props">
+            {{ props.row.male_native_3pcs_notAgbada_folding_white }}
           </q-td>
-          <q-td key="quantity_complete_male_agbada" :props="props">
-            {{ props.row.quantity_complete_male_agbada }}
+          <q-td
+            key="quantity_male_native_3pcs_notAgbada_hanging_white"
+            :props="props"
+          >
+            {{ props.row.quantity_male_native_3pcs_notAgbada_hanging_white }}
           </q-td>
-          <q-td key="complete_male_agbada" :props="props">
-            {{ props.row.complete_male_agbada }}
+          <q-td key="male_native_3pcs_notAgbada_hanging_white" :props="props">
+            {{ props.row.male_native_3pcs_notAgbada_hanging_white }}
           </q-td>
-          <q-td key="quantity_male_agbada_alone" :props="props">
-            {{ props.row.quantity_male_agbada_alone }}
+          <q-td key="quantity_native_top_only_folding_colored" :props="props">
+            {{ props.row.quantity_native_top_only_folding_colored }}
           </q-td>
-          <q-td key="male_agbada_alone" :props="props">
-            {{ props.row.male_agbada_alone }}
+          <q-td key="native_top_only_folding_colored" :props="props">
+            {{ props.row.native_top_only_folding_colored }}
           </q-td>
-          <q-td key="quantity_blouse" :props="props">
-            {{ props.row.quantity_blouse }}
+          <q-td key="quantity_native_top_only_hanging_colored" :props="props">
+            {{ props.row.quantity_native_top_only_hanging_colored }}
           </q-td>
-          <q-td key="blouse" :props="props">
-            {{ props.row.blouse }}
+          <q-td key="native_top_only_hanging_colored" :props="props">
+            {{ props.row.native_top_only_hanging_colored }}
           </q-td>
-          <q-td key="quantity_blouse_hanging" :props="props">
-            {{ props.row.quantity_blouse_hanging }}
+          <q-td key="quantity_native_top_only_folding_white" :props="props">
+            {{ props.row.quantity_native_top_only_folding_white }}
           </q-td>
-          <q-td key="blouse_hanging" :props="props">
-            {{ props.row.blouse_hanging }}
+          <q-td key="native_top_only_folding_white" :props="props">
+            {{ props.row.native_top_only_folding_white }}
           </q-td>
-          <q-td key="quantity_female_shirt" :props="props">
-            {{ props.row.quantity_female_shirt }}
+          <q-td key="quantity_native_top_only_hanging_white" :props="props">
+            {{ props.row.quantity_native_top_only_hanging_white }}
           </q-td>
-          <q-td key="female_shirt" :props="props">
-            {{ props.row.female_shirt }}
+          <q-td key="native_top_only_hanging_white" :props="props">
+            {{ props.row.native_top_only_hanging_white }}
           </q-td>
-          <q-td key="quantity_female_shirt_hanging" :props="props">
-            {{ props.row.quantity_female_shirt_hanging }}
+          <q-td
+            key="quantity_native_trouser_only_folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_native_trouser_only_folding_colored }}
           </q-td>
-          <q-td key="female_shirt_hanging" :props="props">
-            {{ props.row.female_shirt_hanging }}
+          <q-td key="native_trouser_only_folding_colored" :props="props">
+            {{ props.row.native_trouser_only_folding_colored }}
           </q-td>
-          <q-td key="quantity_female_trouser_jeans" :props="props">
-            {{ props.row.quantity_female_trouser_jeans }}
+          <q-td
+            key="quantity_native_trouser_only_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_native_trouser_only_hanging_colored }}
           </q-td>
-          <q-td key="female_trouser_jeans" :props="props">
-            {{ props.row.female_trouser_jeans }}
+          <q-td key="native_trouser_only_hanging_colored" :props="props">
+            {{ props.row.native_trouser_only_hanging_colored }}
           </q-td>
-          <q-td key="quantity_female_trouser_jeans_hanging" :props="props">
-            {{ props.row.quantity_female_trouser_jeans_hanging }}
+          <q-td key="quantity_native_trouser_only_folding_white" :props="props">
+            {{ props.row.quantity_native_trouser_only_folding_white }}
           </q-td>
-          <q-td key="female_trouser_jeans_hanging" :props="props">
-            {{ props.row.female_trouser_jeans_hanging }}
+          <q-td key="native_trouser_only_folding_white" :props="props">
+            {{ props.row.native_trouser_only_folding_white }}
           </q-td>
-          <q-td key="quantity_skirt_and_blouse_english" :props="props">
-            {{ props.row.quantity_skirt_and_blouse_english }}
+          <q-td key="quantity_native_trouser_only_hanging_white" :props="props">
+            {{ props.row.quantity_native_trouser_only_hanging_white }}
           </q-td>
-          <q-td key="skirt_and_blouse_english" :props="props">
-            {{ props.row.skirt_and_blouse_english }}
+          <q-td key="native_trouser_only_hanging_white" :props="props">
+            {{ props.row.native_trouser_only_hanging_white }}
           </q-td>
-          <q-td key="quantity_skirt_and_blouse_english_hanging" :props="props">
-            {{ props.row.quantity_skirt_and_blouse_english_hanging }}
+          <q-td key="quantity_male_agbada_only_folding_colored" :props="props">
+            {{ props.row.quantity_male_agbada_only_folding_colored }}
           </q-td>
-          <q-td key="skirt_and_blouse_english_hanging" :props="props">
-            {{ props.row.skirt_and_blouse_english_hanging }}
+          <q-td key="male_agbada_only_folding_colored" :props="props">
+            {{ props.row.male_agbada_only_folding_colored }}
           </q-td>
-          <q-td key="quantity_wrapper_buba_gele" :props="props">
-            {{ props.row.quantity_wrapper_buba_gele }}
+          <q-td key="quantity_male_agbada_only_hanging_colored" :props="props">
+            {{ props.row.quantity_male_agbada_only_hanging_colored }}
           </q-td>
-          <q-td key="wrapper_buba_gele" :props="props">
-            {{ props.row.wrapper_buba_gele }}
+          <q-td key="male_agbada_only_hanging_colored" :props="props">
+            {{ props.row.male_agbada_only_hanging_colored }}
           </q-td>
-          <q-td key="quantity_female_native_buba_trouser" :props="props">
-            {{ props.row.quantity_female_native_buba_trouser }}
+          <q-td key="quantity_male_agbada_only_folding_white" :props="props">
+            {{ props.row.quantity_male_agbada_only_folding_white }}
           </q-td>
-          <q-td key="female_native_buba_trouser" :props="props">
-            {{ props.row.female_native_buba_trouser }}
+          <q-td key="male_agbada_only_folding_white" :props="props">
+            {{ props.row.male_agbada_only_folding_white }}
           </q-td>
-          <q-td key="quantity_gown_english_hanging" :props="props">
-            {{ props.row.quantity_gown_english_hanging }}
+          <q-td key="quantity_male_agbada_only_hanging_white" :props="props">
+            {{ props.row.quantity_male_agbada_only_hanging_white }}
           </q-td>
-          <q-td key="gown_english_hanging" :props="props">
-            {{ props.row.gown_english_hanging }}
+          <q-td key="male_agbada_only_hanging_white" :props="props">
+            {{ props.row.male_agbada_only_hanging_white }}
           </q-td>
-          <q-td key="quantity_gown_native" :props="props">
-            {{ props.row.quantity_gown_native }}
+          <q-td
+            key="quantity_complete_male_agbada_3pcs_Folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_complete_male_agbada_3pcs_Folding_colored }}
           </q-td>
-          <q-td key="gown_native" :props="props">
-            {{ props.row.gown_native }}
+          <q-td key="complete_male_agbada_3pcs_Folding_colored" :props="props">
+            {{ props.row.complete_male_agbada_3pcs_Folding_colored }}
           </q-td>
-          <q-td key="quantity_skirt_and_blouse_native" :props="props">
-            {{ props.row.quantity_skirt_and_blouse_native }}
+          <q-td
+            key="quantity_complete_male_agbada_3pcs_Hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_complete_male_agbada_3pcs_Hanging_colored }}
           </q-td>
-          <q-td key="skirt_and_blouse_native" :props="props">
-            {{ props.row.skirt_and_blouse_native }}
+          <q-td key="complete_male_agbada_3pcs_Hanging_colored" :props="props">
+            {{ props.row.complete_male_agbada_3pcs_Hanging_colored }}
           </q-td>
-          <q-td key="quantity_aso_oke_wrapper_buba_gele" :props="props">
-            {{ props.row.quantity_aso_oke_wrapper_buba_gele }}
+          <q-td
+            key="quantity_complete_male_agbada_3pcs_Folding_white"
+            :props="props"
+          >
+            {{ props.row.quantity_complete_male_agbada_3pcs_Folding_white }}
           </q-td>
-          <q-td key="aso_oke_wrapper_buba_gele" :props="props">
-            {{ props.row.aso_oke_wrapper_buba_gele }}
+          <q-td key="complete_male_agbada_3pcs_Folding_white" :props="props">
+            {{ props.row.complete_male_agbada_3pcs_Folding_white }}
           </q-td>
-          <q-td key="quantity_male_complete_aso_oke" :props="props">
-            {{ props.row.quantity_male_complete_aso_oke }}
+          <q-td
+            key="quantity_complete_male_agbada_3pcs_Hanging_white"
+            :props="props"
+          >
+            {{ props.row.quantity_complete_male_agbada_3pcs_Hanging_white }}
           </q-td>
-          <q-td key="male_complete_aso_oke" :props="props">
-            {{ props.row.male_complete_aso_oke }}
+          <q-td key="complete_male_agbada_3pcs_Hanging_white" :props="props">
+            {{ props.row.complete_male_agbada_3pcs_Hanging_white }}
           </q-td>
-          <q-td key="quantity_male_medium_t_shirt_or_polo" :props="props">
-            {{ props.row.quantity_male_medium_t_shirt_or_polo }}
+          <q-td key="quantity_normal_shirt_folding_colored" :props="props">
+            {{ props.row.quantity_normal_shirt_folding_colored }}
           </q-td>
-          <q-td key="male_medium_t_shirt_or_polo" :props="props">
-            {{ props.row.male_medium_t_shirt_or_polo }}
+          <q-td key="normal_shirt_folding_colored" :props="props">
+            {{ props.row.normal_shirt_folding_colored }}
           </q-td>
-          <q-td key="quantity_male_big_t_shirt_or_polo" :props="props">
-            {{ props.row.quantity_male_big_t_shirt_or_polo }}
+          <q-td key="quantity_normal_shirt_hanging_colored" :props="props">
+            {{ props.row.quantity_normal_shirt_hanging_colored }}
           </q-td>
-          <q-td key="male_big_t_shirt_or_polo" :props="props">
-            {{ props.row.male_big_t_shirt_or_polo }}
+          <q-td key="normal_shirt_hanging_colored" :props="props">
+            {{ props.row.normal_shirt_hanging_colored }}
           </q-td>
-          <q-td key="quantity_male_t_shirt_or_polo_hanging" :props="props">
-            {{ props.row.quantity_male_t_shirt_or_polo_hanging }}
+          <q-td key="quantity_normal_shirt_folding_white" :props="props">
+            {{ props.row.quantity_normal_shirt_folding_white }}
           </q-td>
-          <q-td key="male_t_shirt_or_polo_hanging" :props="props">
-            {{ props.row.male_t_shirt_or_polo_hanging }}
+          <q-td key="normal_shirt_folding_white" :props="props">
+            {{ props.row.normal_shirt_folding_white }}
           </q-td>
-          <q-td key="quantity_shirt_normal" :props="props">
-            {{ props.row.quantity_shirt_normal }}
+          <q-td key="quantity_normal_shirt_hanging_white" :props="props">
+            {{ props.row.quantity_normal_shirt_hanging_white }}
           </q-td>
-          <q-td key="shirt_normal" :props="props">
-            {{ props.row.shirt_normal }}
+          <q-td key="normal_shirt_hanging_white" :props="props">
+            {{ props.row.normal_shirt_hanging_white }}
           </q-td>
-          <q-td key="quantity_shirt_normal_hanging" :props="props">
-            {{ props.row.quantity_shirt_normal_hanging }}
+
+          <q-td key="quantity_blouse_folding_colored" :props="props">
+            {{ props.row.quantity_blouse_folding_colored }}
           </q-td>
-          <q-td key="shirt_normal_hanging" :props="props">
-            {{ props.row.shirt_normal_hanging }}
+          <q-td key="blouse_folding_colored" :props="props">
+            {{ props.row.blouse_folding_colored }}
           </q-td>
-          <q-td key="quantity_shirt_big" :props="props">
-            {{ props.row.quantity_shirt_big }}
+          <q-td key="quantity_blouse_hanging_colored" :props="props">
+            {{ props.row.quantity_blouse_hanging_colored }}
           </q-td>
-          <q-td key="shirt_big" :props="props">
-            {{ props.row.shirt_big }}
+          <q-td key="blouse_hanging_colored" :props="props">
+            {{ props.row.blouse_hanging_colored }}
           </q-td>
-          <q-td key="quantity_shirt_big_hanging" :props="props">
-            {{ props.row.quantity_shirt_big_hanging }}
+          <q-td key="quantity_blouse_folding_white" :props="props">
+            {{ props.row.quantity_blouse_folding_white }}
           </q-td>
-          <q-td key="shirt_big_hanging" :props="props">
-            {{ props.row.shirt_big_hanging }}
+          <q-td key="blouse_folding_white" :props="props">
+            {{ props.row.blouse_folding_white }}
           </q-td>
-          <q-td key="quantity_plain_trouser" :props="props">
-            {{ props.row.quantity_plain_trouser }}
+          <q-td key="quantity_blouse_hanging_white" :props="props">
+            {{ props.row.quantity_blouse_hanging_white }}
           </q-td>
-          <q-td key="plain_trouser" :props="props">
-            {{ props.row.plain_trouser }}
+          <q-td key="blouse_hanging_white" :props="props">
+            {{ props.row.blouse_hanging_white }}
           </q-td>
-          <q-td key="quantity_plain_trouser_hanging" :props="props">
-            {{ props.row.quantity_plain_trouser_hanging }}
+          <q-td key="quantity_blouse_x_large_folding_colored" :props="props">
+            {{ props.row.quantity_blouse_x_large_folding_colored }}
           </q-td>
-          <q-td key="plain_trouser_hanging" :props="props">
-            {{ props.row.plain_trouser_hanging }}
+          <q-td key="blouse_x_large_folding_colored" :props="props">
+            {{ props.row.blouse_x_large_folding_colored }}
           </q-td>
-          <q-td key="quantity_jeans_chinos_trouser" :props="props">
-            {{ props.row.quantity_jeans_chinos_trouser }}
+          <q-td key="quantity_blouse_x_large_hanging_colored" :props="props">
+            {{ props.row.quantity_blouse_x_large_hanging_colored }}
           </q-td>
-          <q-td key="jeans_chinos_trouser" :props="props">
-            {{ props.row.jeans_chinos_trouser }}
+          <q-td key="blouse_x_large_hanging_colored" :props="props">
+            {{ props.row.blouse_x_large_hanging_colored }}
           </q-td>
-          <q-td key="quantity_jeans_chinos_trouser_hanging" :props="props">
-            {{ props.row.quantity_jeans_chinos_trouser_hanging }}
+          <q-td key="quantity_blouse_x_large_folding_white" :props="props">
+            {{ props.row.quantity_blouse_x_large_folding_white }}
           </q-td>
-          <q-td key="jeans_chinos_trouser_hanging" :props="props">
-            {{ props.row.jeans_chinos_trouser_hanging }}
+          <q-td key="blouse_x_large_folding_white" :props="props">
+            {{ props.row.blouse_x_large_folding_white }}
           </q-td>
-          <q-td key="quantity_waist_coat_hanging" :props="props">
-            {{ props.row.quantity_waist_coat_hanging }}
+          <q-td key="quantity_blouse_x_large_hanging_white" :props="props">
+            {{ props.row.quantity_blouse_x_large_hanging_white }}
           </q-td>
-          <q-td key="waist_coat_hanging" :props="props">
-            {{ props.row.waist_coat_hanging }}
+          <q-td key="blouse_x_large_hanging_white" :props="props">
+            {{ props.row.blouse_x_large_hanging_white }}
           </q-td>
-          <q-td key="quantity_tie" :props="props">
-            {{ props.row.quantity_tie }}
+          <q-td key="quantity_female_shirt_folding_colored" :props="props">
+            {{ props.row.quantity_female_shirt_folding_colored }}
           </q-td>
-          <q-td key="tie" :props="props">
-            {{ props.row.tie }}
+          <q-td key="female_shirt_folding_colored" :props="props">
+            {{ props.row.female_shirt_folding_colored }}
           </q-td>
-          <q-td key="quantity_shorts" :props="props">
-            {{ props.row.quantity_shorts }}
+          <q-td key="quantity_female_shirt_hanging_colored" :props="props">
+            {{ props.row.quantity_female_shirt_hanging_colored }}
           </q-td>
-          <q-td key="shorts" :props="props">
-            {{ props.row.shorts }}
+          <q-td key="female_shirt_hanging_colored" :props="props">
+            {{ props.row.female_shirt_hanging_colored }}
           </q-td>
-          <q-td key="quantity_shorts_hanging" :props="props">
-            {{ props.row.quantity_shorts_hanging }}
+          <q-td key="quantity_female_shirt_folding_white" :props="props">
+            {{ props.row.quantity_female_shirt_folding_white }}
           </q-td>
-          <q-td key="shorts_hanging" :props="props">
-            {{ props.row.shorts_hanging }}
+          <q-td key="female_shirt_folding_white" :props="props">
+            {{ props.row.female_shirt_folding_white }}
           </q-td>
-          <q-td key="quantity_singlet" :props="props">
-            {{ props.row.quantity_singlet }}
+          <q-td key="quantity_female_shirt_hanging_white" :props="props">
+            {{ props.row.quantity_female_shirt_hanging_white }}
           </q-td>
-          <q-td key="singlet" :props="props">
-            {{ props.row.singlet }}
+          <q-td key="female_shirt_hanging_white" :props="props">
+            {{ props.row.female_shirt_hanging_white }}
           </q-td>
-          <q-td key="quantity_boxer" :props="props">
-            {{ props.row.quantity_boxer }}
+          <q-td key="quantity_tshirt_polo_small_folding_colored" :props="props">
+            {{ props.row.quantity_tshirt_polo_small_folding_colored }}
           </q-td>
-          <q-td key="boxer" :props="props">
-            {{ props.row.boxer }}
+          <q-td key="tshirt_polo_small_folding_colored" :props="props">
+            {{ props.row.tshirt_polo_small_folding_colored }}
           </q-td>
-          <q-td key="quantity_male_two_pcs_suit_hanging" :props="props">
-            {{ props.row.quantity_male_two_pcs_suit_hanging }}
+          <q-td key="quantity_tshirt_polo_small_hanging_colored" :props="props">
+            {{ props.row.quantity_tshirt_polo_small_hanging_colored }}
           </q-td>
-          <q-td key="male_two_pcs_suit_hanging" :props="props">
-            {{ props.row.male_two_pcs_suit_hanging }}
+          <q-td key="tshirt_polo_small_hanging_colored" :props="props">
+            {{ props.row.tshirt_polo_small_hanging_colored }}
           </q-td>
-          <q-td key="quantity_male_three_pcs_suit_hanging" :props="props">
-            {{ props.row.quantity_male_three_pcs_suit_hanging }}
+          <q-td key="quantity_tshirt_polo_small_folding_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_small_folding_white }}
           </q-td>
-          <q-td key="male_three_pcs_suit_hanging" :props="props">
-            {{ props.row.male_three_pcs_suit_hanging }}
+          <q-td key="tshirt_polo_small_folding_white" :props="props">
+            {{ props.row.tshirt_polo_small_folding_white }}
           </q-td>
-          <q-td key="quantity_female_two_pcs_suit_hanging" :props="props">
-            {{ props.row.quantity_female_two_pcs_suit_hanging }}
+          <q-td key="quantity_tshirt_polo_small_hanging_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_small_hanging_white }}
           </q-td>
-          <q-td key="female_two_pcs_suit_hanging" :props="props">
-            {{ props.row.female_two_pcs_suit_hanging }}
+          <q-td key="tshirt_polo_small_hanging_white" :props="props">
+            {{ props.row.tshirt_polo_small_hanging_white }}
           </q-td>
-          <q-td key="quantity_female_three_pcs_suit_hanging" :props="props">
-            {{ props.row.quantity_female_three_pcs_suit_hanging }}
+          <q-td
+            key="quantity_tshirt_polo_medium_folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_tshirt_polo_medium_folding_colored }}
           </q-td>
-          <q-td key="female_three_pcs_suit_hanging" :props="props">
-            {{ props.row.female_three_pcs_suit_hanging }}
+          <q-td key="tshirt_polo_medium_folding_colored" :props="props">
+            {{ props.row.tshirt_polo_medium_folding_colored }}
           </q-td>
-          <q-td key="quantity_male_jacket_hanging" :props="props">
-            {{ props.row.quantity_male_jacket_hanging }}
+          <q-td
+            key="quantity_tshirt_polo_medium_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_tshirt_polo_medium_hanging_colored }}
           </q-td>
-          <q-td key="male_jacket_hanging" :props="props">
-            {{ props.row.male_jacket_hanging }}
+          <q-td key="tshirt_polo_medium_hanging_colored" :props="props">
+            {{ props.row.tshirt_polo_medium_hanging_colored }}
           </q-td>
-          <q-td key="quantity_female_jacket_hanging" :props="props">
-            {{ props.row.quantity_female_jacket_hanging }}
+          <q-td key="quantity_tshirt_polo_medium_folding_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_medium_folding_white }}
           </q-td>
-          <q-td key="female_jacket_hanging" :props="props">
-            {{ props.row.female_jacket_hanging }}
+          <q-td key="tshirt_polo_medium_folding_white" :props="props">
+            {{ props.row.tshirt_polo_medium_folding_white }}
           </q-td>
-          <q-td key="quantity_jalamia" :props="props">
-            {{ props.row.quantity_jalamia }}
+          <q-td key="quantity_tshirt_polo_medium_hanging_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_medium_hanging_white }}
           </q-td>
-          <q-td key="jalamia" :props="props">
-            {{ props.row.jalamia }}
+          <q-td key="tshirt_polo_medium_hanging_white" :props="props">
+            {{ props.row.tshirt_polo_medium_hanging_white }}
           </q-td>
-          <q-td key="quantity_camisole" :props="props">
-            {{ props.row.quantity_camisole }}
+          <q-td key="quantity_tshirt_polo_big_folding_colored" :props="props">
+            {{ props.row.quantity_tshirt_polo_big_folding_colored }}
           </q-td>
-          <q-td key="camisole" :props="props">
-            {{ props.row.camisole }}
+          <q-td key="tshirt_polo_big_folding_colored" :props="props">
+            {{ props.row.tshirt_polo_big_folding_colored }}
           </q-td>
-          <q-td key="quantity_wrapper_only" :props="props">
-            {{ props.row.quantity_wrapper_only }}
+          <q-td key="quantity_tshirt_polo_big_hanging_colored" :props="props">
+            {{ props.row.quantity_tshirt_polo_big_hanging_colored }}
           </q-td>
-          <q-td key="wrapper_only" :props="props">
-            {{ props.row.wrapper_only }}
+          <q-td key="tshirt_polo_big_hanging_colored" :props="props">
+            {{ props.row.tshirt_polo_big_hanging_colored }}
           </q-td>
-          <q-td key="quantity_female_inner_wear" :props="props">
-            {{ props.row.quantity_female_inner_wear }}
+          <q-td key="quantity_tshirt_polo_big_folding_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_big_folding_white }}
           </q-td>
-          <q-td key="female_inner_wear" :props="props">
-            {{ props.row.female_inner_wear }}
+          <q-td key="tshirt_polo_big_folding_white" :props="props">
+            {{ props.row.tshirt_polo_big_folding_white }}
           </q-td>
-          <q-td key="quantity_head_tie_gele" :props="props">
-            {{ props.row.quantity_head_tie_gele }}
+          <q-td key="quantity_tshirt_polo_big_hanging_white" :props="props">
+            {{ props.row.quantity_tshirt_polo_big_hanging_white }}
           </q-td>
-          <q-td key="head_tie_gele" :props="props">
-            {{ props.row.head_tie_gele }}
+          <q-td key="tshirt_polo_big_hanging_white" :props="props">
+            {{ props.row.tshirt_polo_big_hanging_white }}
           </q-td>
-          <q-td key="quantity_small_wedding_gown_hanging" :props="props">
-            {{ props.row.quantity_small_wedding_gown_hanging }}
+          <q-td key="quantity_shirt_x_large_folding_colored" :props="props">
+            {{ props.row.quantity_shirt_x_large_folding_colored }}
           </q-td>
-          <q-td key="small_wedding_gown_hanging" :props="props">
-            {{ props.row.small_wedding_gown_hanging }}
+          <q-td key="shirt_x_large_folding_colored" :props="props">
+            {{ props.row.shirt_x_large_folding_colored }}
           </q-td>
-          <q-td key="quantity_big_wedding_gown_hanging" :props="props">
-            {{ props.row.quantity_big_wedding_gown_hanging }}
+          <q-td key="quantity_shirt_x_large_hanging_colored" :props="props">
+            {{ props.row.quantity_shirt_x_large_hanging_colored }}
           </q-td>
-          <q-td key="big_wedding_gown_hanging" :props="props">
-            {{ props.row.big_wedding_gown_hanging }}
+          <q-td key="shirt_x_large_hanging_colored" :props="props">
+            {{ props.row.shirt_x_large_hanging_colored }}
           </q-td>
-          <q-td key="quantity_asooke_head_tie" :props="props">
-            {{ props.row.quantity_asooke_head_tie }}
+          <q-td key="quantity_shirt_x_large_folding_white" :props="props">
+            {{ props.row.quantity_shirt_x_large_folding_white }}
           </q-td>
-          <q-td key="asooke_head_tie" :props="props">
-            {{ props.row.asooke_head_tie }}
+          <q-td key="shirt_x_large_folding_white" :props="props">
+            {{ props.row.shirt_x_large_folding_white }}
           </q-td>
-          <q-td key="quantity_sweater_normal" :props="props">
-            {{ props.row.quantity_sweater_normal }}
+          <q-td key="quantity_shirt_x_large_hanging_white" :props="props">
+            {{ props.row.quantity_shirt_x_large_hanging_white }}
           </q-td>
-          <q-td key="sweater_normal" :props="props">
-            {{ props.row.sweater_normal }}
+          <q-td key="shirt_x_large_hanging_white" :props="props">
+            {{ props.row.shirt_x_large_hanging_white }}
           </q-td>
-          <q-td key="quantity_sweater_big" :props="props">
-            {{ props.row.quantity_sweater_big }}
+          <q-td key="quantity_shirt_big_folding_colored" :props="props">
+            {{ props.row.quantity_shirt_big_folding_colored }}
           </q-td>
-          <q-td key="sweater_big" :props="props">
-            {{ props.row.sweater_big }}
+          <q-td key="shirt_big_folding_colored" :props="props">
+            {{ props.row.shirt_big_folding_colored }}
           </q-td>
-          <q-td key="quantity_towel_normal" :props="props">
-            {{ props.row.quantity_towel_normal }}
+          <q-td key="quantity_shirt_big_hanging_colored" :props="props">
+            {{ props.row.quantity_shirt_big_hanging_colored }}
           </q-td>
-          <q-td key="towel_normal" :props="props">
-            {{ props.row.towel_normal }}
+          <q-td key="shirt_big_hanging_colored" :props="props">
+            {{ props.row.shirt_big_hanging_colored }}
           </q-td>
-          <q-td key="quantity_towel_big" :props="props">
-            {{ props.row.quantity_towel_big }}
+          <q-td key="quantity_shirt_big_folding_white" :props="props">
+            {{ props.row.quantity_shirt_big_folding_white }}
           </q-td>
-          <q-td key="towel_big" :props="props">
-            {{ props.row.towel_big }}
+          <q-td key="shirt_big_folding_white" :props="props">
+            {{ props.row.shirt_big_folding_white }}
           </q-td>
-          <q-td key="quantity_bed_spread_normal" :props="props">
-            {{ props.row.quantity_bed_spread_normal }}
+          <q-td key="quantity_shirt_big_hanging_white" :props="props">
+            {{ props.row.quantity_shirt_big_hanging_white }}
           </q-td>
-          <q-td key="bed_spread_normal" :props="props">
-            {{ props.row.bed_spread_normal }}
+          <q-td key="shirt_big_hanging_white" :props="props">
+            {{ props.row.shirt_big_hanging_white }}
           </q-td>
-          <q-td key="quantity_bed_spread_big" :props="props">
-            {{ props.row.quantity_bed_spread_big }}
+          <q-td key="quantity_shirt_children_folding_colored" :props="props">
+            {{ props.row.quantity_shirt_children_folding_colored }}
           </q-td>
-          <q-td key="bed_spread_big" :props="props">
-            {{ props.row.bed_spread_big }}
+          <q-td key="shirt_children_folding_colored" :props="props">
+            {{ props.row.shirt_children_folding_colored }}
           </q-td>
-          <q-td key="quantity_duvet" :props="props">
-            {{ props.row.quantity_duvet }}
+          <q-td key="quantity_shirt_children_hanging_colored" :props="props">
+            {{ props.row.quantity_shirt_children_hanging_colored }}
           </q-td>
-          <q-td key="duvet" :props="props">
-            {{ props.row.duvet }}
+          <q-td key="shirt_children_hanging_colored" :props="props">
+            {{ props.row.shirt_children_hanging_colored }}
           </q-td>
-          <q-td key="quantity_curtain_normal" :props="props">
-            {{ props.row.quantity_curtain_normal }}
+          <q-td key="quantity_shirt_children_folding_white" :props="props">
+            {{ props.row.quantity_shirt_children_folding_white }}
           </q-td>
-          <q-td key="curtain_normal" :props="props">
-            {{ props.row.curtain_normal }}
+          <q-td key="shirt_children_folding_white" :props="props">
+            {{ props.row.shirt_children_folding_white }}
           </q-td>
-          <q-td key="quantity_curtain_big" :props="props">
-            {{ props.row.quantity_curtain_big }}
+          <q-td key="quantity_plain_trouser_folding_colored" :props="props">
+            {{ props.row.quantity_plain_trouser_folding_colored }}
           </q-td>
-          <q-td key="curtain_big" :props="props">
-            {{ props.row.curtain_big }}
+          <q-td key="plain_trouser_folding_colored" :props="props">
+            {{ props.row.plain_trouser_folding_colored }}
           </q-td>
-          <q-td key="quantity_curtain_very_big" :props="props">
-            {{ props.row.quantity_curtain_very_big }}
+          <q-td key="quantity_plain_trouser_hanging_colored" :props="props">
+            {{ props.row.quantity_plain_trouser_hanging_colored }}
           </q-td>
-          <q-td key="curtain_very_big" :props="props">
-            {{ props.row.curtain_very_big }}
+          <q-td key="plain_trouser_hanging_colored" :props="props">
+            {{ props.row.plain_trouser_hanging_colored }}
           </q-td>
-          <q-td key="quantity_pyjamas_small" :props="props">
-            {{ props.row.quantity_pyjamas_small }}
+          <q-td key="quantity_plain_trouser_folding_white" :props="props">
+            {{ props.row.quantity_plain_trouser_folding_white }}
           </q-td>
-          <q-td key="pyjamas_small" :props="props">
-            {{ props.row.pyjamas_small }}
+          <q-td key="plain_trouser_folding_white" :props="props">
+            {{ props.row.plain_trouser_folding_white }}
           </q-td>
-          <q-td key="quantity_pyjamas_big" :props="props">
-            {{ props.row.quantity_pyjamas_big }}
+          <q-td key="quantity_plain_trouser_hanging_white" :props="props">
+            {{ props.row.quantity_plain_trouser_hanging_white }}
           </q-td>
-          <q-td key="pyjamas_big" :props="props">
-            {{ props.row.pyjamas_big }}
+          <q-td key="plain_trouser_hanging_white" :props="props">
+            {{ props.row.plain_trouser_hanging_white }}
+          </q-td>
+          <q-td
+            key="quantity_jeans_chinos_trouser_folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_jeans_chinos_trouser_folding_colored }}
+          </q-td>
+          <q-td key="jeans_chinos_trouser_folding_colored" :props="props">
+            {{ props.row.jeans_chinos_trouser_folding_colored }}
+          </q-td>
+          <q-td
+            key="quantity_jeans_chinos_trouser_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_jeans_chinos_trouser_hanging_colored }}
+          </q-td>
+          <q-td key="jeans_chinos_trouser_hanging_colored" :props="props">
+            {{ props.row.jeans_chinos_trouser_hanging_colored }}
+          </q-td>
+          <q-td
+            key="quantity_jeans_chinos_trouser_folding_white"
+            :props="props"
+          >
+            {{ props.row.quantity_jeans_chinos_trouser_folding_white }}
+          </q-td>
+          <q-td key="jeans_chinos_trouser_folding_white" :props="props">
+            {{ props.row.jeans_chinos_trouser_folding_white }}
+          </q-td>
+          <q-td
+            key="quantity_jeans_chinos_trouser_hanging_white"
+            :props="props"
+          >
+            {{ props.row.quantity_jeans_chinos_trouser_hanging_white }}
+          </q-td>
+          <q-td key="jeans_chinos_trouser_hanging_white" :props="props">
+            {{ props.row.jeans_chinos_trouser_hanging_white }}
+          </q-td>
+          <q-td key="quantity_waist_coat_hanging_colored" :props="props">
+            {{ props.row.quantity_waist_coat_hanging_colored }}
+          </q-td>
+          <q-td key="waist_coat_hanging_colored" :props="props">
+            {{ props.row.waist_coat_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_waist_coat_hanging_white" :props="props">
+            {{ props.row.quantity_waist_coat_hanging_white }}
+          </q-td>
+          <q-td key="waist_coat_hanging_white" :props="props">
+            {{ props.row.waist_coat_hanging_white }}
+          </q-td>
+          <q-td key="quantity_tie_colored" :props="props">
+            {{ props.row.quantity_tie_colored }}
+          </q-td>
+          <q-td key="tie_colored" :props="props">
+            {{ props.row.tie_colored }}
+          </q-td>
+          <q-td key="quantity_tie_white" :props="props">
+            {{ props.row.quantity_tie_white }}
+          </q-td>
+          <q-td key="tie_white" :props="props">
+            {{ props.row.tie_white }}
+          </q-td>
+          <q-td key="quantity_shorts_folding_colored" :props="props">
+            {{ props.row.quantity_shorts_folding_colored }}
+          </q-td>
+          <q-td key="shorts_folding_colored" :props="props">
+            {{ props.row.shorts_folding_colored }}
+          </q-td>
+          <q-td key="quantity_shorts_hanging_colored" :props="props">
+            {{ props.row.quantity_shorts_hanging_colored }}
+          </q-td>
+          <q-td key="shorts_hanging_colored" :props="props">
+            {{ props.row.shorts_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_shorts_folding_white" :props="props">
+            {{ props.row.quantity_shorts_folding_white }}
+          </q-td>
+          <q-td key="shorts_folding_white" :props="props">
+            {{ props.row.shorts_folding_white }}
+          </q-td>
+          <q-td key="quantity_shorts_hanging_white" :props="props">
+            {{ props.row.quantity_shorts_hanging_white }}
+          </q-td>
+          <q-td key="shorts_hanging_white" :props="props">
+            {{ props.row.shorts_hanging_white }}
+          </q-td>
+          <q-td key="quantity_singlet_colored" :props="props">
+            {{ props.row.quantity_singlet_colored }}
+          </q-td>
+          <q-td key="singlet_colored" :props="props">
+            {{ props.row.singlet_colored }}
+          </q-td>
+          <q-td key="quantity_singlet_white" :props="props">
+            {{ props.row.quantity_singlet_white }}
+          </q-td>
+          <q-td key="singlet_white" :props="props">
+            {{ props.row.singlet_white }}
+          </q-td>
+          <q-td key="quantity_boxer_colored" :props="props">
+            {{ props.row.quantity_boxer_colored }}
+          </q-td>
+          <q-td key="boxer_colored" :props="props">
+            {{ props.row.boxer_colored }}
+          </q-td>
+          <q-td key="quantity_boxer_white" :props="props">
+            {{ props.row.quantity_boxer_white }}
+          </q-td>
+          <q-td key="boxer_white" :props="props">
+            {{ props.row.boxer_white }}
+          </q-td>
+
+          <q-td key="quantity_male_2pcs_suit_hanging_colored" :props="props">
+            {{ props.row.quantity_male_2pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="male_2pcs_suit_hanging_colored" :props="props">
+            {{ props.row.male_2pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_male_2pcs_suit_hanging_white" :props="props">
+            {{ props.row.quantity_male_2pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="male_2pcs_suit_hanging_white" :props="props">
+            {{ props.row.male_2pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="quantity_male_3pcs_suit_hanging_colored" :props="props">
+            {{ props.row.quantity_male_3pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="male_3pcs_suit_hanging_colored" :props="props">
+            {{ props.row.male_3pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_male_3pcs_suit_hanging_white" :props="props">
+            {{ props.row.quantity_male_3pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="male_3pcs_suit_hanging_white" :props="props">
+            {{ props.row.male_3pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="quantity_female_2pcs_suit_hanging_colored" :props="props">
+            {{ props.row.quantity_female_2pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="female_2pcs_suit_hanging_colored" :props="props">
+            {{ props.row.female_2pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_female_2pcs_suit_hanging_white" :props="props">
+            {{ props.row.quantity_female_2pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="female_2pcs_suit_hanging_white" :props="props">
+            {{ props.row.female_2pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="quantity_female_3pcs_suit_hanging_colored" :props="props">
+            {{ props.row.quantity_female_3pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="female_3pcs_suit_hanging_colored" :props="props">
+            {{ props.row.female_3pcs_suit_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_female_3pcs_suit_hanging_white" :props="props">
+            {{ props.row.quantity_female_3pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="female_3pcs_suit_hanging_white" :props="props">
+            {{ props.row.female_3pcs_suit_hanging_white }}
+          </q-td>
+          <q-td key="quantity_male_jacket_only_colored" :props="props">
+            {{ props.row.quantity_male_jacket_only_colored }}
+          </q-td>
+          <q-td key="male_jacket_only_colored" :props="props">
+            {{ props.row.male_jacket_only_colored }}
+          </q-td>
+          <q-td key="quantity_male_jacket_only_white" :props="props">
+            {{ props.row.quantity_male_jacket_only_white }}
+          </q-td>
+          <q-td key="male_jacket_only_white" :props="props">
+            {{ props.row.male_jacket_only_white }}
+          </q-td>
+          <q-td key="quantity_female_jacket_only_colored" :props="props">
+            {{ props.row.quantity_female_jacket_only_colored }}
+          </q-td>
+          <q-td key="female_jacket_only_colored" :props="props">
+            {{ props.row.female_jacket_only_colored }}
+          </q-td>
+          <q-td key="quantity_female_jacket_only_white" :props="props">
+            {{ props.row.quantity_female_jacket_only_white }}
+          </q-td>
+          <q-td key="female_jacket_only_white" :props="props">
+            {{ props.row.female_jacket_only_white }}
+          </q-td>
+          <q-td
+            key="quantity_wedding_gown_small_and_little_accessories_white"
+            :props="props"
+          >
+            {{
+              props.row.quantity_wedding_gown_small_and_little_accessories_white
+            }}
+          </q-td>
+          <q-td
+            key="wedding_gown_small_and_little_accessories_white"
+            :props="props"
+          >
+            {{ props.row.wedding_gown_small_and_little_accessories_white }}
+          </q-td>
+          <q-td
+            key="quantity_wedding_gown_big_and_plenty_accessories_white"
+            :props="props"
+          >
+            {{
+              props.row.quantity_wedding_gown_big_and_plenty_accessories_white
+            }}
+          </q-td>
+          <q-td
+            key="wedding_gown_big_and_plenty_accessories_white"
+            :props="props"
+          >
+            {{ props.row.wedding_gown_big_and_plenty_accessories_white }}
+          </q-td>
+          <q-td key="quantity_Kids_blouse_folding_colored" :props="props">
+            {{ props.row.quantity_Kids_blouse_folding_colored }}
+          </q-td>
+          <q-td key="Kids_blouse_folding_colored" :props="props">
+            {{ props.row.Kids_blouse_folding_colored }}
+          </q-td>
+          <q-td key="quantity_Kids_blouse_hanging_colored" :props="props">
+            {{ props.row.quantity_Kids_blouse_hanging_colored }}
+          </q-td>
+          <q-td key="Kids_blouse_hanging_colored" :props="props">
+            {{ props.row.Kids_blouse_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_Kids_blouse_folding_white" :props="props">
+            {{ props.row.quantity_Kids_blouse_folding_white }}
+          </q-td>
+          <q-td key="Kids_blouse_folding_white" :props="props">
+            {{ props.row.Kids_blouse_folding_white }}
+          </q-td>
+          <q-td key="quantity_Kids_blouse_hanging_white" :props="props">
+            {{ props.row.quantity_Kids_blouse_hanging_white }}
+          </q-td>
+          <q-td key="Kids_blouse_hanging_white" :props="props">
+            {{ props.row.Kids_blouse_hanging_white }}
+          </q-td>
+          <q-td key="quantity_jalamia_colored" :props="props">
+            {{ props.row.quantity_jalamia_colored }}
+          </q-td>
+          <q-td key="jalamia_colored" :props="props">
+            {{ props.row.jalamia_colored }}
+          </q-td>
+          <q-td key="quantity_jalamia_white" :props="props">
+            {{ props.row.quantity_jalamia_white }}
+          </q-td>
+          <q-td key="jalamia_white" :props="props">
+            {{ props.row.jalamia_white }}
+          </q-td>
+          <q-td key="quantity_camisole_colored" :props="props">
+            {{ props.row.quantity_camisole_colored }}
+          </q-td>
+          <q-td key="camisole_colored" :props="props">
+            {{ props.row.camisole_colored }}
+          </q-td>
+          <q-td key="quantity_camisole_white" :props="props">
+            {{ props.row.quantity_camisole_white }}
+          </q-td>
+          <q-td key="camisole_white" :props="props">
+            {{ props.row.camisole_white }}
+          </q-td>
+          <q-td key="quantity_wrapper_buba_scarf_colored" :props="props">
+            {{ props.row.quantity_wrapper_buba_scarf_colored }}
+          </q-td>
+          <q-td key="wrapper_buba_scarf_colored" :props="props">
+            {{ props.row.wrapper_buba_scarf_colored }}
+          </q-td>
+          <q-td key="quantity_wrapper_buba_scarf_white" :props="props">
+            {{ props.row.quantity_wrapper_buba_scarf_white }}
+          </q-td>
+          <q-td key="wrapper_buba_scarf_white" :props="props">
+            {{ props.row.wrapper_buba_scarf_white }}
+          </q-td>
+          <q-td key="quantity_wrapper_only_colored" :props="props">
+            {{ props.row.quantity_wrapper_only_colored }}
+          </q-td>
+          <q-td key="wrapper_only_colored" :props="props">
+            {{ props.row.wrapper_only_colored }}
+          </q-td>
+          <q-td key="quantity_wrapper_only_white" :props="props">
+            {{ props.row.quantity_wrapper_only_white }}
+          </q-td>
+          <q-td key="wrapper_only_white" :props="props">
+            {{ props.row.wrapper_only_white }}
+          </q-td>
+          <q-td
+            key="quantity_two_wrapper_scarf_or_no_scarf_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_two_wrapper_scarf_or_no_scarf_colored }}
+          </q-td>
+          <q-td key="two_wrapper_scarf_or_no_scarf_colored" :props="props">
+            {{ props.row.two_wrapper_scarf_or_no_scarf_colored }}
+          </q-td>
+          <q-td
+            key="quantity_two_wrapper_scarf_or_no_scarf_white"
+            :props="props"
+          >
+            {{ props.row.quantity_two_wrapper_scarf_or_no_scarf_white }}
+          </q-td>
+          <q-td key="two_wrapper_scarf_or_no_scarf_white" :props="props">
+            {{ props.row.two_wrapper_scarf_or_no_scarf_white }}
+          </q-td>
+          <q-td key="quantity_aso_oke_agbada_and_cap_colored" :props="props">
+            {{ props.row.quantity_aso_oke_agbada_and_cap_colored }}
+          </q-td>
+          <q-td key="aso_oke_agbada_and_cap_colored" :props="props">
+            {{ props.row.aso_oke_agbada_and_cap_colored }}
+          </q-td>
+          <q-td key="quantity_male_aso_oke_and_cap_3pcs_colored" :props="props">
+            {{ props.row.quantity_male_aso_oke_and_cap_3pcs_colored }}
+          </q-td>
+          <q-td key="male_aso_oke_and_cap_3pcs_colored" :props="props">
+            {{ props.row.male_aso_oke_and_cap_3pcs_colored }}
+          </q-td>
+          <q-td key="quantity_aso_oke_wrapper_buba_gele_colored" :props="props">
+            {{ props.row.quantity_aso_oke_wrapper_buba_gele_colored }}
+          </q-td>
+          <q-td key="aso_oke_wrapper_buba_gele_colored" :props="props">
+            {{ props.row.aso_oke_wrapper_buba_gele_colored }}
+          </q-td>
+          <q-td key="quantity_aso_oke_wrapper_gele_colored" :props="props">
+            {{ props.row.quantity_aso_oke_wrapper_gele_colored }}
+          </q-td>
+          <q-td key="aso_oke_wrapper_gele_colored" :props="props">
+            {{ props.row.aso_oke_wrapper_gele_colored }}
+          </q-td>
+          <q-td
+            key="quantity_aso_oke_wrapper_gele_ipele_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_aso_oke_wrapper_gele_ipele_colored }}
+          </q-td>
+          <q-td key="aso_oke_wrapper_gele_ipele_colored" :props="props">
+            {{ props.row.aso_oke_wrapper_gele_ipele_colored }}
+          </q-td>
+          <q-td key="quantity_aso_oke_wrapper_gele_ipele_white" :props="props">
+            {{ props.row.quantity_aso_oke_wrapper_gele_ipele_white }}
+          </q-td>
+          <q-td key="aso_oke_wrapper_gele_ipele_white" :props="props">
+            {{ props.row.aso_oke_wrapper_gele_ipele_white }}
+          </q-td>
+          <q-td key="quantity_aso_oke_headtie_ipele_colored" :props="props">
+            {{ props.row.quantity_aso_oke_headtie_ipele_colored }}
+          </q-td>
+          <q-td key="aso_oke_headtie_ipele_colored" :props="props">
+            {{ props.row.aso_oke_headtie_ipele_colored }}
+          </q-td>
+          <q-td key="quantity_female_inner_wear_colored" :props="props">
+            {{ props.row.quantity_female_inner_wear_colored }}
+          </q-td>
+          <q-td key="female_inner_wear_colored" :props="props">
+            {{ props.row.female_inner_wear_colored }}
+          </q-td>
+          <q-td key="quantity_female_inner_wear_white" :props="props">
+            {{ props.row.quantity_female_inner_wear_white }}
+          </q-td>
+          <q-td key="female_inner_wear_white" :props="props">
+            {{ props.row.female_inner_wear_white }}
+          </q-td>
+          <q-td key="quantity_head_tie_gele_colored" :props="props">
+            {{ props.row.quantity_head_tie_gele_colored }}
+          </q-td>
+          <q-td key="head_tie_gele_colored" :props="props">
+            {{ props.row.head_tie_gele_colored }}
+          </q-td>
+          <q-td key="quantity_head_tie_gele_white" :props="props">
+            {{ props.row.quantity_head_tie_gele_white }}
+          </q-td>
+          <q-td key="head_tie_gele_white" :props="props">
+            {{ props.row.head_tie_gele_white }}
+          </q-td>
+          <q-td key="quantity_gown_children_colored" :props="props">
+            {{ props.row.quantity_gown_children_colored }}
+          </q-td>
+          <q-td key="gown_children_colored" :props="props">
+            {{ props.row.gown_children_colored }}
+          </q-td>
+          <q-td key="quantity_gown_children_white" :props="props">
+            {{ props.row.quantity_gown_children_white }}
+          </q-td>
+          <q-td key="gown_children_white" :props="props">
+            {{ props.row.gown_children_white }}
+          </q-td>
+          <q-td
+            key="quantity_gown_english_adult_folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_gown_english_adult_folding_colored }}
+          </q-td>
+          <q-td key="gown_english_adult_folding_colored" :props="props">
+            {{ props.row.gown_english_adult_folding_colored }}
+          </q-td>
+          <q-td key="quantity_gown_english_adult_folding_white" :props="props">
+            {{ props.row.quantity_gown_english_adult_folding_white }}
+          </q-td>
+          <q-td key="gown_english_adult_folding_white" :props="props">
+            {{ props.row.gown_english_adult_folding_white }}
+          </q-td>
+          <q-td
+            key="quantity_gown_english_adult_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_gown_english_adult_hanging_colored }}
+          </q-td>
+          <q-td key="gown_english_adult_hanging_colored" :props="props">
+            {{ props.row.gown_english_adult_hanging_colored }}
+          </q-td>
+          <q-td key="quantity_gown_english_adult_hanging_white" :props="props">
+            {{ props.row.quantity_gown_english_adult_hanging_white }}
+          </q-td>
+          <q-td key="gown_english_adult_hanging_white" :props="props">
+            {{ props.row.gown_english_adult_hanging_white }}
+          </q-td>
+          <q-td key="quantity_gown_native_folding_colored" :props="props">
+            {{ props.row.quantity_gown_native_folding_colored }}
+          </q-td>
+          <q-td key="gown_native_folding_colored" :props="props">
+            {{ props.row.gown_native_folding_colored }}
+          </q-td>
+          <q-td key="quantity_gown_native_folding_white" :props="props">
+            {{ props.row.quantity_gown_native_folding_white }}
+          </q-td>
+          <q-td key="gown_native_folding_white" :props="props">
+            {{ props.row.gown_native_folding_white }}
+          </q-td>
+          <q-td
+            key="quantity_skirt_and_blouse_english_hanging_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_skirt_and_blouse_english_hanging_colored }}
+          </q-td>
+          <q-td key="skirt_and_blouse_english_hanging_colored" :props="props">
+            {{ props.row.skirt_and_blouse_english_hanging_colored }}
+          </q-td>
+          <q-td
+            key="quantity_skirt_and_blouse_english_hanging_white"
+            :props="props"
+          >
+            {{ props.row.quantity_skirt_and_blouse_english_hanging_white }}
+          </q-td>
+          <q-td key="skirt_and_blouse_english_hanging_white" :props="props">
+            {{ props.row.skirt_and_blouse_english_hanging_white }}
+          </q-td>
+          <q-td
+            key="quantity_skirt_and_blouse_native_folding_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_skirt_and_blouse_native_folding_colored }}
+          </q-td>
+          <q-td key="skirt_and_blouse_native_folding_colored" :props="props">
+            {{ props.row.skirt_and_blouse_native_folding_colored }}
+          </q-td>
+          <q-td
+            key="quantity_skirt_and_blouse_native_folding_white"
+            :props="props"
+          >
+            {{ props.row.quantity_skirt_and_blouse_native_folding_white }}
+          </q-td>
+          <q-td key="skirt_and_blouse_native_folding_white" :props="props">
+            {{ props.row.skirt_and_blouse_native_folding_white }}
+          </q-td>
+          <q-td
+            key="quantity_female_native_buba_and_trouser_colored"
+            :props="props"
+          >
+            {{ props.row.quantity_female_native_buba_and_trouser_colored }}
+          </q-td>
+          <q-td key="female_native_buba_and_trouser_colored" :props="props">
+            {{ props.row.female_native_buba_and_trouser_colored }}
+          </q-td>
+          <q-td
+            key="quantity_female_native_buba_and_trouser_white"
+            :props="props"
+          >
+            {{ props.row.quantity_female_native_buba_and_trouser_white }}
+          </q-td>
+          <q-td key="female_native_buba_and_trouser_white" :props="props">
+            {{ props.row.female_native_buba_and_trouser_white }}
+          </q-td>
+          <q-td key="quantity_male_cap_colored" :props="props">
+            {{ props.row.quantity_male_cap_colored }}
+          </q-td>
+          <q-td key="male_cap_colored" :props="props">
+            {{ props.row.male_cap_colored }}
+          </q-td>
+          <q-td key="quantity_male_cap_white" :props="props">
+            {{ props.row.quantity_male_cap_white }}
+          </q-td>
+          <q-td key="male_cap_white" :props="props">
+            {{ props.row.male_cap_white }}
+          </q-td>
+          <q-td key="quantity_female_cap_colored" :props="props">
+            {{ props.row.quantity_female_cap_colored }}
+          </q-td>
+          <q-td key="female_cap_colored" :props="props">
+            {{ props.row.female_cap_colored }}
+          </q-td>
+          <q-td key="quantity_female_cap_white" :props="props">
+            {{ props.row.quantity_female_cap_white }}
+          </q-td>
+          <q-td key="female_cap_white" :props="props">
+            {{ props.row.female_cap_white }}
+          </q-td>
+          <q-td key="quantity_tursan_colored" :props="props">
+            {{ props.row.quantity_tursan_colored }}
+          </q-td>
+          <q-td key="tursan_colored" :props="props">
+            {{ props.row.tursan_colored }}
+          </q-td>
+          <q-td key="quantity_tursan_white" :props="props">
+            {{ props.row.quantity_tursan_white }}
+          </q-td>
+          <q-td key="tursan_white" :props="props">
+            {{ props.row.tursan_white }}
+          </q-td>
+          <q-td key="quantity_sweater_small_colored" :props="props">
+            {{ props.row.quantity_sweater_small_colored }}
+          </q-td>
+          <q-td key="sweater_small_colored" :props="props">
+            {{ props.row.sweater_small_colored }}
+          </q-td>
+          <q-td key="quantity_sweater_small_white" :props="props">
+            {{ props.row.quantity_sweater_small_white }}
+          </q-td>
+          <q-td key="sweater_small_white" :props="props">
+            {{ props.row.sweater_small_white }}
+          </q-td>
+          <q-td key="quantity_sweater_normal_colored" :props="props">
+            {{ props.row.quantity_sweater_normal_colored }}
+          </q-td>
+          <q-td key="sweater_normal_colored" :props="props">
+            {{ props.row.sweater_normal_colored }}
+          </q-td>
+          <q-td key="quantity_sweater_normal_white" :props="props">
+            {{ props.row.quantity_sweater_normal_white }}
+          </q-td>
+          <q-td key="sweater_normal_white" :props="props">
+            {{ props.row.sweater_normal_white }}
+          </q-td>
+          <q-td key="quantity_sweater_big_colored" :props="props">
+            {{ props.row.quantity_sweater_big_colored }}
+          </q-td>
+          <q-td key="sweater_big_colored" :props="props">
+            {{ props.row.sweater_big_colored }}
+          </q-td>
+          <q-td key="quantity_sweater_big_white" :props="props">
+            {{ props.row.quantity_sweater_big_white }}
+          </q-td>
+          <q-td key="sweater_big_white" :props="props">
+            {{ props.row.sweater_big_white }}
+          </q-td>
+          <q-td key="quantity_towel_small_colored" :props="props">
+            {{ props.row.quantity_towel_small_colored }}
+          </q-td>
+          <q-td key="towel_small_colored" :props="props">
+            {{ props.row.towel_small_colored }}
+          </q-td>
+          <q-td key="quantity_towel_small_white" :props="props">
+            {{ props.row.quantity_towel_small_white }}
+          </q-td>
+          <q-td key="towel_small_white" :props="props">
+            {{ props.row.towel_small_white }}
+          </q-td>
+          <q-td key="quantity_towel_normal_colored" :props="props">
+            {{ props.row.quantity_towel_normal_colored }}
+          </q-td>
+          <q-td key="towel_normal_colored" :props="props">
+            {{ props.row.towel_normal_colored }}
+          </q-td>
+          <q-td key="quantity_towel_normal_white" :props="props">
+            {{ props.row.quantity_towel_normal_white }}
+          </q-td>
+          <q-td key="towel_normal_white" :props="props">
+            {{ props.row.towel_normal_white }}
+          </q-td>
+          <q-td key="quantity_towel_big_colored" :props="props">
+            {{ props.row.quantity_towel_big_colored }}
+          </q-td>
+          <q-td key="towel_big_colored" :props="props">
+            {{ props.row.towel_big_colored }}
+          </q-td>
+          <q-td key="quantity_towel_big_white" :props="props">
+            {{ props.row.quantity_towel_big_white }}
+          </q-td>
+          <q-td key="towel_big_white" :props="props">
+            {{ props.row.towel_big_white }}
+          </q-td>
+          <q-td key="quantity_bed_spread_normal_colored" :props="props">
+            {{ props.row.quantity_bed_spread_normal_colored }}
+          </q-td>
+          <q-td key="bed_spread_normal_colored" :props="props">
+            {{ props.row.bed_spread_normal_colored }}
+          </q-td>
+          <q-td key="quantity_bed_spread_normal_white" :props="props">
+            {{ props.row.quantity_bed_spread_normal_white }}
+          </q-td>
+          <q-td key="bed_spread_normal_white" :props="props">
+            {{ props.row.bed_spread_normal_white }}
+          </q-td>
+          <q-td key="quantity_bed_spread_big_colored" :props="props">
+            {{ props.row.quantity_bed_spread_big_colored }}
+          </q-td>
+          <q-td key="bed_spread_big_colored" :props="props">
+            {{ props.row.bed_spread_big_colored }}
+          </q-td>
+          <q-td key="quantity_bed_spread_big_white" :props="props">
+            {{ props.row.quantity_bed_spread_big_white }}
+          </q-td>
+          <q-td key="bed_spread_big_white" :props="props">
+            {{ props.row.bed_spread_big_white }}
+          </q-td>
+          <q-td key="quantity_bed_spread_double_colored" :props="props">
+            {{ props.row.quantity_bed_spread_double_colored }}
+          </q-td>
+          <q-td key="bed_spread_double_colored" :props="props">
+            {{ props.row.bed_spread_double_colored }}
+          </q-td>
+          <q-td key="quantity_bed_spread_double_white" :props="props">
+            {{ props.row.quantity_bed_spread_double_white }}
+          </q-td>
+          <q-td key="bed_spread_double_white" :props="props">
+            {{ props.row.bed_spread_double_white }}
+          </q-td>
+          <q-td key="quantity_duvet_normal_colored" :props="props">
+            {{ props.row.quantity_duvet_normal_colored }}
+          </q-td>
+          <q-td key="duvet_normal_colored" :props="props">
+            {{ props.row.duvet_normal_colored }}
+          </q-td>
+          <q-td key="quantity_duvet_normal_white" :props="props">
+            {{ props.row.quantity_duvet_normal_white }}
+          </q-td>
+          <q-td key="duvet_normal_white" :props="props">
+            {{ props.row.duvet_normal_white }}
+          </q-td>
+          <q-td key="quantity_duvet_big_colored" :props="props">
+            {{ props.row.quantity_duvet_big_colored }}
+          </q-td>
+          <q-td key="duvet_big_colored" :props="props">
+            {{ props.row.duvet_big_colored }}
+          </q-td>
+          <q-td key="quantity_duvet_big_white" :props="props">
+            {{ props.row.quantity_duvet_big_white }}
+          </q-td>
+          <q-td key="duvet_big_white" :props="props">
+            {{ props.row.duvet_big_white }}
+          </q-td>
+          <q-td key="quantity_curtain_normal_colored" :props="props">
+            {{ props.row.quantity_curtain_normal_colored }}
+          </q-td>
+          <q-td key="curtain_normal_colored" :props="props">
+            {{ props.row.curtain_normal_colored }}
+          </q-td>
+          <q-td key="quantity_curtain_big_colored" :props="props">
+            {{ props.row.quantity_curtain_big_colored }}
+          </q-td>
+          <q-td key="curtain_big_colored" :props="props">
+            {{ props.row.curtain_big_colored }}
+          </q-td>
+          <q-td key="quantity_curtain_very_big_colored" :props="props">
+            {{ props.row.quantity_curtain_very_big_colored }}
+          </q-td>
+          <q-td key="curtain_very_big_colored" :props="props">
+            {{ props.row.curtain_very_big_colored }}
+          </q-td>
+          <q-td key="quantity_pyjamas_small_colored" :props="props">
+            {{ props.row.quantity_pyjamas_small_colored }}
+          </q-td>
+          <q-td key="pyjamas_small_colored" :props="props">
+            {{ props.row.pyjamas_small_colored }}
+          </q-td>
+          <q-td key="quantity_pyjamas_small_white" :props="props">
+            {{ props.row.quantity_pyjamas_small_white }}
+          </q-td>
+          <q-td key="pyjamas_small_white" :props="props">
+            {{ props.row.pyjamas_small_white }}
+          </q-td>
+          <q-td key="quantity_pyjamas_big_colored" :props="props">
+            {{ props.row.quantity_pyjamas_big_colored }}
+          </q-td>
+          <q-td key="pyjamas_big_colored" :props="props">
+            {{ props.row.pyjamas_big_colored }}
+          </q-td>
+          <q-td key="quantity_pyjamas_big_white" :props="props">
+            {{ props.row.quantity_pyjamas_big_white }}
+          </q-td>
+          <q-td key="pyjamas_big_white" :props="props">
+            {{ props.row.pyjamas_big_white }}
+          </q-td>
+          <q-td key="quantity_blanket_colored" :props="props">
+            {{ props.row.quantity_blanket_colored }}
+          </q-td>
+          <q-td key="blanket_colored" :props="props">
+            {{ props.row.blanket_colored }}
+          </q-td>
+          <q-td key="quantity_pillow_cases_colored" :props="props">
+            {{ props.row.quantity_pillow_cases_colored }}
+          </q-td>
+          <q-td key="pillow_cases_colored" :props="props">
+            {{ props.row.pillow_cases_colored }}
+          </q-td>
+          <q-td key="quantity_pillow_cases_white" :props="props">
+            {{ props.row.quantity_pillow_cases_white }}
+          </q-td>
+          <q-td key="pillow_cases_white" :props="props">
+            {{ props.row.pillow_cases_white }}
           </q-td>
           <q-td key="comment_section" :props="props">
             {{ props.row.comment_section }}
@@ -641,10 +1242,10 @@
               v-for="(value, key) in dataMore"
               :key="key"
             >
-              <div class="col-12 col-md-6 q-pl-md">
+              <div class="col-12 col-md-7 q-pl-md">
                 <div class="text-subtitle2 bg-grey">{{ key }}</div>
               </div>
-              <div class="col-12 col-md-6 q-pl-md">
+              <div class="col-12 col-md-5 q-pl-md">
                 <div class="text-h6">{{ value }}</div>
               </div>
             </div>
@@ -696,593 +1297,1755 @@ const columns = [
   { name: "intake_id", label: "Intake ID", field: "intake_id" },
   { name: "staff", label: "Staff", field: "staff" },
   {
-    name: "quantity_male_native_2_pcs",
-    label: "Quantity Male Native 2pcs",
-    field: "quantity_male_native_2_pcs",
+    name: "quantity_male_native_2pcs_folding_colored",
+    label: "Quantity Male Native 2 Pcs Folding-Colored",
+    field: "quantity_male_native_2pcs_folding_colored",
   },
   {
-    name: "male_native_2_pcs",
-    label: "Male Native 2pcs",
-    field: "male_native_2_pcs",
+    name: "male_native_2pcs_folding_colored",
+    label: "Male Native 2 Pcs Folding-Colored",
+    field: "male_native_2pcs_folding_colored",
   },
   {
-    name: "quantity_male_native_2_pcs_hanging",
-    label: "Quantity Male Native 2pcs[Hanging]",
-    field: "quantity_male_native_2_pcs_hanging",
+    name: "quantity_male_native_2pcs_hanging_colored",
+    label: "Quantity Male Native 2 Pcs Hanging-Colored",
+    field: "quantity_male_native_2pcs_hanging_colored",
   },
   {
-    name: "male_native_2_pcs_hanging",
-    label: "Male Native 2pcs[Hanging]",
-    field: "male_native_2_pcs_hanging",
+    name: "male_native_2pcs_hanging_colored",
+    label: "Male Native 2 Pcs Hanging-Colored",
+    field: "male_native_2pcs_hanging_colored",
   },
   {
-    name: "quantity_male_native_3_pcs_notAgbada",
-    label: "Quantity Male Native 3pcs Not-Agbada",
-    field: "quantity_male_native_3_pcs_notAgbada",
+    name: "quantity_male_native_2pcs_folding_white",
+    label: "Quantity Male Native 2 Pcs Folding-White",
+    field: "quantity_male_native_2pcs_folding_white",
   },
   {
-    name: "male_native_3_pcs_notAgbada",
-    label: "Male Native 3pcs Not-Agbada",
-    field: "male_native_3_pcs_notAgbada",
+    name: "male_native_2pcs_folding_white",
+    label: "Male Native 2 Pcs Folding-White",
+    field: "male_native_2pcs_folding_white",
   },
   {
-    name: "quantity_male_native_3_pcs_notAgbada_hanging",
-    label: "Quantity Male Native 3pcs Not-Agbada[Hanging]",
-    field: "quantity_male_native_3_pcs_notAgbada_hanging",
+    name: "quantity_male_native_2pcs_hanging_white",
+    label: "Quantity Male Native 2 Pcs Hanging-White",
+    field: "quantity_male_native_2pcs_hanging_white",
   },
   {
-    name: "male_native_3_pcs_notAgbada_hanging",
-    label: "Male Native 3pcs Not-Agbada[Hanging]",
-    field: "male_native_3_pcs_notAgbada_hanging",
+    name: "male_native_2pcs_hanging_white",
+    label: "Male Native 2 Pcs Hanging-White",
+    field: "male_native_2pcs_hanging_white",
   },
   {
-    name: "quantity_native_top_only",
-    label: "Quantity Native Top Only",
-    field: "quantity_native_top_only",
+    name: "quantity_male_native_3pcs_notAgbada_folding_colored",
+    label: "Quantity Male Native 3 Pcs Not-Agbada Folding-Colored",
+    field: "quantity_male_native_3pcs_notAgbada_folding_colored",
   },
   {
-    name: "native_top_only",
-    label: "Native Top Only",
-    field: "native_top_only",
+    name: "male_native_3pcs_notAgbada_folding_colored",
+    label: "Male Native 3 Pcs Not-Agbada Folding-Colored",
+    field: "male_native_3pcs_notAgbada_folding_colored",
   },
   {
-    name: "quantity_native_trouser_only",
-    label: "Quantity Native Trouser Only",
-    field: "quantity_native_trouser_only",
+    name: "quantity_male_native_3pcs_notAgbada_hanging_colored",
+    label: "Quantity Male Native 3 Pcs Not-Agbada Hanging-Colored",
+    field: "quantity_male_native_3pcs_notAgbada_hanging_colored",
   },
   {
-    name: "native_trouser_only",
-    label: "Native Trouser Only",
-    field: "native_trouser_only",
+    name: "male_native_3pcs_notAgbada_hanging_colored",
+    label: "Male Native 3 Pcs Not-Agbada Hanging-Colored",
+    field: "male_native_3pcs_notAgbada_hanging_colored",
   },
   {
-    name: "quantity_complete_male_agbada",
-    label: "Quantity Complete Male Agbada",
-    field: "quantity_complete_male_agbada",
+    name: "quantity_male_native_3pcs_notAgbada_folding_white",
+    label: "Quantity Male Native 3 Pcs Not-Agbada Folding-White",
+    field: "quantity_male_native_3pcs_notAgbada_folding_white",
   },
   {
-    name: "complete_male_agbada",
-    label: "Complete Male Agbada",
-    field: "complete_male_agbada",
+    name: "male_native_3pcs_notAgbada_folding_white",
+    label: "Male Native 3 Pcs Not-Agbada Folding-White",
+    field: "male_native_3pcs_notAgbada_folding_white",
   },
   {
-    name: "quantity_male_agbada_alone",
-    label: "Quantity Male Agbada Alone",
-    field: "quantity_male_agbada_alone",
+    name: "quantity_male_native_3pcs_notAgbada_hanging_white",
+    label: "Quantity Male Native 3 Pcs Not-Agbada Hanging-White",
+    field: "quantity_male_native_3pcs_notAgbada_hanging_white",
   },
   {
-    name: "male_agbada_alone",
-    label: "Male Agbada Alone",
-    field: "male_agbada_alone",
+    name: "male_native_3pcs_notAgbada_hanging_white",
+    label: "Male Native 3 Pcs Not-Agbada Hanging-White",
+    field: "male_native_3pcs_notAgbada_hanging_white",
   },
   {
-    name: "quantity_blouse",
-    label: "Quantity Blouse",
-    field: "quantity_blouse",
+    name: "quantity_native_top_only_folding_colored",
+    label: "Quantity Native Top Only Folding-Colored",
+    field: "quantity_native_top_only_folding_colored",
   },
   {
-    name: "blouse",
-    label: "Blouse",
-    field: "blouse",
+    name: "native_top_only_folding_colored",
+    label: "Native Top Only Folding-Colored",
+    field: "native_top_only_folding_colored",
   },
   {
-    name: "quantity_blouse_hanging",
-    label: "Quantity Blouse[Hanging]",
-    field: "quantity_blouse_hanging",
+    name: "quantity_native_top_only_hanging_colored",
+    label: "Quantity Native Top Only Hanging-Colored",
+    field: "quantity_native_top_only_hanging_colored",
   },
   {
-    name: "blouse_hanging",
-    label: "Blouse[Hanging]",
-    field: "blouse_hanging",
+    name: "native_top_only_hanging_colored",
+    label: "Native Top Only Hanging-Colored",
+    field: "native_top_only_hanging_colored",
   },
   {
-    name: "quantity_female_shirt",
-    label: "Quantity Female Shirt",
-    field: "quantity_female_shirt",
+    name: "quantity_native_top_only_folding_white",
+    label: "Quantity Native Top Only Folding-White",
+    field: "quantity_native_top_only_folding_white",
   },
   {
-    name: "female_shirt",
-    label: "Female Shirt",
-    field: "female_shirt",
+    name: "native_top_only_folding_white",
+    label: "Native Top Only Folding-White",
+    field: "native_top_only_folding_white",
   },
   {
-    name: "quantity_female_shirt_hanging",
-    label: "Quantity Female Shirt[Hanging]",
-    field: "quantity_female_shirt_hanging",
+    name: "quantity_native_top_only_hanging_white",
+    label: "Quantity Native Top Only Hanging-White",
+    field: "quantity_native_top_only_hanging_white",
   },
   {
-    name: "female_shirt_hanging",
-    label: "Female Shirt[Hanging]",
-    field: "female_shirt_hanging",
+    name: "native_top_only_hanging_white",
+    label: "Native Top Only Hanging-White",
+    field: "native_top_only_hanging_white",
   },
   {
-    name: "quantity_female_trouser_jeans",
-    label: "Quantity Female Trouser Jeans",
-    field: "quantity_female_trouser_jeans",
+    name: "quantity_native_trouser_only_folding_colored",
+    label: "Quantity Native Trouser Only Folding-Colored",
+    field: "quantity_native_trouser_only_folding_colored",
   },
   {
-    name: "female_trouser_jeans",
-    label: "Female Trouser Jeans",
-    field: "female_trouser_jeans",
+    name: "native_trouser_only_folding_colored",
+    label: "Native Trouser Only Folding-Colored",
+    field: "native_trouser_only_folding_colored",
   },
   {
-    name: "quantity_female_trouser_jeans_hanging",
-    label: "Quantity Female Trouser Jeans[Hanging]",
-    field: "quantity_female_trouser_jeans_hanging",
+    name: "quantity_native_trouser_only_hanging_colored",
+    label: "Quantity Native Trouser Only Hanging-Colored",
+    field: "quantity_native_trouser_only_hanging_colored",
   },
   {
-    name: "female_trouser_jeans_hanging",
-    label: "Female Trouser Jeans[Hanging]",
-    field: "female_trouser_jeans_hanging",
+    name: "native_trouser_only_hanging_colored",
+    label: "Native Trouser Only Hanging-Colored",
+    field: "native_trouser_only_hanging_colored",
   },
   {
-    name: "quantity_skirt_and_blouse_english",
-    label: "Quantity Skirt-and-Blouse English",
-    field: "quantity_skirt_and_blouse_english",
+    name: "quantity_native_trouser_only_folding_white",
+    label: "Quantity Native Trouser Only Folding-White",
+    field: "quantity_native_trouser_only_folding_white",
   },
   {
-    name: "skirt_and_blouse_english",
-    label: "Skirt-and-Blouse English",
-    field: "skirt_and_blouse_english",
+    name: "native_trouser_only_folding_white",
+    label: "Native Trouser Only Folding-White",
+    field: "native_trouser_only_folding_white",
   },
   {
-    name: "quantity_skirt_and_blouse_english_hanging",
-    label: "Quantity Skirt-and-Blouse English[Hanging]",
-    field: "quantity_skirt_and_blouse_english_hanging",
+    name: "quantity_native_trouser_only_hanging_white",
+    label: "Quantity Native Trouser Only Hanging-White",
+    field: "quantity_native_trouser_only_hanging_white",
   },
   {
-    name: "skirt_and_blouse_english_hanging",
-    label: "Skirt-and-Blouse English[Hanging]",
-    field: "skirt_and_blouse_english_hanging",
+    name: "native_trouser_only_hanging_white",
+    label: "Native Trouser Only Hanging-White",
+    field: "native_trouser_only_hanging_white",
   },
   {
-    name: "quantity_wrapper_buba_gele",
-    label: "Quantity Wrapper Buba Gele",
-    field: "quantity_wrapper_buba_gele",
+    name: "quantity_male_agbada_only_folding_colored",
+    label: "Quantity Agbada Only Folding-Colored",
+    field: "quantity_male_agbada_only_folding_colored",
   },
   {
-    name: "wrapper_buba_gele",
-    label: "Wrapper Buba Gele",
-    field: "wrapper_buba_gele",
+    name: "male_agbada_only_folding_colored",
+    label: "Agbada Only Folding-Colored",
+    field: "male_agbada_only_folding_colored",
   },
   {
-    name: "quantity_female_native_buba_trouser",
-    label: "Quantity Female Native Buba Trouser",
-    field: "quantity_female_native_buba_trouser",
+    name: "quantity_male_agbada_only_hanging_colored",
+    label: "Quantity Agbada Only Hanging-Colored",
+    field: "quantity_male_agbada_only_hanging_colored",
   },
   {
-    name: "female_native_buba_trouser",
-    label: "Female Native Buba Trouser",
-    field: "female_native_buba_trouser",
+    name: "male_agbada_only_hanging_colored",
+    label: "Agbada Only Hanging-Colored",
+    field: "male_agbada_only_hanging_colored",
   },
   {
-    name: "quantity_gown_english_hanging",
-    label: "Quantity Gown English[Hanging]",
-    field: "quantity_gown_english_hanging",
+    name: "quantity_male_agbada_only_folding_white",
+    label: "Quantity Agbada Only Folding-White",
+    field: "quantity_male_agbada_only_folding_white",
   },
   {
-    name: "gown_english_hanging",
-    label: "Gown English[Hanging]",
-    field: "gown_english_hanging",
+    name: "male_agbada_only_folding_white",
+    label: "Agbada Only Folding-White",
+    field: "male_agbada_only_folding_white",
   },
   {
-    name: "quantity_gown_native",
-    label: "Quantity Gown Native",
-    field: "quantity_gown_native",
+    name: "quantity_male_agbada_only_hanging_white",
+    label: "Quantity Agbada Only Hanging-White",
+    field: "quantity_male_agbada_only_hanging_white",
   },
   {
-    name: "gown_native",
-    label: "Gown Native",
-    field: "gown_native",
+    name: "male_agbada_only_hanging_white",
+    label: "Agbada Only Hanging-White",
+    field: "male_agbada_only_hanging_white",
   },
   {
-    name: "quantity_skirt_and_blouse_native",
-    label: "Quantity Skirt-and-Blouse Native",
-    field: "quantity_skirt_and_blouse_native",
+    name: "quantity_complete_male_agbada_3pcs_Folding_colored",
+    label: "Quantity Complete Male Agbada 3 Pcs Hanging-Colored",
+    field: "quantity_complete_male_agbada_3pcs_Folding_colored",
   },
   {
-    name: "skirt_and_blouse_native",
-    label: "Skirt-and-Blouse Native",
-    field: "skirt_and_blouse_native",
+    name: "complete_male_agbada_3pcs_Folding_colored",
+    label: "Complete Male Agbada 3 Pcs Hanging-Colored",
+    field: "complete_male_agbada_3pcs_Folding_colored",
   },
   {
-    name: "quantity_aso_oke_wrapper_buba_gele",
-    label: "Quantity Aso-Oke Wrapper Buba Gele",
-    field: "quantity_aso_oke_wrapper_buba_gele",
+    name: "quantity_complete_male_agbada_3pcs_Hanging_colored",
+    label: "Quantity Complete Male Agbada 3 Pcs Hanging-Colored",
+    field: "quantity_complete_male_agbada_3pcs_Hanging_colored",
   },
   {
-    name: "aso_oke_wrapper_buba_gele",
-    label: "Aso-Oke Wrapper Buba Gele",
-    field: "aso_oke_wrapper_buba_gele",
+    name: "complete_male_agbada_3pcs_Hanging_colored",
+    label: "Complete Male Agbada 3 Pcs Hanging-Colored",
+    field: "complete_male_agbada_3pcs_Hanging_colored",
   },
   {
-    name: "quantity_male_complete_aso_oke",
-    label: "Quantity Male Complete Aso-Oke",
-    field: "quantity_male_complete_aso_oke",
+    name: "quantity_complete_male_agbada_3pcs_Folding_white",
+    label: "Quantity Complete Male Agbada 3 Pcs Hanging-White",
+    field: "quantity_complete_male_agbada_3pcs_Folding_white",
   },
   {
-    name: "male_complete_aso_oke",
-    label: "Male Complete Aso-Oke",
-    field: "male_complete_aso_oke",
+    name: "complete_male_agbada_3pcs_Folding_white",
+    label: "Complete Male Agbada 3 Pcs Hanging-White",
+    field: "complete_male_agbada_3pcs_Folding_white",
   },
   {
-    name: "quantity_male_medium_t_shirt_or_polo",
-    label: "Quantity Male Medium T-Shirt/Polo",
-    field: "quantity_male_medium_t_shirt_or_polo",
+    name: "quantity_complete_male_agbada_3pcs_Hanging_white",
+    label: "Quantity Complete Male Agbada 3 Pcs Hanging-White",
+    field: "quantity_complete_male_agbada_3pcs_Hanging_white",
   },
   {
-    name: "male_medium_t_shirt_or_polo",
-    label: "Male Medium T-Shirt/Polo",
-    field: "male_medium_t_shirt_or_polo",
+    name: "complete_male_agbada_3pcs_Hanging_white",
+    label: "Complete Male Agbada 3 Pcs Hanging-White",
+    field: "complete_male_agbada_3pcs_Hanging_white",
   },
   {
-    name: "quantity_male_big_t_shirt_or_polo",
-    label: "Quantity Male Big T-Shirt/Polo",
-    field: "quantity_male_big_t_shirt_or_polo",
+    name: "quantity_normal_shirt_folding_colored",
+    label: "Quantity Shirt Folding-Colored",
+    field: "quantity_normal_shirt_folding_colored",
   },
   {
-    name: "male_big_t_shirt_or_polo",
-    label: "Male Big T-Shirt/Polo",
-    field: "male_big_t_shirt_or_polo",
+    name: "normal_shirt_folding_colored",
+    label: "Shirt Folding-Colored",
+    field: "normal_shirt_folding_colored",
   },
   {
-    name: "quantity_male_t_shirt_or_polo_hanging",
-    label: "Quantity Male T-Shirt/Polo[Hanging]",
-    field: "quantity_male_t_shirt_or_polo_hanging",
+    name: "quantity_normal_shirt_hanging_colored",
+    label: "Quantity Shirt Hanging-Colored",
+    field: "quantity_normal_shirt_hanging_colored",
   },
   {
-    name: "male_t_shirt_or_polo_hanging",
-    label: "Male T-Shirt/Polo[Hanging]",
-    field: "male_t_shirt_or_polo_hanging",
+    name: "normal_shirt_hanging_colored",
+    label: "Shirt Hanging-Colored",
+    field: "normal_shirt_hanging_colored",
   },
   {
-    name: "quantity_shirt_normal",
-    label: "Quantity Shirt Normal",
-    field: "quantity_shirt_normal",
+    name: "quantity_normal_shirt_folding_white",
+    label: "Quantity Shirt Folding-White",
+    field: "quantity_normal_shirt_folding_white",
   },
   {
-    name: "shirt_normal",
-    label: "Shirt Normal",
-    field: "shirt_normal",
+    name: "normal_shirt_folding_white",
+    label: "Shirt Folding-White",
+    field: "normal_shirt_folding_white",
   },
   {
-    name: "quantity_shirt_normal_hanging",
-    label: "Quantity Shirt Normal[Hanging]",
-    field: "quantity_shirt_normal_hanging",
+    name: "quantity_normal_shirt_hanging_white",
+    label: "Quantity Shirt Hanging-White",
+    field: "quantity_normal_shirt_hanging_white",
   },
   {
-    name: "shirt_normal_hanging",
-    label: "Shirt Normal[Hanging]",
-    field: "shirt_normal_hanging",
+    name: "normal_shirt_hanging_white",
+    label: "Shirt Hanging-White",
+    field: "normal_shirt_hanging_white",
   },
   {
-    name: "quantity_shirt_big",
-    label: "Quantity Shirt Big",
-    field: "quantity_shirt_big",
+    name: "quantity_shirt_big_folding_colored",
+    label: "Quantity Shirt Big Folding-Colored",
+    field: "quantity_shirt_big_folding_colored",
   },
   {
-    name: "shirt_big",
-    label: "Shirt Big",
-    field: "shirt_big",
+    name: "shirt_big_folding_colored",
+    label: "Shirt Big Folding-Colored",
+    field: "shirt_big_folding_colored",
   },
   {
-    name: "quantity_shirt_big_hanging",
-    label: "Quantity Shirt Big[Hanging]",
-    field: "quantity_shirt_big_hanging",
+    name: "quantity_shirt_big_hanging_colored",
+    label: "Quantity Shirt Big Hanging-Colored",
+    field: "quantity_shirt_big_hanging_colored",
   },
   {
-    name: "shirt_big_hanging",
-    label: "Shirt Big[Hanging]",
-    field: "shirt_big_hanging",
+    name: "shirt_big_hanging_colored",
+    label: "Shirt Big Hanging-Colored",
+    field: "shirt_big_hanging_colored",
   },
   {
-    name: "quantity_plain_trouser",
-    label: "Quantity Plain Trouser",
-    field: "quantity_plain_trouser",
+    name: "quantity_shirt_big_folding_white",
+    label: "Quantity Shirt Big Folding-White",
+    field: "quantity_shirt_big_folding_white",
   },
   {
-    name: "plain_trouser",
-    label: "Plain Trouser",
-    field: "plain_trouser",
+    name: "shirt_big_folding_white",
+    label: "Shirt Big Folding-White",
+    field: "shirt_big_folding_white",
   },
   {
-    name: "quantity_plain_trouser_hanging",
-    label: "Quantity Plain Trouser[Hanging]",
-    field: "quantity_plain_trouser_hanging",
+    name: "quantity_shirt_big_hanging_white",
+    label: "Quantity Shirt Big Hanging-White",
+    field: "quantity_shirt_big_hanging_white",
   },
   {
-    name: "plain_trouser_hanging",
-    label: "Plain Trouser[Hanging]",
-    field: "plain_trouser_hanging",
+    name: "shirt_big_hanging_white",
+    label: "Shirt Big Hanging-White",
+    field: "shirt_big_hanging_white",
   },
   {
-    name: "quantity_jeans_chinos_trouser",
-    label: "Quantity Jeans Chinos Trouser",
-    field: "quantity_jeans_chinos_trouser",
+    name: "quantity_shirt_x_large_folding_colored",
+    label: "Quantity Shirt XLarge Folding-Colored",
+    field: "quantity_shirt_x_large_folding_colored",
   },
   {
-    name: "jeans_chinos_trouser",
-    label: "Jeans Chinos Trouser",
-    field: "jeans_chinos_trouser",
+    name: "shirt_x_large_folding_colored",
+    label: "Shirt XLarge Folding-Colored",
+    field: "shirt_x_large_folding_colored",
   },
   {
-    name: "quantity_jeans_chinos_trouser_hanging",
-    label: "Quantity Jeans Chinos Trouser[Hanging]",
-    field: "quantity_jeans_chinos_trouser_hanging",
+    name: "quantity_shirt_x_large_hanging_colored",
+    label: "Quantity Shirt XLarge Hanging-Colored",
+    field: "quantity_shirt_x_large_hanging_colored",
   },
   {
-    name: "jeans_chinos_trouser_hanging",
-    label: "Jeans Chinos Trouser[Hanging]",
-    field: "jeans_chinos_trouser_hanging",
+    name: "shirt_x_large_hanging_colored",
+    label: "Shirt XLarge Hanging-Colored",
+    field: "shirt_x_large_hanging_colored",
   },
   {
-    name: "quantity_waist_coat_hanging",
-    label: "Quantity Waist Coat[Hanging]",
-    field: "quantity_waist_coat_hanging",
+    name: "quantity_shirt_x_large_folding_white",
+    label: "Quantity Shirt XLarge Folding-White",
+    field: "quantity_shirt_x_large_folding_white",
   },
   {
-    name: "waist_coat_hanging",
-    label: "Waist Coat[Hanging]",
-    field: "waist_coat_hanging",
+    name: "shirt_x_large_folding_white",
+    label: "Shirt XLarge Folding-White",
+    field: "shirt_x_large_folding_white",
   },
-  { name: "quantity_tie", label: "Quantity Tie", field: "quantity_tie" },
-  { name: "tie", label: "Tie", field: "tie" },
   {
-    name: "quantity_shorts",
-    label: "Quantity Shorts",
-    field: "quantity_shorts",
+    name: "quantity_shirt_x_large_hanging_white",
+    label: "Quantity Shirt XLarge Hanging-White",
+    field: "quantity_shirt_x_large_hanging_white",
   },
   {
-    name: "shorts",
-    label: "Shorts",
-    field: "shorts",
+    name: "shirt_x_large_hanging_white",
+    label: "Shirt XLarge Hanging-White",
+    field: "shirt_x_large_hanging_white",
   },
   {
-    name: "quantity_shorts_hanging",
-    label: "Quantity Shorts[Hanging]",
-    field: "quantity_shorts_hanging",
+    name: "quantity_shirt_children_folding_colored",
+    label: "Quantity Shirt Children Folding-Colored",
+    field: "quantity_shirt_children_folding_colored",
   },
   {
-    name: "shorts_hanging",
-    label: "Shorts[Hanging]",
-    field: "shorts_hanging",
+    name: "shirt_children_folding_colored",
+    label: "Shirt Children Folding-Colored",
+    field: "shirt_children_folding_colored",
   },
   {
-    name: "quantity_singlet",
-    label: "Quantity Singlet",
-    field: "quantity_singlet",
+    name: "quantity_shirt_children_hanging_colored",
+    label: "Quantity Shirt Children Hanging-Colored",
+    field: "quantity_shirt_children_hanging_colored",
   },
   {
-    name: "singlet",
-    label: "Singlet",
-    field: "singlet",
+    name: "shirt_children_hanging_colored",
+    label: "Shirt Children Hanging-Colored",
+    field: "shirt_children_hanging_colored",
   },
-  { name: "quantity_boxer", label: "Quantity Boxer", field: "quantity_boxer" },
-  { name: "boxer", label: "Boxer", field: "boxer" },
   {
-    name: "quantity_male_two_pcs_suit_hanging",
-    label: "Quantity Male 2pcs Suit[Hanging]",
-    field: "quantity_male_two_pcs_suit_hanging",
+    name: "quantity_shirt_children_folding_white",
+    label: "Quantity Shirt Children Folding-White",
+    field: "quantity_shirt_children_folding_white",
   },
   {
-    name: "male_two_pcs_suit_hanging",
-    label: "Male 2pcs Suit[Hanging]",
-    field: "male_two_pcs_suit_hanging",
+    name: "shirt_children_folding_white",
+    label: "Shirt Children Folding-White",
+    field: "shirt_children_folding_white",
   },
   {
-    name: "quantity_male_three_pcs_suit_hanging",
-    label: "Quantity Male 3pcs Suit[Hanging]",
-    field: "quantity_male_three_pcs_suit_hanging",
+    name: "quantity_shirt_children_hanging_white",
+    label: "Quantity Shirt Children Hanging-White",
+    field: "quantity_shirt_children_hanging_white",
   },
   {
-    name: "male_three_pcs_suit_hanging",
-    label: "Male 3pcs Suit[Hanging]",
-    field: "male_three_pcs_suit_hanging",
+    name: "shirt_children_hanging_white",
+    label: "Shirt Children Hanging-White",
+    field: "shirt_children_hanging_white",
   },
   {
-    name: "quantity_female_two_pcs_suit_hanging",
-    label: "Quantity Female 2pcs Suit[Hanging]",
-    field: "quantity_female_two_pcs_suit_hanging",
+    name: "quantity_blouse_folding_colored",
+    label: "Quantity Blouse Folding-Colored",
+    field: "quantity_blouse_folding_colored",
   },
   {
-    name: "female_two_pcs_suit_hanging",
-    label: "Female 2pcs Suit[Hanging]",
-    field: "female_two_pcs_suit_hanging",
+    name: "blouse_folding_colored",
+    label: "Blouse Folding-Colored",
+    field: "blouse_folding_colored",
   },
   {
-    name: "quantity_female_three_pcs_suit_hanging",
-    label: "Quantity Female 3pcs Suit[Hanging]",
-    field: "quantity_female_three_pcs_suit_hanging",
+    name: "quantity_blouse_hanging_colored",
+    label: "Quantity Blouse Hanging-Colored",
+    field: "quantity_blouse_hanging_colored",
   },
   {
-    name: "female_three_pcs_suit_hanging",
-    label: "Female 3pcs Suit[Hanging]",
-    field: "female_three_pcs_suit_hanging",
+    name: "blouse_hanging_colored",
+    label: "Blouse Hanging-Colored",
+    field: "blouse_hanging_colored",
   },
   {
-    name: "quantity_male_jacket_hanging",
-    label: "Quantity Male Jacket[Hanging]",
-    field: "quantity_male_jacket_hanging",
+    name: "quantity_blouse_folding_white",
+    label: "Quantity Blouse Folding-White",
+    field: "quantity_blouse_folding_white",
   },
   {
-    name: "male_jacket_hanging",
-    label: "Male Jacket[Hanging]",
-    field: "male_jacket_hanging",
+    name: "blouse_folding_white",
+    label: "Blouse Folding-White",
+    field: "blouse_folding_white",
   },
   {
-    name: "quantity_female_jacket_hanging",
-    label: "Quantity Female Jacket[Hanging]",
-    field: "quantity_female_jacket_hanging",
+    name: "quantity_blouse_hanging_white",
+    label: "Quantity Blouse Hanging-White",
+    field: "quantity_blouse_hanging_white",
   },
   {
-    name: "female_jacket_hanging",
-    label: "Female Jacket[Hanging]",
-    field: "female_jacket_hanging",
+    name: "blouse_hanging_white",
+    label: "Blouse Hanging-White",
+    field: "blouse_hanging_white",
   },
   {
-    name: "quantity_jalamia",
-    label: "Quantity Jalamia",
-    field: "quantity_jalamia",
+    name: "quantity_blouse_x_large_folding_colored",
+    label: "Quantity Blouse XLarge Folding-Colored",
+    field: "quantity_blouse_x_large_folding_colored",
   },
   {
-    name: "jalamia",
-    label: "Jalamia",
-    field: "jalamia",
+    name: "blouse_x_large_folding_colored",
+    label: "Blouse XLarge Folding-Colored",
+    field: "blouse_x_large_folding_colored",
   },
   {
-    name: "quantity_camisole",
-    label: "Quantity Camisole",
-    field: "quantity_camisole",
+    name: "quantity_blouse_x_large_hanging_colored",
+    label: "Quantity Blouse XLarge Hanging-Colored",
+    field: "quantity_blouse_x_large_hanging_colored",
   },
-  { name: "camisole", label: "Camisole", field: "camisole" },
   {
-    name: "quantity_wrapper_only",
-    label: "Quantity Wrapper Only",
-    field: "quantity_wrapper_only",
+    name: "blouse_x_large_hanging_colored",
+    label: "Blouse XLarge Hanging-Colored",
+    field: "blouse_x_large_hanging_colored",
   },
-  { name: "wrapper_only", label: "Wrapper Only", field: "wrapper_only" },
   {
-    name: "quantity_female_inner_wear",
-    label: "Quantity Female Inner-Wear",
-    field: "quantity_female_inner_wear",
+    name: "quantity_blouse_x_large_folding_white",
+    label: "Quantity Blouse XLarge Folding-White",
+    field: "quantity_blouse_x_large_folding_white",
   },
   {
-    name: "female_inner_wear",
-    label: "Female Inner-Wear",
-    field: "female_inner_wear",
+    name: "blouse_x_large_folding_white",
+    label: "Blouse XLarge Folding-White",
+    field: "blouse_x_large_folding_white",
   },
   {
-    name: "quantity_head_tie_gele",
-    label: "Quantity Head Tie Gele",
-    field: "quantity_head_tie_gele",
+    name: "quantity_blouse_x_large_hanging_white",
+    label: "Quantity Blouse XLarge Hanging-White",
+    field: "quantity_blouse_x_large_hanging_white",
   },
-  { name: "head_tie_gele", label: "Head Tie Gele", field: "head_tie_gele" },
   {
-    name: "quantity_small_wedding_gown_hanging",
-    label: "Quantity Small Wedding Gown[Hanging]",
-    field: "quantity_small_wedding_gown_hanging",
+    name: "blouse_x_large_hanging_white",
+    label: "Blouse XLarge Hanging-White",
+    field: "blouse_x_large_hanging_white",
   },
   {
-    name: "small_wedding_gown_hanging",
-    label: "Small Wedding Gown[Hanging]",
-    field: "small_wedding_gown_hanging",
+    name: "quantity_female_shirt_folding_colored",
+    label: "Quantity Female Shirt Folding-Colored",
+    field: "quantity_female_shirt_folding_colored",
   },
   {
-    name: "quantity_big_wedding_gown_hanging",
-    label: "Quantity Big Wedding Gown[Hanging]",
-    field: "quantity_big_wedding_gown_hanging",
+    name: "female_shirt_folding_colored",
+    label: "Female Shirt Folding-Colored",
+    field: "female_shirt_folding_colored",
   },
   {
-    name: "big_wedding_gown_hanging",
-    label: "Big Wedding Gown[Hanging]",
-    field: "big_wedding_gown_hanging",
+    name: "quantity_female_shirt_hanging_colored",
+    label: "Quantity Female Shirt Hanging-Colored",
+    field: "quantity_female_shirt_hanging_colored",
   },
   {
-    name: "quantity_asooke_head_tie",
-    label: "Quantity Aso-Oke Head Tie",
-    field: "quantity_asooke_head_tie",
+    name: "female_shirt_hanging_colored",
+    label: "Female Shirt Hanging-Colored",
+    field: "female_shirt_hanging_colored",
   },
   {
-    name: "asooke_head_tie",
-    label: "Aso-Oke Head Tie",
-    field: "asooke_head_tie",
+    name: "quantity_female_shirt_folding_white",
+    label: "Quantity Female Shirt Folding-White",
+    field: "quantity_female_shirt_folding_white",
   },
   {
-    name: "quantity_sweater_normal",
-    label: "Quantity Sweater Normal",
-    field: "quantity_sweater_normal",
+    name: "female_shirt_folding_white",
+    label: "Female Shirt Folding-White",
+    field: "female_shirt_folding_white",
   },
-  { name: "sweater_normal", label: "Sweater Normal", field: "sweater_normal" },
   {
-    name: "quantity_sweater_big",
-    label: "Quantity Sweater Big",
-    field: "quantity_sweater_big",
+    name: "quantity_female_shirt_hanging_white",
+    label: "Quantity Female Shirt Hanging-White",
+    field: "quantity_female_shirt_hanging_white",
   },
-  { name: "sweater_big", label: "Sweater Big", field: "sweater_big" },
   {
-    name: "quantity_towel_normal",
-    label: "Quantity Towel Normal",
-    field: "quantity_towel_normal",
+    name: "female_shirt_hanging_white",
+    label: "Female Shirt Hanging-White",
+    field: "female_shirt_hanging_white",
   },
-  { name: "towel_normal", label: "Towel Normal", field: "towel_normal" },
   {
-    name: "quantity_towel_big",
-    label: "Quantity Towel Big",
-    field: "quantity_towel_big",
+    name: "quantity_tshirt_polo_small_folding_colored",
+    label: "Quantity TShirt/Polo Small Folding-Colored",
+    field: "quantity_tshirt_polo_small_folding_colored",
   },
-  { name: "towel_big", label: "Towel Big", field: "towel_big" },
   {
-    name: "quantity_bed_spread_normal",
-    label: "Quantity Bed Spread Normal",
-    field: "quantity_bed_spread_normal",
+    name: "tshirt_polo_small_folding_colored",
+    label: "TShirt/Polo Small Folding-Colored",
+    field: "tshirt_polo_small_folding_colored",
   },
   {
-    name: "bed_spread_normal",
-    label: "Bed Spread Normal",
-    field: "bed_spread_normal",
+    name: "quantity_tshirt_polo_small_hanging_colored",
+    label: "Quantity TShirt/Polo Small Hanging-Colored",
+    field: "quantity_tshirt_polo_small_hanging_colored",
   },
   {
-    name: "quantity_bed_spread_big",
-    label: "Quantity Bed Spread Big",
-    field: "quantity_bed_spread_big",
+    name: "tshirt_polo_small_hanging_colored",
+    label: "TShirt/Polo Small Hanging-Colored",
+    field: "tshirt_polo_small_hanging_colored",
   },
-  { name: "bed_spread_big", label: "Bed Spread Big", field: "bed_spread_big" },
-  { name: "quantity_duvet", label: "Quantity Duvet", field: "quantity_duvet" },
-  { name: "duvet", label: "Duvet", field: "duvet" },
   {
-    name: "quantity_curtain_normal",
-    label: "Quantity Curtain Normal",
-    field: "quantity_curtain_normal",
+    name: "quantity_tshirt_polo_small_folding_white",
+    label: "Quantity TShirt/Polo Small Folding-White",
+    field: "quantity_tshirt_polo_small_folding_white",
   },
-  { name: "curtain_normal", label: "Curtain Normal", field: "curtain_normal" },
   {
-    name: "quantity_curtain_big",
-    label: "Quantity Curtain Big",
-    field: "quantity_curtain_big",
+    name: "tshirt_polo_small_folding_white",
+    label: "TShirt/Polo Small Folding-White",
+    field: "tshirt_polo_small_folding_white",
   },
-  { name: "curtain_big", label: "Curtain Big", field: "curtain_big" },
   {
-    name: "quantity_curtain_very_big",
-    label: "Quantity Curtain Very Big",
-    field: "quantity_curtain_very_big",
+    name: "quantity_tshirt_polo_small_hanging_white",
+    label: "Quantity TShirt/Polo Small Hanging-White",
+    field: "quantity_tshirt_polo_small_hanging_white",
   },
   {
-    name: "curtain_very_big",
-    label: "Curtain Very Big",
-    field: "curtain_very_big",
+    name: "tshirt_polo_small_hanging_white",
+    label: "TShirt/Polo Small Hanging-White",
+    field: "tshirt_polo_small_hanging_white",
   },
   {
-    name: "quantity_pyjamas_small",
-    label: "Quantity Pyjamas Small",
-    field: "quantity_pyjamas_small",
+    name: "quantity_tshirt_polo_medium_folding_colored",
+    label: "Quantity TShirt/Polo Medium Folding-Colored",
+    field: "quantity_tshirt_polo_medium_folding_colored",
   },
-  { name: "pyjamas_small", label: "Pyjamas Small", field: "pyjamas_small" },
   {
-    name: "quantity_pyjamas_big",
-    label: "Quantity Pyjamas Big",
-    field: "quantity_pyjamas_big",
+    name: "tshirt_polo_medium_folding_colored",
+    label: "TShirt/Polo Medium Folding-Colored",
+    field: "tshirt_polo_medium_folding_colored",
   },
-  { name: "pyjamas_big", label: "Pyjamas Big", field: "quantity_pyjamas_big" },
+  {
+    name: "quantity_tshirt_polo_medium_hanging_colored",
+    label: "Quantity TShirt/Polo Medium Hanging-Colored",
+    field: "quantity_tshirt_polo_medium_hanging_colored",
+  },
+  {
+    name: "tshirt_polo_medium_hanging_colored",
+    label: "TShirt/Polo Medium Hanging-Colored",
+    field: "tshirt_polo_medium_hanging_colored",
+  },
+  {
+    name: "quantity_tshirt_polo_medium_folding_white",
+    label: "Quantity TShirt/Polo Medium Folding-White",
+    field: "quantity_tshirt_polo_medium_folding_white",
+  },
+  {
+    name: "tshirt_polo_medium_folding_white",
+    label: "TShirt/Polo Medium Folding-White",
+    field: "tshirt_polo_medium_folding_white",
+  },
+  {
+    name: "quantity_tshirt_polo_medium_hanging_white",
+    label: "Quantity TShirt/Polo Medium Hanging-White",
+    field: "quantity_tshirt_polo_medium_hanging_white",
+  },
+  {
+    name: "tshirt_polo_medium_hanging_white",
+    label: "TShirt/Polo Medium Hanging-White",
+    field: "tshirt_polo_medium_hanging_white",
+  },
+  {
+    name: "quantity_tshirt_polo_big_folding_colored",
+    label: "Quantity TShirt/Polo Big Folding-Colored",
+    field: "quantity_tshirt_polo_big_folding_colored",
+  },
+  {
+    name: "tshirt_polo_big_folding_colored",
+    label: "TShirt/Polo Big Folding-Colored",
+    field: "tshirt_polo_big_folding_colored",
+  },
+  {
+    name: "quantity_tshirt_polo_big_hanging_colored",
+    label: "Quantity TShirt/Polo Big Hanging-Colored",
+    field: "quantity_tshirt_polo_big_hanging_colored",
+  },
+  {
+    name: "tshirt_polo_big_hanging_colored",
+    label: "TShirt/Polo Big Hanging-Colored",
+    field: "tshirt_polo_big_hanging_colored",
+  },
+  {
+    name: "quantity_tshirt_polo_big_folding_white",
+    label: "Quantity TShirt/Polo Big Folding-White",
+    field: "quantity_tshirt_polo_big_folding_white",
+  },
+  {
+    name: "tshirt_polo_big_folding_white",
+    label: "TShirt/Polo Big Folding-White",
+    field: "tshirt_polo_big_folding_white",
+  },
+  {
+    name: "quantity_tshirt_polo_big_hanging_white",
+    label: "Quantity TShirt/Polo Big Hanging-White",
+    field: "quantity_tshirt_polo_big_hanging_white",
+  },
+  {
+    name: "tshirt_polo_big_hanging_white",
+    label: "TShirt/Polo Big Hanging-White",
+    field: "tshirt_polo_big_hanging_white",
+  },
+  {
+    name: "quantity_plain_trouser_folding_colored",
+    label: "Quantity Trouser Folding-Colored",
+    field: "quantity_plain_trouser_folding_colored",
+  },
+  {
+    name: "plain_trouser_folding_colored",
+    label: "Trouser Folding-Colored",
+    field: "plain_trouser_folding_colored",
+  },
+  {
+    name: "quantity_plain_trouser_hanging_colored",
+    label: "Quantity Trouser Hanging-Colored",
+    field: "quantity_plain_trouser_hanging_colored",
+  },
+  {
+    name: "plain_trouser_hanging_colored",
+    label: "Trouser Hanging-Colored",
+    field: "plain_trouser_hanging_colored",
+  },
+  {
+    name: "quantity_plain_trouser_folding_white",
+    label: "Quantity Trouser Folding-White",
+    field: "quantity_plain_trouser_folding_white",
+  },
+  {
+    name: "plain_trouser_folding_white",
+    label: "Trouser Folding-White",
+    field: "plain_trouser_folding_white",
+  },
+  {
+    name: "quantity_plain_trouser_hanging_white",
+    label: "Quantity Trouser Hanging-White",
+    field: "quantity_plain_trouser_hanging_white",
+  },
+  {
+    name: "plain_trouser_hanging_white",
+    label: "Trouser Hanging-White",
+    field: "plain_trouser_hanging_white",
+  },
+  {
+    name: "quantity_jeans_chinos_trouser_folding_colored",
+    label: "Quantity Jeans/Chinos Trouser Folding-Colored",
+    field: "quantity_jeans_chinos_trouser_folding_colored",
+  },
+  {
+    name: "jeans_chinos_trouser_folding_colored",
+    label: "Jeans/Chinos Trouser Folding-Colored",
+    field: "jeans_chinos_trouser_folding_colored",
+  },
+  {
+    name: "quantity_jeans_chinos_trouser_hanging_colored",
+    label: "Quantity Jeans/Chinos Trouser Hanging-Colored",
+    field: "quantity_jeans_chinos_trouser_hanging_colored",
+  },
+  {
+    name: "jeans_chinos_trouser_hanging_colored",
+    label: "Jeans/Chinos Trouser Hanging-Colored",
+    field: "jeans_chinos_trouser_hanging_colored",
+  },
+  {
+    name: "quantity_jeans_chinos_trouser_folding_white",
+    label: "Quantity Jeans/Chinos Trouser Folding-White",
+    field: "quantity_jeans_chinos_trouser_folding_white",
+  },
+  {
+    name: "jeans_chinos_trouser_folding_white",
+    label: "Jeans/Chinos Trouser Folding-White",
+    field: "jeans_chinos_trouser_folding_white",
+  },
+  {
+    name: "quantity_jeans_chinos_trouser_hanging_white",
+    label: "Quantity Jeans/Chinos Trouser Hanging-White",
+    field: "quantity_jeans_chinos_trouser_hanging_white",
+  },
+  {
+    name: "jeans_chinos_trouser_hanging_white",
+    label: "Jeans/Chinos Trouser Hanging-White",
+    field: "jeans_chinos_trouser_hanging_white",
+  },
+  {
+    name: "quantity_waist_coat_hanging_colored",
+    label: "Quantity Waist Coat Hanging-Colored",
+    field: "quantity_waist_coat_hanging_colored",
+  },
+  {
+    name: "waist_coat_hanging_colored",
+    label: "Waist Coat Hanging-Colored",
+    field: "waist_coat_hanging_colored",
+  },
+  {
+    name: "quantity_waist_coat_hanging_white",
+    label: "Quantity Waist Coat Hanging-White",
+    field: "quantity_waist_coat_hanging_white",
+  },
+  {
+    name: "waist_coat_hanging_white",
+    label: "Waist Coat Hanging-White",
+    field: "waist_coat_hanging_white",
+  },
+  {
+    name: "quantity_tie_colored",
+    label: "Quantity Tie Colored",
+    field: "quantity_tie_colored",
+  },
+  {
+    name: "tie_colored",
+    label: "Tie Colored",
+    field: "tie_colored",
+  },
+  {
+    name: "quantity_tie_white",
+    label: "Quantity Tie White",
+    field: "quantity_tie_white",
+  },
+  {
+    name: "tie_white",
+    label: "Tie White",
+    field: "tie_white",
+  },
+  {
+    name: "quantity_shorts_folding_colored",
+    label: "Quantity Shorts Folding-Colored",
+    field: "quantity_shorts_folding_colored",
+  },
+  {
+    name: "shorts_folding_colored",
+    label: "Shorts Folding-Colored",
+    field: "shorts_folding_colored",
+  },
+  {
+    name: "quantity_shorts_hanging_colored",
+    label: "Quantity Shorts Hanging-Colored",
+    field: "quantity_shorts_hanging_colored",
+  },
+  {
+    name: "shorts_hanging_colored",
+    label: "Shorts Hanging-Colored",
+    field: "shorts_hanging_colored",
+  },
+  {
+    name: "quantity_shorts_folding_white",
+    label: "Quantity Shorts Folding-White",
+    field: "quantity_shorts_folding_white",
+  },
+  {
+    name: "shorts_folding_white",
+    label: "Shorts Folding-White",
+    field: "shorts_folding_white",
+  },
+  {
+    name: "quantity_shorts_hanging_white",
+    label: "Quantity Shorts Hanging-White",
+    field: "quantity_shorts_hanging_white",
+  },
+  {
+    name: "shorts_hanging_white",
+    label: "Shorts Hanging-White",
+    field: "shorts_hanging_white",
+  },
+  {
+    name: "quantity_singlet_colored",
+    label: "Quantity Singlet Colored",
+    field: "quantity_singlet_colored",
+  },
+  {
+    name: "singlet_colored",
+    label: "Singlet Colored",
+    field: "singlet_colored",
+  },
+  {
+    name: "quantity_singlet_white",
+    label: "Quantity Singlet White",
+    field: "quantity_singlet_white",
+  },
+  {
+    name: "singlet_white",
+    label: "Singlet White",
+    field: "singlet_white",
+  },
+  {
+    name: "quantity_boxer_colored",
+    label: "Quantity Boxer Colored",
+    field: "quantity_boxer_colored",
+  },
+  {
+    name: "boxer_colored",
+    label: "Boxer Colored",
+    field: "boxer_colored",
+  },
+  {
+    name: "quantity_boxer_white",
+    label: "Quantity Boxer White",
+    field: "quantity_boxer_white",
+  },
+  {
+    name: "boxer_white",
+    label: "Boxer White",
+    field: "boxer_white",
+  },
+  {
+    name: "quantity_male_2pcs_suit_hanging_colored",
+    label: "Quantity Male 2 Pcs Suit Hanging-Colored",
+    field: "quantity_male_2pcs_suit_hanging_colored",
+  },
+  {
+    name: "male_2pcs_suit_hanging_colored",
+    label: "Male 2 Pcs Suit Hanging-Colored",
+    field: "male_2pcs_suit_hanging_colored",
+  },
+  {
+    name: "quantity_male_2pcs_suit_hanging_white",
+    label: "Quantity Male 2 Pcs Suit Hanging-White",
+    field: "quantity_male_2pcs_suit_hanging_white",
+  },
+  {
+    name: "male_2pcs_suit_hanging_white",
+    label: "Male 2 Pcs Suit Hanging-White",
+    field: "male_2pcs_suit_hanging_white",
+  },
+  {
+    name: "quantity_male_3pcs_suit_hanging_colored",
+    label: "Quantity Male 3 Pcs Suit Hanging-Colored",
+    field: "quantity_male_3pcs_suit_hanging_colored",
+  },
+  {
+    name: "male_3pcs_suit_hanging_colored",
+    label: "Male 3 Pcs Suit Hanging-Colored",
+    field: "male_3pcs_suit_hanging_colored",
+  },
+  {
+    name: "quantity_male_3pcs_suit_hanging_white",
+    label: "Quantity Male 3 Pcs Suit Hanging-White",
+    field: "quantity_male_3pcs_suit_hanging_white",
+  },
+  {
+    name: "male_3pcs_suit_hanging_white",
+    label: "Male 3 Pcs Suit Hanging-White",
+    field: "male_3pcs_suit_hanging_white",
+  },
+  {
+    name: "quantity_female_2pcs_suit_hanging_colored",
+    label: "Quantity Female 2 Pcs Suit Hanging-Colored",
+    field: "quantity_female_2pcs_suit_hanging_colored",
+  },
+  {
+    name: "female_2pcs_suit_hanging_colored",
+    label: "Female 2 Pcs Suit Hanging-Colored",
+    field: "female_2pcs_suit_hanging_colored",
+  },
+  {
+    name: "quantity_female_2pcs_suit_hanging_white",
+    label: "Quantity Female 2 Pcs Suit Hanging-White",
+    field: "quantity_female_2pcs_suit_hanging_white",
+  },
+  {
+    name: "female_2pcs_suit_hanging_white",
+    label: "Female 2 Pcs Suit Hanging-White",
+    field: "female_2pcs_suit_hanging_white",
+  },
+  {
+    name: "quantity_female_3pcs_suit_hanging_colored",
+    label: "Quantity Female 3 Pcs Suit Hanging-Colored",
+    field: "quantity_female_3pcs_suit_hanging_colored",
+  },
+  {
+    name: "female_3pcs_suit_hanging_colored",
+    label: "Female 3 Pcs Suit Hanging-Colored",
+    field: "female_3pcs_suit_hanging_colored",
+  },
+  {
+    name: "quantity_female_3pcs_suit_hanging_white",
+    label: "Quantity Female 3 Pcs Suit Hanging-White",
+    field: "quantity_female_3pcs_suit_hanging_white",
+  },
+  {
+    name: "female_3pcs_suit_hanging_white",
+    label: "Female 3 Pcs Suit Hanging-White",
+    field: "female_3pcs_suit_hanging_white",
+  },
+  {
+    name: "quantity_male_jacket_only_colored",
+    label: "Quantity Male Jacket Only Colored",
+    field: "quantity_male_jacket_only_colored",
+  },
+  {
+    name: "male_jacket_only_colored",
+    label: "Male Jacket Only Colored",
+    field: "male_jacket_only_colored",
+  },
+  {
+    name: "quantity_male_jacket_only_white",
+    label: "Quantity Male Jacket Only White",
+    field: "quantity_male_jacket_only_white",
+  },
+  {
+    name: "male_jacket_only_white",
+    label: "Male Jacket Only White",
+    field: "male_jacket_only_white",
+  },
+  {
+    name: "quantity_female_jacket_only_colored",
+    label: "Quantity Female Jacket Only Colored",
+    field: "quantity_female_jacket_only_colored",
+  },
+  {
+    name: "female_jacket_only_colored",
+    label: "Female Jacket Only Colored",
+    field: "female_jacket_only_colored",
+  },
+  {
+    name: "quantity_female_jacket_only_white",
+    label: "Quantity Female Jacket Only White",
+    field: "quantity_female_jacket_only_white",
+  },
+  {
+    name: "female_jacket_only_white",
+    label: "Female Jacket Only White",
+    field: "female_jacket_only_white",
+  },
+  {
+    name: "quantity_wedding_gown_small_and_little_accessories_white",
+    label: "Quantity Wedding Gown Small With Little Accessories White",
+    field: "quantity_wedding_gown_small_and_little_accessories_white",
+  },
+  {
+    name: "wedding_gown_small_and_little_accessories_white",
+    label: "Wedding Gown Small With Little Accessories White",
+    field: "wedding_gown_small_and_little_accessories_white",
+  },
+  {
+    name: "quantity_wedding_gown_big_and_plenty_accessories_white",
+    label: "Quantity Wedding Gown Big With Plenty Accessories White",
+    field: "quantity_wedding_gown_big_and_plenty_accessories_white",
+  },
+  {
+    name: "wedding_gown_big_and_plenty_accessories_white",
+    label: "Wedding Gown Big With Plenty Accessories White",
+    field: "wedding_gown_big_and_plenty_accessories_white",
+  },
+  {
+    name: "quantity_Kids_blouse_folding_colored",
+    label: "Quantity Kids Blouse Folding-Colored",
+    field: "quantity_Kids_blouse_folding_colored",
+  },
+  {
+    name: "Kids_blouse_folding_colored",
+    label: "Kids Blouse Folding-Colored",
+    field: "Kids_blouse_folding_colored",
+  },
+  {
+    name: "quantity_Kids_blouse_hanging_colored",
+    label: "Quantity Kids Blouse Hanging-Colored",
+    field: "quantity_Kids_blouse_hanging_colored",
+  },
+  {
+    name: "Kids_blouse_hanging_colored",
+    label: "Kids Blouse Hanging-Colored",
+    field: "Kids_blouse_hanging_colored",
+  },
+  {
+    name: "quantity_Kids_blouse_folding_white",
+    label: "Quantity Kids Blouse Folding-White",
+    field: "quantity_Kids_blouse_folding_white",
+  },
+  {
+    name: "Kids_blouse_folding_white",
+    label: "Kids Blouse Folding-White",
+    field: "Kids_blouse_folding_white",
+  },
+  {
+    name: "quantity_Kids_blouse_hanging_white",
+    label: "Quantity Kids Blouse Hanging-White",
+    field: "quantity_Kids_blouse_hanging_white",
+  },
+  {
+    name: "Kids_blouse_hanging_white",
+    label: "Kids Blouse Hanging-White",
+    field: "Kids_blouse_hanging_white",
+  },
+  {
+    name: "quantity_jalamia_colored",
+    label: "Quantity Jalamia Colored",
+    field: "quantity_jalamia_colored",
+  },
+  {
+    name: "jalamia_colored",
+    label: "Jalamia Colored",
+    field: "jalamia_colored",
+  },
+  {
+    name: "quantity_jalamia_white",
+    label: "Quantity Jalamia White",
+    field: "quantity_jalamia_white",
+  },
+  {
+    name: "jalamia_white",
+    label: "Jalamia White",
+    field: "jalamia_white",
+  },
+  {
+    name: "quantity_camisole_colored",
+    label: "Quantity Camisole Colored",
+    field: "quantity_camisole_colored",
+  },
+  {
+    name: "camisole_colored",
+    label: "Camisole Colored",
+    field: "camisole_colored",
+  },
+  {
+    name: "quantity_camisole_white",
+    label: "Quantity Camisole White",
+    field: "quantity_camisole_white",
+  },
+  {
+    name: "camisole_white",
+    label: "Camisole White",
+    field: "camisole_white",
+  },
+  {
+    name: "quantity_wrapper_buba_scarf_colored",
+    label: "Quantity Wrapper, Buba And Scarf Colored",
+    field: "quantity_wrapper_buba_scarf_colored",
+  },
+  {
+    name: "wrapper_buba_scarf_colored",
+    label: "Wrapper, Buba And Scarf Colored",
+    field: "wrapper_buba_scarf_colored",
+  },
+  {
+    name: "quantity_wrapper_buba_scarf_white",
+    label: "Quantity Wrapper, Buba And Scarf White",
+    field: "quantity_wrapper_buba_scarf_white",
+  },
+  {
+    name: "wrapper_buba_scarf_white",
+    label: "Wrapper, Buba And Scarf White",
+    field: "wrapper_buba_scarf_white",
+  },
+  {
+    name: "quantity_wrapper_only_colored",
+    label: "Quantity Wrapper Only Colored",
+    field: "quantity_wrapper_only_colored",
+  },
+  {
+    name: "wrapper_only_colored",
+    label: "Wrapper Only Colored",
+    field: "wrapper_only_colored",
+  },
+  {
+    name: "quantity_wrapper_only_white",
+    label: "Quantity Wrapper Only White",
+    field: "quantity_wrapper_only_white",
+  },
+  {
+    name: "wrapper_only_white",
+    label: "Wrapper Only White",
+    field: "wrapper_only_white",
+  },
+  {
+    name: "quantity_two_wrapper_scarf_or_no_scarf_colored",
+    label: "Quantity Two Wrapper Scarf/No-Scarf Only Colored",
+    field: "quantity_two_wrapper_scarf_or_no_scarf_colored",
+  },
+  {
+    name: "two_wrapper_scarf_or_no_scarf_colored",
+    label: "Two Wrapper Scarf/No-Scarf Only Colored",
+    field: "two_wrapper_scarf_or_no_scarf_colored",
+  },
+  {
+    name: "quantity_two_wrapper_scarf_or_no_scarf_white",
+    label: "Quantity Two Wrapper Scarf/No-Scarf Only White",
+    field: "quantity_two_wrapper_scarf_or_no_scarf_white",
+  },
+  {
+    name: "two_wrapper_scarf_or_no_scarf_white",
+    label: "Two Wrapper Scarf/No-Scarf Only White",
+    field: "two_wrapper_scarf_or_no_scarf_white",
+  },
+  {
+    name: "quantity_aso_oke_agbada_and_cap_colored",
+    label: "Quantity Aso-Oke Agbada and Cap 2pcs Colored",
+    field: "quantity_aso_oke_agbada_and_cap_colored",
+  },
+  {
+    name: "aso_oke_agbada_and_cap_colored",
+    label: "Aso-Oke Agbada and Cap 2pcs Colored",
+    field: "aso_oke_agbada_and_cap_colored",
+  },
+  {
+    name: "quantity_male_aso_oke_and_cap_3pcs_colored",
+    label: "Quantity Aso-Oke Agbada, Sokoto and Cap 3 Pcs Colored",
+    field: "quantity_male_aso_oke_and_cap_3pcs_colored",
+  },
+  {
+    name: "male_aso_oke_and_cap_3pcs_colored",
+    label: "Aso-Oke Agbada, Sokoto and Cap 3 Pcs Colored",
+    field: "male_aso_oke_and_cap_3pcs_colored",
+  },
+  {
+    name: "quantity_aso_oke_wrapper_buba_gele_colored",
+    label: "Quantity Aso-Oke Wrapper, Buba and Gele 3pcs Colored",
+    field: "quantity_aso_oke_wrapper_buba_gele_colored",
+  },
+  {
+    name: "aso_oke_wrapper_buba_gele_colored",
+    label: "Aso-Oke Wrapper, Buba and Gele 3pcs Colored",
+    field: "aso_oke_wrapper_buba_gele_colored",
+  },
+  {
+    name: "quantity_aso_oke_wrapper_gele_colored",
+    label: "Quantity Aso-Oke Wrapper and Gele 2pcs Colored",
+    field: "quantity_aso_oke_wrapper_gele_colored",
+  },
+  {
+    name: "aso_oke_wrapper_gele_colored",
+    label: "Aso-Oke Wrapper and Gele 2pcs Colored",
+    field: "aso_oke_wrapper_gele_colored",
+  },
+  {
+    name: "quantity_aso_oke_wrapper_gele_ipele_colored",
+    label: "Quantity Aso-Oke Wrapper, Gele and Ipele 3pcs Colored",
+    field: "quantity_aso_oke_wrapper_gele_ipele_colored",
+  },
+  {
+    name: "aso_oke_wrapper_gele_ipele_colored",
+    label: "Aso-Oke Wrapper, Gele and Ipele 3pcs Colored",
+    field: "aso_oke_wrapper_gele_ipele_colored",
+  },
+  {
+    name: "quantity_aso_oke_wrapper_gele_ipele_white",
+    label: "Quantity Aso-Oke Wrapper, Gele and Ipele 3pcs White",
+    field: "quantity_aso_oke_wrapper_gele_ipele_white",
+  },
+  {
+    name: "aso_oke_wrapper_gele_ipele_white",
+    label: "Aso-Oke Wrapper, Gele and Ipele 3pcs White",
+    field: "aso_oke_wrapper_gele_ipele_white",
+  },
+  {
+    name: "quantity_aso_oke_headtie_ipele_colored",
+    label: "Quantity Aso-Oke Head-Tie Ipele 2pcs White",
+    field: "quantity_aso_oke_headtie_ipele_colored",
+  },
+  {
+    name: "aso_oke_headtie_ipele_colored",
+    label: "Aso-Oke Head-Tie Ipele 2pcs White",
+    field: "aso_oke_headtie_ipele_colored",
+  },
+  {
+    name: "quantity_female_inner_wear_colored",
+    label: "Quantity Female Inner-Wear Colored",
+    field: "quantity_female_inner_wear_colored",
+  },
+  {
+    name: "female_inner_wear_colored",
+    label: "Female Inner-Wear Colored",
+    field: "female_inner_wear_colored",
+  },
+  {
+    name: "quantity_female_inner_wear_white",
+    label: "Quantity Female Inner-Wear White",
+    field: "quantity_female_inner_wear_white",
+  },
+  {
+    name: "female_inner_wear_white",
+    label: "Female Inner-Wear White",
+    field: "female_inner_wear_white",
+  },
+  {
+    name: "quantity_head_tie_gele_colored",
+    label: "Quantity Head-Tie/Gele Colored",
+    field: "quantity_head_tie_gele_colored",
+  },
+  {
+    name: "head_tie_gele_colored",
+    label: "Head-Tie/Gele Colored",
+    field: "head_tie_gele_colored",
+  },
+  {
+    name: "quantity_head_tie_gele_white",
+    label: "Quantity Head-Tie/Gele White",
+    field: "quantity_head_tie_gele_white",
+  },
+  {
+    name: "head_tie_gele_white",
+    label: "Head-Tie/Gele White",
+    field: "head_tie_gele_white",
+  },
+  {
+    name: "quantity_gown_children_colored",
+    label: "Quantity Gown Children Colored",
+    field: "quantity_gown_children_colored",
+  },
+  {
+    name: "gown_children_colored",
+    label: "Gown Children Colored",
+    field: "gown_children_colored",
+  },
+  {
+    name: "quantity_gown_children_white",
+    label: "Quantity Gown Children White",
+    field: "quantity_gown_children_white",
+  },
+  {
+    name: "gown_children_white",
+    label: "Gown Children White",
+    field: "gown_children_white",
+  },
+  {
+    name: "quantity_gown_english_adult_folding_colored",
+    label: "Quantity Gown English Adult Folding Colored",
+    field: "quantity_gown_english_adult_folding_colored",
+  },
+  {
+    name: "gown_english_adult_folding_colored",
+    label: "Gown English Adult Folding Colored",
+    field: "gown_english_adult_folding_colored",
+  },
+  {
+    name: "quantity_gown_english_adult_folding_white",
+    label: "Quantity Gown English Adult Folding White",
+    field: "quantity_gown_english_adult_folding_white",
+  },
+  {
+    name: "gown_english_adult_folding_white",
+    label: "Gown English Adult Folding White",
+    field: "gown_english_adult_folding_white",
+  },
+  {
+    name: "quantity_gown_english_adult_hanging_colored",
+    label: "Quantity Gown English Adult Hanging Colored",
+    field: "quantity_gown_english_adult_hanging_colored",
+  },
+  {
+    name: "gown_english_adult_hanging_colored",
+    label: "Gown English Adult Hanging Colored",
+    field: "gown_english_adult_hanging_colored",
+  },
+  {
+    name: "quantity_gown_english_adult_hanging_white",
+    label: "Quantity Gown English Adult Hanging White",
+    field: "quantity_gown_english_adult_hanging_white",
+  },
+  {
+    name: "gown_english_adult_hanging_white",
+    label: "Gown English Adult Hanging White",
+    field: "gown_english_adult_hanging_white",
+  },
+  {
+    name: "quantity_gown_native_folding_colored",
+    label: "Quantity Gown Native Folding Colored",
+    field: "quantity_gown_native_folding_colored",
+  },
+  {
+    name: "gown_native_folding_colored",
+    label: "Gown Native Folding Colored",
+    field: "gown_native_folding_colored",
+  },
+  {
+    name: "quantity_gown_native_folding_white",
+    label: "Quantity Gown Native Folding White",
+    field: "quantity_gown_native_folding_white",
+  },
+  {
+    name: "gown_native_folding_white",
+    label: "Gown Native Folding White",
+    field: "gown_native_folding_white",
+  },
+  {
+    name: "quantity_skirt_and_blouse_english_hanging_colored",
+    label: "Quantity Skirt and Blouse English 2pcs Hanging Colored",
+    field: "quantity_skirt_and_blouse_english_hanging_colored",
+  },
+  {
+    name: "skirt_and_blouse_english_hanging_colored",
+    label: "Skirt and Blouse English 2pcs Hanging Colored",
+    field: "skirt_and_blouse_english_hanging_colored",
+  },
+  {
+    name: "quantity_skirt_and_blouse_english_hanging_white",
+    label: "Quantity Skirt and Blouse English 2pcs Hanging White",
+    field: "quantity_skirt_and_blouse_english_hanging_white",
+  },
+  {
+    name: "skirt_and_blouse_english_hanging_white",
+    label: "Skirt and Blouse English 2pcs Hanging White",
+    field: "skirt_and_blouse_english_hanging_white",
+  },
+  {
+    name: "quantity_skirt_and_blouse_native_folding_colored",
+    label: "Quantity Skirt and Blouse Native 2pcs Folding Colored",
+    field: "quantity_skirt_and_blouse_native_folding_colored",
+  },
+  {
+    name: "skirt_and_blouse_native_folding_colored",
+    label: "Skirt and Blouse Native 2pcs Folding Colored",
+    field: "skirt_and_blouse_native_folding_colored",
+  },
+  {
+    name: "quantity_skirt_and_blouse_native_folding_white",
+    label: "Quantity Skirt and Blouse Native 2pcs Folding White",
+    field: "quantity_skirt_and_blouse_native_folding_white",
+  },
+  {
+    name: "skirt_and_blouse_native_folding_white",
+    label: "Skirt and Blouse Native 2pcs Folding White",
+    field: "skirt_and_blouse_native_folding_white",
+  },
+  {
+    name: "quantity_female_native_buba_and_trouser_colored",
+    label: "Quantity Female Native Buba and Trouser 2pcs Colored",
+    field: "quantity_female_native_buba_and_trouser_colored",
+  },
+  {
+    name: "female_native_buba_and_trouser_colored",
+    label: "Female Native Buba and Trouser 2pcs Colored",
+    field: "female_native_buba_and_trouser_colored",
+  },
+  {
+    name: "quantity_female_native_buba_and_trouser_white",
+    label: "Quantity Female Native Buba and Trouser 2pcs White",
+    field: "quantity_female_native_buba_and_trouser_white",
+  },
+  {
+    name: "female_native_buba_and_trouser_white",
+    label: "Female Native Buba and Trouser 2pcs White",
+    field: "female_native_buba_and_trouser_white",
+  },
+  {
+    name: "quantity_male_cap_colored",
+    label: "Quantity Male Cap Colored",
+    field: "quantity_male_cap_colored",
+  },
+  {
+    name: "male_cap_colored",
+    label: "Male Cap Colored",
+    field: "male_cap_colored",
+  },
+  {
+    name: "quantity_male_cap_white",
+    label: "Quantity Male Cap White",
+    field: "quantity_male_cap_white",
+  },
+  {
+    name: "male_cap_white",
+    label: "Male Cap White",
+    field: "male_cap_white",
+  },
+  {
+    name: "quantity_female_cap_colored",
+    label: "Quantity Female Cap Colored",
+    field: "quantity_female_cap_colored",
+  },
+  {
+    name: "female_cap_colored",
+    label: "Female Cap Colored",
+    field: "female_cap_colored",
+  },
+  {
+    name: "quantity_female_cap_white",
+    label: "Quantity Female Cap White",
+    field: "quantity_female_cap_white",
+  },
+  {
+    name: "female_cap_white",
+    label: "Female Cap White",
+    field: "female_cap_white",
+  },
+  {
+    name: "quantity_tursan_colored",
+    label: "Quantity Tursan Colored",
+    field: "quantity_tursan_colored",
+  },
+  {
+    name: "tursan_colored",
+    label: "Tursan Colored",
+    field: "tursan_colored",
+  },
+  {
+    name: "quantity_tursan_white",
+    label: "Quantity Tursan White",
+    field: "quantity_tursan_white",
+  },
+  {
+    name: "tursan_white",
+    label: "Tursan White",
+    field: "tursan_white",
+  },
+  {
+    name: "quantity_sweater_small_colored",
+    label: "Quantity Sweater Small Colored",
+    field: "quantity_sweater_small_colored",
+  },
+  {
+    name: "sweater_small_colored",
+    label: "Sweater Small Colored",
+    field: "sweater_small_colored",
+  },
+  {
+    name: "quantity_sweater_small_white",
+    label: "Quantity Sweater Small White",
+    field: "quantity_sweater_small_white",
+  },
+  {
+    name: "sweater_small_white",
+    label: "Sweater Small White",
+    field: "sweater_small_white",
+  },
+  {
+    name: "quantity_sweater_normal_colored",
+    label: "Quantity Sweater Normal Colored",
+    field: "quantity_sweater_normal_colored",
+  },
+  {
+    name: "sweater_normal_colored",
+    label: "Sweater Normal Colored",
+    field: "sweater_normal_colored",
+  },
+  {
+    name: "quantity_sweater_normal_white",
+    label: "Quantity Sweater Normal White",
+    field: "quantity_sweater_normal_white",
+  },
+  {
+    name: "sweater_normal_white",
+    label: "Sweater Normal White",
+    field: "sweater_normal_white",
+  },
+  {
+    name: "quantity_sweater_big_colored",
+    label: "Quantity Sweater Big Colored",
+    field: "quantity_sweater_big_colored",
+  },
+  {
+    name: "sweater_big_colored",
+    label: "Sweater Big Colored",
+    field: "sweater_big_colored",
+  },
+  {
+    name: "quantity_sweater_big_white",
+    label: "Quantity Sweater Big White",
+    field: "quantity_sweater_big_white",
+  },
+  {
+    name: "sweater_big_white",
+    label: "Sweater Big White",
+    field: "sweater_big_white",
+  },
+  {
+    name: "quantity_towel_small_colored",
+    label: "Quantity Towel Small Colored",
+    field: "quantity_towel_small_colored",
+  },
+  {
+    name: "towel_small_colored",
+    label: "Towel Small Colored",
+    field: "towel_small_colored",
+  },
+  {
+    name: "quantity_towel_small_white",
+    label: "Quantity Towel Small White",
+    field: "quantity_towel_small_white",
+  },
+  {
+    name: "towel_small_white",
+    label: "Towel Small White",
+    field: "towel_small_white",
+  },
+  {
+    name: "quantity_towel_normal_colored",
+    label: "Quantity Towel Normal Colored",
+    field: "quantity_towel_normal_colored",
+  },
+  {
+    name: "towel_normal_colored",
+    label: "Towel Normal Colored",
+    field: "towel_normal_colored",
+  },
+  {
+    name: "quantity_towel_normal_white",
+    label: "Quantity Towel Normal White",
+    field: "quantity_towel_normal_white",
+  },
+  {
+    name: "towel_normal_white",
+    label: "Towel Normal White",
+    field: "towel_normal_white",
+  },
+  {
+    name: "quantity_towel_big_colored",
+    label: "Quantity Towel Big Colored",
+    field: "quantity_towel_big_colored",
+  },
+  {
+    name: "towel_big_colored",
+    label: "Towel Big Colored",
+    field: "towel_big_colored",
+  },
+  {
+    name: "quantity_towel_big_white",
+    label: "Quantity Towel Big White",
+    field: "quantity_towel_big_white",
+  },
+  {
+    name: "towel_big_white",
+    label: "Towel Big White",
+    field: "towel_big_white",
+  },
+  {
+    name: "quantity_bed_spread_normal_colored",
+    label: "Quantity Bed-Spread Normal Colored",
+    field: "quantity_bed_spread_normal_colored",
+  },
+  {
+    name: "bed_spread_normal_colored",
+    label: "Bed-Spread Normal Colored",
+    field: "bed_spread_normal_colored",
+  },
+  {
+    name: "quantity_bed_spread_normal_white",
+    label: "Quantity Bed-Spread Normal White",
+    field: "quantity_bed_spread_normal_white",
+  },
+  {
+    name: "bed_spread_normal_white",
+    label: "Bed-Spread Normal White",
+    field: "bed_spread_normal_white",
+  },
+  {
+    name: "quantity_bed_spread_big_colored",
+    label: "Quantity Bed-Spread Big Colored",
+    field: "quantity_bed_spread_big_colored",
+  },
+  {
+    name: "bed_spread_big_colored",
+    label: "Bed-Spread Big Colored",
+    field: "bed_spread_big_colored",
+  },
+  {
+    name: "quantity_bed_spread_big_white",
+    label: "Quantity Bed-Spread Big White",
+    field: "quantity_bed_spread_big_white",
+  },
+  {
+    name: "bed_spread_big_white",
+    label: "Bed-Spread Big White",
+    field: "bed_spread_big_white",
+  },
+  {
+    name: "quantity_bed_spread_double_colored",
+    label: "Quantity Bed-Spread Double Colored",
+    field: "quantity_bed_spread_double_colored",
+  },
+  {
+    name: "bed_spread_double_colored",
+    label: "Bed-Spread Double Colored",
+    field: "bed_spread_double_colored",
+  },
+  {
+    name: "quantity_bed_spread_double_white",
+    label: "Quantity Bed-Spread Double White",
+    field: "quantity_bed_spread_double_white",
+  },
+  {
+    name: "bed_spread_double_white",
+    label: "Bed-Spread Double White",
+    field: "bed_spread_double_white",
+  },
+  {
+    name: "quantity_duvet_normal_colored",
+    label: "Quantity Duvet Normal Colored",
+    field: "quantity_duvet_normal_colored",
+  },
+  {
+    name: "duvet_normal_colored",
+    label: "Duvet Normal Colored",
+    field: "duvet_normal_colored",
+  },
+  {
+    name: "quantity_duvet_normal_white",
+    label: "Quantity Duvet Normal White",
+    field: "quantity_duvet_normal_white",
+  },
+  {
+    name: "duvet_normal_white",
+    label: "Duvet Normal White",
+    field: "duvet_normal_white",
+  },
+  {
+    name: "quantity_duvet_big_colored",
+    label: "Quantity Duvet Big Colored",
+    field: "quantity_duvet_big_colored",
+  },
+  {
+    name: "duvet_big_colored",
+    label: "Duvet Big Colored",
+    field: "duvet_big_colored",
+  },
+  {
+    name: "quantity_duvet_big_white",
+    label: "Quantity Duvet Big White",
+    field: "quantity_duvet_big_white",
+  },
+  {
+    name: "duvet_big_white",
+    label: "Duvet Big White",
+    field: "duvet_big_white",
+  },
+  {
+    name: "quantity_curtain_normal_colored",
+    label: "Quantity Curtain Normal Colored",
+    field: "quantity_curtain_normal_colored",
+  },
+  {
+    name: "curtain_normal_colored",
+    label: "Curtain Normal Colored",
+    field: "curtain_normal_colored",
+  },
+  {
+    name: "quantity_curtain_big_colored",
+    label: "Quantity Curtain Big Colored",
+    field: "quantity_curtain_big_colored",
+  },
+  {
+    name: "curtain_big_colored",
+    label: "Curtain Big Colored",
+    field: "curtain_big_colored",
+  },
+  {
+    name: "quantity_curtain_very_big_colored",
+    label: "Quantity Curtain Very Big Colored",
+    field: "quantity_curtain_very_big_colored",
+  },
+  {
+    name: "curtain_very_big_colored",
+    label: "Curtain Very Big Colored",
+    field: "curtain_very_big_colored",
+  },
+  {
+    name: "quantity_blanket_colored",
+    label: "Quantity Blanket Colored",
+    field: "quantity_blanket_colored",
+  },
+  {
+    name: "blanket_colored",
+    label: "Blanket Colored",
+    field: "blanket_colored",
+  },
+  {
+    name: "quantity_pyjamas_small_colored",
+    label: "Quantity Pyjamas Small Colored",
+    field: "quantity_pyjamas_small_colored",
+  },
+  {
+    name: "pyjamas_small_colored",
+    label: "Pyjamas Small Colored",
+    field: "pyjamas_small_colored",
+  },
+  {
+    name: "quantity_pyjamas_small_white",
+    label: "Quantity Pyjamas Small White",
+    field: "quantity_pyjamas_small_white",
+  },
+  {
+    name: "pyjamas_small_white",
+    label: "Pyjamas Small White",
+    field: "pyjamas_small_white",
+  },
+  {
+    name: "quantity_pyjamas_big_colored",
+    label: "Quantity Pyjamas Big Colored",
+    field: "quantity_pyjamas_big_colored",
+  },
+  {
+    name: "pyjamas_big_colored",
+    label: "Pyjamas Big Colored",
+    field: "pyjamas_big_colored",
+  },
+  {
+    name: "quantity_pyjamas_big_white",
+    label: "Quantity Pyjamas Big White",
+    field: "quantity_pyjamas_big_white",
+  },
+  {
+    name: "pyjamas_big_white",
+    label: "Pyjamas Big White",
+    field: "pyjamas_big_white",
+  },
+  {
+    name: "quantity_pillow_cases_colored",
+    label: "Quantity Pillow Cases Colored",
+    field: "quantity_pillow_cases_colored",
+  },
+  {
+    name: "pillow_cases_colored",
+    label: "Pillow Cases Colored",
+    field: "pillow_cases_colored",
+  },
+  {
+    name: "quantity_pillow_cases_white",
+    label: "Quantity Pillow Cases White",
+    field: "quantity_pillow_cases_white",
+  },
+  {
+    name: "pillow_cases_white",
+    label: "Pillow Cases White",
+    field: "pillow_cases_white",
+  },
   { name: "comment_section", label: "Comment", field: "comment_section" },
   { name: "discount", label: "Discount", field: "discount" },
   { name: "deposit", label: "Deposit", field: "deposit" },
