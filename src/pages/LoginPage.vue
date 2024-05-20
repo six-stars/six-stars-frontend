@@ -216,7 +216,7 @@ const onSubmit = async () => {
   // await useStore.getSanctumCookie()
   // login user
   const user = await useStore.login(phone_number.value, password.value);
-  console.log(user);
+  console.log(user, "user D");
   // set user data to localstorage()
   useStore.setUser(user.data);
   // routing to the dashboard

@@ -13,15 +13,19 @@ import ResendMessagePage from "src/pages/ResendMessagePage.vue";
 import GeneralMessagePage from "src/pages/GeneralMessagePage.vue";
 import ResetPasswordPage from "src/pages/ResetPasswordPage.vue";
 import AdminPages from "src/pages/AdminPages.vue";
+import ProfilePage from "pages/ProfilePage.vue";
+import MainLayout from "src/layouts/MainLayout.vue";
 
 const routes = [
   {
     path: "/main",
-    component: () => import("layouts/MainLayout.vue"),
+    component: MainLayout,
+    // component: () => import("layouts/MainLayout.vue"),
     children: [
       {
         path: "",
-        component: () => import("pages/ProfilePage.vue"),
+        component: ProfilePage,
+        // component: () => import("pages/ProfilePage.vue"),
         meta: { requireLogin: true },
       },
       // {
