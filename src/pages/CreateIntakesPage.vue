@@ -4,29 +4,29 @@
     <!-- <q-separator /> -->
     <div class="q-pt-sm" v-show="main">
       <q-separator />
-      <div class="row lt-md">
-        <q-btn-toggle
-          v-model="category"
-          push
-          spread
-          no-caps
-          rounded
-          unelevated
-          color="white"
-          text-color="primary"
-          toggle-color="primary"
-          class="q-mt-sm q-mb-sm"
-          :options="[
-            { label: 'General', value: '4' },
-            { label: 'Male', value: '3' },
-            { label: 'Female', value: '2' },
-            { label: 'Kids', value: '1' },
-          ]"
-        />
-        <q-separator />
-        <div>
+      <div class="column lt-md">
+        <div class="fixed-full overflow-auto">
+          <q-btn-toggle
+            v-model="category"
+            push
+            spread
+            no-caps
+            rounded
+            unelevated
+            color="white"
+            text-color="primary"
+            toggle-color="primary"
+            class="col q-mt-sm q-mb-sm"
+            :options="[
+              { label: 'General', value: '4' },
+              { label: 'Male', value: '3' },
+              { label: 'Female', value: '2' },
+              { label: 'Kids', value: '1' },
+            ]"
+          />
+          <q-separator />
           <!-- <q-scroll-area :style="{ height: '100vh' }"> -->
-          <div>
+          <div class="col">
             <!-- <q-form @submit="onSubmit" @reset="onReset"> -->
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
@@ -4664,6 +4664,88 @@
                   class="text-h6 bg-primary q-pa-sm"
                   style="border-radius: 15%; color: white"
                 >
+                  Wrapper, Buba And No-Scarf Colored
+                </p>
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Price: {{ lastPrice.wrapper_buba_no_scarf_colored }}
+                </p>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <q-slider
+                  v-model="wrapper_buba_no_scarf_colored"
+                  color="teal"
+                  thumb-color="black"
+                  label-color="black"
+                  label-text-color="white"
+                  markers
+                  switch-marker-labels-side
+                  label-always
+                  switch-label-side
+                  :min="0"
+                  :max="20"
+                />
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Total: ₦
+                  {{
+                    (total_wrapper_buba_no_scarf_colored =
+                      lastPrice.wrapper_buba_no_scarf_colored *
+                      wrapper_buba_no_scarf_colored)
+                  }}
+                </p>
+              </div>
+            </div>
+            <q-separator v-show="category === '2'" />
+            <div v-show="category === '2'" class="row q-pt-lg">
+              <div class="col-12 col-md-2 q-pl-md">
+                <p
+                  class="text-h6 bg-primary q-pa-sm"
+                  style="border-radius: 15%; color: white"
+                >
+                  Wrapper, Buba And No-Scarf White
+                </p>
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Price: {{ lastPrice.wrapper_buba_no_scarf_white }}
+                </p>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <q-slider
+                  v-model="wrapper_buba_no_scarf_white"
+                  color="teal"
+                  thumb-color="black"
+                  label-color="black"
+                  label-text-color="white"
+                  markers
+                  switch-marker-labels-side
+                  label-always
+                  switch-label-side
+                  :min="0"
+                  :max="20"
+                />
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Total: ₦
+                  {{
+                    (total_wrapper_buba_no_scarf_white =
+                      lastPrice.wrapper_buba_no_scarf_white *
+                      wrapper_buba_no_scarf_white)
+                  }}
+                </p>
+              </div>
+            </div>
+            <q-separator v-show="category === '2'" />
+            <div v-show="category === '2'" class="row q-pt-lg">
+              <div class="col-12 col-md-2 q-pl-md">
+                <p
+                  class="text-h6 bg-primary q-pa-sm"
+                  style="border-radius: 15%; color: white"
+                >
                   Wrapper Only Colored
                 </p>
               </div>
@@ -5179,6 +5261,110 @@
                     (total_aso_oke_headtie_ipele_colored =
                       lastPrice.aso_oke_headtie_ipele_colored *
                       quan_aso_oke_headtie_ipele_colored)
+                  }}
+                </p>
+              </div>
+            </div>
+            <q-separator v-show="category === '2'" />
+            <div v-show="category === '2'" class="row q-pt-lg">
+              <div class="col-12 col-md-2 q-pl-md">
+                <p
+                  class="text-h6 bg-primary q-pa-sm"
+                  style="border-radius: 15%; color: white"
+                >
+                  Complete Male Aso-Oke 3pcs White
+                </p>
+              </div>
+              <div class="column">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.male_complete_aso_oke_white }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <q-chip square color="primary" text-color="white">
+                    Quantity:
+                    {{
+                      (male_complete_aso_oke_white =
+                        3 * quan_male_complete_aso_oke_white)
+                    }}
+                  </q-chip>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <q-slider
+                  v-model="quan_male_complete_aso_oke_white"
+                  color="teal"
+                  thumb-color="black"
+                  label-color="black"
+                  label-text-color="white"
+                  markers
+                  switch-marker-labels-side
+                  label-always
+                  switch-label-side
+                  :min="0"
+                  :max="20"
+                />
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Total: ₦
+                  {{
+                    (total_male_complete_aso_oke_white =
+                      lastPrice.male_complete_aso_oke_white *
+                      quan_male_complete_aso_oke_white)
+                  }}
+                </p>
+              </div>
+            </div>
+            <q-separator v-show="category === '2'" />
+            <div v-show="category === '2'" class="row q-pt-lg">
+              <div class="col-12 col-md-2 q-pl-md">
+                <p
+                  class="text-h6 bg-primary q-pa-sm"
+                  style="border-radius: 15%; color: white"
+                >
+                  Complete Female Aso-Oke 3pcs White
+                </p>
+              </div>
+              <div class="column">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.female_complete_aso_oke_white }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <q-chip square color="primary" text-color="white">
+                    Quantity:
+                    {{
+                      (female_complete_aso_oke_white =
+                        3 * quan_female_complete_aso_oke_white)
+                    }}
+                  </q-chip>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <q-slider
+                  v-model="quan_female_complete_aso_oke_white"
+                  color="teal"
+                  thumb-color="black"
+                  label-color="black"
+                  label-text-color="white"
+                  markers
+                  switch-marker-labels-side
+                  label-always
+                  switch-label-side
+                  :min="0"
+                  :max="20"
+                />
+              </div>
+              <div class="col-12 col-md-2 q-pl-md">
+                <p class="text-subtitle1">
+                  Total: ₦
+                  {{
+                    (total_female_complete_aso_oke_white =
+                      lastPrice.female_complete_aso_oke_white *
+                      quan_female_complete_aso_oke_white)
                   }}
                 </p>
               </div>
@@ -6154,17 +6340,17 @@
                   class="text-h6 bg-primary q-pa-sm"
                   style="border-radius: 15%; color: white"
                 >
-                  Tursan Colored
+                  Turban Colored
                 </p>
               </div>
               <div class="col-12 col-md-2 q-pl-md">
                 <p class="text-subtitle1">
-                  Price: {{ lastPrice.tursan_colored }}
+                  Price: {{ lastPrice.turban_colored }}
                 </p>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <q-slider
-                  v-model="tursan_colored"
+                  v-model="turban_colored"
                   color="teal"
                   thumb-color="black"
                   label-color="black"
@@ -6181,8 +6367,8 @@
                 <p class="text-subtitle1">
                   Total: ₦
                   {{
-                    (total_tursan_colored =
-                      lastPrice.tursan_colored * tursan_colored)
+                    (total_turban_colored =
+                      lastPrice.turban_colored * turban_colored)
                   }}
                 </p>
               </div>
@@ -6194,17 +6380,17 @@
                   class="text-h6 bg-primary q-pa-sm"
                   style="border-radius: 15%; color: white"
                 >
-                  Tursan White
+                  Turban White
                 </p>
               </div>
               <div class="col-12 col-md-2 q-pl-md">
                 <p class="text-subtitle1">
-                  Price: {{ lastPrice.tursan_white }}
+                  Price: {{ lastPrice.turban_white }}
                 </p>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <q-slider
-                  v-model="tursan_white"
+                  v-model="turban_white"
                   color="teal"
                   thumb-color="black"
                   label-color="black"
@@ -6221,7 +6407,7 @@
                 <p class="text-subtitle1">
                   Total: ₦
                   {{
-                    (total_tursan_white = lastPrice.tursan_white * tursan_white)
+                    (total_turban_white = lastPrice.turban_white * turban_white)
                   }}
                 </p>
               </div>
@@ -7515,7 +7701,7 @@
             <!-- </q-form> -->
           </div>
           <!-- </q-scroll-area> -->
-          <div class="">
+          <div class="col q-mb-xl">
             <q-separator />
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
@@ -7581,188 +7767,192 @@
                   Final Total: ₦
                   {{
                     (total_final_amount =
-                      total_male_native_2pcs_folding_colored +
-                      total_male_native_2pcs_hanging_colored +
-                      total_male_native_2pcs_folding_white +
-                      total_male_native_2pcs_hanging_white +
-                      total_male_native_3pcs_notAgbada_folding_colored +
-                      total_male_native_3pcs_notAgbada_hanging_colored +
-                      total_male_native_3pcs_notAgbada_folding_white +
-                      total_male_native_3pcs_notAgbada_hanging_white +
-                      total_native_top_only_folding_colored +
-                      total_native_top_only_hanging_colored +
-                      total_native_top_only_folding_white +
-                      total_native_top_only_hanging_white +
-                      total_native_trouser_only_folding_colored +
-                      total_native_trouser_only_hanging_colored +
-                      total_native_trouser_only_folding_white +
-                      total_native_trouser_only_hanging_white +
-                      total_male_agbada_only_folding_colored +
-                      total_male_agbada_only_hanging_colored +
-                      total_male_agbada_only_folding_white +
-                      total_male_agbada_only_hanging_white +
-                      total_complete_male_agbada_3pcs_Folding_colored +
-                      total_complete_male_agbada_3pcs_Hanging_colored +
-                      total_complete_male_agbada_3pcs_Folding_white +
-                      total_complete_male_agbada_3pcs_Hanging_white +
-                      total_normal_shirt_folding_colored +
-                      total_normal_shirt_hanging_colored +
-                      total_normal_shirt_folding_white +
-                      total_normal_shirt_hanging_white +
-                      total_blouse_folding_colored +
-                      total_blouse_hanging_colored +
-                      total_blouse_folding_white +
-                      total_blouse_hanging_white +
-                      total_blouse_x_large_folding_colored +
-                      total_blouse_x_large_hanging_colored +
-                      total_blouse_x_large_folding_white +
-                      total_blouse_x_large_hanging_white +
-                      total_female_shirt_folding_colored +
-                      total_female_shirt_hanging_colored +
-                      total_female_shirt_folding_white +
-                      total_female_shirt_hanging_white +
-                      total_tshirt_polo_small_folding_colored +
-                      total_tshirt_polo_small_hanging_colored +
-                      total_tshirt_polo_small_folding_white +
-                      total_tshirt_polo_small_hanging_white +
-                      total_tshirt_polo_medium_folding_colored +
-                      total_tshirt_polo_medium_hanging_colored +
-                      total_tshirt_polo_medium_folding_white +
-                      total_tshirt_polo_medium_hanging_white +
-                      total_tshirt_polo_big_folding_colored +
-                      total_tshirt_polo_big_hanging_colored +
-                      total_tshirt_polo_big_folding_white +
-                      total_tshirt_polo_big_hanging_white +
-                      total_shirt_x_large_folding_colored +
-                      total_shirt_x_large_hanging_colored +
-                      total_shirt_x_large_folding_white +
-                      total_shirt_x_large_hanging_white +
-                      total_shirt_big_folding_colored +
-                      total_shirt_big_hanging_colored +
-                      total_shirt_big_folding_white +
-                      total_shirt_big_hanging_white +
-                      total_shirt_children_folding_colored +
-                      total_shirt_children_hanging_colored +
-                      total_shirt_children_folding_white +
-                      total_shirt_children_hanging_white +
-                      total_plain_trouser_folding_colored +
-                      total_plain_trouser_hanging_colored +
-                      total_plain_trouser_folding_white +
-                      total_plain_trouser_hanging_white +
-                      total_jeans_chinos_trouser_folding_colored +
-                      total_jeans_chinos_trouser_hanging_colored +
-                      total_jeans_chinos_trouser_folding_white +
-                      total_jeans_chinos_trouser_hanging_white +
-                      total_waist_coat_hanging_colored +
-                      total_waist_coat_hanging_white +
-                      total_tie_colored +
-                      total_tie_white +
-                      total_shorts_folding_colored +
-                      total_shorts_hanging_colored +
-                      total_shorts_folding_white +
-                      total_shorts_hanging_white +
-                      total_singlet_colored +
-                      total_singlet_white +
-                      total_boxer_colored +
-                      total_boxer_white +
-                      total_male_2pcs_suit_hanging_colored +
-                      total_male_2pcs_suit_hanging_white +
-                      total_male_3pcs_suit_hanging_colored +
-                      total_male_3pcs_suit_hanging_white +
-                      total_female_2pcs_suit_hanging_colored +
-                      total_female_2pcs_suit_hanging_white +
-                      total_female_3pcs_suit_hanging_colored +
-                      total_female_3pcs_suit_hanging_white +
-                      total_male_jacket_only_colored +
-                      total_male_jacket_only_white +
-                      total_female_jacket_only_colored +
-                      total_female_jacket_only_white +
-                      total_wedding_gown_small_and_little_accessories_white +
-                      total_wedding_gown_big_and_plenty_accessories_white +
-                      total_Kids_blouse_folding_colored +
-                      total_Kids_blouse_hanging_colored +
-                      total_Kids_blouse_folding_white +
-                      total_Kids_blouse_hanging_white +
-                      total_jalamia_colored +
-                      total_jalamia_white +
-                      total_camisole_colored +
-                      total_camisole_white +
-                      total_wrapper_buba_scarf_colored +
-                      total_wrapper_buba_scarf_white +
-                      total_wrapper_only_colored +
-                      total_wrapper_only_white +
-                      total_two_wrapper_scarf_or_no_scarf_colored +
-                      total_two_wrapper_scarf_or_no_scarf_white +
-                      total_aso_oke_agbada_and_cap_colored +
-                      total_male_aso_oke_and_cap_3pcs_colored +
-                      total_aso_oke_wrapper_buba_gele_colored +
-                      total_aso_oke_wrapper_gele_colored +
-                      total_aso_oke_wrapper_gele_ipele_colored +
-                      total_aso_oke_wrapper_gele_ipele_white +
-                      total_aso_oke_headtie_ipele_colored +
-                      total_female_inner_wear_colored +
-                      total_female_inner_wear_white +
-                      total_head_tie_gele_colored +
-                      total_head_tie_gele_white +
-                      total_gown_children_colored +
-                      total_gown_children_white +
-                      total_gown_english_adult_folding_colored +
-                      total_gown_english_adult_folding_white +
-                      total_gown_english_adult_hanging_colored +
-                      total_gown_english_adult_hanging_white +
-                      total_gown_native_folding_colored +
-                      total_gown_native_folding_white +
-                      total_skirt_and_blouse_english_hanging_colored +
-                      total_skirt_and_blouse_english_hanging_white +
-                      total_skirt_and_blouse_native_folding_colored +
-                      total_skirt_and_blouse_native_folding_white +
-                      total_female_native_buba_and_trouser_colored +
-                      total_female_native_buba_and_trouser_white +
-                      total_male_cap_colored +
-                      total_male_cap_white +
-                      total_female_cap_colored +
-                      total_female_cap_white +
-                      total_tursan_colored +
-                      total_tursan_white +
-                      total_sweater_small_colored +
-                      total_sweater_small_white +
-                      total_sweater_normal_colored +
-                      total_sweater_normal_white +
-                      total_sweater_big_colored +
-                      total_sweater_big_white +
-                      total_towel_small_colored +
-                      total_towel_small_white +
-                      total_towel_normal_colored +
-                      total_towel_normal_big +
-                      total_towel_big_colored +
-                      total_towel_big_white +
-                      total_bed_spread_normal_colored +
-                      total_bed_spread_normal_white +
-                      total_bed_spread_big_colored +
-                      total_bed_spread_big_white +
-                      total_bed_spread_double_colored +
-                      total_bed_spread_double_white +
-                      total_duvet_normal_colored +
-                      total_duvet_normal_white +
-                      total_duvet_big_colored +
-                      total_duvet_big_white +
-                      total_curtain_normal_colored +
-                      total_curtain_big_colored +
-                      total_curtain_very_big_colored +
-                      total_pyjamas_small_colored +
-                      total_pyjamas_small_white +
-                      total_pyjamas_big_colored +
-                      total_pyjamas_big_white +
-                      total_blanket_colored +
-                      total_pillow_cases_colored +
-                      total_pillow_cases_white)
+                      Number(total_male_native_2pcs_folding_colored) +
+                      Number(total_male_native_2pcs_hanging_colored) +
+                      Number(total_male_native_2pcs_folding_white) +
+                      Number(total_male_native_2pcs_hanging_white) +
+                      Number(total_male_native_3pcs_notAgbada_folding_colored) +
+                      Number(total_male_native_3pcs_notAgbada_hanging_colored) +
+                      Number(total_male_native_3pcs_notAgbada_folding_white) +
+                      Number(total_male_native_3pcs_notAgbada_hanging_white) +
+                      Number(total_native_top_only_folding_colored) +
+                      Number(total_native_top_only_hanging_colored) +
+                      Number(total_native_top_only_folding_white) +
+                      Number(total_native_top_only_hanging_white) +
+                      Number(total_native_trouser_only_folding_colored) +
+                      Number(total_native_trouser_only_hanging_colored) +
+                      Number(total_native_trouser_only_folding_white) +
+                      Number(total_native_trouser_only_hanging_white) +
+                      Number(total_male_agbada_only_folding_colored) +
+                      Number(total_male_agbada_only_hanging_colored) +
+                      Number(total_male_agbada_only_folding_white) +
+                      Number(total_male_agbada_only_hanging_white) +
+                      Number(total_complete_male_agbada_3pcs_Folding_colored) +
+                      Number(total_complete_male_agbada_3pcs_Hanging_colored) +
+                      Number(total_complete_male_agbada_3pcs_Folding_white) +
+                      Number(total_complete_male_agbada_3pcs_Hanging_white) +
+                      Number(total_normal_shirt_folding_colored) +
+                      Number(total_normal_shirt_hanging_colored) +
+                      Number(total_normal_shirt_folding_white) +
+                      Number(total_normal_shirt_hanging_white) +
+                      Number(total_blouse_folding_colored) +
+                      Number(total_blouse_hanging_colored) +
+                      Number(total_blouse_folding_white) +
+                      Number(total_blouse_hanging_white) +
+                      Number(total_blouse_x_large_folding_colored) +
+                      Number(total_blouse_x_large_hanging_colored) +
+                      Number(total_blouse_x_large_folding_white) +
+                      Number(total_blouse_x_large_hanging_white) +
+                      Number(total_female_shirt_folding_colored) +
+                      Number(total_female_shirt_hanging_colored) +
+                      Number(total_female_shirt_folding_white) +
+                      Number(total_female_shirt_hanging_white) +
+                      Number(total_tshirt_polo_small_folding_colored) +
+                      Number(total_tshirt_polo_small_hanging_colored) +
+                      Number(total_tshirt_polo_small_folding_white) +
+                      Number(total_tshirt_polo_small_hanging_white) +
+                      Number(total_tshirt_polo_medium_folding_colored) +
+                      Number(total_tshirt_polo_medium_hanging_colored) +
+                      Number(total_tshirt_polo_medium_folding_white) +
+                      Number(total_tshirt_polo_medium_hanging_white) +
+                      Number(total_tshirt_polo_big_folding_colored) +
+                      Number(total_tshirt_polo_big_hanging_colored) +
+                      Number(total_tshirt_polo_big_folding_white) +
+                      Number(total_tshirt_polo_big_hanging_white) +
+                      Number(total_shirt_x_large_folding_colored) +
+                      Number(total_shirt_x_large_hanging_colored) +
+                      Number(total_shirt_x_large_folding_white) +
+                      Number(total_shirt_x_large_hanging_white) +
+                      Number(total_shirt_big_folding_colored) +
+                      Number(total_shirt_big_hanging_colored) +
+                      Number(total_shirt_big_folding_white) +
+                      Number(total_shirt_big_hanging_white) +
+                      Number(total_shirt_children_folding_colored) +
+                      Number(total_shirt_children_hanging_colored) +
+                      Number(total_shirt_children_folding_white) +
+                      Number(total_shirt_children_hanging_white) +
+                      Number(total_plain_trouser_folding_colored) +
+                      Number(total_plain_trouser_hanging_colored) +
+                      Number(total_plain_trouser_folding_white) +
+                      Number(total_plain_trouser_hanging_white) +
+                      Number(total_jeans_chinos_trouser_folding_colored) +
+                      Number(total_jeans_chinos_trouser_hanging_colored) +
+                      Number(total_jeans_chinos_trouser_folding_white) +
+                      Number(total_jeans_chinos_trouser_hanging_white) +
+                      Number(total_waist_coat_hanging_colored) +
+                      Number(total_waist_coat_hanging_white) +
+                      Number(total_tie_colored) +
+                      Number(total_tie_white) +
+                      Number(total_shorts_folding_colored) +
+                      Number(total_shorts_hanging_colored) +
+                      Number(total_shorts_folding_white) +
+                      Number(total_shorts_hanging_white) +
+                      Number(total_singlet_colored) +
+                      Number(total_singlet_white) +
+                      Number(total_boxer_colored) +
+                      Number(total_boxer_white) +
+                      Number(total_male_2pcs_suit_hanging_colored) +
+                      Number(total_male_2pcs_suit_hanging_white) +
+                      Number(total_male_3pcs_suit_hanging_colored) +
+                      Number(total_male_3pcs_suit_hanging_white) +
+                      Number(total_female_2pcs_suit_hanging_colored) +
+                      Number(total_female_2pcs_suit_hanging_white) +
+                      Number(total_female_3pcs_suit_hanging_colored) +
+                      Number(total_female_3pcs_suit_hanging_white) +
+                      Number(total_male_jacket_only_colored) +
+                      Number(total_male_jacket_only_white) +
+                      Number(total_female_jacket_only_colored) +
+                      Number(total_female_jacket_only_white) +
+                      Number(total_wedding_gown_small_and_little_accessories_white) +
+                      Number(total_wedding_gown_big_and_plenty_accessories_white) +
+                      Number(total_Kids_blouse_folding_colored) +
+                      Number(total_Kids_blouse_hanging_colored) +
+                      Number(total_Kids_blouse_folding_white) +
+                      Number(total_Kids_blouse_hanging_white) +
+                      Number(total_jalamia_colored) +
+                      Number(total_jalamia_white) +
+                      Number(total_camisole_colored) +
+                      Number(total_camisole_white) +
+                      Number(total_wrapper_buba_scarf_colored) +
+                      Number(total_wrapper_buba_scarf_white) +
+                      Number(total_wrapper_buba_no_scarf_colored) +
+                      Number(total_wrapper_buba_no_scarf_white) +
+                      Number(total_wrapper_only_colored) +
+                      Number(total_wrapper_only_white) +
+                      Number(total_two_wrapper_scarf_or_no_scarf_colored) +
+                      Number(total_two_wrapper_scarf_or_no_scarf_white) +
+                      Number(total_aso_oke_agbada_and_cap_colored) +
+                      Number(total_male_aso_oke_and_cap_3pcs_colored) +
+                      Number(total_aso_oke_wrapper_buba_gele_colored) +
+                      Number(total_aso_oke_wrapper_gele_colored) +
+                      Number(total_aso_oke_wrapper_gele_ipele_colored) +
+                      Number(total_aso_oke_wrapper_gele_ipele_white) +
+                      Number(total_aso_oke_headtie_ipele_colored) +
+                      Number(total_male_complete_aso_oke_white) +
+                      Number(total_female_complete_aso_oke_white) +
+                      Number(total_female_inner_wear_colored) +
+                      Number(total_female_inner_wear_white) +
+                      Number(total_head_tie_gele_colored) +
+                      Number(total_head_tie_gele_white) +
+                      Number(total_gown_children_colored) +
+                      Number(total_gown_children_white) +
+                      Number(total_gown_english_adult_folding_colored) +
+                      Number(total_gown_english_adult_folding_white) +
+                      Number(total_gown_english_adult_hanging_colored) +
+                      Number(total_gown_english_adult_hanging_white) +
+                      Number(total_gown_native_folding_colored) +
+                      Number(total_gown_native_folding_white) +
+                      Number(total_skirt_and_blouse_english_hanging_colored) +
+                      Number(total_skirt_and_blouse_english_hanging_white) +
+                      Number(total_skirt_and_blouse_native_folding_colored) +
+                      Number(total_skirt_and_blouse_native_folding_white) +
+                      Number(total_female_native_buba_and_trouser_colored) +
+                      Number(total_female_native_buba_and_trouser_white) +
+                      Number(total_male_cap_colored) +
+                      Number(total_male_cap_white) +
+                      Number(total_female_cap_colored) +
+                      Number(total_female_cap_white) +
+                      Number(total_turban_colored) +
+                      Number(total_turban_white) +
+                      Number(total_sweater_small_colored) +
+                      Number(total_sweater_small_white) +
+                      Number(total_sweater_normal_colored) +
+                      Number(total_sweater_normal_white) +
+                      Number(total_sweater_big_colored) +
+                      Number(total_sweater_big_white) +
+                      Number(total_towel_small_colored) +
+                      Number(total_towel_small_white) +
+                      Number(total_towel_normal_colored) +
+                      Number(total_towel_normal_white) +
+                      Number(total_towel_big_colored) +
+                      Number(total_towel_big_white) +
+                      Number(total_bed_spread_normal_colored) +
+                      Number(total_bed_spread_normal_white) +
+                      Number(total_bed_spread_big_colored) +
+                      Number(total_bed_spread_big_white) +
+                      Number(total_bed_spread_double_colored) +
+                      Number(total_bed_spread_double_white) +
+                      Number(total_duvet_normal_colored) +
+                      Number(total_duvet_normal_white) +
+                      Number(total_duvet_big_colored) +
+                      Number(total_duvet_big_white) +
+                      Number(total_curtain_normal_colored) +
+                      Number(total_curtain_big_colored) +
+                      Number(total_curtain_very_big_colored) +
+                      Number(total_pyjamas_small_colored) +
+                      Number(total_pyjamas_small_white) +
+                      Number(total_pyjamas_big_colored) +
+                      Number(total_pyjamas_big_white) +
+                      Number(total_blanket_colored) +
+                      Number(total_pillow_cases_colored) +
+                      Number(total_pillow_cases_white))
                   }}
                 </p>
               </div>
             </div>
 
-            <div class="row q-pt-md q-pb-md">
-              <div class="text-center full-width q-pl-md">
+            <div class="row q-pt-md q-pb-xl">
+              <div class="q-mb-xl text-center full-width q-pl-md">
                 <q-btn
                   :disabled="!collection_date"
                   @click="continue_"
@@ -12450,6 +12640,88 @@
                     class="text-h6 bg-primary q-pa-sm"
                     style="border-radius: 15%; color: white"
                   >
+                    Wrapper, Buba And No-Scarf Colored
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.wrapper_buba_no_scarf_colored }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="wrapper_buba_no_scarf_colored"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_wrapper_buba_no_scarf_colored =
+                        lastPrice.wrapper_buba_no_scarf_colored *
+                        wrapper_buba_no_scarf_colored)
+                    }}
+                  </p>
+                </div>
+              </div>
+              <q-separator v-show="category === '2'" />
+              <div v-show="category === '2'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-primary q-pa-sm"
+                    style="border-radius: 15%; color: white"
+                  >
+                    Wrapper, Buba And No-Scarf White
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.wrapper_buba_no_scarf_white }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="wrapper_buba_no_scarf_white"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_wrapper_buba_no_scarf_white =
+                        lastPrice.wrapper_buba_no_scarf_white *
+                        wrapper_buba_no_scarf_white)
+                    }}
+                  </p>
+                </div>
+              </div>
+              <q-separator v-show="category === '2'" />
+              <div v-show="category === '2'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-primary q-pa-sm"
+                    style="border-radius: 15%; color: white"
+                  >
                     Wrapper Only Colored
                   </p>
                 </div>
@@ -12965,6 +13237,110 @@
                       (total_aso_oke_headtie_ipele_colored =
                         lastPrice.aso_oke_headtie_ipele_colored *
                         quan_aso_oke_headtie_ipele_colored)
+                    }}
+                  </p>
+                </div>
+              </div>
+              <q-separator v-show="category === '2'" />
+              <div v-show="category === '2'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-primary q-pa-sm"
+                    style="border-radius: 15%; color: white"
+                  >
+                    Complete Male 3pcs White
+                  </p>
+                </div>
+                <div class="column">
+                  <div class="col-12 col-md-2 q-pl-md">
+                    <p class="text-subtitle1">
+                      Price: {{ lastPrice.male_complete_aso_oke_white }}
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-2 q-pl-md">
+                    <q-chip square color="primary" text-color="white">
+                      Quantity:
+                      {{
+                        (male_complete_aso_oke_white =
+                          3 * quan_male_complete_aso_oke_white)
+                      }}
+                    </q-chip>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="quan_male_complete_aso_oke_white"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_male_complete_aso_oke_white =
+                        lastPrice.male_complete_aso_oke_white *
+                        quan_male_complete_aso_oke_white)
+                    }}
+                  </p>
+                </div>
+              </div>
+              <q-separator v-show="category === '2'" />
+              <div v-show="category === '2'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-primary q-pa-sm"
+                    style="border-radius: 15%; color: white"
+                  >
+                    Complete Female 3pcs White
+                  </p>
+                </div>
+                <div class="column">
+                  <div class="col-12 col-md-2 q-pl-md">
+                    <p class="text-subtitle1">
+                      Price: {{ lastPrice.female_complete_aso_oke_white }}
+                    </p>
+                  </div>
+                  <div class="col-12 col-md-2 q-pl-md">
+                    <q-chip square color="primary" text-color="white">
+                      Quantity:
+                      {{
+                        (female_complete_aso_oke_white =
+                          3 * quan_female_complete_aso_oke_white)
+                      }}
+                    </q-chip>
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="quan_female_complete_aso_oke_white"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_female_complete_aso_oke_white =
+                        lastPrice.female_complete_aso_oke_white *
+                        quan_female_complete_aso_oke_white)
                     }}
                   </p>
                 </div>
@@ -13942,17 +14318,17 @@
                     class="text-h6 bg-primary q-pa-sm"
                     style="border-radius: 15%; color: white"
                   >
-                    Tursan Colored
+                    Turban Colored
                   </p>
                 </div>
                 <div class="col-12 col-md-2 q-pl-md">
                   <p class="text-subtitle1">
-                    Price: {{ lastPrice.tursan_colored }}
+                    Price: {{ lastPrice.turban_colored }}
                   </p>
                 </div>
                 <div class="col-12 col-md-6 q-pl-md">
                   <q-slider
-                    v-model="tursan_colored"
+                    v-model="turban_colored"
                     color="teal"
                     thumb-color="black"
                     label-color="black"
@@ -13969,8 +14345,8 @@
                   <p class="text-subtitle1">
                     Total: ₦
                     {{
-                      (total_tursan_colored =
-                        lastPrice.tursan_colored * tursan_colored)
+                      (total_turban_colored =
+                        lastPrice.turban_colored * turban_colored)
                     }}
                   </p>
                 </div>
@@ -13982,17 +14358,17 @@
                     class="text-h6 bg-primary q-pa-sm"
                     style="border-radius: 15%; color: white"
                   >
-                    Tursan White
+                    Turban White
                   </p>
                 </div>
                 <div class="col-12 col-md-2 q-pl-md">
                   <p class="text-subtitle1">
-                    Price: {{ lastPrice.tursan_white }}
+                    Price: {{ lastPrice.turban_white }}
                   </p>
                 </div>
                 <div class="col-12 col-md-6 q-pl-md">
                   <q-slider
-                    v-model="tursan_white"
+                    v-model="turban_white"
                     color="teal"
                     thumb-color="black"
                     label-color="black"
@@ -14009,8 +14385,8 @@
                   <p class="text-subtitle1">
                     Total: ₦
                     {{
-                      (total_tursan_white =
-                        lastPrice.tursan_white * tursan_white)
+                      (total_turban_white =
+                        lastPrice.turban_white * turban_white)
                     }}
                   </p>
                 </div>
@@ -15373,181 +15749,185 @@
                 Final Total: ₦
                 {{
                   (total_final_amount =
-                    total_male_native_2pcs_folding_colored +
-                    total_male_native_2pcs_hanging_colored +
-                    total_male_native_2pcs_folding_white +
-                    total_male_native_2pcs_hanging_white +
-                    total_male_native_3pcs_notAgbada_folding_colored +
-                    total_male_native_3pcs_notAgbada_hanging_colored +
-                    total_male_native_3pcs_notAgbada_folding_white +
-                    total_male_native_3pcs_notAgbada_hanging_white +
-                    total_native_top_only_folding_colored +
-                    total_native_top_only_hanging_colored +
-                    total_native_top_only_folding_white +
-                    total_native_top_only_hanging_white +
-                    total_native_trouser_only_folding_colored +
-                    total_native_trouser_only_hanging_colored +
-                    total_native_trouser_only_folding_white +
-                    total_native_trouser_only_hanging_white +
-                    total_male_agbada_only_folding_colored +
-                    total_male_agbada_only_hanging_colored +
-                    total_male_agbada_only_folding_white +
-                    total_male_agbada_only_hanging_white +
-                    total_complete_male_agbada_3pcs_Folding_colored +
-                    total_complete_male_agbada_3pcs_Hanging_colored +
-                    total_complete_male_agbada_3pcs_Folding_white +
-                    total_complete_male_agbada_3pcs_Hanging_white +
-                    total_normal_shirt_folding_colored +
-                    total_normal_shirt_hanging_colored +
-                    total_normal_shirt_folding_white +
-                    total_normal_shirt_hanging_white +
-                    total_blouse_folding_colored +
-                    total_blouse_hanging_colored +
-                    total_blouse_folding_white +
-                    total_blouse_hanging_white +
-                    total_blouse_x_large_folding_colored +
-                    total_blouse_x_large_hanging_colored +
-                    total_blouse_x_large_folding_white +
-                    total_blouse_x_large_hanging_white +
-                    total_female_shirt_folding_colored +
-                    total_female_shirt_hanging_colored +
-                    total_female_shirt_folding_white +
-                    total_female_shirt_hanging_white +
-                    total_tshirt_polo_small_folding_colored +
-                    total_tshirt_polo_small_hanging_colored +
-                    total_tshirt_polo_small_folding_white +
-                    total_tshirt_polo_small_hanging_white +
-                    total_tshirt_polo_medium_folding_colored +
-                    total_tshirt_polo_medium_hanging_colored +
-                    total_tshirt_polo_medium_folding_white +
-                    total_tshirt_polo_medium_hanging_white +
-                    total_tshirt_polo_big_folding_colored +
-                    total_tshirt_polo_big_hanging_colored +
-                    total_tshirt_polo_big_folding_white +
-                    total_tshirt_polo_big_hanging_white +
-                    total_shirt_x_large_folding_colored +
-                    total_shirt_x_large_hanging_colored +
-                    total_shirt_x_large_folding_white +
-                    total_shirt_x_large_hanging_white +
-                    total_shirt_big_folding_colored +
-                    total_shirt_big_hanging_colored +
-                    total_shirt_big_folding_white +
-                    total_shirt_big_hanging_white +
-                    total_shirt_children_folding_colored +
-                    total_shirt_children_hanging_colored +
-                    total_shirt_children_folding_white +
-                    total_shirt_children_hanging_white +
-                    total_plain_trouser_folding_colored +
-                    total_plain_trouser_hanging_colored +
-                    total_plain_trouser_folding_white +
-                    total_plain_trouser_hanging_white +
-                    total_jeans_chinos_trouser_folding_colored +
-                    total_jeans_chinos_trouser_hanging_colored +
-                    total_jeans_chinos_trouser_folding_white +
-                    total_jeans_chinos_trouser_hanging_white +
-                    total_waist_coat_hanging_colored +
-                    total_waist_coat_hanging_white +
-                    total_tie_colored +
-                    total_tie_white +
-                    total_shorts_folding_colored +
-                    total_shorts_hanging_colored +
-                    total_shorts_folding_white +
-                    total_shorts_hanging_white +
-                    total_singlet_colored +
-                    total_singlet_white +
-                    total_boxer_colored +
-                    total_boxer_white +
-                    total_male_2pcs_suit_hanging_colored +
-                    total_male_2pcs_suit_hanging_white +
-                    total_male_3pcs_suit_hanging_colored +
-                    total_male_3pcs_suit_hanging_white +
-                    total_female_2pcs_suit_hanging_colored +
-                    total_female_2pcs_suit_hanging_white +
-                    total_female_3pcs_suit_hanging_colored +
-                    total_female_3pcs_suit_hanging_white +
-                    total_male_jacket_only_colored +
-                    total_male_jacket_only_white +
-                    total_female_jacket_only_colored +
-                    total_female_jacket_only_white +
-                    total_wedding_gown_small_and_little_accessories_white +
-                    total_wedding_gown_big_and_plenty_accessories_white +
-                    total_Kids_blouse_folding_colored +
-                    total_Kids_blouse_hanging_colored +
-                    total_Kids_blouse_folding_white +
-                    total_Kids_blouse_hanging_white +
-                    total_jalamia_colored +
-                    total_jalamia_white +
-                    total_camisole_colored +
-                    total_camisole_white +
-                    total_wrapper_buba_scarf_colored +
-                    total_wrapper_buba_scarf_white +
-                    total_wrapper_only_colored +
-                    total_wrapper_only_white +
-                    total_two_wrapper_scarf_or_no_scarf_colored +
-                    total_two_wrapper_scarf_or_no_scarf_white +
-                    total_aso_oke_agbada_and_cap_colored +
-                    total_male_aso_oke_and_cap_3pcs_colored +
-                    total_aso_oke_wrapper_buba_gele_colored +
-                    total_aso_oke_wrapper_gele_colored +
-                    total_aso_oke_wrapper_gele_ipele_colored +
-                    total_aso_oke_wrapper_gele_ipele_white +
-                    total_aso_oke_headtie_ipele_colored +
-                    total_female_inner_wear_colored +
-                    total_female_inner_wear_white +
-                    total_head_tie_gele_colored +
-                    total_head_tie_gele_white +
-                    total_gown_children_colored +
-                    total_gown_children_white +
-                    total_gown_english_adult_folding_colored +
-                    total_gown_english_adult_folding_white +
-                    total_gown_english_adult_hanging_colored +
-                    total_gown_english_adult_hanging_white +
-                    total_gown_native_folding_colored +
-                    total_gown_native_folding_white +
-                    total_skirt_and_blouse_english_hanging_colored +
-                    total_skirt_and_blouse_english_hanging_white +
-                    total_skirt_and_blouse_native_folding_colored +
-                    total_skirt_and_blouse_native_folding_white +
-                    total_female_native_buba_and_trouser_colored +
-                    total_female_native_buba_and_trouser_white +
-                    total_male_cap_colored +
-                    total_male_cap_white +
-                    total_female_cap_colored +
-                    total_female_cap_white +
-                    total_tursan_colored +
-                    total_tursan_white +
-                    total_sweater_small_colored +
-                    total_sweater_small_white +
-                    total_sweater_normal_colored +
-                    total_sweater_normal_white +
-                    total_sweater_big_colored +
-                    total_sweater_big_white +
-                    total_towel_small_colored +
-                    total_towel_small_white +
-                    total_towel_normal_colored +
-                    total_towel_normal_big +
-                    total_towel_big_colored +
-                    total_towel_big_white +
-                    total_bed_spread_normal_colored +
-                    total_bed_spread_normal_white +
-                    total_bed_spread_big_colored +
-                    total_bed_spread_big_white +
-                    total_bed_spread_double_colored +
-                    total_bed_spread_double_white +
-                    total_duvet_normal_colored +
-                    total_duvet_normal_white +
-                    total_duvet_big_colored +
-                    total_duvet_big_white +
-                    total_curtain_normal_colored +
-                    total_curtain_big_colored +
-                    total_curtain_very_big_colored +
-                    total_pyjamas_small_colored +
-                    total_pyjamas_small_white +
-                    total_pyjamas_big_colored +
-                    total_pyjamas_big_white +
-                    total_blanket_colored +
-                    total_pillow_cases_colored +
-                    total_pillow_cases_white)
+                    Number(total_male_native_2pcs_folding_colored) +
+                    Number(total_male_native_2pcs_hanging_colored) +
+                    Number(total_male_native_2pcs_folding_white) +
+                    Number(total_male_native_2pcs_hanging_white) +
+                    Number(total_male_native_3pcs_notAgbada_folding_colored) +
+                    Number(total_male_native_3pcs_notAgbada_hanging_colored) +
+                    Number(total_male_native_3pcs_notAgbada_folding_white) +
+                    Number(total_male_native_3pcs_notAgbada_hanging_white) +
+                    Number(total_native_top_only_folding_colored) +
+                    Number(total_native_top_only_hanging_colored) +
+                    Number(total_native_top_only_folding_white) +
+                    Number(total_native_top_only_hanging_white) +
+                    Number(total_native_trouser_only_folding_colored) +
+                    Number(total_native_trouser_only_hanging_colored) +
+                    Number(total_native_trouser_only_folding_white) +
+                    Number(total_native_trouser_only_hanging_white) +
+                    Number(total_male_agbada_only_folding_colored) +
+                    Number(total_male_agbada_only_hanging_colored) +
+                    Number(total_male_agbada_only_folding_white) +
+                    Number(total_male_agbada_only_hanging_white) +
+                    Number(total_complete_male_agbada_3pcs_Folding_colored) +
+                    Number(total_complete_male_agbada_3pcs_Hanging_colored) +
+                    Number(total_complete_male_agbada_3pcs_Folding_white) +
+                    Number(total_complete_male_agbada_3pcs_Hanging_white) +
+                    Number(total_normal_shirt_folding_colored) +
+                    Number(total_normal_shirt_hanging_colored) +
+                    Number(total_normal_shirt_folding_white) +
+                    Number(total_normal_shirt_hanging_white) +
+                    Number(total_blouse_folding_colored) +
+                    Number(total_blouse_hanging_colored) +
+                    Number(total_blouse_folding_white) +
+                    Number(total_blouse_hanging_white) +
+                    Number(total_blouse_x_large_folding_colored) +
+                    Number(total_blouse_x_large_hanging_colored) +
+                    Number(total_blouse_x_large_folding_white) +
+                    Number(total_blouse_x_large_hanging_white) +
+                    Number(total_female_shirt_folding_colored) +
+                    Number(total_female_shirt_hanging_colored) +
+                    Number(total_female_shirt_folding_white) +
+                    Number(total_female_shirt_hanging_white) +
+                    Number(total_tshirt_polo_small_folding_colored) +
+                    Number(total_tshirt_polo_small_hanging_colored) +
+                    Number(total_tshirt_polo_small_folding_white) +
+                    Number(total_tshirt_polo_small_hanging_white) +
+                    Number(total_tshirt_polo_medium_folding_colored) +
+                    Number(total_tshirt_polo_medium_hanging_colored) +
+                    Number(total_tshirt_polo_medium_folding_white) +
+                    Number(total_tshirt_polo_medium_hanging_white) +
+                    Number(total_tshirt_polo_big_folding_colored) +
+                    Number(total_tshirt_polo_big_hanging_colored) +
+                    Number(total_tshirt_polo_big_folding_white) +
+                    Number(total_tshirt_polo_big_hanging_white) +
+                    Number(total_shirt_x_large_folding_colored) +
+                    Number(total_shirt_x_large_hanging_colored) +
+                    Number(total_shirt_x_large_folding_white) +
+                    Number(total_shirt_x_large_hanging_white) +
+                    Number(total_shirt_big_folding_colored) +
+                    Number(total_shirt_big_hanging_colored) +
+                    Number(total_shirt_big_folding_white) +
+                    Number(total_shirt_big_hanging_white) +
+                    Number(total_shirt_children_folding_colored) +
+                    Number(total_shirt_children_hanging_colored) +
+                    Number(total_shirt_children_folding_white) +
+                    Number(total_shirt_children_hanging_white) +
+                    Number(total_plain_trouser_folding_colored) +
+                    Number(total_plain_trouser_hanging_colored) +
+                    Number(total_plain_trouser_folding_white) +
+                    Number(total_plain_trouser_hanging_white) +
+                    Number(total_jeans_chinos_trouser_folding_colored) +
+                    Number(total_jeans_chinos_trouser_hanging_colored) +
+                    Number(total_jeans_chinos_trouser_folding_white) +
+                    Number(total_jeans_chinos_trouser_hanging_white) +
+                    Number(total_waist_coat_hanging_colored) +
+                    Number(total_waist_coat_hanging_white) +
+                    Number(total_tie_colored) +
+                    Number(total_tie_white) +
+                    Number(total_shorts_folding_colored) +
+                    Number(total_shorts_hanging_colored) +
+                    Number(total_shorts_folding_white) +
+                    Number(total_shorts_hanging_white) +
+                    Number(total_singlet_colored) +
+                    Number(total_singlet_white) +
+                    Number(total_boxer_colored) +
+                    Number(total_boxer_white) +
+                    Number(total_male_2pcs_suit_hanging_colored) +
+                    Number(total_male_2pcs_suit_hanging_white) +
+                    Number(total_male_3pcs_suit_hanging_colored) +
+                    Number(total_male_3pcs_suit_hanging_white) +
+                    Number(total_female_2pcs_suit_hanging_colored) +
+                    Number(total_female_2pcs_suit_hanging_white) +
+                    Number(total_female_3pcs_suit_hanging_colored) +
+                    Number(total_female_3pcs_suit_hanging_white) +
+                    Number(total_male_jacket_only_colored) +
+                    Number(total_male_jacket_only_white) +
+                    Number(total_female_jacket_only_colored) +
+                    Number(total_female_jacket_only_white) +
+                    Number(total_wedding_gown_small_and_little_accessories_white) +
+                    Number(total_wedding_gown_big_and_plenty_accessories_white) +
+                    Number(total_Kids_blouse_folding_colored) +
+                    Number(total_Kids_blouse_hanging_colored) +
+                    Number(total_Kids_blouse_folding_white) +
+                    Number(total_Kids_blouse_hanging_white) +
+                    Number(total_jalamia_colored) +
+                    Number(total_jalamia_white) +
+                    Number(total_camisole_colored) +
+                    Number(total_camisole_white) +
+                    Number(total_wrapper_buba_scarf_colored) +
+                    Number(total_wrapper_buba_scarf_white) +
+                    Number(total_wrapper_buba_no_scarf_colored) +
+                    Number(total_wrapper_buba_no_scarf_white) +
+                    Number(total_wrapper_only_colored) +
+                    Number(total_wrapper_only_white) +
+                    Number(total_two_wrapper_scarf_or_no_scarf_colored) +
+                    Number(total_two_wrapper_scarf_or_no_scarf_white) +
+                    Number(total_aso_oke_agbada_and_cap_colored) +
+                    Number(total_male_aso_oke_and_cap_3pcs_colored) +
+                    Number(total_aso_oke_wrapper_buba_gele_colored) +
+                    Number(total_aso_oke_wrapper_gele_colored) +
+                    Number(total_aso_oke_wrapper_gele_ipele_colored) +
+                    Number(total_aso_oke_wrapper_gele_ipele_white) +
+                    Number(total_aso_oke_headtie_ipele_colored) +
+                    Number(total_male_complete_aso_oke_white) +
+                    Number(total_female_complete_aso_oke_white) +
+                    Number(total_female_inner_wear_colored) +
+                    Number(total_female_inner_wear_white) +
+                    Number(total_head_tie_gele_colored) +
+                    Number(total_head_tie_gele_white) +
+                    Number(total_gown_children_colored) +
+                    Number(total_gown_children_white) +
+                    Number(total_gown_english_adult_folding_colored) +
+                    Number(total_gown_english_adult_folding_white) +
+                    Number(total_gown_english_adult_hanging_colored) +
+                    Number(total_gown_english_adult_hanging_white) +
+                    Number(total_gown_native_folding_colored) +
+                    Number(total_gown_native_folding_white) +
+                    Number(total_skirt_and_blouse_english_hanging_colored) +
+                    Number(total_skirt_and_blouse_english_hanging_white) +
+                    Number(total_skirt_and_blouse_native_folding_colored) +
+                    Number(total_skirt_and_blouse_native_folding_white) +
+                    Number(total_female_native_buba_and_trouser_colored) +
+                    Number(total_female_native_buba_and_trouser_white) +
+                    Number(total_male_cap_colored) +
+                    Number(total_male_cap_white) +
+                    Number(total_female_cap_colored) +
+                    Number(total_female_cap_white) +
+                    Number(total_turban_colored) +
+                    Number(total_turban_white) +
+                    Number(total_sweater_small_colored) +
+                    Number(total_sweater_small_white) +
+                    Number(total_sweater_normal_colored) +
+                    Number(total_sweater_normal_white) +
+                    Number(total_sweater_big_colored) +
+                    Number(total_sweater_big_white) +
+                    Number(total_towel_small_colored) +
+                    Number(total_towel_small_white) +
+                    Number(total_towel_normal_colored) +
+                    Number(total_towel_normal_white) +
+                    Number(total_towel_big_colored) +
+                    Number(total_towel_big_white) +
+                    Number(total_bed_spread_normal_colored) +
+                    Number(total_bed_spread_normal_white) +
+                    Number(total_bed_spread_big_colored) +
+                    Number(total_bed_spread_big_white) +
+                    Number(total_bed_spread_double_colored) +
+                    Number(total_bed_spread_double_white) +
+                    Number(total_duvet_normal_colored) +
+                    Number(total_duvet_normal_white) +
+                    Number(total_duvet_big_colored) +
+                    Number(total_duvet_big_white) +
+                    Number(total_curtain_normal_colored) +
+                    Number(total_curtain_big_colored) +
+                    Number(total_curtain_very_big_colored) +
+                    Number(total_pyjamas_small_colored) +
+                    Number(total_pyjamas_small_white) +
+                    Number(total_pyjamas_big_colored) +
+                    Number(total_pyjamas_big_white) +
+                    Number(total_blanket_colored) +
+                    Number(total_pillow_cases_colored) +
+                    Number(total_pillow_cases_white))
                 }}
               </p>
             </div>
@@ -18285,6 +18665,53 @@
           </div>
         </div>
         <q-separator v-show="wrapper_buba_scarf_white != 0" />
+        <div v-show="wrapper_buba_no_scarf_colored != 0" class="row q-pt-lg">
+          <div class="col-12 col-md-6 q-pl-md">
+            <p class="text-h6 text-primary">Wrapper, Buba And No Scarf Colored</p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Price: {{ lastPrice.wrapper_buba_no_scarf_colored }}
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            Quantity: {{ wrapper_buba_no_scarf_colored }}
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Total: ₦
+              {{
+                (total_wrapper_buba_no_scarf_colored =
+                  lastPrice.wrapper_buba_no_scarf_colored *
+                  wrapper_buba_no_scarf_colored)
+              }}
+            </p>
+          </div>
+        </div>
+        <q-separator v-show="wrapper_buba_no_scarf_colored != 0" />
+        <div v-show="wrapper_buba_no_scarf_white != 0" class="row q-pt-lg">
+          <div class="col-12 col-md-6 q-pl-md">
+            <p class="text-h6 text-primary">Wrapper, Buba And No Scarf White</p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Price: {{ lastPrice.wrapper_buba_no_scarf_white }}
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            Quantity: {{ wrapper_buba_no_scarf_white }}
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Total: ₦
+              {{
+                (total_wrapper_buba_no_scarf_white =
+                  lastPrice.wrapper_buba_no_scarf_white * wrapper_buba_no_scarf_white)
+              }}
+            </p>
+          </div>
+        </div>
+        <q-separator v-show="wrapper_buba_no_scarf_white != 0" />
         <div v-show="wrapper_only_colored != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
             <p class="text-h6 text-primary">Wrapper Only Colored</p>
@@ -18585,6 +19012,60 @@
           </div>
         </div>
         <q-separator v-show="aso_oke_headtie_ipele_colored != 0" />
+        <div v-show="male_complete_aso_oke_white != 0" class="row q-pt-lg">
+          <div class="col-12 col-md-6 q-pl-md">
+            <p class="text-h6 text-primary">
+              Complete Male Aso-oke White
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Price: {{ lastPrice.male_complete_aso_oke_white }}
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            Quantity:
+            {{ male_complete_aso_oke_white }}
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Total: ₦
+              {{
+                (total_male_complete_aso_oke_white =
+                  lastPrice.male_complete_aso_oke_white *
+                  quan_male_complete_aso_oke_white)
+              }}
+            </p>
+          </div>
+        </div>
+        <q-separator v-show="male_complete_aso_oke_white != 0" />
+        <div v-show="female_complete_aso_oke_white != 0" class="row q-pt-lg">
+          <div class="col-12 col-md-6 q-pl-md">
+            <p class="text-h6 text-primary">
+              Complete Female Aso-oke White
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Price: {{ lastPrice.female_complete_aso_oke_white }}
+            </p>
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            Quantity:
+            {{ female_complete_aso_oke_white }}
+          </div>
+          <div class="col-12 col-md-2 q-pl-md">
+            <p class="text-subtitle1">
+              Total: ₦
+              {{
+                (total_female_complete_aso_oke_white =
+                  lastPrice.female_complete_aso_oke_white *
+                  quan_female_complete_aso_oke_white)
+              }}
+            </p>
+          </div>
+        </div>
+        <q-separator v-show="female_complete_aso_oke_white != 0" />
         <div v-show="female_inner_wear_colored != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
             <p class="text-h6 text-primary">Female Inner-Wear Colored</p>
@@ -19152,45 +19633,45 @@
           </div>
         </div>
         <q-separator v-show="female_cap_white != 0" />
-        <div v-show="tursan_colored != 0" class="row q-pt-lg">
+        <div v-show="turban_colored != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Tursan Colored</p>
+            <p class="text-h6 text-primary">Turban Colored</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
-            <p class="text-subtitle1">Price: {{ lastPrice.tursan_colored }}</p>
+            <p class="text-subtitle1">Price: {{ lastPrice.turban_colored }}</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
-            Quantity: {{ tursan_colored }}
+            Quantity: {{ turban_colored }}
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
               Total: ₦
               {{
-                (total_tursan_colored =
-                  lastPrice.tursan_colored * tursan_colored)
+                (total_turban_colored =
+                  lastPrice.turban_colored * turban_colored)
               }}
             </p>
           </div>
         </div>
-        <q-separator v-show="tursan_colored != 0" />
-        <div v-show="tursan_white != 0" class="row q-pt-lg">
+        <q-separator v-show="turban_colored != 0" />
+        <div v-show="turban_white != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Tursan White</p>
+            <p class="text-h6 text-primary">Turban White</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
-            <p class="text-subtitle1">Price: {{ lastPrice.tursan_white }}</p>
+            <p class="text-subtitle1">Price: {{ lastPrice.turban_white }}</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
-            Quantity: {{ tursan_white }}
+            Quantity: {{ turban_white }}
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
               Total: ₦
-              {{ (total_tursan_white = lastPrice.tursan_white * tursan_white) }}
+              {{ (total_turban_white = lastPrice.turban_white * turban_white) }}
             </p>
           </div>
         </div>
-        <q-separator v-show="tursan_white != 0" />
+        <q-separator v-show="turban_white != 0" />
         <div v-show="sweater_small_colored != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
             <p class="text-h6 text-primary">Sweater Small Colored</p>
@@ -19967,76 +20448,76 @@
       <div class="row q-pt-md">
         <div class="text-center full-width q-pl-md">
           <p class="text-h4">
-            Final Total: ₦
-            {{
+            Final Total: ₦{{ total_final_amount }}
+            <!-- {{
               (total_final_amount =
-                total_male_native_2_pcs +
-                total_male_native_2_pcs_hanging +
-                total_complete_male_agbada +
-                total_native_trouser_only +
-                total_native_top_only +
-                total_male_native_3_pcs_notAgbada_hanging +
-                total_male_native_3_pcs_notAgbada +
-                total_female_jacket_hanging +
-                total_male_agbada_alone +
-                total_blouse +
-                total_blouse_hanging +
-                total_female_shirt +
-                total_pyjamas_small +
-                total_pyjamas_big +
-                total_duvet +
-                total_towel_big +
-                total_sweater_big +
-                total_boxer +
-                total_skirt_and_blouse_english +
-                total_female_trouser_jeans_hanging +
-                total_female_trouser_jeans +
-                total_female_shirt_hanging +
-                total_curtain_normal +
-                total_curtain_big +
-                total_curtain_very_big +
-                total_skirt_and_blouse_english_hanging +
-                total_wrapper_buba_gele +
-                total_female_native_buba_trouser +
-                total_gown_english_hanging +
-                total_gown_native +
-                total_bed_spread_normal +
-                total_bed_spread_big +
-                total_skirt_and_blouse_native +
-                total_aso_oke_wrapper_buba_gele +
-                total_male_complete_aso_oke +
-                total_male_medium_t_shirt_or_polo +
-                total_male_big_t_shirt_or_polo +
-                total_towel_normal +
-                total_male_t_shirt_or_polo_hanging +
-                total_shirt_normal +
-                total_shirt_normal_hanging +
-                total_shirt_big +
-                total_shirt_big_hanging +
-                total_plain_trouser +
-                total_plain_trouser_hanging +
-                total_jeans_chinos_trouser +
-                total_jeans_chinos_trouser_hanging +
-                total_waist_coat_hanging +
-                total_tie +
-                total_shorts +
-                total_shorts_hanging +
-                total_singlet +
-                total_sweater_normal +
-                total_male_three_pcs_suit_hanging +
-                total_female_two_pcs_suit_hanging +
-                total_male_two_pcs_suit_hanging +
-                total_female_three_pcs_suit_hanging +
-                total_male_jacket_hanging +
-                total_asooke_head_tie +
-                total_jalamia +
-                total_camisole +
-                total_wrapper_only +
-                total_female_inner_wear +
-                total_head_tie_gele +
-                total_small_wedding_gown_hanging +
-                total_big_wedding_gown_hanging)
-            }}
+                Number(total_male_native_2_pcs) +
+                Number(total_male_native_2_pcs_hanging) +
+                Number(total_complete_male_agbada) +
+                Number(total_native_trouser_only) +
+                Number(total_native_top_only) +
+                Number(total_male_native_3_pcs_notAgbada_hanging) +
+                Number(total_male_native_3_pcs_notAgbada) +
+                Number(total_female_jacket_hanging) +
+                Number(total_male_agbada_alone) +
+                Number(total_blouse) +
+                Number(total_blouse_hanging) +
+                Number(total_female_shirt) +
+                Number(total_pyjamas_small) +
+                Number(total_pyjamas_big) +
+                Number(total_duvet) +
+                Number(total_towel_big) +
+                Number(total_sweater_big) +
+                Number(total_boxer) +
+                Number(total_skirt_and_blouse_english) +
+                Number(total_female_trouser_jeans_hanging) +
+                Number(total_female_trouser_jeans) +
+                Number(total_female_shirt_hanging) +
+                Number(total_curtain_normal) +
+                Number(total_curtain_big) +
+                Number(total_curtain_very_big) +
+                Number(total_skirt_and_blouse_english_hanging) +
+                Number(total_wrapper_buba_gele) +
+                Number(total_female_native_buba_trouser) +
+                Number(total_gown_english_hanging) +
+                Number(total_gown_native) +
+                Number(total_bed_spread_normal) +
+                Number(total_bed_spread_big) +
+                Number(total_skirt_and_blouse_native) +
+                Number(total_aso_oke_wrapper_buba_gele) +
+                Number(total_male_complete_aso_oke) +
+                Number(total_male_medium_t_shirt_or_polo) +
+                Number(total_male_big_t_shirt_or_polo) +
+                Number(total_towel_normal) +
+                Number(total_male_t_shirt_or_polo_hanging) +
+                Number(total_shirt_normal) +
+                Number(total_shirt_normal_hanging) +
+                Number(total_shirt_big) +
+                Number(total_shirt_big_hanging) +
+                Number(total_plain_trouser) +
+                Number(total_plain_trouser_hanging) +
+                Number(total_jeans_chinos_trouser) +
+                Number(total_jeans_chinos_trouser_hanging) +
+                Number(total_waist_coat_hanging) +
+                Number(total_tie) +
+                Number(total_shorts) +
+                Number(total_shorts_hanging) +
+                Number(total_singlet) +
+                Number(total_sweater_normal) +
+                Number(total_male_three_pcs_suit_hanging) +
+                Number(total_female_two_pcs_suit_hanging) +
+                Number(total_male_two_pcs_suit_hanging) +
+                Number(total_female_three_pcs_suit_hanging) +
+                Number(total_male_jacket_hanging) +
+                Number(total_asooke_head_tie) +
+                Number(total_jalamia) +
+                Number(total_camisole) +
+                Number(total_wrapper_only) +
+                Number(total_female_inner_wear) +
+                Number(total_head_tie_gele) +
+                Number(total_small_wedding_gown_hanging) +
+                Number(total_big_wedding_gown_hanging))
+            }} -->
           </p>
         </div>
       </div>
@@ -20445,6 +20926,12 @@ watch(total_wrapper_buba_scarf_colored, () => {});
 const wrapper_buba_scarf_white = ref(0);
 const total_wrapper_buba_scarf_white = ref("");
 watch(total_wrapper_buba_scarf_white, () => {});
+const wrapper_buba_no_scarf_colored = ref(0);
+const total_wrapper_buba_no_scarf_colored = ref("");
+watch(total_wrapper_buba_no_scarf_colored, () => {});
+const wrapper_buba_no_scarf_white = ref(0);
+const total_wrapper_buba_no_scarf_white = ref("");
+watch(total_wrapper_buba_no_scarf_white, () => {});
 //4th page
 const wrapper_only_colored = ref(0);
 const total_wrapper_only_colored = ref("");
@@ -20486,6 +20973,14 @@ const quan_aso_oke_headtie_ipele_colored = ref(0);
 const aso_oke_headtie_ipele_colored = ref(0);
 const total_aso_oke_headtie_ipele_colored = ref("");
 watch(total_aso_oke_headtie_ipele_colored, () => {});
+const quan_male_complete_aso_oke_white = ref(0);
+const male_complete_aso_oke_white = ref(0);
+const total_male_complete_aso_oke_white = ref("");
+watch(total_male_complete_aso_oke_white, () => {});
+const quan_female_complete_aso_oke_white = ref(0);
+const female_complete_aso_oke_white = ref(0);
+const total_female_complete_aso_oke_white = ref("");
+watch(total_female_complete_aso_oke_white, () => {});
 const female_inner_wear_colored = ref(0);
 const total_female_inner_wear_colored = ref("");
 watch(total_female_inner_wear_colored, () => {});
@@ -20559,12 +21054,12 @@ watch(total_female_cap_colored, () => {});
 const female_cap_white = ref(0);
 const total_female_cap_white = ref("");
 watch(total_female_cap_white, () => {});
-const tursan_colored = ref(0);
-const total_tursan_colored = ref("");
-watch(total_tursan_colored, () => {});
-const tursan_white = ref(0);
-const total_tursan_white = ref("");
-watch(total_tursan_white, () => {});
+const turban_colored = ref(0);
+const total_turban_colored = ref("");
+watch(total_turban_colored, () => {});
+const turban_white = ref(0);
+const total_turban_white = ref("");
+watch(total_turban_white, () => {});
 const sweater_small_colored = ref(0);
 const total_sweater_small_colored = ref("");
 watch(total_sweater_small_colored, () => {});
@@ -21219,6 +21714,12 @@ const onSubmit = () => {
     wrapper_buba_scarf_colored: Number(total_wrapper_buba_scarf_colored.value),
     quantity_wrapper_buba_scarf_white: Number(wrapper_buba_scarf_white.value),
     wrapper_buba_scarf_white: Number(total_wrapper_buba_scarf_white.value),
+    quantity_wrapper_buba_no_scarf_colored: Number(
+      wrapper_buba_no_scarf_colored.value
+    ),
+    wrapper_buba_no_scarf_colored: Number(total_wrapper_buba_no_scarf_colored.value),
+    quantity_wrapper_buba_no_scarf_white: Number(wrapper_buba_no_scarf_white.value),
+    wrapper_buba_no_scarf_white: Number(total_wrapper_buba_no_scarf_white.value),
     //5th page
     quantity_wrapper_only_colored: Number(wrapper_only_colored.value),
     wrapper_only_colored: Number(total_wrapper_only_colored.value),
@@ -21277,6 +21778,18 @@ const onSubmit = () => {
     ),
     aso_oke_headtie_ipele_colored: Number(
       total_aso_oke_headtie_ipele_colored.value
+    ),
+    quantity_male_complete_aso_oke_white: Number(
+      male_complete_aso_oke_white.value
+    ),
+    male_complete_aso_oke_white: Number(
+      total_male_complete_aso_oke_white.value
+    ),
+    quantity_female_complete_aso_oke_white: Number(
+      female_complete_aso_oke_white.value
+    ),
+    female_complete_aso_oke_white: Number(
+      total_female_complete_aso_oke_white.value
     ),
     quantity_female_inner_wear_colored: Number(female_inner_wear_colored.value),
     female_inner_wear_colored: Number(total_female_inner_wear_colored.value),
@@ -21367,10 +21880,10 @@ const onSubmit = () => {
     female_cap_colored: Number(total_female_cap_colored.value),
     quantity_female_cap_white: Number(female_cap_white.value),
     female_cap_white: Number(total_female_cap_white.value),
-    quantity_tursan_colored: Number(tursan_colored.value),
-    tursan_colored: Number(total_tursan_colored.value),
-    quantity_tursan_white: Number(tursan_white.value),
-    tursan_white: Number(total_tursan_white.value),
+    quantity_turban_colored: Number(turban_colored.value),
+    turban_colored: Number(total_turban_colored.value),
+    quantity_turban_white: Number(turban_white.value),
+    turban_white: Number(total_turban_white.value),
     quantity_sweater_small_colored: Number(sweater_small_colored.value),
     sweater_small_colored: Number(total_sweater_small_colored.value),
     quantity_sweater_small_white: Number(sweater_small_white.value),

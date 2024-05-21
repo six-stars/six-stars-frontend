@@ -743,6 +743,18 @@
           <q-td key="wrapper_buba_scarf_white" :props="props">
             {{ props.row.wrapper_buba_scarf_white }}
           </q-td>
+          <q-td key="quantity_wrapper_buba_no_scarf_colored" :props="props">
+            {{ props.row.quantity_wrapper_buba_no_scarf_colored }}
+          </q-td>
+          <q-td key="wrapper_buba_no_scarf_colored" :props="props">
+            {{ props.row.wrapper_buba_no_scarf_colored }}
+          </q-td>
+          <q-td key="quantity_wrapper_buba_no_scarf_white" :props="props">
+            {{ props.row.quantity_wrapper_buba_no_scarf_white }}
+          </q-td>
+          <q-td key="wrapper_buba_no_scarf_white" :props="props">
+            {{ props.row.wrapper_buba_no_scarf_white }}
+          </q-td>
           <q-td key="quantity_wrapper_only_colored" :props="props">
             {{ props.row.quantity_wrapper_only_colored }}
           </q-td>
@@ -817,6 +829,18 @@
           </q-td>
           <q-td key="aso_oke_headtie_ipele_colored" :props="props">
             {{ props.row.aso_oke_headtie_ipele_colored }}
+          </q-td>
+          <q-td key="quantity_male_complete_aso_oke_white" :props="props">
+            {{ props.row.quantity_male_complete_aso_oke_white }}
+          </q-td>
+          <q-td key="male_complete_aso_oke_white" :props="props">
+            {{ props.row.male_complete_aso_oke_white }}
+          </q-td>
+          <q-td key="quantity_female_complete_aso_oke_white" :props="props">
+            {{ props.row.quantity_female_complete_aso_oke_white }}
+          </q-td>
+          <q-td key="female_complete_aso_oke_white" :props="props">
+            {{ props.row.female_complete_aso_oke_white }}
           </q-td>
           <q-td key="quantity_female_inner_wear_colored" :props="props">
             {{ props.row.quantity_female_inner_wear_colored }}
@@ -974,17 +998,17 @@
           <q-td key="female_cap_white" :props="props">
             {{ props.row.female_cap_white }}
           </q-td>
-          <q-td key="quantity_tursan_colored" :props="props">
-            {{ props.row.quantity_tursan_colored }}
+          <q-td key="quantity_turban_colored" :props="props">
+            {{ props.row.quantity_turban_colored }}
           </q-td>
-          <q-td key="tursan_colored" :props="props">
-            {{ props.row.tursan_colored }}
+          <q-td key="turban_colored" :props="props">
+            {{ props.row.turban_colored }}
           </q-td>
-          <q-td key="quantity_tursan_white" :props="props">
-            {{ props.row.quantity_tursan_white }}
+          <q-td key="quantity_turban_white" :props="props">
+            {{ props.row.quantity_turban_white }}
           </q-td>
-          <q-td key="tursan_white" :props="props">
-            {{ props.row.tursan_white }}
+          <q-td key="turban_white" :props="props">
+            {{ props.row.turban_white }}
           </q-td>
           <q-td key="quantity_sweater_small_colored" :props="props">
             {{ props.row.quantity_sweater_small_colored }}
@@ -2377,6 +2401,26 @@ const columns = [
     field: "wrapper_buba_scarf_white",
   },
   {
+    name: "quantity_wrapper_buba_no_scarf_colored",
+    label: "Quantity Wrapper, Buba And No-Scarf Colored",
+    field: "quantity_wrapper_buba_no_scarf_colored",
+  },
+  {
+    name: "wrapper_buba_no_scarf_colored",
+    label: "Wrapper, Buba And No-Scarf Colored",
+    field: "wrapper_buba_no_scarf_colored",
+  },
+  {
+    name: "quantity_wrapper_buba_no_scarf_white",
+    label: "Quantity Wrapper, Buba And No-Scarf White",
+    field: "quantity_wrapper_buba_no_scarf_white",
+  },
+  {
+    name: "wrapper_buba_no_scarf_white",
+    label: "Wrapper, Buba And No-Scarf White",
+    field: "wrapper_buba_no_scarf_white",
+  },
+  {
     name: "quantity_wrapper_only_colored",
     label: "Quantity Wrapper Only Colored",
     field: "quantity_wrapper_only_colored",
@@ -2485,6 +2529,26 @@ const columns = [
     name: "aso_oke_headtie_ipele_colored",
     label: "Aso-Oke Head-Tie Ipele 2pcs White",
     field: "aso_oke_headtie_ipele_colored",
+  },
+  {
+    name: "quantity_male_complete_aso_oke_white",
+    label: "Quantity Complete Male Aso-Oke 3pcs White",
+    field: "quantity_male_complete_aso_oke_white",
+  },
+  {
+    name: "male_complete_aso_oke_white",
+    label: "Complete Male Aso-Oke 3pcs White",
+    field: "male_complete_aso_oke_white",
+  },
+  {
+    name: "quantity_female_complete_aso_oke_white",
+    label: "Quantity Complete Female Aso-Oke 3pcs White",
+    field: "quantity_female_complete_aso_oke_white",
+  },
+  {
+    name: "female_complete_aso_oke_white",
+    label: "Complete Female Aso-Oke 3pcs White",
+    field: "female_complete_aso_oke_white",
   },
   {
     name: "quantity_female_inner_wear_colored",
@@ -2707,24 +2771,24 @@ const columns = [
     field: "female_cap_white",
   },
   {
-    name: "quantity_tursan_colored",
-    label: "Quantity Tursan Colored",
-    field: "quantity_tursan_colored",
+    name: "quantity_turban_colored",
+    label: "Quantity Turban Colored",
+    field: "quantity_turban_colored",
   },
   {
-    name: "tursan_colored",
-    label: "Tursan Colored",
-    field: "tursan_colored",
+    name: "turban_colored",
+    label: "Turban Colored",
+    field: "turban_colored",
   },
   {
-    name: "quantity_tursan_white",
-    label: "Quantity Tursan White",
-    field: "quantity_tursan_white",
+    name: "quantity_turban_white",
+    label: "Quantity Turban White",
+    field: "quantity_turban_white",
   },
   {
-    name: "tursan_white",
-    label: "Tursan White",
-    field: "tursan_white",
+    name: "turban_white",
+    label: "Turban White",
+    field: "turban_white",
   },
   {
     name: "quantity_sweater_small_colored",

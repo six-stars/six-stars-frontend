@@ -623,6 +623,16 @@ const columns = [
     field: "wrapper_buba_scarf_white",
   },
   {
+    name: "wrapper_buba_no_scarf_colored",
+    label: "Wrapper, Buba And No-Scarf Colored",
+    field: "wrapper_buba_no_scarf_colored",
+  },
+  {
+    name: "wrapper_buba_no_scarf_white",
+    label: "Wrapper, Buba And No-Scarf White",
+    field: "wrapper_buba_no_scarf_white",
+  },
+  {
     name: "wrapper_only_colored",
     label: "Wrapper Only Colored",
     field: "wrapper_only_colored",
@@ -676,6 +686,16 @@ const columns = [
     name: "aso_oke_headtie_ipele_colored",
     label: "Aso-Oke Head-Tie Ipele 2pcs White",
     field: "aso_oke_headtie_ipele_colored",
+  },
+  {
+    name: "male_complete_aso_oke_white",
+    label: "Complete Male Aso-Oke White",
+    field: "male_complete_aso_oke_white",
+  },
+  {
+    name: "female_complete_aso_oke_white",
+    label: "Complete Female Aso-Oke White",
+    field: "female_complete_aso_oke_white",
   },
   {
     name: "female_inner_wear_colored",
@@ -788,14 +808,14 @@ const columns = [
     field: "female_cap_white",
   },
   {
-    name: "tursan_colored",
-    label: "Tursan Colored",
-    field: "tursan_colored",
+    name: "turban_colored",
+    label: "Turban Colored",
+    field: "turban_colored",
   },
   {
-    name: "tursan_white",
-    label: "Tursan White",
-    field: "tursan_white",
+    name: "turban_white",
+    label: "Turban White",
+    field: "turban_white",
   },
   {
     name: "sweater_small_colored",

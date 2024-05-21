@@ -1202,6 +1202,28 @@
             <q-input
               required
               class=""
+              v-model="wrapper_buba_no_scarf_colored"
+              outlined
+              type="number"
+              hint="Wrapper and Buba(No Scarf) Colored"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="wrapper_buba_no_scarf_white"
+              outlined
+              type="number"
+              hint="Wrapper and Buba(No Scarf) White"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
               v-model="wrapper_only_colored"
               outlined
               type="number"
@@ -1286,7 +1308,7 @@
           </div>
         </div>
         <div class="row q-pt-sm">
-          <div class="col-12 col-md-3 q-pl-md">
+          <div class="col-12 col-md-6 q-pl-md">
             <q-input
               required
               class=""
@@ -1296,7 +1318,7 @@
               hint="Aso-Oke Wrapper, Gele and Ipele 3pcs Colored"
             />
           </div>
-          <div class="col-12 col-md-3 q-pl-md">
+          <div class="col-12 col-md-6 q-pl-md">
             <q-input
               required
               class=""
@@ -1306,7 +1328,11 @@
               hint="Aso-Oke Wrapper, Gele and Ipele 3pcs White"
             />
           </div>
-          <div class="col-12 col-md-3 q-pl-md">
+        </div>
+        <!-- <div class="row q-pt-sm">
+        </div> -->
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-4 q-pl-md">
             <q-input
               required
               class=""
@@ -1314,6 +1340,26 @@
               outlined
               type="number"
               hint="Aso-Oke Head-Tie Ipele 2pcs White"
+            />
+          </div>
+          <div class="col-12 col-md-4 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="male_complete_aso_oke_white"
+              outlined
+              type="number"
+              hint="Male Complete Aso-Oke White"
+            />
+          </div>
+          <div class="col-12 col-md-4 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="female_complete_aso_oke_white"
+              outlined
+              type="number"
+              hint="Female Complete Aso-Oke White"
             />
           </div>
         </div>
@@ -1564,20 +1610,20 @@
             <q-input
               required
               class=""
-              v-model="tursan_colored"
+              v-model="turban_colored"
               outlined
               type="number"
-              hint="Tursan Colored"
+              hint="Turban Colored"
             />
           </div>
           <div class="col-12 col-md-6 q-pl-md">
             <q-input
               required
               class=""
-              v-model="tursan_white"
+              v-model="turban_white"
               outlined
               type="number"
-              hint="Tursan White"
+              hint="Turban White"
             />
           </div>
         </div>
@@ -2095,6 +2141,8 @@ const camisole_colored = ref("");
 const camisole_white = ref("");
 const wrapper_buba_scarf_colored = ref("");
 const wrapper_buba_scarf_white = ref("");
+const wrapper_buba_no_scarf_colored = ref("");
+const wrapper_buba_no_scarf_white = ref("");
 //4th page
 const wrapper_only_colored = ref("");
 const wrapper_only_white = ref("");
@@ -2107,6 +2155,8 @@ const aso_oke_wrapper_gele_colored = ref("");
 const aso_oke_wrapper_gele_ipele_colored = ref("");
 const aso_oke_wrapper_gele_ipele_white = ref("");
 const aso_oke_headtie_ipele_colored = ref("");
+const male_complete_aso_oke_white = ref("");
+const female_complete_aso_oke_white = ref("");
 const female_inner_wear_colored = ref("");
 const female_inner_wear_white = ref("");
 const head_tie_gele_colored = ref("");
@@ -2130,8 +2180,8 @@ const male_cap_colored = ref("");
 const male_cap_white = ref("");
 const female_cap_colored = ref("");
 const female_cap_white = ref("");
-const tursan_colored = ref("");
-const tursan_white = ref("");
+const turban_colored = ref("");
+const turban_white = ref("");
 const sweater_small_colored = ref("");
 const sweater_small_white = ref("");
 const sweater_normal_colored = ref("");
@@ -2390,6 +2440,8 @@ const onSubmit = () => {
     camisole_white: Number(camisole_white.value),
     wrapper_buba_scarf_colored: Number(wrapper_buba_scarf_colored.value),
     wrapper_buba_scarf_white: Number(wrapper_buba_scarf_white.value),
+    wrapper_buba_no_scarf_colored: Number(wrapper_buba_no_scarf_colored.value),
+    wrapper_buba_no_scarf_white: Number(wrapper_buba_no_scarf_white.value),
     //5th page
     wrapper_only_colored: Number(wrapper_only_colored.value),
     wrapper_only_white: Number(wrapper_only_white.value),
@@ -2416,6 +2468,8 @@ const onSubmit = () => {
       aso_oke_wrapper_gele_ipele_white.value
     ),
     aso_oke_headtie_ipele_colored: Number(aso_oke_headtie_ipele_colored.value),
+    male_complete_aso_oke_white: Number(male_complete_aso_oke_white.value),
+    female_complete_aso_oke_white: Number(female_complete_aso_oke_white.value),
     female_inner_wear_colored: Number(female_inner_wear_colored.value),
     female_inner_wear_white: Number(female_inner_wear_white.value),
     head_tie_gele_colored: Number(head_tie_gele_colored.value),
@@ -2435,6 +2489,7 @@ const onSubmit = () => {
       gown_english_adult_hanging_white.value
     ),
     gown_native_folding_colored: Number(gown_native_folding_colored.value),
+    gown_native_folding_white: Number(gown_native_folding_white.value),
     skirt_and_blouse_english_hanging_colored: Number(
       skirt_and_blouse_english_hanging_colored.value
     ),
@@ -2457,8 +2512,8 @@ const onSubmit = () => {
     male_cap_white: Number(male_cap_white.value),
     female_cap_colored: Number(female_cap_colored.value),
     female_cap_white: Number(female_cap_white.value),
-    tursan_colored: Number(tursan_colored.value),
-    tursan_white: Number(tursan_white.value),
+    turban_colored: Number(turban_colored.value),
+    turban_white: Number(turban_white.value),
     sweater_small_colored: Number(sweater_small_colored.value),
     sweater_small_white: Number(sweater_small_white.value),
     sweater_normal_colored: Number(sweater_normal_colored.value),
