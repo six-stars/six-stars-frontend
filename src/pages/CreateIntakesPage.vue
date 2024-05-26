@@ -946,7 +946,7 @@
                   class="text-h6 bg-primary q-pa-sm"
                   style="border-radius: 15%; color: white"
                 >
-                  Complete Male Agbada 3 Pcs Hanging-Colored
+                  Complete Male Agbada 3 Pcs Folding-Colored
                 </p>
               </div>
               <div class="column">
@@ -7863,8 +7863,12 @@
                       Number(total_male_jacket_only_white) +
                       Number(total_female_jacket_only_colored) +
                       Number(total_female_jacket_only_white) +
-                      Number(total_wedding_gown_small_and_little_accessories_white) +
-                      Number(total_wedding_gown_big_and_plenty_accessories_white) +
+                      Number(
+                        total_wedding_gown_small_and_little_accessories_white
+                      ) +
+                      Number(
+                        total_wedding_gown_big_and_plenty_accessories_white
+                      ) +
                       Number(total_Kids_blouse_folding_colored) +
                       Number(total_Kids_blouse_hanging_colored) +
                       Number(total_Kids_blouse_folding_white) +
@@ -8911,7 +8915,7 @@
                     class="text-h6 bg-primary q-pa-sm"
                     style="border-radius: 15%; color: white"
                   >
-                    Complete Male Agbada 3 Pcs Hanging-Colored
+                    Complete Male Agbada 3 Pcs Folding-Colored
                   </p>
                 </div>
                 <div class="column">
@@ -15845,8 +15849,12 @@
                     Number(total_male_jacket_only_white) +
                     Number(total_female_jacket_only_colored) +
                     Number(total_female_jacket_only_white) +
-                    Number(total_wedding_gown_small_and_little_accessories_white) +
-                    Number(total_wedding_gown_big_and_plenty_accessories_white) +
+                    Number(
+                      total_wedding_gown_small_and_little_accessories_white
+                    ) +
+                    Number(
+                      total_wedding_gown_big_and_plenty_accessories_white
+                    ) +
                     Number(total_Kids_blouse_folding_colored) +
                     Number(total_Kids_blouse_hanging_colored) +
                     Number(total_Kids_blouse_folding_white) +
@@ -16524,7 +16532,7 @@
         >
           <div class="col-12 col-md-6 q-pl-md">
             <p class="text-h6 text-primary">
-              Complete Male Agbada 3 Pcs Hanging-Colored
+              Complete Male Agbada 3 Pcs Folding-Colored
             </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
@@ -18667,7 +18675,9 @@
         <q-separator v-show="wrapper_buba_scarf_white != 0" />
         <div v-show="wrapper_buba_no_scarf_colored != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Wrapper, Buba And No Scarf Colored</p>
+            <p class="text-h6 text-primary">
+              Wrapper, Buba And No Scarf Colored
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -18706,7 +18716,8 @@
               Total: ₦
               {{
                 (total_wrapper_buba_no_scarf_white =
-                  lastPrice.wrapper_buba_no_scarf_white * wrapper_buba_no_scarf_white)
+                  lastPrice.wrapper_buba_no_scarf_white *
+                  wrapper_buba_no_scarf_white)
               }}
             </p>
           </div>
@@ -19014,9 +19025,7 @@
         <q-separator v-show="aso_oke_headtie_ipele_colored != 0" />
         <div v-show="male_complete_aso_oke_white != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">
-              Complete Male Aso-oke White
-            </p>
+            <p class="text-h6 text-primary">Complete Male Aso-oke White</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -19041,9 +19050,7 @@
         <q-separator v-show="male_complete_aso_oke_white != 0" />
         <div v-show="female_complete_aso_oke_white != 0" class="row q-pt-lg">
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">
-              Complete Female Aso-oke White
-            </p>
+            <p class="text-h6 text-primary">Complete Female Aso-oke White</p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -21717,9 +21724,15 @@ const onSubmit = () => {
     quantity_wrapper_buba_no_scarf_colored: Number(
       wrapper_buba_no_scarf_colored.value
     ),
-    wrapper_buba_no_scarf_colored: Number(total_wrapper_buba_no_scarf_colored.value),
-    quantity_wrapper_buba_no_scarf_white: Number(wrapper_buba_no_scarf_white.value),
-    wrapper_buba_no_scarf_white: Number(total_wrapper_buba_no_scarf_white.value),
+    wrapper_buba_no_scarf_colored: Number(
+      total_wrapper_buba_no_scarf_colored.value
+    ),
+    quantity_wrapper_buba_no_scarf_white: Number(
+      wrapper_buba_no_scarf_white.value
+    ),
+    wrapper_buba_no_scarf_white: Number(
+      total_wrapper_buba_no_scarf_white.value
+    ),
     //5th page
     quantity_wrapper_only_colored: Number(wrapper_only_colored.value),
     wrapper_only_colored: Number(total_wrapper_only_colored.value),
