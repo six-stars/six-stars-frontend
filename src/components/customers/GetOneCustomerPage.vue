@@ -3,22 +3,38 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
-        <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+      <div class="q-pt-sm">
+        <q-form @submit="onSubmit" @reset="onReset" class="row">
+          <div class="col-8 q-pl-md">
             <q-input
-              label="Customer Phone Number"
+              label="Customer Phone Number Or Customer ID"
               class=""
               outlined
-              v-model="phone1"
+              v-model="phone1_customer_id"
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
       </div>
+      <!-- <div class="q-pt-sm">
+        <q-form @submit="onSubmitID" @reset="onReset" class="row">
+          <div class="col-8 q-pl-md">
+            <q-input
+              label="Customer ID"
+              class=""
+              outlined
+              v-model="customer_id"
+              hint=""
+            />
+          </div>
+          <div class="col-4 q-pl-md">
+            <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
+          </div>
+        </q-form>
+      </div> -->
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
         <q-card class="my-card-2 bg-primary text-white">
@@ -125,7 +141,9 @@ const fixed0 = ref(false);
 const fixed1 = ref(false);
 const $q = useQuasar();
 const data = ref([]);
+const phone1_customer_id = ref("");
 const phone1 = ref("");
+const customer_id = ref("");
 const useStore = useUserStore();
 const $router = useRouter();
 const selectedCustomer = reactive([]);
@@ -178,7 +196,7 @@ const onSubmit = () => {
   const token = useStore.getToken;
 
   axios
-    .get(`${base}/customer/${phone1.value}`, {
+    .get(`${base}/customer/${phone1_customer_id.value}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
@@ -202,8 +220,41 @@ const onSubmit = () => {
     });
 };
 
+// const onSubmitID = () => {
+//   // const formData = {
+//   //   customer_id: customer_id.value,
+//   // }
+//   const token = useStore.getToken;
+
+//   axios
+//     .get(`${base}/customer/${customer_id.value}`, {
+//       headers: { Authorization: `Bearer ${token}` },
+//     })
+//     .then((response) => {
+//       data.value = response.data.data;
+//       console.log(data.value);
+//       $q.notify({
+//         color: "green-4",
+//         textColor: "white",
+//         icon: "thumb_up",
+//         message: "Customer Found",
+//       });
+//       fixed0.value = true;
+//     })
+//     .catch(() => {
+//       $q.notify({
+//         color: "negative",
+//         position: "bottom",
+//         message: "Customer not found",
+//         icon: "report_problem",
+//       });
+//     });
+// };
+
 const onReset = () => {
-  customer_id.value = null;
+  phone1.value = "";
+  customer_id.value = "";
+  phone1_customer_id.value = "";
 };
 </script>
 
