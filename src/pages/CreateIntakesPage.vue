@@ -7958,7 +7958,7 @@
             <div class="row q-pt-md q-pb-xl">
               <div class="q-mb-xl text-center full-width q-pl-md">
                 <q-btn
-                  :disabled="!collection_date"
+                  :disabled="!collection_date || !comment_section"
                   @click="continue_"
                   label="Continue"
                   type="submit"
@@ -15944,7 +15944,7 @@
           <div class="row q-pt-md q-pb-md">
             <div class="text-center full-width q-pl-md">
               <q-btn
-                :disabled="!collection_date"
+                :disabled="!collection_date || !comment_section"
                 @click="continue_"
                 label="Continue"
                 type="submit"
@@ -20582,7 +20582,7 @@ const collected_on_date = ref("");
 const collected_on_time = ref("");
 const comment_section = ref("");
 const discount = ref("");
-const deposit = ref("");
+const deposit = ref(0);
 const deposit_type = ref("");
 const optionsDepositType = ["POS", "CASH", "BANK TRANSFER"];
 
@@ -21197,7 +21197,7 @@ const onSubmit = () => {
   const formData = {
     customer: _first_name.value + " " + _last_name.value,
     customer_phone: _phone.value,
-    staff: first_name + " " + last_name,
+    staff: first_name,
     //
     //1st
     quantity_male_native_2pcs_folding_colored: Number(
@@ -21968,7 +21968,7 @@ const onSubmit = () => {
     collected_on: collected_on_date.value + " " + collected_on_time.value,
     comment_section: comment_section.value,
     discount: discount.value,
-    deposit: deposit.value,
+    deposit: deposit.value.toString(),
     deposit_type: deposit_type.value,
     final_amount: total_final_amount.value.toString(),
   };
