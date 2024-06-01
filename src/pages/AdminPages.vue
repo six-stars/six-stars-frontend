@@ -58,6 +58,7 @@
           align="justify"
         >
           <q-tab name="users" label="Users" />
+          <q-tab name="completed_work" label="Completed Work" />
           <q-tab name="price" label="Price" />
           <q-tab name="intake" label="Intake" />
           <q-tab name="customer" label="Customers" />
@@ -111,10 +112,47 @@
             </q-splitter>
           </q-tab-panel>
 
-          <q-tab-panel name="price" class="q-pa-none">
+          <q-tab-panel name="completed_work" class="q-pa-none">
             <q-splitter v-model="splitterModel">
               <template v-slot:before>
                 <q-tabs v-model="innerTab2" vertical class="text-primary">
+                  <q-tab
+                    name="innerAllCompletedWork"
+                    icon="visibility"
+                    label="See All Completed Work"
+                  />
+                  <q-tab
+                    name="innerGetOneIntakeCompleted"
+                    icon="search"
+                    label="Search for a Completed Work"
+                  />
+                </q-tabs>
+              </template>
+
+              <template v-slot:after>
+                <q-tab-panels
+                  v-model="innerTab2"
+                  animated
+                  transition-prev="slide-down"
+                  transition-next="slide-up"
+                >
+
+                  <q-tab-panel name="innerAllCompletedWork">
+                    <AllCompletedWorkPage />
+                  </q-tab-panel>
+
+                  <q-tab-panel name="innerGetOneIntakeCompleted">
+                    <GetOneIntakeCompletedPage />
+                  </q-tab-panel>
+                </q-tab-panels>
+              </template>
+            </q-splitter>
+          </q-tab-panel>
+
+          <q-tab-panel name="price" class="q-pa-none">
+            <q-splitter v-model="splitterModel">
+              <template v-slot:before>
+                <q-tabs v-model="innerTab3" vertical class="text-primary">
                   <q-tab
                     name="innerCreatePrice"
                     icon="create"
@@ -135,7 +173,7 @@
 
               <template v-slot:after>
                 <q-tab-panels
-                  v-model="innerTab2"
+                  v-model="innerTab3"
                   animated
                   transition-prev="slide-down"
                   transition-next="slide-up"
@@ -159,7 +197,7 @@
           <q-tab-panel name="intake" class="q-pa-none">
             <q-splitter v-model="splitterModel">
               <template v-slot:before>
-                <q-tabs v-model="innerTab3" vertical class="text-primary">
+                <q-tabs v-model="innerTab4" vertical class="text-primary">
                   <q-tab
                     name="innerDeleteIntake"
                     icon="delete"
@@ -170,7 +208,7 @@
 
               <template v-slot:after>
                 <q-tab-panels
-                  v-model="innerTab3"
+                  v-model="innerTab4"
                   animated
                   transition-prev="slide-down"
                   transition-next="slide-up"
@@ -186,7 +224,7 @@
           <q-tab-panel name="customer" class="q-pa-none">
             <q-splitter v-model="splitterModel">
               <template v-slot:before>
-                <q-tabs v-model="innerTab4" vertical class="text-primary">
+                <q-tabs v-model="innerTab5" vertical class="text-primary">
                   <q-tab
                     name="innerDeleteCustomer"
                     icon="delete"
@@ -197,7 +235,7 @@
 
               <template v-slot:after>
                 <q-tab-panels
-                  v-model="innerTab4"
+                  v-model="innerTab5"
                   animated
                   transition-prev="slide-down"
                   transition-next="slide-up"
@@ -227,6 +265,8 @@ import GetOneUser from "src/components/users/GetOneUser.vue";
 import CreatePricesPage from "src/components/users/prices/CreatePricesPage.vue";
 import AllPricesPage from "src/components/users/prices/AllPricesPage.vue";
 import GetOnePricePage from "src/components/users/prices/GetOnePricePage.vue";
+import AllCompletedWorkPage from "src/components/users/completed_work/AllCompletedWorkPage.vue";
+import GetOneIntakeCompletedPage from "src/components/users/completed_work/GetOneIntakeCompletedPage.vue";
 import DeleteOneIntake from "src/components/users/intakes/DeleteOneIntake.vue";
 import DeleteOneCustomerPage from "src/components/users/customers/DeleteOneCustomerPage.vue";
 
@@ -235,9 +275,10 @@ const name = "AdminPages";
 // const tab = ref("create_user");
 const tab = ref("users");
 const innerTab1 = ref("innerCreateUsers");
-const innerTab2 = ref("innerCreatePrice");
-const innerTab3 = ref("innerDeleteIntake");
-const innerTab4 = ref("innerDeleteCustomer");
+const innerTab2 = ref("innerAllCompletedWork");
+const innerTab3 = ref("innerCreatePrice");
+const innerTab4 = ref("innerDeleteIntake");
+const innerTab5 = ref("innerDeleteCustomer");
 const splitterModel = ref(20);
 
 const useStore = useUserStore();
