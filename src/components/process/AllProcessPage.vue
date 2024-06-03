@@ -384,6 +384,28 @@ const onUpdate = (process, stage) => {
           message: "Ironing Saved",
         });
         // window.location.reload();
+        const formData4Work = {
+          intake_id: intake_id.value,
+          collection_date: process.collection_date,
+          customer: process.customer,
+          customer_phone: process.customer_phone,
+          staff_name: process.collection_date,
+          quantity: process.collection_date,
+          stage: stage,
+        };
+        axios
+          .post(`${base}/completed_work/`, formData4Work, {
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          .then((response) => {
+            // data.value = response.data.data
+            // console.log(data.value)
+            fixed0.value = true;
+            window.location.reload();
+          })
+          .catch((e) => {
+            console.log(e, "completed_work error");
+          });
       })
       .catch(() => {
         $q.loading.hide();
@@ -393,29 +415,6 @@ const onUpdate = (process, stage) => {
           message: "Something went wrong",
           icon: "report_problem",
         });
-      });
-
-    const formData4Work = {
-      intake_id: intake_id.value,
-      collection_date: process.collection_date,
-      customer: process.customer,
-      customer_phone: process.customer_phone,
-      staff_name: process.collection_date,
-      quantity: process.collection_date,
-      stage: stage,
-    };
-    axios
-      .post(`${base}/completed_work/`, formData4Work, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        // data.value = response.data.data
-        // console.log(data.value)
-        fixed0.value = true;
-        window.location.reload();
-      })
-      .catch((e) => {
-        console.log(e, "completed_work error");
       });
   } else if (stage == "packing") {
     const formData3 = {
@@ -445,6 +444,28 @@ const onUpdate = (process, stage) => {
           message: "Packing Saved",
         });
         // window.location.reload();
+        const formData3Work = {
+          intake_id: intake_id.value,
+          collection_date: process.collection_date,
+          customer: process.customer,
+          customer_phone: process.customer_phone,
+          staff_name: process.collection_date,
+          quantity: process.collection_date,
+          stage: stage,
+        };
+        axios
+          .post(`${base}/completed_work/`, formData3Work, {
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          .then((response) => {
+            // data.value = response.data.data
+            // console.log(data.value)
+            fixed0.value = true;
+            window.location.reload();
+          })
+          .catch((e) => {
+            console.log(e, "completed_work error");
+          });
       })
       .catch(() => {
         $q.loading.hide();
@@ -454,29 +475,6 @@ const onUpdate = (process, stage) => {
           message: "Something went wrong",
           icon: "report_problem",
         });
-      });
-
-    const formData3Work = {
-      intake_id: intake_id.value,
-      collection_date: process.collection_date,
-      customer: process.customer,
-      customer_phone: process.customer_phone,
-      staff_name: process.collection_date,
-      quantity: process.collection_date,
-      stage: stage,
-    };
-    axios
-      .post(`${base}/completed_work/`, formData3Work, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        // data.value = response.data.data
-        // console.log(data.value)
-        fixed0.value = true;
-        window.location.reload();
-      })
-      .catch((e) => {
-        console.log(e, "completed_work error");
       });
   } else if (stage == "ready") {
     const formData2 = {
@@ -506,6 +504,28 @@ const onUpdate = (process, stage) => {
           message: "Ready Saved",
         });
         // window.location.reload();
+        const formData2Work = {
+          intake_id: intake_id.value,
+          collection_date: process.collection_date,
+          customer: process.customer,
+          customer_phone: process.customer_phone,
+          staff_name: process.collection_date,
+          quantity: process.collection_date,
+          stage: stage,
+        };
+        axios
+          .post(`${base}/completed_work/`, formData2Work, {
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          .then((response) => {
+            // data.value = response.data.data
+            // console.log(data.value)
+            fixed0.value = true;
+            window.location.reload();
+          })
+          .catch((e) => {
+            console.log(e, "completed_work error");
+          });
       })
       .catch(() => {
         $q.loading.hide();
@@ -515,29 +535,6 @@ const onUpdate = (process, stage) => {
           message: "Something went wrong",
           icon: "report_problem",
         });
-      });
-
-    const formData2Work = {
-      intake_id: intake_id.value,
-      collection_date: process.collection_date,
-      customer: process.customer,
-      customer_phone: process.customer_phone,
-      staff_name: process.collection_date,
-      quantity: process.collection_date,
-      stage: stage,
-    };
-    axios
-      .post(`${base}/completed_work/`, formData2Work, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        // data.value = response.data.data
-        // console.log(data.value)
-        fixed0.value = true;
-        window.location.reload();
-      })
-      .catch((e) => {
-        console.log(e, "completed_work error");
       });
   } else {
     const formData1 = {
@@ -566,6 +563,28 @@ const onUpdate = (process, stage) => {
           message: "Washing Saved",
         });
         // window.location.reload();
+        const formData1Work = {
+          intake_id: intake_id.value,
+          collection_date: process.collection_date,
+          customer: process.customer,
+          customer_phone: process.customer_phone,
+          staff_name: process.collection_date,
+          quantity: process.collection_date,
+          stage: stage,
+        };
+        axios
+          .post(`${base}/completed_work/`, formData1Work, {
+            headers: { Authorization: `Bearer ${token}` },
+          })
+          .then((response) => {
+            // data.value = response.data.data
+            // console.log(data.value)
+            fixed0.value = true;
+            window.location.reload();
+          })
+          .catch((e) => {
+            console.log(e, "completed_work error");
+          });
       })
       .catch(() => {
         $q.loading.hide();
@@ -575,29 +594,6 @@ const onUpdate = (process, stage) => {
           message: "Something went wrong",
           icon: "report_problem",
         });
-      });
-
-    const formData1Work = {
-      intake_id: intake_id.value,
-      collection_date: process.collection_date,
-      customer: process.customer,
-      customer_phone: process.customer_phone,
-      staff_name: process.collection_date,
-      quantity: process.collection_date,
-      stage: stage,
-    };
-    axios
-      .post(`${base}/completed_work/`, formData1Work, {
-        headers: { Authorization: `Bearer ${token}` },
-      })
-      .then((response) => {
-        // data.value = response.data.data
-        // console.log(data.value)
-        fixed0.value = true;
-        window.location.reload();
-      })
-      .catch((e) => {
-        console.log(e, "completed_work error");
       });
   }
 };

@@ -89,7 +89,7 @@ const fixed1 = ref(false);
 const $q = useQuasar();
 const data = ref([]);
 const da = ref([]);
-const inatke_id = ref("");
+const intake_id = ref("");
 const useStore = useUserStore();
 const selectedCompletedWork = reactive([]);
 const selectedCompletedWorkPopup1 = ref({});
@@ -222,7 +222,7 @@ const onSubmit = () => {
       $q.notify({
         color: "negative",
         position: "bottom",
-        message: "Please Refresh",
+        message: "Not found",
         icon: "report_problem",
       });
     });
