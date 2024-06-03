@@ -368,6 +368,7 @@ const onUpdate = (process, stage) => {
         process.intake_id +
         ") Done " +
         dateTime,
+      current_status: "ironing",
     };
     axios
       .patch(`${base}/process/${process.intake_id}`, formData4, {
@@ -383,29 +384,8 @@ const onUpdate = (process, stage) => {
           icon: "thumb_up",
           message: "Ironing Saved",
         });
-        // window.location.reload();
-        const formData4Work = {
-          intake_id: intake_id.value,
-          collection_date: process.collection_date,
-          customer: process.customer,
-          customer_phone: process.customer_phone,
-          staff_name: process.collection_date,
-          quantity: process.collection_date,
-          stage: stage,
-        };
-        axios
-          .post(`${base}/completed_work/`, formData4Work, {
-            headers: { Authorization: `Bearer ${token}` },
-          })
-          .then((response) => {
-            // data.value = response.data.data
-            // console.log(data.value)
-            fixed0.value = true;
-            window.location.reload();
-          })
-          .catch((e) => {
-            console.log(e, "completed_work error");
-          });
+        fixed0.value = true;
+        window.location.reload();
       })
       .catch(() => {
         $q.loading.hide();
@@ -427,6 +407,7 @@ const onUpdate = (process, stage) => {
         process.intake_id +
         ") Done " +
         dateTime,
+      current_status: "packing",
     };
 
     axios
@@ -443,29 +424,8 @@ const onUpdate = (process, stage) => {
           icon: "thumb_up",
           message: "Packing Saved",
         });
-        // window.location.reload();
-        const formData3Work = {
-          intake_id: intake_id.value,
-          collection_date: process.collection_date,
-          customer: process.customer,
-          customer_phone: process.customer_phone,
-          staff_name: process.collection_date,
-          quantity: process.collection_date,
-          stage: stage,
-        };
-        axios
-          .post(`${base}/completed_work/`, formData3Work, {
-            headers: { Authorization: `Bearer ${token}` },
-          })
-          .then((response) => {
-            // data.value = response.data.data
-            // console.log(data.value)
-            fixed0.value = true;
-            window.location.reload();
-          })
-          .catch((e) => {
-            console.log(e, "completed_work error");
-          });
+        fixed0.value = true;
+        window.location.reload();
       })
       .catch(() => {
         $q.loading.hide();
@@ -487,6 +447,7 @@ const onUpdate = (process, stage) => {
         process.intake_id +
         ") Done " +
         dateTime,
+      current_status: "ready",
     };
 
     axios
@@ -503,29 +464,8 @@ const onUpdate = (process, stage) => {
           icon: "thumb_up",
           message: "Ready Saved",
         });
-        // window.location.reload();
-        const formData2Work = {
-          intake_id: intake_id.value,
-          collection_date: process.collection_date,
-          customer: process.customer,
-          customer_phone: process.customer_phone,
-          staff_name: process.collection_date,
-          quantity: process.collection_date,
-          stage: stage,
-        };
-        axios
-          .post(`${base}/completed_work/`, formData2Work, {
-            headers: { Authorization: `Bearer ${token}` },
-          })
-          .then((response) => {
-            // data.value = response.data.data
-            // console.log(data.value)
-            fixed0.value = true;
-            window.location.reload();
-          })
-          .catch((e) => {
-            console.log(e, "completed_work error");
-          });
+        fixed0.value = true;
+        window.location.reload();
       })
       .catch(() => {
         $q.loading.hide();
@@ -547,6 +487,7 @@ const onUpdate = (process, stage) => {
         process.intake_id +
         ") Done " +
         dateTime,
+      current_status: "washing",
     };
     axios
       .patch(`${base}/process/${process.intake_id}`, formData1, {
@@ -562,29 +503,8 @@ const onUpdate = (process, stage) => {
           icon: "thumb_up",
           message: "Washing Saved",
         });
-        // window.location.reload();
-        const formData1Work = {
-          intake_id: intake_id.value,
-          collection_date: process.collection_date,
-          customer: process.customer,
-          customer_phone: process.customer_phone,
-          staff_name: process.collection_date,
-          quantity: process.collection_date,
-          stage: stage,
-        };
-        axios
-          .post(`${base}/completed_work/`, formData1Work, {
-            headers: { Authorization: `Bearer ${token}` },
-          })
-          .then((response) => {
-            // data.value = response.data.data
-            // console.log(data.value)
-            fixed0.value = true;
-            window.location.reload();
-          })
-          .catch((e) => {
-            console.log(e, "completed_work error");
-          });
+        fixed0.value = true;
+        window.location.reload();
       })
       .catch(() => {
         $q.loading.hide();
