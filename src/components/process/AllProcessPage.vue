@@ -389,12 +389,13 @@ const onUpdate = (process, stage) => {
       })
       .catch(() => {
         $q.loading.hide();
-        $q.notify({
-          color: "negative",
-          position: "bottom",
-          message: "Something went wrong",
-          icon: "report_problem",
-        });
+        // $q.notify({
+        //   color: "negative",
+        //   position: "bottom",
+        //   message: "Something went wrong",
+        //   icon: "report_problem",
+        // });
+        window.location.reload();
       });
   } else if (stage == "packing") {
     const formData3 = {
@@ -429,12 +430,13 @@ const onUpdate = (process, stage) => {
       })
       .catch(() => {
         $q.loading.hide();
-        $q.notify({
-          color: "negative",
-          position: "bottom",
-          message: "Something went wrong",
-          icon: "report_problem",
-        });
+        // $q.notify({
+        //   color: "negative",
+        //   position: "bottom",
+        //   message: "Something went wrong",
+        //   icon: "report_problem",
+        // });
+        window.location.reload();
       });
   } else if (stage == "ready") {
     const formData2 = {
@@ -469,12 +471,13 @@ const onUpdate = (process, stage) => {
       })
       .catch(() => {
         $q.loading.hide();
-        $q.notify({
-          color: "negative",
-          position: "bottom",
-          message: "Something went wrong",
-          icon: "report_problem",
-        });
+        // $q.notify({
+        //   color: "negative",
+        //   position: "bottom",
+        //   message: "Something went wrong",
+        //   icon: "report_problem",
+        // });
+        window.location.reload();
       });
   } else {
     const formData1 = {
@@ -508,12 +511,13 @@ const onUpdate = (process, stage) => {
       })
       .catch(() => {
         $q.loading.hide();
-        $q.notify({
-          color: "negative",
-          position: "bottom",
-          message: "Something went wrong",
-          icon: "report_problem",
-        });
+        // $q.notify({
+        //   color: "negative",
+        //   position: "bottom",
+        //   message: "Something went wrong",
+        //   icon: "report_problem",
+        // });
+        window.location.reload();
       });
   }
 };
