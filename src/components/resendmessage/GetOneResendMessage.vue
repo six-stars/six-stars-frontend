@@ -88,8 +88,30 @@
 
           <q-separator dark />
 
+          <q-card-actions class="row full-width">
+            <div class="col-12 q-pa-md">
+              <div class="">
+                <q-select
+                  required
+                  outlined
+                  v-model="route"
+                  :options="optionsRouteType"
+                  option-label="name"
+                  option-value="id"
+                  emit-value
+                  map-options
+                  hint="Route"
+                />
+              </div>
+            </div>
+          </q-card-actions>
+          <q-separator dark />
           <q-card-actions align="right">
-            <q-btn color="primary" @click="onResend(data.resend_id)" flat
+            <q-btn
+              :disable="route == ''"
+              color="primary"
+              @click="onResend(data.resend_id)"
+              flat
               >Resend</q-btn
             >
           </q-card-actions>
@@ -113,6 +135,11 @@ const fixed1 = ref(false);
 const $q = useQuasar();
 const data = ref([]);
 const resend_id = ref("");
+const route = ref("");
+const optionsRouteType = [
+  { name: "GENERIC", id: "generic" },
+  { name: "DND", id: "dnd" },
+];
 
 const $router = useRouter();
 const useStore = useUserStore();
@@ -154,6 +181,7 @@ function formatDate(date) {
 
 function popup1(selectedCustomer) {
   fixed1.value = true;
+  route.value = "";
   // console.log(selectedCustomer, 'selectedCustomer')
   selectedCustomerPopup1.value = selectedCustomer;
   // console.log(selectedCustomerPopup1.value, 'selectedCustomerpopup1 value')
@@ -212,7 +240,7 @@ const onResend = (resend_id) => {
   };
 
   axios
-    .patch(`${base}/resend/message/${resend_id}`, formData, {
+    .patch(`${base}/resend/message/${resend_id}/${route.value}`, formData, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {

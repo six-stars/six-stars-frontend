@@ -123,10 +123,31 @@
             </div>
           </q-card-section>
 
+          <q-card-actions class="row full-width">
+            <div class="col-12 q-pa-md">
+              <div class="">
+                <q-select
+                  required
+                  outlined
+                  v-model="route"
+                  :options="optionsRouteType"
+                  option-label="name"
+                  option-value="id"
+                  emit-value
+                  map-options
+                  hint="Route"
+                />
+              </div>
+            </div>
+          </q-card-actions>
           <q-separator dark />
 
           <q-card-actions align="right">
-            <q-btn color="primary" @click="onResend(dataMore.resend_id)" flat
+            <q-btn
+              :disable="route == ''"
+              color="primary"
+              @click="onResend(dataMore.resend_id)"
+              flat
               >Resend</q-btn
             >
           </q-card-actions>
@@ -153,6 +174,11 @@ const data = ref([]);
 const dataMore = ref([]);
 const moreDetails = ref(false);
 const pageEnd = ref(false);
+const route = ref("");
+const optionsRouteType = [
+  { name: "GENERIC", id: "generic" },
+  { name: "DND", id: "dnd" },
+];
 
 const columns = [
   { name: "resend_id", label: "Resend ID", field: "resend_id" },
@@ -176,6 +202,7 @@ const columns = [
 const onRowClick = (row) => {
   moreDetails.value = true;
   dataMore.value = row;
+  route.value = "";
 };
 
 const pagination = ref({
@@ -270,7 +297,7 @@ const onResend = (resendID) => {
   };
 
   axios
-    .patch(`${base}/resend/message/${resendID}`, formData, {
+    .patch(`${base}/resend/message/${resendID}/${route.value}`, formData, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
