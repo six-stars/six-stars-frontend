@@ -14,8 +14,8 @@
             rounded
             unelevated
             color="white"
-            text-color="primary"
-            toggle-color="primary"
+            text-color="black"
+            toggle-color="blue-11"
             class="col q-mt-sm q-mb-sm"
             :options="[
               { label: 'General', value: '4' },
@@ -31,8 +31,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 2 Pcs Folding-Colored
                 </p>
@@ -83,8 +83,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 2 Pcs Hanging-Colored
                 </p>
@@ -135,8 +135,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 2 Pcs Folding-White
                 </p>
@@ -187,8 +187,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 2 Pcs Hanging-White
                 </p>
@@ -239,8 +239,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 3 Pcs Not-Agbada Folding-Colored
                 </p>
@@ -292,8 +292,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 3 Pcs Not-Agbada Hanging-Colored
                 </p>
@@ -345,8 +345,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 3 Pcs Not-Agbada Folding-White
                 </p>
@@ -398,8 +398,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Native 3 Pcs Not-Agbada Hanging-White
                 </p>
@@ -451,8 +451,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Top Only Folding-Colored
                 </p>
@@ -492,8 +492,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Top Only Hanging-Colored
                 </p>
@@ -533,8 +533,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Top Only Folding-White
                 </p>
@@ -574,8 +574,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Top Only Hanging-White
                 </p>
@@ -615,8 +615,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Trouser Only Folding-Colored
                 </p>
@@ -656,8 +656,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Trouser Only Hanging-Colored
                 </p>
@@ -697,8 +697,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Trouser Only Folding-White
                 </p>
@@ -738,8 +738,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Native Trouser Only Hanging-White
                 </p>
@@ -779,8 +779,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Agbada Only Folding-Colored
                 </p>
@@ -820,8 +820,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Agbada Hanging-Colored
                 </p>
@@ -861,8 +861,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Agbada Only Folding-White
                 </p>
@@ -902,8 +902,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Agbada Only Hanging-White
                 </p>
@@ -943,8 +943,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Male Agbada 3 Pcs Folding-Colored
                 </p>
@@ -996,8 +996,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Male Agbada 3 Pcs Hanging-Colored
                 </p>
@@ -1049,8 +1049,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Male Agbada 3 Pcs Folding-White
                 </p>
@@ -1102,8 +1102,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Male Agbada 3 Pcs Hanging-White
                 </p>
@@ -1155,8 +1155,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Folding-Colored
                 </p>
@@ -1196,8 +1196,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Hanging-Colored
                 </p>
@@ -1237,8 +1237,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Folding-White
                 </p>
@@ -1278,8 +1278,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Hanging-White
                 </p>
@@ -1319,8 +1319,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Big Folding-Colored
                 </p>
@@ -1360,8 +1360,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Big Hanging-Colored
                 </p>
@@ -1401,8 +1401,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Big Folding-White
                 </p>
@@ -1442,8 +1442,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Big Hanging-White
                 </p>
@@ -1483,8 +1483,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt XLarge Folding-Colored
                 </p>
@@ -1524,8 +1524,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt XLarge Hanging-Colored
                 </p>
@@ -1565,8 +1565,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt XLarge Folding-White
                 </p>
@@ -1606,8 +1606,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt XLarge Hanging-White
                 </p>
@@ -1647,8 +1647,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Children Folding-Colored
                 </p>
@@ -1688,8 +1688,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Children Hanging-Colored
                 </p>
@@ -1729,8 +1729,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Children Folding-White
                 </p>
@@ -1770,8 +1770,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shirt Children Hanging-White
                 </p>
@@ -1811,8 +1811,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse Folding-Colored
                 </p>
@@ -1851,8 +1851,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse Hanging-Colored
                 </p>
@@ -1891,8 +1891,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse Folding-White
                 </p>
@@ -1931,8 +1931,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse Hanging-White
                 </p>
@@ -1971,8 +1971,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse XLarge Folding-Colored
                 </p>
@@ -2012,8 +2012,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse XLarge Hanging-Colored
                 </p>
@@ -2053,8 +2053,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse XLarge Folding-White
                 </p>
@@ -2094,8 +2094,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blouse XLarge Hanging-White
                 </p>
@@ -2135,8 +2135,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Shirt Folding-Colored
                 </p>
@@ -2176,8 +2176,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Shirt Hanging-Colored
                 </p>
@@ -2217,8 +2217,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Shirt Folding-White
                 </p>
@@ -2258,8 +2258,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Shirt Hanging-White
                 </p>
@@ -2299,8 +2299,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Small Folding-Colored
                 </p>
@@ -2340,8 +2340,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Small Hanging-Colored
                 </p>
@@ -2381,8 +2381,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Small Folding-White
                 </p>
@@ -2422,8 +2422,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Small Hanging-White
                 </p>
@@ -2463,8 +2463,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Medium Folding-Colored
                 </p>
@@ -2504,8 +2504,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Medium Hanging-Colored
                 </p>
@@ -2545,8 +2545,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Medium Folding-White
                 </p>
@@ -2586,8 +2586,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Medium Hanging-White
                 </p>
@@ -2627,8 +2627,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Big Folding-Colored
                 </p>
@@ -2668,8 +2668,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Big Hanging-Colored
                 </p>
@@ -2709,8 +2709,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Big Folding-White
                 </p>
@@ -2750,8 +2750,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   TShirt/Polo Big Hanging-White
                 </p>
@@ -2791,8 +2791,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Trouser Folding-Colored
                 </p>
@@ -2832,8 +2832,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Trouser Hanging-Colored
                 </p>
@@ -2873,8 +2873,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Trouser Folding-White
                 </p>
@@ -2914,8 +2914,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Trouser Hanging-White
                 </p>
@@ -2955,8 +2955,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jeans/Chinos Trouser Folding-Colored
                 </p>
@@ -2996,8 +2996,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jeans/Chinos Trouser Hanging-Colored
                 </p>
@@ -3037,8 +3037,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jeans/Chinos Trouser Folding-White
                 </p>
@@ -3078,8 +3078,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jeans/Chinos Trouser Hanging-White
                 </p>
@@ -3119,8 +3119,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Waist Coat Hanging-Colored
                 </p>
@@ -3160,8 +3160,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Waist Coat Hanging-White
                 </p>
@@ -3201,8 +3201,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Tie Colored
                 </p>
@@ -3238,8 +3238,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Tie White
                 </p>
@@ -3273,8 +3273,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shorts Folding-Colored
                 </p>
@@ -3313,8 +3313,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shorts Hanging-Colored
                 </p>
@@ -3353,8 +3353,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shorts Folding-White
                 </p>
@@ -3393,8 +3393,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Shorts Hanging-White
                 </p>
@@ -3433,8 +3433,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Singlet Colored
                 </p>
@@ -3473,8 +3473,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Singlet White
                 </p>
@@ -3513,8 +3513,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Boxer Colored
                 </p>
@@ -3553,8 +3553,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Boxer White
                 </p>
@@ -3590,8 +3590,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male 2 Pcs Suit Hanging-Colored
                 </p>
@@ -3642,8 +3642,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male 2 Pcs Suit Hanging-White
                 </p>
@@ -3694,8 +3694,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male 3 Pcs Suit Hanging-Colored
                 </p>
@@ -3746,8 +3746,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male 3 Pcs Suit Hanging-White
                 </p>
@@ -3798,8 +3798,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female 2 Pcs Suit Hanging-Colored
                 </p>
@@ -3850,8 +3850,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female 2 Pcs Suit Hanging-White
                 </p>
@@ -3902,8 +3902,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female 3 Pcs Suit Hanging-Colored
                 </p>
@@ -3954,8 +3954,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female 3 Pcs Suit Hanging-White
                 </p>
@@ -4006,8 +4006,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Jacket Only Colored
                 </p>
@@ -4047,8 +4047,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Jacket Only White
                 </p>
@@ -4087,8 +4087,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Jacket Only Colored
                 </p>
@@ -4128,8 +4128,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Jacket Only White
                 </p>
@@ -4169,8 +4169,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wedding Gown Small With Little Accessories White
                 </p>
@@ -4213,8 +4213,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wedding Gown Big With Plenty Accessories White
                 </p>
@@ -4255,8 +4255,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Kids Blouse Folding-Colored
                 </p>
@@ -4296,8 +4296,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Kids Blouse Hanging-Colored
                 </p>
@@ -4337,8 +4337,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Kids Blouse Folding-White
                 </p>
@@ -4378,8 +4378,8 @@
             <div v-show="category === '1'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Kids Blouse Hanging-White
                 </p>
@@ -4419,8 +4419,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jalamia Colored
                 </p>
@@ -4459,8 +4459,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Jalamia White
                 </p>
@@ -4499,8 +4499,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Camisole Colored
                 </p>
@@ -4539,8 +4539,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Camisole White
                 </p>
@@ -4579,8 +4579,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper, Buba And Scarf Colored
                 </p>
@@ -4620,8 +4620,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper, Buba And Scarf White
                 </p>
@@ -4661,8 +4661,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper, Buba And No-Scarf Colored
                 </p>
@@ -4702,8 +4702,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper, Buba And No-Scarf White
                 </p>
@@ -4743,8 +4743,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper Only Colored
                 </p>
@@ -4783,8 +4783,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Wrapper Only White
                 </p>
@@ -4823,8 +4823,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Two Wrapper Scarf/No-Scarf Only Colored
                 </p>
@@ -4864,8 +4864,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Two Wrapper Scarf/No-Scarf White
                 </p>
@@ -4905,8 +4905,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Agbada and Cap 2pcs Colored
                 </p>
@@ -4957,8 +4957,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Agbada, Sokoto and Cap 3 Pcs Colored
                 </p>
@@ -5009,8 +5009,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Wrapper, Buba and Gele 3pcs Colored
                 </p>
@@ -5061,8 +5061,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Wrapper and Gele 2pcs Colored
                 </p>
@@ -5113,8 +5113,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Wrapper, Gele and Ipele 3pcs Colored
                 </p>
@@ -5165,8 +5165,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Wrapper, Gele and Ipele 3pcs White
                 </p>
@@ -5217,8 +5217,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Aso-Oke Head-Tie Ipele 2pcs White
                 </p>
@@ -5269,8 +5269,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Male Aso-Oke 3pcs White
                 </p>
@@ -5321,8 +5321,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Complete Female Aso-Oke 3pcs White
                 </p>
@@ -5373,8 +5373,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Inner-Wear Colored
                 </p>
@@ -5414,8 +5414,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Inner-Wear White
                 </p>
@@ -5455,8 +5455,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Head-Tie/Gele Colored
                 </p>
@@ -5495,8 +5495,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Head-Tie/Gele White
                 </p>
@@ -5535,8 +5535,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown Children Colored
                 </p>
@@ -5575,8 +5575,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown Children White
                 </p>
@@ -5615,8 +5615,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown English Adult Folding Colored
                 </p>
@@ -5656,8 +5656,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown English Adult Folding White
                 </p>
@@ -5697,8 +5697,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown English Adult Hanging Colored
                 </p>
@@ -5738,8 +5738,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown English Adult Hanging White
                 </p>
@@ -5779,8 +5779,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown Native Folding Colored
                 </p>
@@ -5820,8 +5820,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Gown Native Folding White
                 </p>
@@ -5861,8 +5861,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Skirt and Blouse English 2pcs Hanging Colored
                 </p>
@@ -5914,8 +5914,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Skirt and Blouse English 2pcs Hanging White
                 </p>
@@ -5967,8 +5967,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Skirt and Blouse Native 2pcs Folding Colored
                 </p>
@@ -6020,8 +6020,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Skirt and Blouse Native 2pcs Folding White
                 </p>
@@ -6072,8 +6072,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Native Buba and Trouser 2pcs Colored
                 </p>
@@ -6125,8 +6125,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Native Buba and Trouser 2pcs White
                 </p>
@@ -6177,8 +6177,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Cap Colored
                 </p>
@@ -6217,8 +6217,8 @@
             <div v-show="category === '3'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Male Cap White
                 </p>
@@ -6257,8 +6257,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Cap Colored
                 </p>
@@ -6297,8 +6297,8 @@
             <div v-show="category === '2'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Female Cap White
                 </p>
@@ -6337,8 +6337,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Turban Colored
                 </p>
@@ -6377,8 +6377,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Turban White
                 </p>
@@ -6416,8 +6416,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Small Colored
                 </p>
@@ -6456,8 +6456,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Small White
                 </p>
@@ -6496,8 +6496,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Normal Colored
                 </p>
@@ -6536,8 +6536,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Normal White
                 </p>
@@ -6576,8 +6576,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Big Colored
                 </p>
@@ -6616,8 +6616,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Sweater Big White
                 </p>
@@ -6656,8 +6656,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Small Colored
                 </p>
@@ -6696,8 +6696,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Small White
                 </p>
@@ -6736,8 +6736,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Normal Colored
                 </p>
@@ -6776,8 +6776,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Normal White
                 </p>
@@ -6816,8 +6816,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Big Colored
                 </p>
@@ -6856,8 +6856,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Towel Big White
                 </p>
@@ -6896,8 +6896,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Normal Colored
                 </p>
@@ -6937,8 +6937,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Normal White
                 </p>
@@ -6978,8 +6978,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Big Colored
                 </p>
@@ -7018,8 +7018,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Big White
                 </p>
@@ -7058,8 +7058,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Double Colored
                 </p>
@@ -7099,8 +7099,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Bed-Spread Double White
                 </p>
@@ -7140,8 +7140,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Duvet Normal Colored
                 </p>
@@ -7180,8 +7180,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Duvet Normal White
                 </p>
@@ -7220,8 +7220,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Duvet Big Colored
                 </p>
@@ -7260,8 +7260,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Duvet Big White
                 </p>
@@ -7300,8 +7300,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Curtain Normal Colored
                 </p>
@@ -7340,8 +7340,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Curtain Big Colored
                 </p>
@@ -7380,8 +7380,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Curtain Very Big Colored
                 </p>
@@ -7421,8 +7421,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pyjamas Small Colored
                 </p>
@@ -7461,8 +7461,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pyjamas Small White
                 </p>
@@ -7501,8 +7501,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pyjamas Big Colored
                 </p>
@@ -7541,8 +7541,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pyjamas Big White
                 </p>
@@ -7581,8 +7581,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Blanket Colored
                 </p>
@@ -7621,8 +7621,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pillow Cases Colored
                 </p>
@@ -7661,8 +7661,8 @@
             <div v-show="category === '4'" class="row q-pt-lg">
               <div class="col-12 col-md-2 q-pl-md">
                 <p
-                  class="text-h6 bg-primary q-pa-sm"
-                  style="border-radius: 15%; color: white"
+                  class="text-h6 bg-blue-11 q-pa-sm"
+                  style="border-radius: 15%; color: black"
                 >
                   Pillow Cases White
                 </p>

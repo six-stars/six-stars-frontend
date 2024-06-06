@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="User Phone Number"
               class=""
@@ -14,79 +14,87 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Created At
+                </div>
                 <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
-                <div class="text-subtitle2">Created At</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">User ID</div>
                 <div class="text-h6">{{ data.user_id }}</div>
-                <div class="text-subtitle2">User ID</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  First Name
+                </div>
                 <div class="text-h6">{{ data.first_name }}</div>
-                <div class="text-subtitle2">First Name</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Last Name</div>
                 <div class="text-h6">{{ data.last_name }}</div>
-                <div class="text-subtitle2">Last Name</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Email</div>
                 <div class="text-h6">{{ data.email }}</div>
-                <div class="text-subtitle2">Email</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Username</div>
                 <div class="text-h6">{{ data.username }}</div>
-                <div class="text-subtitle2">Username</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">User Type</div>
                 <div class="text-h6">{{ data.user_type }}</div>
-                <div class="text-subtitle2">User Type</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Phone Number
+                </div>
                 <div class="text-h6">{{ data.phone_number }}</div>
-                <div class="text-subtitle2">Phone Number</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Gender</div>
                 <div class="text-h6">{{ data.gender }}</div>
-                <div class="text-subtitle2">Gender</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Date of Birth
+                </div>
                 <div class="text-h6">{{ data.dob }}</div>
-                <div class="text-subtitle2">Date of Birth</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Address</div>
                 <div class="text-h6">{{ data.address }}</div>
-                <div class="text-subtitle2">Address</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">State</div>
                 <div class="text-h6">{{ data.state }}</div>
-                <div class="text-subtitle2">State</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Country</div>
                 <div class="text-h6">{{ data.country }}</div>
-                <div class="text-subtitle2">Country</div>
               </div>
             </div>
           </q-card-section>

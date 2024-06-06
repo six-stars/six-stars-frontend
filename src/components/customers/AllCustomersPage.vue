@@ -96,32 +96,38 @@
     </div>
 
     <q-dialog v-model="moreDetails">
-      <div class="my-card-2">
+      <div class="my-card-2 text-primary">
         <q-card>
           <q-card-section>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Created At</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Created At
+                </div>
                 <div class="text-h6">{{ formatDate(dataMore.CreatedAt) }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer ID
+                </div>
                 <div class="text-h6">{{ dataMore.customer_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">First Name</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  First Name
+                </div>
                 <div class="text-h6">{{ dataMore.first_name }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Last Name</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Last Name</div>
                 <div class="text-h6">{{ dataMore.last_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Email</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Email</div>
                 <div class="text-h6">{{ dataMore.email }}</div>
               </div>
               <!-- <div class="col-12 col-md-6 q-pl-md">
@@ -129,43 +135,47 @@
                     <div class="text-subtitle2">Username</div>
                   </div> -->
               <!-- <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Type</div>
+                <div class="text-subtitle2  bg-teal-9 text-white">Customer Type</div>
                 <div class="text-h6">{{ dataMore.user_type }}</div>
               </div> -->
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Phone Number</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Phone Number
+                </div>
                 <div class="text-h6">{{ dataMore.phone1 }}</div>
               </div>
               <!-- <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Phone Number 2</div>
+                <div class="text-subtitle2  bg-teal-9 text-white">Phone Number 2</div>
                 <div class="text-h6">{{ dataMore.phone2 }}</div>
               </div> -->
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Gender</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Gender</div>
                 <div class="text-h6">{{ dataMore.gender }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Date of Birth</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Date of Birth
+                </div>
                 <div class="text-h6">{{ dataMore.dob }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">State</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">State</div>
                 <div class="text-h6">{{ dataMore.state }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Country</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Country</div>
                 <div class="text-h6">{{ dataMore.country }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Address</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Address</div>
                 <div class="text-h6">{{ dataMore.address }}</div>
               </div>
             </div>

@@ -1258,7 +1258,7 @@
     </div>
 
     <q-dialog v-model="moreDetails">
-      <div class="my-card-2">
+      <div class="my-card-2 text-primary">
         <q-card>
           <q-card-section>
             <div
@@ -1267,7 +1267,7 @@
               :key="key"
             >
               <div class="col-12 col-md-7 q-pl-md">
-                <div class="text-subtitle2 bg-grey">{{ key }}</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">{{ key }}</div>
               </div>
               <div class="col-12 col-md-5 q-pl-md">
                 <div class="text-h6">{{ value }}</div>

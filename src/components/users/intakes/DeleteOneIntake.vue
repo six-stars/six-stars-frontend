@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="Intake ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Delete</q-btn>
           </div>
         </q-form>

@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="Intake ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
@@ -41,81 +41,93 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-        <q-card class="my-card-2 bg-white text-primary">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Created At</div>
+                      <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
                       <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
                     </div> -->
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Phone
+                </div>
                 <div class="text-h6">{{ data.customer_phone }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collected On</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collected On
+                </div>
                 <div class="text-h6">{{ data.collected_on }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collection Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collection Date
+                </div>
                 <div class="text-h6">{{ data.collection_date }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Customer</div>
                 <div class="text-h6">{{ data.customer }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Intake ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Intake ID</div>
                 <div class="text-h6">{{ data.intake_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Quantity</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Quantity</div>
                 <div class="text-h6">{{ data.quantity }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Staff</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Staff</div>
                 <div class="text-h6">{{ data.staff_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Deposit</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Deposit</div>
                 <div class="text-h6">₦{{ data.deposit }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Deposit Type</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Deposit Type
+                </div>
                 <div class="text-h6">{{ data.deposit_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Paid?</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Paid?</div>
                 <div class="text-h6">{{ data.paid }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Paid Type</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Paid Type</div>
                 <div class="text-h6">{{ data.paid_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Balance</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Balance</div>
                 <div class="text-h6">₦{{ data.balance }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Total Amount</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Total Amount
+                </div>
                 <div class="text-h6">₦{{ data.total_amount }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Collected
+                </div>
                 <div class="text-h6">{{ data.customer_collected }}</div>
               </div>
             </div>
@@ -147,7 +159,7 @@
               <div class="col q-mt-sm">
                 <q-btn
                   :disable="!customer_collected"
-                  color="primary"
+                  class="bg-teal-9 text-white"
                   flat
                   @click="onUpdate(data.intake_id)"
                   >Complete Payment</q-btn

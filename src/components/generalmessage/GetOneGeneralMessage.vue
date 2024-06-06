@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="General ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
@@ -48,31 +48,33 @@
                       <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
                     </div> -->
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">General ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  General ID
+                </div>
                 <div class="text-h6">{{ data.general_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Title</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Title</div>
                 <div class="text-h6">{{ data.title }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Message</div>
                 <div class="text-h6">{{ data.message }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Sent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Sent</div>
                 <div class="text-h6">{{ data.sent }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Date</div>
                 <div class="text-h6">{{ data.date }}</div>
               </div>
             </div>

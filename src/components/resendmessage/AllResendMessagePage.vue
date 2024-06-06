@@ -26,6 +26,9 @@
           <q-td key="customer_phone" :props="props">
             {{ props.row.customer_phone }}
           </q-td>
+          <q-td key="customer_name" :props="props">
+            {{ props.row.customer_name }}
+          </q-td>
           <q-td text-capitalize key="sent" :props="props">
             {{ props.row.sent }}
           </q-td>
@@ -79,52 +82,60 @@
     </div>
 
     <q-dialog v-model="moreDetails">
-      <div class="my-card-2">
-        <q-card>
+      <div class="">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Created At</div>
+                      <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
                       <div class="text-h6">{{ formatDate(dataMore.CreatedAt) }}</div>
                     </div> -->
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resend ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Resend ID</div>
                 <div class="text-h6">{{ dataMore.resend_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Phone
+                </div>
                 <div class="text-h6">{{ dataMore.customer_phone }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Other Phone</div>
-                <div class="text-h6">{{ dataMore.customer_other_phone }}</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Name
+                </div>
+                <div class="text-h6">{{ dataMore.customer_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Message</div>
                 <div class="text-h6">{{ dataMore.message }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Sent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Sent</div>
                 <div class="text-h6">{{ dataMore.sent }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Resent</div>
                 <div class="text-h6">{{ dataMore.resent }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resent Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Resent Date
+                </div>
                 <div class="text-h6">{{ dataMore.resent_date }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message Route</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Message Route
+                </div>
                 <div class="text-h6">{{ dataMore.message_route }}</div>
               </div>
             </div>
@@ -152,7 +163,7 @@
           <q-card-actions align="right">
             <q-btn
               :disable="route == ''"
-              color="primary"
+              class="bg-teal-9 text-white"
               @click="onResend(dataMore.resend_id)"
               flat
               >Resend</q-btn
@@ -195,6 +206,7 @@ const columns = [
     label: "Customer Phone",
     field: "customer_phone",
   },
+  { name: "customer_name", label: "Customer Name", field: "customer_name" },
   { name: "sent", label: "Sent", field: "sent" },
   {
     name: "message_route",

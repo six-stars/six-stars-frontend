@@ -67,40 +67,42 @@
     </div>
 
     <q-dialog v-model="moreDetails">
-      <div class="my-card-2">
+      <div class="my-card-2 text-primary">
         <q-card>
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
-                      <div class="text-subtitle2 bg-grey">Created At</div>
+                      <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
                       <div class="text-h6">{{ formatDate(dataMore.CreatedAt) }}</div>
                     </div> -->
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">General ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  General ID
+                </div>
                 <div class="text-h6">{{ dataMore.general_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Title</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Title</div>
                 <div class="text-h6">{{ dataMore.title }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Message</div>
                 <div class="text-h6">{{ dataMore.message }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Sent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Sent</div>
                 <div class="text-h6">{{ dataMore.sent }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Date</div>
                 <div class="text-h6">{{ dataMore.date }}</div>
               </div>
             </div>

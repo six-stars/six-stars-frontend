@@ -86,74 +86,86 @@
     </div>
 
     <q-dialog v-model="moreDetails">
-      <div class="my-card-2">
+      <div class="my-card-2 text-primary">
         <q-card>
           <q-card-section>
             <!-- <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Created At</div>
+                <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
                 <div class="text-h6">{{ formatDate(dataMore.CreatedAt) }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-subtitle2  bg-teal-9 text-white">Customer Phone</div>
                 <div class="text-h6">{{ dataMore.customer_phone }}</div>
               </div>
             </div> -->
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collected On</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collected On
+                </div>
                 <div class="text-h6">
                   {{ dataMore.collected_on }}
                 </div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collection Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collection Date
+                </div>
                 <div class="text-h6">{{ dataMore.collection_date }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Customer</div>
                 <div class="text-h6">{{ dataMore.customer }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Intake ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Intake ID</div>
                 <div class="text-h6">{{ dataMore.intake_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Quantity</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Quantity</div>
                 <div class="text-h6">{{ dataMore.quantity }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Staff</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Staff</div>
                 <div class="text-h6">{{ dataMore.staff_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Washing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Washing Stage
+                </div>
                 <div class="text-h6">{{ dataMore.washing_stage }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Ironing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Ironing Stage
+                </div>
                 <div class="text-h6">{{ dataMore.ironing_stage }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Packing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Packing Stage
+                </div>
                 <div class="text-h6">{{ dataMore.packing_stage }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Ready?</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Ready?</div>
                 <div class="text-h6">{{ dataMore.ready }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Collected
+                </div>
                 <div class="text-h6">{{ dataMore.customer_collected }}</div>
               </div>
             </div>
@@ -163,21 +175,21 @@
 
           <q-card-actions align="right">
             <q-btn
-              color="primary"
+              class="bg-teal-9 text-white"
               v-show="show1"
               @click="onUpdate(dataMore, 'washing')"
               flat
               >Washing Stage</q-btn
             >
             <q-btn
-              color="primary"
+              class="bg-teal-9 text-white"
               v-show="show2"
               @click="onUpdate(dataMore, 'ironing')"
               flat
               >Ironing Stage</q-btn
             >
             <q-btn
-              color="primary"
+              class="bg-teal-9 text-white"
               v-show="show3"
               @click="onUpdate(dataMore, 'packing')"
               flat

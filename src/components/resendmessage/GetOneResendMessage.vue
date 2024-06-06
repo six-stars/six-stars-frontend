@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="Resend ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <div class="row q-pt-sm">
               <!-- <div class="col-12 col-md-6 q-pl-md">
@@ -48,43 +48,51 @@
                       <div class="text-h6">{{ formatDate(data.CreatedAt) }}</div>
                     </div> -->
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resend ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Resend ID</div>
                 <div class="text-h6">{{ data.resend_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Phone
+                </div>
                 <div class="text-h6">{{ data.customer_phone }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Other Phone</div>
-                <div class="text-h6">{{ data.customer_other_phone }}</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Name
+                </div>
+                <div class="text-h6">{{ data.customer_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Message</div>
                 <div class="text-h6">{{ data.message }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Sent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Sent</div>
                 <div class="text-h6">{{ data.sent }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resent</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Resent</div>
                 <div class="text-h6">{{ data.resent }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Resent Date</div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Resent Date
+                </div>
                 <div class="text-h6">{{ data.resent_date }}</div>
               </div>
-              <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Message Route</div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Message Route
+                </div>
                 <div class="text-h6">{{ data.message_route }}</div>
               </div>
             </div>
@@ -113,9 +121,8 @@
           <q-card-actions align="right">
             <q-btn
               :disable="route == ''"
-              color="primary"
+              class="bg-teal-9 text-white"
               @click="onResend(data.resend_id)"
-              flat
               >Resend</q-btn
             >
           </q-card-actions>
@@ -191,14 +198,14 @@ function popup1(selectedCustomer) {
   // console.log(selectedCustomerPopup1.value, 'selectedCustomerpopup1 value')
 }
 
+const token = useStore.getToken;
 const onSubmit = () => {
-  const token = useStore.getToken;
-
   axios
-    .get(`${base}/resend/messsage/${resend_id.value}`, {
+    .get(`${base}/resend/message/${resend_id.value}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
+      console.log(response, "response");
       data.value = response.data.data;
       console.log(data.value);
       $q.notify({
@@ -209,7 +216,8 @@ const onSubmit = () => {
       });
       fixed0.value = true;
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log(e, "e");
       $q.notify({
         color: "negative",
         position: "bottom",
@@ -225,7 +233,7 @@ const onResend = (resend_id) => {
     boxClass: "bg-grey-2 text-grey-9",
     spinnerColor: "primary",
   });
-  const token = useStore.getToken;
+  // const token = useStore.getToken;
   const firstName = useStore.getFirst_name;
   const lastName = useStore.getLast_name;
 

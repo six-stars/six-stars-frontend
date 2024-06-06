@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="Intake ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
@@ -37,11 +37,11 @@
       </div> -->
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 text-primary">
           <!-- <q-card-section>
             <div class="row q-pt-sm" v-for="(value, key) in data" :key="key">
               <div class="col-12 col-md-12 q-pl-md">
-                <div class="text-subtitle2 bg-grey">{{ key }}</div>
+                <div class="text-subtitle2  bg-teal-9 text-white">{{ key }}</div>
                 <div class="text-h6">{{ value }}</div>
               </div>
             </div>
@@ -57,7 +57,7 @@
                 v-for="(value, key) in obj"
                 :key="key"
               >
-                <div class="text-subtitle2 bg-grey">{{ key }}</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">{{ key }}</div>
                 <div class="text-h6">{{ value }}</div>
               </div>
             </div>

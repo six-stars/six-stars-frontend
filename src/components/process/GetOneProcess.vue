@@ -3,9 +3,9 @@
     <!-- <div class="text-black text-h4">Search User</div>
     <q-separator /> -->
     <div class="q-gutter-y-md" fullwidth>
-      <div class="row q-pt-sm">
+      <div class="q-pt-sm">
         <q-form @submit="onSubmit" @reset="onReset" class="">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-8 q-pl-md">
             <q-input
               label="Intake ID"
               class=""
@@ -14,7 +14,7 @@
               hint=""
             />
           </div>
-          <div class="col-12 q-pl-md">
+          <div class="col-4 q-pl-md">
             <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
           </div>
         </q-form>
@@ -40,71 +40,83 @@
       </div>
 
       <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
-        <q-card class="my-card-2 bg-primary text-white">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <!-- <div class="row q-pt-sm">
                       <div class="col-12 col-md-6 q-pl-md">
-                        <div class="text-subtitle2 bg-grey">Created At</div>
+                        <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
                         <div class="text-h6">{{ formatDate(data4.CreatedAt) }}</div>
                       </div>
                       <div class="col-12 col-md-6 q-pl-md">
-                        <div class="text-subtitle2 bg-grey">Customer Phone</div>
+                        <div class="text-subtitle2  bg-teal-9 text-white">Customer Phone</div>
                         <div class="text-h6">{{ data4.customer_phone }}</div>
                       </div>
                     </div> -->
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collected On</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collected On
+                </div>
                 <div class="text-h6">{{ formatDate(data4.collected_on) }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Collection Date</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Collection Date
+                </div>
                 <div class="text-h6">{{ data4.collection_date }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Customer</div>
                 <div class="text-h6">{{ data4.customer }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Intake ID</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Intake ID</div>
                 <div class="text-h6">{{ data4.intake_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Quantity</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Quantity</div>
                 <div class="text-h6">{{ data4.quantity }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Staff</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Staff</div>
                 <div class="text-h6">{{ data4.staff_name }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Washing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Washing Stage
+                </div>
                 <div class="text-h6">{{ data4.washing_stage }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Ironing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Ironing Stage
+                </div>
                 <div class="text-h6">{{ data4.ironing_stage }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Packing Stage</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Packing Stage
+                </div>
                 <div class="text-h6">{{ data4.packing_stage }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Ready?</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">Ready?</div>
                 <div class="text-h6">{{ data4.ready }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2 bg-grey">Customer Collected</div>
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Customer Collected
+                </div>
                 <div class="text-h6">{{ data4.customer_collected }}</div>
               </div>
             </div>
@@ -113,16 +125,28 @@
           <q-separator dark />
 
           <q-card-actions align="right">
-            <q-btn v-show="show1" @click="onUpdate(data4, 'washing')" flat
+            <q-btn
+              v-show="show1"
+              @click="onUpdate(data4, 'washing')"
+              class="bg-teal-9 text-white"
               >Washing Stage</q-btn
             >
-            <q-btn v-show="show2" @click="onUpdate(data4, 'ironing')" flat
+            <q-btn
+              v-show="show2"
+              @click="onUpdate(data4, 'ironing')"
+              class="bg-teal-9 text-white"
               >Ironing Stage</q-btn
             >
-            <q-btn v-show="show3" @click="onUpdate(data4, 'packing')" flat
+            <q-btn
+              v-show="show3"
+              @click="onUpdate(data4, 'packing')"
+              class="bg-teal-9 text-white"
               >Packing Stage</q-btn
             >
-            <q-btn v-show="show4" @click="onUpdate(data4, 'ready')" flat
+            <q-btn
+              v-show="show4"
+              @click="onUpdate(data4, 'ready')"
+              class="bg-teal-9 text-white"
               >Ready</q-btn
             >
           </q-card-actions>
