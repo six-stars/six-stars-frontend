@@ -83,6 +83,10 @@
                 <div class="text-subtitle2 bg-grey">Resent Date</div>
                 <div class="text-h6">{{ data.resent_date }}</div>
               </div>
+              <div class="col-12 col-md-12 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Message Route</div>
+                <div class="text-h6">{{ data.message_route }}</div>
+              </div>
             </div>
           </q-card-section>
 

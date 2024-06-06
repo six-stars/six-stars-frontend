@@ -29,6 +29,9 @@
           <q-td text-capitalize key="sent" :props="props">
             {{ props.row.sent }}
           </q-td>
+          <q-td key="message_route" :props="props">
+            {{ props.row.message_route }}
+          </q-td>
           <q-td text-capitalize key="resent" :props="props">
             {{ props.row.resent }}
           </q-td>
@@ -116,9 +119,13 @@
               </div>
             </div>
             <div class="row q-pt-sm">
-              <div class="col-12 col-md-12 q-pl-md">
+              <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-grey">Resent Date</div>
                 <div class="text-h6">{{ dataMore.resent_date }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-grey">Message Route</div>
+                <div class="text-h6">{{ dataMore.message_route }}</div>
               </div>
             </div>
           </q-card-section>
@@ -189,6 +196,11 @@ const columns = [
     field: "customer_phone",
   },
   { name: "sent", label: "Sent", field: "sent" },
+  {
+    name: "message_route",
+    label: "Message Route",
+    field: "message_route",
+  },
   { name: "resent", label: "Resent", field: "resent" },
   { name: "resent_date", label: "Resent Date", field: "resent_date" },
   { name: "message", label: "Message", field: "message" },
