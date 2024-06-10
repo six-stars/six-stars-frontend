@@ -159,7 +159,7 @@
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Deposit Type
                 </div>
-                <div class="text-h6">₦{{ dataMore.deposit_type }}</div>
+                <div class="text-h6">{{ dataMore.deposit_type }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -215,10 +215,10 @@
                   outlined
                   v-model="customer_collected"
                   label="Collected by?"
-                  style="width: 520px"
+                  style="width: 480px"
                 />
               </div>
-              <div class="col q-mt-sm">
+              <div class="col q-mt-sm text-center">
                 <q-btn
                   :disable="!customer_collected"
                   class="bg-teal-9 text-white"
