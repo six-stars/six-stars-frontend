@@ -202,7 +202,7 @@
 
           <q-card-actions class="q-pa-md" v-show="show4">
             <div class="column">
-              <div class="col q-pl-md">
+              <div v-show="data.paid_status == false" class="col q-pl-md">
                 <q-select
                   outlined
                   v-model="paid_type"
@@ -383,6 +383,7 @@ const onUpdate = (intakeID) => {
       " on " +
       timeDate,
     paid_type: paid_type.value,
+    paid_status: true,
   };
 
   axios

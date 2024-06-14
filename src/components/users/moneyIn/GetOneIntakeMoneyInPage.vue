@@ -82,7 +82,7 @@ import { copyToClipboard, useQuasar } from "quasar";
 import { useUserStore } from "../../../stores/user-store";
 import { useRouter } from "vue-router";
 
-const name = "GetOneIntakeCompletedPage";
+const name = "GetOneIntakeMoneyInPage";
 
 const fixed0 = ref(false);
 const fixed1 = ref(false);
@@ -91,26 +91,16 @@ const data = ref([]);
 const da = ref([]);
 const intake_id = ref("");
 const useStore = useUserStore();
-const selectedCompletedWork = reactive([]);
-const selectedCompletedWorkPopup1 = ref({});
-const selectedCompletedWorkPopup2 = ref({});
+const selectedMoneyIn = reactive([]);
+const selectedMoneyInPopup1 = ref({});
+const selectedMoneyInPopup2 = ref({});
 
 const columns = [
   { name: "intake_id", label: "Intake ID", field: "intake_id" },
   {
-    name: "collection_date",
-    label: "Collection Date",
-    field: "collection_date",
-  },
-  {
     name: "customer",
     label: "Customer",
     field: "customer",
-  },
-  {
-    name: "customer_phone",
-    label: "Customer Phone",
-    field: "customer_phone",
   },
   {
     name: "staff_name",
@@ -118,14 +108,39 @@ const columns = [
     field: "staff_name",
   },
   {
-    name: "quantity",
-    label: "Quantity",
-    field: "quantity",
+    name: "discount",
+    label: "Discount",
+    field: "discount",
   },
   {
-    name: "stage",
-    label: "Stage",
-    field: "stage",
+    name: "total_amount",
+    label: "Total Amount",
+    field: "total_amount",
+  },
+  {
+    name: "money_in",
+    label: "Money In",
+    field: "money_in",
+  },
+  {
+    name: "money_in_status",
+    label: "Money In Status",
+    field: "money_in_status",
+  },
+  {
+    name: "money_in_type",
+    label: "Money In Type",
+    field: "money_in_type",
+  },
+  {
+    name: "collected_on",
+    label: "Collected On",
+    field: "collected_on",
+  },
+  {
+    name: "collection_date",
+    label: "Collection Date",
+    field: "collection_date",
   },
   {
     name: "created_at",
@@ -165,23 +180,18 @@ function formatDate(date) {
   return `${day}/${month}/${year} ${hours}:${minutes}`;
 }
 
-function popup1(selectedCompletedWork) {
+function popup1(selectedMoneyIn) {
   fixed1.value = true;
-  console.log(selectedCompletedWork, "selectedCompletedWork");
-  selectedCompletedWorkPopup1.value = selectedCompletedWork;
-  console.log(
-    selectedCompletedWorkPopup1.value,
-    "selectedCompletedWorkpopup1 value"
-  );
+  console.log(selectedMoneyIn, "selectedMoneyIn");
+  selectedMoneyInPopup1.value = selectedMoneyIn;
+  console.log(selectedMoneyInPopup1.value, "selectedMoneyInpopup1 value");
 }
 
 const onSubmit = () => {
   const token = useStore.getToken;
 
   api
-    .get(`/completed_work/${intake_id.value}`, {
-      // axios
-      //   .get(`${base}/completed_work/${intake_id.value}`, {
+    .get(`/money_in/${intake_id.value}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
