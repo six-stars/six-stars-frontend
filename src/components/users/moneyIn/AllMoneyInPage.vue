@@ -14,11 +14,11 @@
           'intake_id',
           'customer',
           'staff_name',
-          'discount',
           'total_amount',
           'money_in',
           'money_in_status',
           'money_in_type',
+          'discount',
           'collected_on',
           'collection_date',
           'created_at',
@@ -133,7 +133,7 @@ const loadData = (pageNumber) => {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data;
+      data.value = response.data.data.reverse();
       pageEnd.value = response.data.has_next;
       console.log(data.value, "yello!");
     })

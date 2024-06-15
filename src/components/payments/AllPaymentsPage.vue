@@ -202,7 +202,8 @@
 
           <q-card-actions class="q-pa-md" v-show="show4">
             <div class="column">
-              <div v-show="data.paid_status == false" class="col q-pl-md">
+              <!-- <div class="col q-pl-md"> -->
+              <div v-show="dataMore.paid_status == false" class="col q-pl-md">
                 <q-select
                   outlined
                   v-model="paid_type"
@@ -308,7 +309,7 @@ const loadData = (pageNumber) => {
     .then((response) => {
       data.value = response.data.data;
       pageEnd.value = response.data.has_next;
-      console.log(data.value, "yello!");
+      console.log(data.value, "payment!");
     })
     .catch(() => {
       $q.notify({
