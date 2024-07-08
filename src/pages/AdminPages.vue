@@ -127,6 +127,11 @@
                     icon="search"
                     label="Search for a Completed Work"
                   />
+                  <q-tab
+                    name="innerGetQuantityOfCompletedWork"
+                    icon="search"
+                    label="Get Quantity using Date Range"
+                  />
                 </q-tabs>
               </template>
 
@@ -143,6 +148,10 @@
 
                   <q-tab-panel name="innerGetOneIntakeCompleted">
                     <GetOneIntakeCompletedPage />
+                  </q-tab-panel>
+
+                  <q-tab-panel name="innerGetQuantityOfCompletedWork">
+                    <GetQuantityOfCompletedWorkPage />
                   </q-tab-panel>
                 </q-tab-panels>
               </template>
@@ -303,6 +312,7 @@ import AllPricesPage from "src/components/users/prices/AllPricesPage.vue";
 import GetOnePricePage from "src/components/users/prices/GetOnePricePage.vue";
 import AllCompletedWorkPage from "src/components/users/completed_work/AllCompletedWorkPage.vue";
 import GetOneIntakeCompletedPage from "src/components/users/completed_work/GetOneIntakeCompletedPage.vue";
+import GetQuantityOfCompletedWorkPage from "src/components/users/completed_work/GetQuantityOfCompletedWorkPage.vue";
 import AllMoneyInPage from "src/components/users/moneyIn/AllMoneyInPage.vue";
 import GetOneIntakeMoneyInPage from "src/components/users/moneyIn/GetOneIntakeMoneyInPage.vue";
 import DeleteOneIntake from "src/components/users/intakes/DeleteOneIntake.vue";

@@ -11,14 +11,14 @@
         flat
         bordered
         :visible-columns="[
+          'CreatedAt',
           'intake_id',
-          'collection_date',
           'customer',
-          'customer_phone',
-          'staff_name',
-          'quantity',
           'stage',
-          'created_at',
+          'quantity',
+          'staff_name',
+          'collection_date',
+          'customer_phone',
         ]"
         :loading="true"
         :filter="filter"
