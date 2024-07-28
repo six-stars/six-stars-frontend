@@ -1500,6 +1500,94 @@
             <q-input
               required
               class=""
+              v-model="adult_white_garment_folding_with_cap"
+              outlined
+              type="number"
+              hint="Adult White Garment With Cap (F)"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="adult_white_garment_folding_without_cap"
+              outlined
+              type="number"
+              hint="Adult White Garment Without Cap (F)"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="adult_white_garment_hanging_with_cap"
+              outlined
+              type="number"
+              hint="Adult White Garment with Cap (H)"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="adult_white_garment_hanging_without_cap"
+              outlined
+              type="number"
+              hint="Adult White Garment without Cap (H)"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="children_white_garment_folding_with_cap"
+              outlined
+              type="number"
+              hint="Children White Garment with Cap (F)"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="children_white_garment_folding_without_cap"
+              outlined
+              type="number"
+              hint="Children White Garment Without Cap (F)"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="children_white_garment_hanging_with_cap"
+              outlined
+              type="number"
+              hint="Children White Garment With Cap (H)"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
+              v-model="children_white_garment_hanging_without_cap"
+              outlined
+              type="number"
+              hint="Children White Garment Without Cap (H)"
+            />
+          </div>
+        </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-input
+              required
+              class=""
               v-model="skirt_and_blouse_english_hanging_colored"
               outlined
               type="number"
@@ -2169,6 +2257,14 @@ const gown_english_adult_hanging_colored = ref("");
 const gown_english_adult_hanging_white = ref("");
 const gown_native_folding_colored = ref("");
 const gown_native_folding_white = ref("");
+const adult_white_garment_folding_with_cap = ref("");
+const adult_white_garment_folding_without_cap = ref("");
+const adult_white_garment_hanging_with_cap = ref("");
+const adult_white_garment_hanging_without_cap = ref("");
+const children_white_garment_folding_with_cap = ref("");
+const children_white_garment_folding_without_cap = ref("");
+const children_white_garment_hanging_with_cap = ref("");
+const children_white_garment_hanging_without_cap = ref("");
 //5th page
 const skirt_and_blouse_english_hanging_colored = ref("");
 const skirt_and_blouse_english_hanging_white = ref("");
@@ -2490,6 +2586,30 @@ const onSubmit = () => {
     ),
     gown_native_folding_colored: Number(gown_native_folding_colored.value),
     gown_native_folding_white: Number(gown_native_folding_white.value),
+    adult_white_garment_folding_with_cap: Number(
+      adult_white_garment_folding_with_cap.value
+    ),
+    adult_white_garment_folding_without_cap: Number(
+      adult_white_garment_folding_without_cap.value
+    ),
+    adult_white_garment_hanging_with_cap: Number(
+      adult_white_garment_hanging_with_cap.value
+    ),
+    adult_white_garment_hanging_without_cap: Number(
+      adult_white_garment_hanging_without_cap.value
+    ),
+    children_white_garment_folding_with_cap: Number(
+      children_white_garment_folding_with_cap.value
+    ),
+    children_white_garment_folding_without_cap: Number(
+      children_white_garment_folding_without_cap.value
+    ),
+    children_white_garment_hanging_with_cap: Number(
+      children_white_garment_hanging_with_cap.value
+    ),
+    children_white_garment_hanging_without_cap: Number(
+      children_white_garment_hanging_without_cap.value
+    ),
     skirt_and_blouse_english_hanging_colored: Number(
       skirt_and_blouse_english_hanging_colored.value
     ),

@@ -758,6 +758,46 @@ const columns = [
     field: "gown_native_folding_white",
   },
   {
+    name: "adult_white_garment_folding_with_cap",
+    label: "Adult White Garment With Cap Folding",
+    field: "adult_white_garment_folding_with_cap",
+  },
+  {
+    name: "adult_white_garment_folding_without_cap",
+    label: "Adult White Garment Without Cap Folding",
+    field: "adult_white_garment_folding_without_cap",
+  },
+  {
+    name: "adult_white_garment_hanging_with_cap",
+    label: "Adult White Garment With Cap Hanging",
+    field: "adult_white_garment_hanging_with_cap",
+  },
+  {
+    name: "adult_white_garment_hanging_without_cap",
+    label: "Adult White Garment Without Cap Hanging",
+    field: "adult_white_garment_hanging_without_cap",
+  },
+  {
+    name: "children_white_garment_folding_with_cap",
+    label: "Children White Garment With Cap Folding",
+    field: "children_white_garment_folding_with_cap",
+  },
+  {
+    name: "children_white_garment_folding_without_cap",
+    label: "Children White Garment Without Cap Folding",
+    field: "children_white_garment_folding_without_cap",
+  },
+  {
+    name: "children_white_garment_hanging_with_cap",
+    label: "Children White Garment With Cap Hanging",
+    field: "children_white_garment_hanging_with_cap",
+  },
+  {
+    name: "children_white_garment_hanging_without_cap",
+    label: "Children White Garment Without Cap Hanging",
+    field: "children_white_garment_hanging_without_cap",
+  },
+  {
     name: "skirt_and_blouse_english_hanging_colored",
     label: "Skirt and Blouse English 2pcs Hanging Colored",
     field: "skirt_and_blouse_english_hanging_colored",
