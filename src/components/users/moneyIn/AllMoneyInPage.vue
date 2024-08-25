@@ -10,7 +10,13 @@
         row-key="CreatedAt"
         flat
         bordered
-        :visible-columns="[
+        :columns="columns"
+        :loading="true"
+        :filter="filter"
+        :pagination="pagination"
+        @request="handleTableRequest"
+      >
+        <!-- :visible-columns="[
           'intake_id',
           'customer',
           'staff_name',
@@ -22,13 +28,8 @@
           'collected_on',
           'collection_date',
           'created_at',
-        ]"
-        :loading="true"
-        :filter="filter"
-        :pagination="pagination"
-        @request="handleTableRequest"
-      >
-        <template v-slot:top-right>
+        ]" -->
+        <template v-slot:top-center>
           <q-input
             borderless
             dense
@@ -40,6 +41,15 @@
               <q-icon name="search" />
             </template>
           </q-input>
+        </template>
+        <template v-slot:top-right>
+          <q-btn
+            color="primary"
+            icon-right="archive"
+            label="Export to csv"
+            no-caps
+            @click="exportTable"
+          />
         </template>
       </q-table>
 
@@ -66,7 +76,7 @@
 <script setup>
 import { onMounted, reactive, ref } from "vue";
 import { axios, api, base } from "boot/axios";
-import { copyToClipboard, useQuasar } from "quasar";
+import { exportFile, copyToClipboard, useQuasar } from "quasar";
 import { useUserStore } from "../../../stores/user-store";
 import { useRouter } from "vue-router";
 
@@ -80,6 +90,37 @@ const selectedMoneyIn = reactive([]);
 const selectedMoneyInPopup1 = ref({});
 const selectedMoneyInPopup2 = ref({});
 const pageEnd = ref(false);
+
+const columns = [
+  { name: "intake_id", label: "Intake ID", field: "intake_id" },
+  { name: "customer", label: "Customer", field: "customer" },
+  { name: "staff_name", label: "Staff Name", field: "staff_name" },
+  {
+    name: "total_amount",
+    label: "Total Amount",
+    field: "total_amount",
+  },
+  { name: "money_in", label: "Money In", field: "money_in" },
+  {
+    name: "money_in_status",
+    label: "Money In Status",
+    field: "money_in_status",
+  },
+  { name: "money_in_type", label: "Money In Type", field: "money_in_type" },
+  { name: "discount", label: "Discount", field: "discount" },
+  { name: "deposit", label: "Deposit", field: "deposit" },
+  { name: "Collected_on", label: "Collected On", field: "Collected_on" },
+  {
+    name: "collection_date",
+    label: "Collection Date",
+    field: "collection_date",
+  },
+  {
+    name: "created_at",
+    label: "Created At",
+    field: "created_at",
+  },
+];
 
 function formatDate(date) {
   const dateObj = new Date(date);
@@ -181,6 +222,55 @@ const handleNextPage = () => {
 onMounted(() => {
   loadData(pagination.value.page);
 });
+
+const wrapCsvValue = (val, formatFn, row) => {
+  let formatted = formatFn !== void 0 ? formatFn(val, row) : val;
+
+  formatted =
+    formatted === void 0 || formatted === null ? "" : String(formatted);
+
+  formatted = formatted.split('"').join('""');
+  /**
+   * Excel accepts \n and \r in strings, but some other CSV parsers do not
+   * Uncomment the next two lines to escape new lines
+   */
+  // .split('\n').join('\\n')
+  // .split('\r').join('\\r')
+
+  return `"${formatted}"`;
+};
+
+const exportTable = () => {
+  // naive encoding to csv format
+  const content = [columns.map((col) => wrapCsvValue(col.label))]
+    .concat(
+      // rows.map((row) =>
+      data.value.map((row) =>
+        columns
+          .map((col) =>
+            wrapCsvValue(
+              typeof col.field === "function"
+                ? col.field(row)
+                : row[col.field === void 0 ? col.name : col.field],
+              col.format,
+              row
+            )
+          )
+          .join(",")
+      )
+    )
+    .join("\r\n");
+
+  const status = exportFile("all-money-in.csv", content, "text/csv");
+
+  if (status !== true) {
+    $q.notify({
+      message: "Browser denied file download...",
+      color: "negative",
+      icon: "warning",
+    });
+  }
+};
 </script>
 
 <style lang="sass" scoped>
