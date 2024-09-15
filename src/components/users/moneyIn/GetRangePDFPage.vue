@@ -524,7 +524,7 @@ const processReport = (_type) => {
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/logo/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -532,6 +532,12 @@ const processReport = (_type) => {
   doc.text(`Generated @: ${actualData}`, 280, 30, null, null, "right");
 
   doc.setFont("times", "normal");
+
+  doc.setFont("helvetica", "bold");
+  doc.text("Process Report", 105, 85, null, null, "center");
+  doc.setLineWidth(1);
+  doc.line(130, 87, 80, 87);
+  doc.setFont("courier", "normal");
 
   // Extract the header and body data
   const header = [
@@ -617,6 +623,7 @@ const processReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  processData.value = [];
 };
 
 const paymentReport = (_type) => {
@@ -626,7 +633,7 @@ const paymentReport = (_type) => {
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/logo/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -634,6 +641,12 @@ const paymentReport = (_type) => {
   doc.text(`Generated @: ${actualData}`, 280, 30, null, null, "right");
 
   doc.setFont("times", "normal");
+
+  doc.setFont("helvetica", "bold");
+  doc.text("Payment Report", 105, 85, null, null, "center");
+  doc.setLineWidth(1);
+  doc.line(130, 87, 80, 87);
+  doc.setFont("courier", "normal");
 
   // Extract the header and body data
   const header = [
@@ -725,6 +738,7 @@ const paymentReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  paymentData.value = [];
 };
 
 const moneyInReport = (_type) => {
@@ -734,7 +748,7 @@ const moneyInReport = (_type) => {
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/logo/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -742,6 +756,12 @@ const moneyInReport = (_type) => {
   doc.text(`Generated @: ${actualData}`, 280, 30, null, null, "right");
 
   doc.setFont("times", "normal");
+
+  doc.setFont("helvetica", "bold");
+  doc.text("Money In Report", 105, 85, null, null, "center");
+  doc.setLineWidth(1);
+  doc.line(130, 87, 80, 87);
+  doc.setFont("courier", "normal");
 
   // Extract the header and body data
   const header = [
@@ -823,6 +843,7 @@ const moneyInReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  moneyInData.value = [];
 };
 </script>
 
