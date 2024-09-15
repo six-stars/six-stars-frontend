@@ -172,6 +172,11 @@
                     icon="search"
                     label="Search for a MoneyIn"
                   />
+                  <q-tab
+                    name="innerGetRangePDF"
+                    icon="date_range"
+                    label="Range in PDF"
+                  />
                 </q-tabs>
               </template>
 
@@ -188,6 +193,10 @@
 
                   <q-tab-panel name="innerGetOneIntakeMoneyIn">
                     <GetOneIntakeMoneyInPage />
+                  </q-tab-panel>
+
+                  <q-tab-panel name="innerGetRangePDF">
+                    <GetRangePDFPage />
                   </q-tab-panel>
                 </q-tab-panels>
               </template>
@@ -315,6 +324,7 @@ import GetOneIntakeCompletedPage from "src/components/users/completed_work/GetOn
 import GetQuantityOfCompletedWorkPage from "src/components/users/completed_work/GetQuantityOfCompletedWorkPage.vue";
 import AllMoneyInPage from "src/components/users/moneyIn/AllMoneyInPage.vue";
 import GetOneIntakeMoneyInPage from "src/components/users/moneyIn/GetOneIntakeMoneyInPage.vue";
+import GetRangePDFPage from "src/components/users/moneyIn/GetRangePDFPage.vue";
 import DeleteOneIntake from "src/components/users/intakes/DeleteOneIntake.vue";
 import DeleteOneCustomerPage from "src/components/users/customers/DeleteOneCustomerPage.vue";
 
