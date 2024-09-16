@@ -544,7 +544,7 @@ const processReport = (_type) => {
     [
       "Intake ID",
       "Customer",
-      "Customer Phone",
+      // "Customer Phone",
       "Staff Name",
       "Quantity",
       "Collected On",
@@ -560,7 +560,7 @@ const processReport = (_type) => {
   const theBody = processData.value.map((item) => [
     item.intake_id,
     item.customer,
-    item.customer_phone,
+    // item.customer_phone,
     item.staff_name,
     item.quantity,
     item.collected_on,

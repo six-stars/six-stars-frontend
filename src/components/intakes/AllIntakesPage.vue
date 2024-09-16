@@ -1208,6 +1208,12 @@
           <q-td key="discount" :props="props">
             {{ props.row.discount }}
           </q-td>
+          <q-td key="addon" :props="props">
+            {{ props.row.addon }}
+          </q-td>
+          <q-td key="addon_amount" :props="props">
+            {{ props.row.addon_amount }}
+          </q-td>
           <q-td key="deposit" :props="props">
             {{ props.row.deposit }}
           </q-td>
@@ -3112,6 +3118,8 @@ const columns = [
   },
   { name: "comment_section", label: "Comment", field: "comment_section" },
   { name: "discount", label: "Discount", field: "discount" },
+  { name: "addon", label: "Addon", field: "addon" },
+  { name: "addon_amount", label: "Addon Amount", field: "addon_amount" },
   { name: "deposit", label: "Deposit", field: "deposit" },
   { name: "deposit_type", label: "Deposit Type", field: "deposit_type" },
   { name: "balance", label: "Balance", field: "balance" },
