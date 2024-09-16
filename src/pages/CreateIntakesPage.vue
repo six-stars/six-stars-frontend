@@ -6074,7 +6074,8 @@
               </div>
               <div class="col-12 col-md-2 q-pl-md">
                 <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_folding_without_cap }}
+                  Price:
+                  {{ lastPrice.children_white_garment_folding_without_cap }}
                 </p>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
@@ -6156,7 +6157,8 @@
               </div>
               <div class="col-12 col-md-2 q-pl-md">
                 <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_hanging_without_cap }}
+                  Price:
+                  {{ lastPrice.children_white_garment_hanging_without_cap }}
                 </p>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
@@ -8063,8 +8065,30 @@
               </div>
             </div>
             <q-separator />
-            <div class="row q-pt-sm">
-              <div class="col-12 col-md-12 q-pl-md">
+            <div class="row q-pt-sm q-pb-sm">
+              <div class="col-12 col-md-6 q-pl-md">
+                <p class="text-subtitle1 text-center">Addon:</p>
+                <q-input
+                  required
+                  class=""
+                  v-model="addon"
+                  outlined
+                  type="text"
+                />
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <p class="text-subtitle1 text-center">Addon Amount:</p>
+                <q-input
+                  class=""
+                  v-model="addon_amount"
+                  outlined
+                  type="number"
+                />
+              </div>
+            </div>
+            <q-separator />
+            <div class="row q-pt-sm q-pb-sm">
+              <div class="col-12 col-md-6 q-pl-md">
                 <p class="text-subtitle1 text-center">Deposit:</p>
                 <q-input
                   required
@@ -8075,10 +8099,7 @@
                   hint=""
                 />
               </div>
-            </div>
-            <q-separator />
-            <div class="row q-pt-sm">
-              <div class="col-12 col-md-12 q-pl-md">
+              <div class="col-12 col-md-6 q-pl-md">
                 <p class="text-subtitle1 text-center">Deposit Type:</p>
                 <q-select
                   outlined
@@ -8089,6 +8110,9 @@
               </div>
             </div>
             <q-separator />
+            <!-- <div class="row q-pt-sm">
+            </div>
+            <q-separator /> -->
             <div class="row q-pt-sm">
               <div class="text-center full-width q-pl-md">
                 <p class="text-h6">
@@ -8285,7 +8309,8 @@
                       Number(total_pyjamas_big_white) +
                       Number(total_blanket_colored) +
                       Number(total_pillow_cases_colored) +
-                      Number(total_pillow_cases_white))
+                      Number(total_pillow_cases_white) +
+                      Number(addon_amount))
                   }}
                 </p>
               </div>
@@ -14174,334 +14199,340 @@
                 </div>
               </div>
               <q-separator v-show="category === '1'" />
-            <div v-show="category === '4'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Adult White Garment With Cap Folding
-                </p>
+              <div v-show="category === '4'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Adult White Garment With Cap Folding
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.adult_white_garment_folding_with_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="adult_white_garment_folding_with_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_adult_white_garment_folding_with_cap =
+                        lastPrice.adult_white_garment_folding_with_cap *
+                        adult_white_garment_folding_with_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.adult_white_garment_folding_with_cap }}
-                </p>
+              <q-separator v-show="category === '4'" />
+              <div v-show="category === '4'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Adult White Garment Without Cap Folding
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.adult_white_garment_folding_without_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="adult_white_garment_folding_without_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_adult_white_garment_folding_without_cap =
+                        lastPrice.adult_white_garment_folding_without_cap *
+                        adult_white_garment_folding_without_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="adult_white_garment_folding_with_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
+              <q-separator v-show="category === '4'" />
+              <div v-show="category === '4'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Adult White Garment With Cap Hanging
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price: {{ lastPrice.adult_white_garment_hanging_with_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="adult_white_garment_hanging_with_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_adult_white_garment_hanging_with_cap =
+                        lastPrice.adult_white_garment_hanging_with_cap *
+                        adult_white_garment_hanging_with_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_adult_white_garment_folding_with_cap =
-                      lastPrice.adult_white_garment_folding_with_cap *
-                      adult_white_garment_folding_with_cap)
-                  }}
-                </p>
+              <q-separator v-show="category === '4'" />
+              <div v-show="category === '4'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Adult White Garment Without Cap Hanging
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.adult_white_garment_hanging_without_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="adult_white_garment_hanging_without_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_adult_white_garment_hanging_without_cap =
+                        lastPrice.adult_white_garment_hanging_without_cap *
+                        adult_white_garment_hanging_without_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-            </div>
-            <q-separator v-show="category === '4'" />
-            <div v-show="category === '4'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Adult White Garment Without Cap Folding
-                </p>
+              <q-separator v-show="category === '4'" />
+              <div v-show="category === '1'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Children White Garment With Cap Folding
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.children_white_garment_folding_with_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="children_white_garment_folding_with_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_children_white_garment_folding_with_cap =
+                        lastPrice.children_white_garment_folding_with_cap *
+                        children_white_garment_folding_with_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.adult_white_garment_folding_without_cap }}
-                </p>
+              <q-separator v-show="category === '1'" />
+              <div v-show="category === '1'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Children White Garment Without Cap Folding
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.children_white_garment_folding_without_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="children_white_garment_folding_without_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_children_white_garment_folding_without_cap =
+                        lastPrice.children_white_garment_folding_without_cap *
+                        children_white_garment_folding_without_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="adult_white_garment_folding_without_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
+              <q-separator v-show="category === '1'" />
+              <div v-show="category === '1'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Children White Garment With Cap Hanging
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.children_white_garment_hanging_with_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="children_white_garment_hanging_with_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_children_white_garment_hanging_with_cap =
+                        lastPrice.children_white_garment_hanging_with_cap *
+                        children_white_garment_hanging_with_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_adult_white_garment_folding_without_cap =
-                      lastPrice.adult_white_garment_folding_without_cap *
-                      adult_white_garment_folding_without_cap)
-                  }}
-                </p>
+              <q-separator v-show="category === '1'" />
+              <div v-show="category === '1'" class="row q-pt-lg">
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p
+                    class="text-h6 bg-blue-11 q-pa-sm"
+                    style="border-radius: 15%; color: black"
+                  >
+                    Children White Garment Without Cap Hanging
+                  </p>
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Price:
+                    {{ lastPrice.children_white_garment_hanging_without_cap }}
+                  </p>
+                </div>
+                <div class="col-12 col-md-6 q-pl-md">
+                  <q-slider
+                    v-model="children_white_garment_hanging_without_cap"
+                    color="teal"
+                    thumb-color="black"
+                    label-color="black"
+                    label-text-color="white"
+                    markers
+                    switch-marker-labels-side
+                    label-always
+                    switch-label-side
+                    :min="0"
+                    :max="20"
+                  />
+                </div>
+                <div class="col-12 col-md-2 q-pl-md">
+                  <p class="text-subtitle1">
+                    Total: ₦
+                    {{
+                      (total_children_white_garment_hanging_without_cap =
+                        lastPrice.children_white_garment_hanging_without_cap *
+                        children_white_garment_hanging_without_cap)
+                    }}
+                  </p>
+                </div>
               </div>
-            </div>
-            <q-separator v-show="category === '4'" />
-            <div v-show="category === '4'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Adult White Garment With Cap Hanging
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.adult_white_garment_hanging_with_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="adult_white_garment_hanging_with_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_adult_white_garment_hanging_with_cap =
-                      lastPrice.adult_white_garment_hanging_with_cap *
-                      adult_white_garment_hanging_with_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '4'" />
-            <div v-show="category === '4'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Adult White Garment Without Cap Hanging
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.adult_white_garment_hanging_without_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="adult_white_garment_hanging_without_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_adult_white_garment_hanging_without_cap =
-                      lastPrice.adult_white_garment_hanging_without_cap *
-                      adult_white_garment_hanging_without_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '4'" />
-            <div v-show="category === '1'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Children White Garment With Cap Folding
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_folding_with_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="children_white_garment_folding_with_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_children_white_garment_folding_with_cap =
-                      lastPrice.children_white_garment_folding_with_cap *
-                      children_white_garment_folding_with_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '1'" />
-            <div v-show="category === '1'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Children White Garment Without Cap Folding
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_folding_without_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="children_white_garment_folding_without_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_children_white_garment_folding_without_cap =
-                      lastPrice.children_white_garment_folding_without_cap *
-                      children_white_garment_folding_without_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '1'" />
-            <div v-show="category === '1'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Children White Garment With Cap Hanging
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_hanging_with_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="children_white_garment_hanging_with_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_children_white_garment_hanging_with_cap =
-                      lastPrice.children_white_garment_hanging_with_cap *
-                      children_white_garment_hanging_with_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '1'" />
-            <div v-show="category === '1'" class="row q-pt-lg">
-              <div class="col-12 col-md-2 q-pl-md">
-                <p
-                  class="text-h6 bg-blue-11 q-pa-sm"
-                  style="border-radius: 15%; color: black"
-                >
-                  Children White Garment Without Cap Hanging
-                </p>
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Price: {{ lastPrice.children_white_garment_hanging_without_cap }}
-                </p>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <q-slider
-                  v-model="children_white_garment_hanging_without_cap"
-                  color="teal"
-                  thumb-color="black"
-                  label-color="black"
-                  label-text-color="white"
-                  markers
-                  switch-marker-labels-side
-                  label-always
-                  switch-label-side
-                  :min="0"
-                  :max="20"
-                />
-              </div>
-              <div class="col-12 col-md-2 q-pl-md">
-                <p class="text-subtitle1">
-                  Total: ₦
-                  {{
-                    (total_children_white_garment_hanging_without_cap =
-                      lastPrice.children_white_garment_hanging_without_cap *
-                      children_white_garment_hanging_without_cap)
-                  }}
-                </p>
-              </div>
-            </div>
-            <q-separator v-show="category === '1'" />
+              <q-separator v-show="category === '1'" />
               <div v-show="category === '2'" class="row q-pt-lg">
                 <div class="col-12 col-md-2 q-pl-md">
                   <p
@@ -16385,8 +16416,19 @@
             </div>
           </div>
           <q-separator />
-          <div class="row q-pt-sm">
-            <div class="col-12 col-md-12 q-pl-md">
+          <div class="row q-pt-sm q-pb-sm">
+            <div class="col-12 col-md-6 q-pl-md">
+              <p class="text-subtitle1 text-center">Addon:</p>
+              <q-input class="" v-model="addon" outlined type="text" />
+            </div>
+            <div class="col-12 col-md-6 q-pl-md">
+              <p class="text-subtitle1 text-center">Addon Amount:</p>
+              <q-input class="" v-model="addon_amount" outlined type="number" />
+            </div>
+          </div>
+          <q-separator />
+          <div class="row q-pt-sm q-pb-sm">
+            <div class="col-12 col-md-6 q-pl-md">
               <p class="text-subtitle1 text-center">Deposit:</p>
               <q-input
                 required
@@ -16397,10 +16439,7 @@
                 hint=""
               />
             </div>
-          </div>
-          <q-separator />
-          <div class="row q-pt-sm">
-            <div class="col-12 col-md-12 q-pl-md">
+            <div class="col-12 col-md-6 q-pl-md">
               <p class="text-subtitle1 text-center">Deposit Type:</p>
               <q-select
                 outlined
@@ -16411,6 +16450,9 @@
             </div>
           </div>
           <q-separator />
+          <!-- <div class="row q-pt-sm">
+          </div>
+          <q-separator /> -->
           <div class="row q-pt-sm">
             <div class="text-center full-width q-pl-md">
               <p class="text-h6">
@@ -16607,7 +16649,8 @@
                     Number(total_pyjamas_big_white) +
                     Number(total_blanket_colored) +
                     Number(total_pillow_cases_colored) +
-                    Number(total_pillow_cases_white))
+                    Number(total_pillow_cases_white) +
+                    Number(addon_amount))
                 }}
               </p>
             </div>
@@ -20038,9 +20081,14 @@
           </div>
         </div>
         <q-separator v-show="gown_native_folding_white != 0" />
-        <div v-show="adult_white_garment_folding_with_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="adult_white_garment_folding_with_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Adult White Garment With Cap Folding</p>
+            <p class="text-h6 text-primary">
+              Adult White Garment With Cap Folding
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20062,9 +20110,14 @@
           </div>
         </div>
         <q-separator v-show="adult_white_garment_folding_with_cap != 0" />
-        <div v-show="adult_white_garment_folding_without_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="adult_white_garment_folding_without_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Adult White Garment Without Cap Folding</p>
+            <p class="text-h6 text-primary">
+              Adult White Garment Without Cap Folding
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20086,9 +20139,14 @@
           </div>
         </div>
         <q-separator v-show="adult_white_garment_folding_without_cap != 0" />
-        <div v-show="adult_white_garment_hanging_with_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="adult_white_garment_hanging_with_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Adult White Garment With Cap Hanging</p>
+            <p class="text-h6 text-primary">
+              Adult White Garment With Cap Hanging
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20110,9 +20168,14 @@
           </div>
         </div>
         <q-separator v-show="adult_white_garment_hanging_with_cap != 0" />
-        <div v-show="adult_white_garment_hanging_without_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="adult_white_garment_hanging_without_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Adult White Garment Without Cap Hanging</p>
+            <p class="text-h6 text-primary">
+              Adult White Garment Without Cap Hanging
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20134,9 +20197,14 @@
           </div>
         </div>
         <q-separator v-show="adult_white_garment_hanging_without_cap != 0" />
-        <div v-show="children_white_garment_folding_with_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="children_white_garment_folding_with_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Children White Garment With Cap Folding</p>
+            <p class="text-h6 text-primary">
+              Children White Garment With Cap Folding
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20158,9 +20226,14 @@
           </div>
         </div>
         <q-separator v-show="children_white_garment_folding_with_cap != 0" />
-        <div v-show="children_white_garment_folding_without_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="children_white_garment_folding_without_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Children White Garment Without Cap Folding</p>
+            <p class="text-h6 text-primary">
+              Children White Garment Without Cap Folding
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20182,9 +20255,14 @@
           </div>
         </div>
         <q-separator v-show="children_white_garment_folding_without_cap != 0" />
-        <div v-show="children_white_garment_hanging_with_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="children_white_garment_hanging_with_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Children White Garment With Cap Hanging</p>
+            <p class="text-h6 text-primary">
+              Children White Garment With Cap Hanging
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -20206,9 +20284,14 @@
           </div>
         </div>
         <q-separator v-show="children_white_garment_hanging_with_cap != 0" />
-        <div v-show="children_white_garment_hanging_without_cap != 0" class="row q-pt-lg">
+        <div
+          v-show="children_white_garment_hanging_without_cap != 0"
+          class="row q-pt-lg"
+        >
           <div class="col-12 col-md-6 q-pl-md">
-            <p class="text-h6 text-primary">Children White Garment Without Cap Hanging</p>
+            <p class="text-h6 text-primary">
+              Children White Garment Without Cap Hanging
+            </p>
           </div>
           <div class="col-12 col-md-2 q-pl-md">
             <p class="text-subtitle1">
@@ -21302,6 +21385,16 @@
         </div>
       </div>
       <div class="row q-pt-md">
+        <div class="col-12 col-md-6 q-pl-md">
+          <p class="text-h6">Addon:</p>
+          {{ addon }}
+        </div>
+        <div class="col-12 col-md-6 q-pl-md">
+          <p class="text-h6">Addon Amount:</p>
+          ₦{{ addon_amount }}
+        </div>
+      </div>
+      <div class="row q-pt-md">
         <div class="col-12 col-md-4 q-pl-md">
           <p class="text-h6">Discount:</p>
           {{ discount }}%
@@ -21448,6 +21541,8 @@ const comment_section = ref("");
 const discount = ref("");
 const deposit = ref(0);
 const deposit_type = ref("");
+const addon = ref("");
+const addon_amount = ref(0);
 const optionsDepositType = ["POS", "CASH", "BANK TRANSFER"];
 
 const quan_male_native_2pcs_folding_colored = ref(0);
@@ -22736,22 +22831,54 @@ const onSubmit = () => {
     ),
     quantity_gown_native_folding_white: Number(gown_native_folding_white.value),
     gown_native_folding_white: Number(total_gown_native_folding_white.value),
-    quantity_adult_white_garment_folding_with_cap: Number(adult_white_garment_folding_with_cap.value),
-    adult_white_garment_folding_with_cap: Number(total_adult_white_garment_folding_with_cap.value),
-    quantity_adult_white_garment_folding_without_cap: Number(adult_white_garment_folding_without_cap.value),
-    adult_white_garment_folding_without_cap: Number(total_adult_white_garment_folding_without_cap.value),
-    quantity_adult_white_garment_hanging_with_cap: Number(adult_white_garment_hanging_with_cap.value),
-    adult_white_garment_hanging_with_cap: Number(total_adult_white_garment_hanging_with_cap.value),
-    quantity_adult_white_garment_hanging_without_cap: Number(adult_white_garment_hanging_without_cap.value),
-    adult_white_garment_hanging_without_cap: Number(total_adult_white_garment_hanging_without_cap.value),
-    quantity_children_white_garment_folding_with_cap: Number(children_white_garment_folding_with_cap.value),
-    children_white_garment_folding_with_cap: Number(total_children_white_garment_folding_with_cap.value),
-    quantity_children_white_garment_folding_without_cap: Number(children_white_garment_folding_without_cap.value),
-    children_white_garment_folding_without_cap: Number(total_children_white_garment_folding_without_cap.value),
-    quantity_children_white_garment_hanging_with_cap: Number(children_white_garment_hanging_with_cap.value),
-    children_white_garment_hanging_with_cap: Number(total_children_white_garment_hanging_with_cap.value),
-    quantity_children_white_garment_hanging_without_cap: Number(children_white_garment_hanging_without_cap.value),
-    children_white_garment_hanging_without_cap: Number(total_children_white_garment_hanging_without_cap.value),
+    quantity_adult_white_garment_folding_with_cap: Number(
+      adult_white_garment_folding_with_cap.value
+    ),
+    adult_white_garment_folding_with_cap: Number(
+      total_adult_white_garment_folding_with_cap.value
+    ),
+    quantity_adult_white_garment_folding_without_cap: Number(
+      adult_white_garment_folding_without_cap.value
+    ),
+    adult_white_garment_folding_without_cap: Number(
+      total_adult_white_garment_folding_without_cap.value
+    ),
+    quantity_adult_white_garment_hanging_with_cap: Number(
+      adult_white_garment_hanging_with_cap.value
+    ),
+    adult_white_garment_hanging_with_cap: Number(
+      total_adult_white_garment_hanging_with_cap.value
+    ),
+    quantity_adult_white_garment_hanging_without_cap: Number(
+      adult_white_garment_hanging_without_cap.value
+    ),
+    adult_white_garment_hanging_without_cap: Number(
+      total_adult_white_garment_hanging_without_cap.value
+    ),
+    quantity_children_white_garment_folding_with_cap: Number(
+      children_white_garment_folding_with_cap.value
+    ),
+    children_white_garment_folding_with_cap: Number(
+      total_children_white_garment_folding_with_cap.value
+    ),
+    quantity_children_white_garment_folding_without_cap: Number(
+      children_white_garment_folding_without_cap.value
+    ),
+    children_white_garment_folding_without_cap: Number(
+      total_children_white_garment_folding_without_cap.value
+    ),
+    quantity_children_white_garment_hanging_with_cap: Number(
+      children_white_garment_hanging_with_cap.value
+    ),
+    children_white_garment_hanging_with_cap: Number(
+      total_children_white_garment_hanging_with_cap.value
+    ),
+    quantity_children_white_garment_hanging_without_cap: Number(
+      children_white_garment_hanging_without_cap.value
+    ),
+    children_white_garment_hanging_without_cap: Number(
+      total_children_white_garment_hanging_without_cap.value
+    ),
     //6th page
     quantity_skirt_and_blouse_english_hanging_colored: Number(
       skirt_and_blouse_english_hanging_colored.value
@@ -22872,6 +22999,8 @@ const onSubmit = () => {
     collected_on: collected_on_date.value + " " + collected_on_time.value,
     comment_section: comment_section.value,
     discount: discount.value,
+    addon: addon.value,
+    addon_amount: addon_amount.value.toString(),
     deposit: deposit.value.toString(),
     deposit_type: deposit_type.value,
     final_amount: total_final_amount.value.toString(),

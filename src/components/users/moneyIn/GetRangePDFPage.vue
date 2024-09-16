@@ -232,13 +232,6 @@ import { useUserStore } from "../../../stores/user-store";
 import { jsPDF } from "jspdf";
 import autoTable from "jspdf-autotable";
 
-// Create a new jsPDF instance
-const doc = new jsPDF({
-  orientation: "landscape",
-  // unit: "in",
-  // format: [4, 2]
-});
-
 const name = "GetRangePDFPage";
 
 // const processDownload = ref(false);
@@ -246,7 +239,7 @@ const name = "GetRangePDFPage";
 // const moneyInDownload = ref(false);
 const loading = ref(false);
 const $q = useQuasar();
-const da = ref([]);
+// const da = ref([]);
 const processData = ref([]);
 const paymentData = ref([]);
 const moneyInData = ref([]);
@@ -270,7 +263,7 @@ const onProcessSubmit = () => {
     })
     .then((response) => {
       // console.log(response.data, "gotten process");
-      da.value = response.data.data;
+      const data = response.data.data;
       // processData.value = da;
       // quantity.value = response.data.total_quantity;
       // console.log(quantity.value, "quantity 1");
@@ -298,7 +291,7 @@ const onProcessSubmit = () => {
       //   }
       // }
 
-      processData.value = da.value.reverse();
+      processData.value = data.reverse();
       // console.log(processData.value, "processData");
       // console.log(quantity.value, "quantity 2");
       $q.notify({
@@ -335,7 +328,7 @@ const onPaymentSubmit = () => {
     })
     .then((response) => {
       // console.log(response.data, "gotten it");
-      da.value = response.data.data;
+      const data = response.data.data;
       // quantity.value = response.data.total_quantity;
       // console.log(quantity.value, "quantity 1");
 
@@ -362,7 +355,7 @@ const onPaymentSubmit = () => {
       //   }
       // }
 
-      paymentData.value = da.value.reverse();
+      paymentData.value = data.reverse();
       // console.log(paymentData.value, "paymentData");
       // console.log(quantity.value, "quantity 2");
       $q.notify({
@@ -399,7 +392,7 @@ const onMoneyInSubmit = () => {
     })
     .then((response) => {
       // console.log(response.data, "gotten it");
-      da.value = response.data.data;
+      const data = response.data.data;
       // quantity.value = response.data.total_quantity;
       // console.log(quantity.value, "quantity 1");
 
@@ -426,7 +419,7 @@ const onMoneyInSubmit = () => {
       //   }
       // }
 
-      moneyInData.value = da.value.reverse();
+      moneyInData.value = data.reverse();
       // console.log(moneyInData.value, "moneyInData");
       // console.log(quantity.value, "quantity 2");
       $q.notify({
@@ -518,13 +511,20 @@ function getFormattedDate2() {
 }
 
 const processReport = (_type) => {
+  // Create a new jsPDF instance
+  const doc = new jsPDF({
+    orientation: "landscape",
+    // unit: "in",
+    // format: [4, 2]
+  });
+
   // Use autoTable to create the main table
   const date = getFormattedDate();
   const actualData = getFormattedDate2();
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -534,9 +534,9 @@ const processReport = (_type) => {
   doc.setFont("times", "normal");
 
   doc.setFont("helvetica", "bold");
-  doc.text("Process Report", 105, 85, null, null, "center");
+  doc.text("Process Report", 150, 45, null, null, "center");
   doc.setLineWidth(1);
-  doc.line(130, 87, 80, 87);
+  doc.line(180, 48, 120, 48);
   doc.setFont("courier", "normal");
 
   // Extract the header and body data
@@ -581,7 +581,7 @@ const processReport = (_type) => {
   autoTable(doc, {
     head: header,
     body: theBody,
-    startY: 40, // Start the table 20mm from the top of the page
+    startY: 60, // Start the table 20mm from the top of the page
     // theme: "grid", // Grid style
     // tableWidth: "wrap",
     headStyles: {
@@ -623,17 +623,26 @@ const processReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  paymentData.value = [];
+  moneyInData.value = [];
   processData.value = [];
 };
 
 const paymentReport = (_type) => {
+  // Create a new jsPDF instance
+  const doc = new jsPDF({
+    orientation: "landscape",
+    // unit: "in",
+    // format: [4, 2]
+  });
+
   // Use autoTable to create the main table
   const date = getFormattedDate();
   const actualData = getFormattedDate2();
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -643,9 +652,9 @@ const paymentReport = (_type) => {
   doc.setFont("times", "normal");
 
   doc.setFont("helvetica", "bold");
-  doc.text("Payment Report", 105, 85, null, null, "center");
+  doc.text("Payment Report", 150, 45, null, null, "center");
   doc.setLineWidth(1);
-  doc.line(130, 87, 80, 87);
+  doc.line(180, 48, 120, 48);
   doc.setFont("courier", "normal");
 
   // Extract the header and body data
@@ -696,7 +705,7 @@ const paymentReport = (_type) => {
   autoTable(doc, {
     head: header,
     body: theBody,
-    startY: 40, // Start the table 20mm from the top of the page
+    startY: 60, // Start the table 20mm from the top of the page
     // theme: "grid", // Grid style
     // tableWidth: "wrap",
     headStyles: {
@@ -738,17 +747,26 @@ const paymentReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  moneyInData.value = [];
+  processData.value = [];
   paymentData.value = [];
 };
 
 const moneyInReport = (_type) => {
+  // Create a new jsPDF instance
+  const doc = new jsPDF({
+    orientation: "landscape",
+    // unit: "in",
+    // format: [4, 2]
+  });
+
   // Use autoTable to create the main table
   const date = getFormattedDate();
   const actualData = getFormattedDate2();
 
   // doc.addImage("src/assets/logo.png", "PNG", 10, 10, 60, 30);
   // doc.addImage("src/assets/a3.jpeg", "JPEG", 10, 10, 60, 30);
-  doc.addImage("src/assets/Six_Stars_2.jpeg", "JPEG", 15, 10, 60, 30);
+  doc.addImage("src/assets/Six_Stars.jpeg", "JPEG", 15, 10, 60, 30);
   // Adding the logo as a header
   // const logo = "src/assets/logo.png";
   // doc.addImage(logo, "PNG", 10, 10, 50, 20);
@@ -758,9 +776,9 @@ const moneyInReport = (_type) => {
   doc.setFont("times", "normal");
 
   doc.setFont("helvetica", "bold");
-  doc.text("Money In Report", 105, 85, null, null, "center");
+  doc.text("Money In Report", 150, 45, null, null, "center");
   doc.setLineWidth(1);
-  doc.line(130, 87, 80, 87);
+  doc.line(180, 48, 120, 48);
   doc.setFont("courier", "normal");
 
   // Extract the header and body data
@@ -801,7 +819,7 @@ const moneyInReport = (_type) => {
   autoTable(doc, {
     head: header,
     body: theBody,
-    startY: 40, // Start the table 20mm from the top of the page
+    startY: 60, // Start the table 20mm from the top of the page
     // theme: "grid", // Grid style
     // tableWidth: "wrap",
     headStyles: {
@@ -843,6 +861,8 @@ const moneyInReport = (_type) => {
 
   // Save the PDF
   doc.save(_type + date + ".pdf");
+  processData.value = [];
+  paymentData.value = [];
   moneyInData.value = [];
 };
 </script>
