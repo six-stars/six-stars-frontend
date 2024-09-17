@@ -4,25 +4,31 @@
       class="my-sticky-header-table"
       title="All Payments"
       :rows="data"
-      row-key="CreatedAt"
       flat
       bordered
       :columns="columns"
       :loading="true"
       :filter="filter"
+      row-key="name"
       :pagination="pagination"
+      :rows-per-page-options="[5, 10, 15, 20, 50]"
       @request="handleTableRequest"
     >
       <template v-slot:body="props">
         <q-tr :props="props" @click="onRowClick(props.row)">
-          <q-td key="created_at" :props="props">
+          <!-- <q-td key="created_at" :props="props">
             <q-badge color="green">
               {{ props.row.created_at }}
             </q-badge>
-          </q-td>
+          </q-td> -->
           <q-td key="name" :props="props">
-            {{ props.row.name }}
+            <q-badge color="green">
+              {{ props.row.name }}
+            </q-badge>
           </q-td>
+          <!-- <q-td key="name" :props="props">
+            {{ props.row.name }}
+          </q-td> -->
           <q-td key="sent" :props="props">
             {{ props.row.sent }}
           </q-td>
@@ -41,12 +47,12 @@
           <q-td key="views" :props="props">
             {{ props.row.views }}
           </q-td>
-          <q-td ellipsis key="clicks" :props="props">
+          <q-td key="clicks" :props="props">
             {{ props.row.clicks }}
           </q-td>
-          <q-td key="body" :props="props">
+          <!-- <q-td key="body" :props="props">
             {{ props.row.body }}
-          </q-td>
+          </q-td> -->
         </q-tr>
       </template>
       <template v-slot:top-right>
@@ -79,6 +85,11 @@ let filter = ref("");
 const $q = useQuasar();
 const useStore = useUserStore();
 const data = ref([]);
+// Set pagination
+const pagination = ref({
+  page: 1,
+  rowsPerPage: 15, // Set default rows per page to 15
+});
 // const dataMore = ref([]);
 // const moreDetails = ref(false);
 // const pageEnd = ref(false);
@@ -89,7 +100,7 @@ const data = ref([]);
 // ];
 
 const columns = [
-  { name: "created_at", label: "Created At", field: "created_at" },
+  // { name: "created_at", label: "Created At", field: "created_at" },
   { name: "name", label: "Name", field: "name" },
   { name: "sent", label: "Sent", field: "sent" },
   { name: "fails", label: "Fails", field: "fails" },
@@ -106,11 +117,11 @@ const columns = [
     label: "Clicks",
     field: "clicks",
   },
-  {
-    name: "body",
-    label: "Body",
-    field: "body",
-  },
+  // {
+  //   name: "body",
+  //   label: "Body",
+  //   field: "body",
+  // },
 ];
 
 // const onRowClick = (row) => {
