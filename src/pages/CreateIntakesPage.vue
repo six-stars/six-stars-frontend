@@ -8082,7 +8082,7 @@
                   class=""
                   v-model="addon_amount"
                   outlined
-                  type="number"
+                  type="text"
                 />
               </div>
             </div>
@@ -16423,7 +16423,7 @@
             </div>
             <div class="col-12 col-md-6 q-pl-md">
               <p class="text-subtitle1 text-center">Addon Amount:</p>
-              <q-input class="" v-model="addon_amount" outlined type="number" />
+              <q-input class="" v-model="addon_amount" outlined type="text" />
             </div>
           </div>
           <q-separator />
@@ -21542,7 +21542,7 @@ const discount = ref("");
 const deposit = ref(0);
 const deposit_type = ref("");
 const addon = ref("");
-const addon_amount = ref(0);
+const addon_amount = ref("");
 const optionsDepositType = ["POS", "CASH", "BANK TRANSFER"];
 
 const quan_male_native_2pcs_folding_colored = ref(0);
@@ -23000,7 +23000,7 @@ const onSubmit = () => {
     comment_section: comment_section.value,
     discount: discount.value,
     addon: addon.value,
-    addon_amount: addon_amount.value.toString(),
+    addon_amount: addon_amount.value,
     deposit: deposit.value.toString(),
     deposit_type: deposit_type.value,
     final_amount: total_final_amount.value.toString(),

@@ -11,6 +11,7 @@
           align="left"
           narrow-indicator
         >
+          <q-tab name="your_notify_report" label="YourNotify Report" />
           <q-tab name="see_resend_message" label="See all Message Sent" />
           <q-tab name="search_resend_message" label="Search for a Message" />
         </q-tabs>
@@ -18,6 +19,9 @@
         <q-separator />
 
         <q-tab-panels v-model="tab" animated>
+          <q-tab-panel name="your_notify_report">
+            <YourNotifyReportPage />
+          </q-tab-panel>
           <q-tab-panel name="see_resend_message">
             <AllResendMessagePage />
           </q-tab-panel>
@@ -33,6 +37,7 @@
 
 <script setup>
 import { watch, ref } from "vue";
+import YourNotifyReportPage from "src/components/resendmessage/YourNotifyReportPage.vue";
 import AllResendMessagePage from "src/components/resendmessage/AllResendMessagePage.vue";
 import GetOneResendMessage from "src/components/resendmessage/GetOneResendMessage.vue";
 // import CreateIntakesPage from 'src/components/intakes/CreateIntakesPage.vue'
@@ -59,7 +64,7 @@ watch(() => {
 });
 
 const name = "ResendMessagePage";
-const tab = ref("see_resend_message");
+const tab = ref("your_notify_report");
 </script>
 
 <style lang="sass" scoped></style>
