@@ -8078,12 +8078,7 @@
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <p class="text-subtitle1 text-center">Addon Amount:</p>
-                <q-input
-                  class=""
-                  v-model="addon_amount"
-                  outlined
-                  type="text"
-                />
+                <q-input class="" v-model="addon_amount" outlined type="text" />
               </div>
             </div>
             <q-separator />
@@ -23003,6 +22998,11 @@ const onSubmit = () => {
     addon_amount: addon_amount.value,
     deposit: deposit.value.toString(),
     deposit_type: deposit_type.value,
+    balance: calculateBalance(
+      Number(discount.value),
+      Number(deposit.value),
+      Number(total_final_amount.value)
+    ).toString(),
     final_amount: total_final_amount.value.toString(),
   };
 
@@ -23115,6 +23115,24 @@ const onSubmit = () => {
       });
       isloading.value = false;
     });
+};
+
+// Function to calculate the balance
+const calculateBalance = (discount, deposit, amount) => {
+  const amt = parseFloat(amount) || 0;
+  const dep = parseFloat(deposit) || 0;
+  let disc = parseFloat(discount) || 0;
+
+  // Ensure the discount is between 0 and 100
+  disc = disc > 0 && disc <= 100 ? disc : 0;
+
+  // Calculate discounted amount
+  const discountedAmount = amt - amt * (disc / 100);
+
+  // Calculate the final balance
+  const _balance_ = discountedAmount - dep;
+  console.log(_balance_, "_balance_");
+  return _balance_;
 };
 
 const continue_ = () => {
