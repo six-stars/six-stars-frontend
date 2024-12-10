@@ -163,6 +163,11 @@
               <template v-slot:before>
                 <q-tabs v-model="innerTab3" vertical class="text-primary">
                   <q-tab
+                    name="innerEntireMoneyIn"
+                    icon="visibility"
+                    label="Entire MoneyIn"
+                  />
+                  <q-tab
                     name="innerAllMoneyIn"
                     icon="visibility"
                     label="See All MoneyIn"
@@ -187,6 +192,10 @@
                   transition-prev="slide-down"
                   transition-next="slide-up"
                 >
+                  <q-tab-panel name="innerEntireMoneyIn">
+                    <EntireMoneyInPage />
+                  </q-tab-panel>
+
                   <q-tab-panel name="innerAllMoneyIn">
                     <AllMoneyInPage />
                   </q-tab-panel>
@@ -322,6 +331,7 @@ import GetOnePricePage from "src/components/users/prices/GetOnePricePage.vue";
 import AllCompletedWorkPage from "src/components/users/completed_work/AllCompletedWorkPage.vue";
 import GetOneIntakeCompletedPage from "src/components/users/completed_work/GetOneIntakeCompletedPage.vue";
 import GetQuantityOfCompletedWorkPage from "src/components/users/completed_work/GetQuantityOfCompletedWorkPage.vue";
+import EntireMoneyInPage from "src/components/users/moneyIn/EntireMoneyInPage.vue";
 import AllMoneyInPage from "src/components/users/moneyIn/AllMoneyInPage.vue";
 import GetOneIntakeMoneyInPage from "src/components/users/moneyIn/GetOneIntakeMoneyInPage.vue";
 import GetRangePDFPage from "src/components/users/moneyIn/GetRangePDFPage.vue";
