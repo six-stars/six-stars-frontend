@@ -13,13 +13,13 @@
         :columns="columns"
         :loading="true"
         :filter="filter"
-        :rows-per-page="10"
+        @request="handleTableRequest"
+      >
+        <!-- :rows-per-page="10"
         :total-rows="totalRows"
         :pagination="{
           rowsPerPageOptions: [10, 20, 50, 100],
-        }"
-        @request="handleTableRequest"
-      >
+        }" -->
         <!-- :visible-columns="[
           'intake_id',
           'customer',
