@@ -13,9 +13,13 @@
         :columns="columns"
         :loading="true"
         :filter="filter"
+        :rows-per-page="10"
+        :total-rows="totalRows"
+        :pagination="{
+          rowsPerPageOptions: [10, 20, 50, 100],
+        }"
         @request="handleTableRequest"
       >
-        <!-- :pagination="pagination" -->
         <!-- :visible-columns="[
           'intake_id',
           'customer',
@@ -90,6 +94,7 @@ const selectedMoneyIn = reactive([]);
 const selectedMoneyInPopup1 = ref({});
 const selectedMoneyInPopup2 = ref({});
 const pageEnd = ref(false);
+const totalRows = ref(100);
 
 const columns = [
   { name: "intake_id", label: "Intake ID", field: "intake_id" },
