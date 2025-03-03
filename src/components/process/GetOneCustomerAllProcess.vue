@@ -1,141 +1,105 @@
 <template>
-  <div class="q-pa-md">
-    <q-table
-      class="my-sticky-header-table"
-      title="All Processes"
-      :rows="data"
-      row-key="CreatedAt"
-      flat
-      bordered
-      :columns="columns"
-      :loading="true"
-      :filter="filter"
-      :pagination="pagination"
-      @request="handleTableRequest"
-    >
-      <template v-slot:body="props">
-        <q-tr :props="props" @click="onRowClick(props.row)">
-          <q-td key="collected_on" :props="props">
-            {{ props.row.collected_on }}
-          </q-td>
-          <q-td key="intake_id" :props="props">
-            <q-badge color="green">
-              {{ props.row.intake_id }}
-            </q-badge>
-          </q-td>
-          <q-td key="collection_date" :props="props">
-            {{ props.row.collection_date }}
-          </q-td>
-          <q-td key="customer" :props="props">
-            {{ props.row.customer }}
-          </q-td>
-          <q-td key="staff_name" :props="props">
-            {{ props.row.staff_name }}
-          </q-td>
-          <q-td key="quantity" :props="props">
-            {{ props.row.quantity }}
-          </q-td>
-          <q-td key="washing_stage" :props="props">
-            {{ props.row.washing_stage }}
-          </q-td>
-          <q-td key="ironing_stage" :props="props">
-            {{ props.row.ironing_stage }}
-          </q-td>
-          <q-td key="packing_stage" :props="props">
-            {{ props.row.packing_stage }}
-          </q-td>
-          <q-td key="stored_at" :props="props">
-            {{ props.row.stored_at }}
-          </q-td>
-          <q-td key="ready" :props="props">
-            {{ props.row.ready }}
-          </q-td>
-          <q-td key="customer_collected" :props="props">
-            {{ props.row.customer_collected }}
-          </q-td>
-        </q-tr>
-      </template>
-      <template v-slot:top-right>
-        <q-input
-          borderless
-          dense
-          debounce="300"
-          v-model="filter"
-          placeholder="Search"
+  <q-page class="q-pa-md">
+    <!-- <div class="text-black text-h4">Search User</div>
+    <q-separator /> -->
+    <div class="q-gutter-y-md" fullwidth>
+      <div class="q-pt-sm">
+        <q-form @submit="onSubmit" @reset="onReset" class="">
+          <div class="col-8 q-pl-md">
+            <q-input
+              label="Customer Phone Number"
+              class=""
+              outlined
+              v-model="customer_phone"
+              hint="example 2349084293029"
+            />
+          </div>
+          <div class="col-4 q-pl-md q-mt-md">
+            <q-btn class="bg-primary text-white" type="submit">Search</q-btn>
+          </div>
+        </q-form>
+      </div>
+      <div class="q-pa-md row items-start q-gutter-md" v-if="fixed0">
+        <q-chip
+          clickable
+          v-for="(theData, i) in _data"
+          :key="i"
+          @click="popup1(theData)"
+          color="primary"
+          text-color="white"
         >
-          <template v-slot:append>
-            <q-icon name="search" />
-          </template>
-        </q-input>
-      </template>
-    </q-table>
-    <!-- :visible-columns="['created_at', 'updated_at', 'deleted_at']" -->
+          {{ theData.intake_id }}&nbsp;
+          <q-badge color="blue"> Quantity: {{ theData.quantity }} </q-badge>
+        </q-chip>
+        <!-- <q-card class="my-card" v-for="(theData, i) in _data" :key="i">
+          <q-card-section class="bg-primary text-white">
+            <div class="text-h6">{{ theData.intake_id }}</div>
+            <div class="text-subtitle1">Quantity: {{ theData.quantity }}</div>
+            <div class="text-subtitle2">
+              Collection Date:
+              {{ theData.collection_date }}
+            </div>
+          </q-card-section>
 
-    <div class="text-right full-width q-pl-md">
-      <q-btn
-        v-if="pagination.page > 1"
-        rounded
-        color="secondary"
-        label="Previous Page"
-        @click="handlePreviousPage"
-      />
-      <q-btn
-        v-if="pageEnd == true"
-        rounded
-        color="primary"
-        label="Next Page"
-        @click="handleNextPage"
-      />
-    </div>
+          <q-separator />
 
-    <q-dialog v-model="moreDetails">
-      <div class="my-card-2 text-primary">
-        <q-card>
+          <q-card-actions align="right">
+            <q-btn flat @click="popup1(theData)">See Details</q-btn>
+          </q-card-actions>
+        </q-card> -->
+      </div>
+
+      <div class="q-pa-md row items-start q-gutter-md" v-if="fixed1">
+        <q-card class="my-card-2 text-primary">
           <q-card-section>
             <!-- <div class="row q-pt-sm">
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
-                <div class="text-h6">{{ formatDate(dataMore.CreatedAt) }}</div>
-              </div>
-              <div class="col-12 col-md-6 q-pl-md">
-                <div class="text-subtitle2  bg-teal-9 text-white">Customer Phone</div>
-                <div class="text-h6">{{ dataMore.customer_phone }}</div>
-              </div>
-            </div> -->
+                      <div class="col-12 col-md-6 q-pl-md">
+                        <div class="text-subtitle2  bg-teal-9 text-white">Created At</div>
+                        <div class="text-h6">{{ formatDate(selectedCustomerPopup.CreatedAt) }}</div>
+                      </div>
+                      <div class="col-12 col-md-6 q-pl-md">
+                        <div class="text-subtitle2  bg-teal-9 text-white">Customer Phone</div>
+                        <div class="text-h6">{{ selectedCustomerPopup.customer_phone }}</div>
+                      </div>
+                    </div> -->
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Collected On
                 </div>
                 <div class="text-h6">
-                  {{ dataMore.collected_on }}
+                  {{ formatDate(selectedCustomerPopup.collected_on) }}
                 </div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Collection Date
                 </div>
-                <div class="text-h6">{{ dataMore.collection_date }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.collection_date }}
+                </div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Customer</div>
-                <div class="text-h6">{{ dataMore.customer }}</div>
+                <div class="text-h6">{{ selectedCustomerPopup.customer }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Intake ID</div>
-                <div class="text-h6">{{ dataMore.intake_id }}</div>
+                <div class="text-h6">{{ selectedCustomerPopup.intake_id }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Quantity</div>
-                <div class="text-h6">{{ dataMore.quantity }}</div>
+                <div class="text-h6">{{ selectedCustomerPopup.quantity }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Staff</div>
-                <div class="text-h6">{{ dataMore.staff_name }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.staff_name }}
+                </div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -143,13 +107,17 @@
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Washing Stage
                 </div>
-                <div class="text-h6">{{ dataMore.washing_stage }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.washing_stage }}
+                </div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Ironing Stage
                 </div>
-                <div class="text-h6">{{ dataMore.ironing_stage }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.ironing_stage }}
+                </div>
               </div>
             </div>
             <div class="row q-pt-sm">
@@ -157,23 +125,27 @@
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Packing Stage
                 </div>
-                <div class="text-h6">{{ dataMore.packing_stage }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.packing_stage }}
+                </div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Ready?</div>
-                <div class="text-h6">{{ dataMore.ready }}</div>
+                <div class="text-h6">{{ selectedCustomerPopup.ready }}</div>
               </div>
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">Stored At</div>
-                <div class="text-h6">{{ dataMore.stored_at }}</div>
+                <div class="text-h6">{{ selectedCustomerPopup.stored_at }}</div>
               </div>
               <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Customer Collected
                 </div>
-                <div class="text-h6">{{ dataMore.customer_collected }}</div>
+                <div class="text-h6">
+                  {{ selectedCustomerPopup.customer_collected }}
+                </div>
               </div>
             </div>
           </q-card-section>
@@ -182,9 +154,9 @@
           <q-card-section>
             <q-select
               v-if="
-                dataMore.washing_stage_status == true &&
-                dataMore.ironing_stage_status == true &&
-                dataMore.packing_stage_status == false
+                selectedCustomerPopup.washing_stage_status == true &&
+                selectedCustomerPopup.ironing_stage_status == true &&
+                selectedCustomerPopup.packing_stage_status == false
               "
               outlined
               v-model="storedAt"
@@ -197,40 +169,36 @@
 
           <q-card-actions align="right">
             <q-btn
-              class="bg-teal-9 text-white"
               v-show="show1"
-              @click="onUpdate(dataMore, 'washing')"
-              flat
+              @click="onUpdate(selectedCustomerPopup, 'washing')"
+              class="bg-teal-9 text-white"
               >Washing Stage</q-btn
             >
             <q-btn
-              class="bg-teal-9 text-white"
               v-show="show2"
-              @click="onUpdate(dataMore, 'ironing')"
-              flat
+              @click="onUpdate(selectedCustomerPopup, 'ironing')"
+              class="bg-teal-9 text-white"
               >Ironing Stage</q-btn
             >
             <q-btn
               :disable="!storedAt"
-              class="bg-teal-9 text-white"
               v-show="show3"
-              @click="onUpdate(dataMore, 'packing')"
-              flat
+              @click="onUpdate(selectedCustomerPopup, 'packing')"
+              class="bg-teal-9 text-white"
               >Packing Stage</q-btn
             >
             <q-btn
               :disable="show3 == true"
-              color="red"
               v-show="show4"
-              @click="onUpdate(dataMore, 'ready')"
-              flat
+              @click="onUpdate(selectedCustomerPopup, 'ready')"
+              class="bg-teal-9 text-white"
               >Ready</q-btn
             >
           </q-card-actions>
         </q-card>
       </div>
-    </q-dialog>
-  </div>
+    </div>
+  </q-page>
 </template>
 
 <script setup>
@@ -240,19 +208,17 @@ import { copyToClipboard, useQuasar } from "quasar";
 import { useUserStore } from "../../stores/user-store";
 import { useRouter } from "vue-router";
 
-name: "AllProcessPage";
+const name = "GetOneCustomerAllProcess";
 
-let filter = ref("");
-const $q = useQuasar();
-const useStore = useUserStore();
-const data = ref([]);
-const dataMore = ref([]);
-const moreDetails = ref(false);
+const fixed0 = ref(false);
+const fixed1 = ref(false);
 const show1 = ref(false);
 const show2 = ref(false);
 const show3 = ref(false);
 const show4 = ref(false);
-const pageEnd = ref(false);
+const $q = useQuasar();
+const _data = ref([]);
+const data4 = ref([]);
 const storedAt = ref("");
 const storedOptions = ref([
   "Blue iron bord (room 1)",
@@ -268,6 +234,13 @@ const storedOptions = ref([
   "Hanger (room  2)",
 ]);
 
+const $router = useRouter();
+const customer_phone = ref("");
+// const dateTime = ref("")
+const useStore = useUserStore();
+const selectedCustomer = reactive([]);
+const selectedCustomerPopup = ref({});
+
 function formatDate(date) {
   const now = new Date(date);
   const year = now.getFullYear();
@@ -279,113 +252,63 @@ function formatDate(date) {
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
 
-const columns = [
-  { name: "collected_on", label: "Collected On", field: "collected_on" },
-  { name: "intake_id", label: "Intake ID", field: "intake_id" },
-  {
-    name: "collection_date",
-    label: "Collection Date",
-    field: "collection_date",
-  },
-  { name: "customer", label: "Customer", field: "customer" },
-  { name: "staff_name", label: "Staff Name", field: "staff_name" },
-  { name: "quantity", label: "Quantity", field: "quantity" },
-  { name: "washing_stage", label: "Washing Stage", field: "washing_stage" },
-  { name: "ironing_stage", label: "Ironing Stage", field: "ironing_stage" },
-  { name: "packing_stage", label: "Packing Stage", field: "packing_stage" },
-  { name: "stored_at", label: "Stored At", field: "stored_at" },
-  { name: "ready", label: "Ready", field: "ready" },
-  {
-    name: "customer_collected",
-    label: "Customer Collected",
-    field: "customer_collected",
-  },
-];
-
-const onRowClick = (row) => {
+function popup1(selectedCustomer) {
   const user_type = useStore.getUser_type;
-  show1.value = false;
-  show2.value = false;
-  show3.value = false;
-  show4.value = false;
-
-  moreDetails.value = true;
-  dataMore.value = row;
-  if (dataMore.value.washing_stage_status == false) {
+  fixed1.value = true;
+  // console.log(selectedCustomer, 'selectedCustomer')
+  selectedCustomerPopup.value = selectedCustomer;
+  // console.log(selectedCustomerPopup.value, 'selectedCustomerPopup value')
+  if (selectedCustomerPopup.value.washing_stage_status == false) {
     show1.value = true;
   }
-  if (dataMore.value.ironing_stage_status == false) {
+  if (selectedCustomerPopup.value.ironing_stage_status == false) {
     show2.value = true;
   }
-  if (dataMore.value.packing_stage_status == false) {
+  if (selectedCustomerPopup.value.packing_stage_status == false) {
     show3.value = true;
   }
   if (
-    (dataMore.value.ready_status == false && user_type == "Manager") ||
-    (dataMore.value.ready_status == false && user_type == "Super_Admin")
+    (selectedCustomerPopup.value.ready_status == false &&
+      user_type == "Manager") ||
+    (selectedCustomerPopup.value.ready_status == false &&
+      user_type == "Super_Admin")
   ) {
     show4.value = true;
   }
-};
+}
 
-const pagination = ref({
-  sortBy: "CreatedAt", // Set default sort field
-  descending: false,
-  page: 1,
-  rowsPerPage: 10,
-});
-
-const loadData = (pageNumber) => {
+const onSubmit = () => {
   const token = useStore.getToken;
-  console.log(token, "token");
-  api
-    .get(`/process/all/${pageNumber}`, {
+  $q.loading.show({
+    message: "Some important process  is in progress. Hang on...",
+  });
+
+  axios
+    .get(`${base}/process/search/${customer_phone.value}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
     .then((response) => {
-      data.value = response.data.data;
-      pageEnd.value = response.data.has_next;
-      console.log(data.value, "yello!");
+      _data.value = response.data.data.reverse();
+      console.log(_data.value);
+      $q.notify({
+        color: "green-4",
+        textColor: "white",
+        icon: "thumb_up",
+        message: "Process Found",
+      });
+      fixed0.value = true;
+      $q.loading.hide();
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log(e, "e");
       $q.notify({
         color: "negative",
         position: "bottom",
-        message: "Please refresh page",
+        message: "Process not found",
         icon: "report_problem",
       });
+      $q.loading.hide();
     });
-};
-
-const handleTableRequest = (params) => {
-  pagination.value = { ...params.pagination, rowsPerPage: 10 }; // Ensure rowsPerPage is 10
-  fetchData(pagination.value.page);
-};
-
-const handlePreviousPage = () => {
-  $q.loading.show({
-    message: "Loading. Please wait...",
-    boxClass: "bg-grey-2 text-grey-9",
-    spinnerColor: "primary",
-  });
-  if (pagination.value.page > 1) {
-    pagination.value.page--;
-    loadData(pagination.value.page);
-  }
-  $q.loading.hide();
-};
-
-const handleNextPage = () => {
-  $q.loading.show({
-    message: "Loading. Please wait...",
-    boxClass: "bg-grey-2 text-grey-9",
-    spinnerColor: "primary",
-  });
-  if (pageEnd.value == true) {
-    pagination.value.page++;
-    loadData(pagination.value.page);
-  }
-  $q.loading.hide();
 };
 
 const onUpdate = (process, stage) => {
@@ -574,35 +497,48 @@ const onUpdate = (process, stage) => {
   }
 };
 
-onMounted(() => {
-  loadData(pagination.value.page);
-});
+const onReset = () => {
+  customer_phone.value = null;
+};
 </script>
 
-<style lang="sass">
-.my-sticky-header-table
-  /* height or max-height is important */
-  height: 510px
-
-  .q-table__top,
-  .q-table__bottom,
-  thead tr:first-child th
-    /* bg color is important for th; just specify one */
-    background-color: $primary
-    color: $white
-    /* background-color: #c1f4cd */
-
-  thead
-    color: $white
-
-  thead tr th
-    position: sticky
-    z-index: 1
-  thead tr:first-child th
-    top: 0
-
-  /* this is when the loading indicator appears */
-  &.q-table--loading thead tr:last-child th
-    /* height of all previous header rows */
-    top: 48px
+<style lang="sass" scoped>
+.my-card
+  width: 100%
+  max-width: 250px
+.my-card-2
+  width: 100%
+.siz
+  width: 100%
+  max-width: 250px
+  height: 100%
+.siz1
+  width: 250px
+  max-width: 250px
+  height: 150px
+  margin-top: -8px
+.bgPropfunds
+  background-color: $propfunds
+select
+  margin-top: 10px
+  margin-right: 10px
+  padding: 15px 10px
+  background: rgba(196, 196, 196, 0.1)
+  border: 2px solid grey
+  border-radius: 4px
+  outline: none
+  width: 540px
+.btn2
+  border: none
+  border-radius: 3px
+  font-weight: 500
+  font-size: 18px
+  height: 40px
+  margin-right: 10px
+  background-color: #001951
+  color: white
+  cursor: pointer
+.is-s
+  background-color: #001951
+  color: white
 </style>

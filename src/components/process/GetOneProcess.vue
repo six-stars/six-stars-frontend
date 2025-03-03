@@ -114,6 +114,10 @@
             </div>
             <div class="row q-pt-sm">
               <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">Stored At</div>
+                <div class="text-h6">{{ data4.stored_at }}</div>
+              </div>
+              <div class="col-12 col-md-6 q-pl-md">
                 <div class="text-subtitle2 bg-teal-9 text-white">
                   Customer Collected
                 </div>
@@ -122,7 +126,22 @@
             </div>
           </q-card-section>
 
-          <q-separator dark />
+          <q-separator />
+          <q-card-section>
+            <q-select
+              v-if="
+                data4.washing_stage_status == true &&
+                data4.ironing_stage_status == true &&
+                data4.packing_stage_status == false
+              "
+              outlined
+              v-model="storedAt"
+              :options="storedOptions"
+              label="Select where the clothes are stored"
+              hint="It is compulsory at Packing Stage"
+            />
+          </q-card-section>
+          <q-separator />
 
           <q-card-actions align="right">
             <q-btn
@@ -138,12 +157,14 @@
               >Ironing Stage</q-btn
             >
             <q-btn
+              :disable="!storedAt"
               v-show="show3"
               @click="onUpdate(data4, 'packing')"
               class="bg-teal-9 text-white"
               >Packing Stage</q-btn
             >
             <q-btn
+              :disable="show3 == true"
               v-show="show4"
               @click="onUpdate(data4, 'ready')"
               class="bg-teal-9 text-white"
@@ -173,6 +194,20 @@ const show3 = ref(false);
 const show4 = ref(false);
 const $q = useQuasar();
 const data4 = ref([]);
+const storedAt = ref("");
+const storedOptions = ref([
+  "Blue iron bord (room 1)",
+  "Blue iron bord under (room 1)",
+  "White iron bord (room 1)",
+  "White iron bord  under(room 1)",
+  "High hanger (room 1)",
+  "Low hanger  (room 1)",
+  "Cupboard  top (room  2)",
+  "Curbord inside(room  2)",
+  "Machine (room 2)",
+  "Mat    (room 2)",
+  "Hanger (room  2)",
+]);
 
 const $router = useRouter();
 const intake_id = ref("");
@@ -201,6 +236,7 @@ function popup1(selectedCustomer) {
 }
 
 const onSubmit = () => {
+  const user_type = useStore.getUser_type;
   // const formData = {
   //   intake_id: intake_id.value,
   // }
@@ -230,13 +266,14 @@ const onSubmit = () => {
         show3.value = true;
       }
       if (
-        (dataMore.value.ready_status == false && user_type == "Manager") ||
-        (dataMore.value.ready_status == false && user_type == "Super_Admin")
+        (data4.value.ready_status == false && user_type == "Manager") ||
+        (data4.value.ready_status == false && user_type == "Super_Admin")
       ) {
         show4.value = true;
       }
     })
-    .catch(() => {
+    .catch((e) => {
+      console.log(e, "e");
       $q.notify({
         color: "negative",
         position: "bottom",
@@ -318,6 +355,7 @@ const onUpdate = (process, stage) => {
         ") Done " +
         dateTime,
       current_status: "packing",
+      stored_at: storedAt.value,
     };
 
     axios
