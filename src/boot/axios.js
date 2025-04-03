@@ -8,7 +8,8 @@ import axios from "axios";
 // "export default () => {}" function below (which runs individually
 // for each client)
 // const api = axios.create({ baseURL: 'https://api.example.com' })
-const api = axios.create({ baseURL: "https://api.sixstarsdc.com.ng/api/v1" });
+// const api = axios.create({ baseURL: "https://api.sixstarsdc.com.ng/api/v1" });
+const api = axios.create({ baseURL: "https://six-stars-backend-production.up.railway.app/api/v1" });
 const base = "https://api.sixstarsdc.com.ng/api/v1";
 // const api = axios.create({ baseURL: 'https://six-stars.up.railway.app/api/v1' })
 // const base = "https://six-stars.up.railway.app/api/v1"
