@@ -255,6 +255,7 @@ const show4 = ref(false);
 const pageEnd = ref(false);
 const storedAt = ref("");
 const storedOptions = ref([
+  "Shelf (room 1)",
   "Blue iron bord (room 1)",
   "Blue iron bord under (room 1)",
   "White iron bord (room 1)",

@@ -196,6 +196,7 @@ const $q = useQuasar();
 const data4 = ref([]);
 const storedAt = ref("");
 const storedOptions = ref([
+  "Shelf (room 1)",
   "Blue iron bord (room 1)",
   "Blue iron bord under (room 1)",
   "White iron bord (room 1)",

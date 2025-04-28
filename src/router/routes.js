@@ -1,4 +1,5 @@
 import LoginPage from "pages/LoginPage.vue";
+import CustomerAccountPage from "pages/CustomerAccountPage.vue";
 // import SignUpPage from 'pages/SignUpPage.vue'
 // import ResetPassword from 'pages/ResetPassword.vue'
 // import ProfilePage from 'pages/ProfilePage.vue'
@@ -98,6 +99,11 @@ const routes = [
     path: "/resetpassword/:phone",
     name: "ResetPasswordPage",
     component: ResetPasswordPage,
+  },
+  {
+    path: "/account",
+    name: "CustomerAccountPage",
+    component: CustomerAccountPage,
   },
   // {
   //   // path: '/reset',

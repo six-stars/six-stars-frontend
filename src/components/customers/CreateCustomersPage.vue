@@ -24,13 +24,20 @@
           </div>
         </div>
         <div class="row q-pt-sm">
-          <div class="col-12 col-md-12 q-pl-md">
+          <div class="col-12 col-md-6 q-pl-md">
             <q-input
               class=""
               v-model="formData.email"
               outlined
               type="email"
               hint="Email"
+            />
+          </div>
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-toggle
+              v-model="formData.verified_email"
+              label="Verified Email?"
+              size="xl"
             />
           </div>
         </div>
@@ -233,9 +240,14 @@
         </div>
       </div>
       <div class="row q-pt-sm">
-        <div class="col-12 col-md-12 q-pl-md">
+        <div class="col-12 col-md-6 q-pl-md">
           <q-chip color="primary" text-color="white"> Email </q-chip>
           {{ formData2.email }}
+          <!-- <q-input class="" v-model="formData.email" outlined type="email" hint="Email" required/> -->
+        </div>
+        <div class="col-12 col-md-6 q-pl-md">
+          <q-chip color="primary" text-color="white"> Verified Email? </q-chip>
+          {{ formData2.verified_email }}
           <!-- <q-input class="" v-model="formData.email" outlined type="email" hint="Email" required/> -->
         </div>
       </div>

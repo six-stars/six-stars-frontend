@@ -8,7 +8,7 @@
             <q-item-section>
               <q-img
                 class=""
-                alt="Propfunds.ng Logo"
+                alt="Sixstarsdc.com.ng Logo"
                 src="~assets/logo/Six_Star_3.png"
                 style="max-width: 200px; max-height: 150px"
               />
@@ -21,7 +21,7 @@
           <div class="col-2 q-pb-xl q-pt-xl q-pl-md">
             <q-img
               class="lt-md"
-              alt="Propfunds.ng Logo"
+              alt="Sixstarsdc.com.ng Logo"
               src="~assets/logo/Six_Star_3.png"
               style="max-width: 200px"
             />
