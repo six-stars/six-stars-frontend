@@ -96,6 +96,12 @@
                 <div class="text-subtitle2 bg-teal-9 text-white">Country</div>
                 <div class="text-h6">{{ data.country }}</div>
               </div>
+              <div class="col-12 col-md-6 q-pl-md">
+                <div class="text-subtitle2 bg-teal-9 text-white">
+                  Verified Email?
+                </div>
+                <div class="text-h6">{{ data.verified_email }}</div>
+              </div>
             </div>
           </q-card-section>
 

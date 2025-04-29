@@ -145,6 +145,24 @@
             />
           </div>
         </div>
+        <div class="row q-pt-sm">
+          <div class="col-12 col-md-6 q-pl-md">
+            <q-toggle
+              v-model="verified_email"
+              label="Verified Email?"
+              size="xl"
+            />
+          </div>
+          <!-- <div class="col-12 col-md-6 q-pl-md">
+            <q-select
+              required
+              outlined
+              v-model="active"
+              :options="optionsActive"
+              hint="Active"
+            />
+          </div> -->
+        </div>
 
         <!-- <div class="text-center q-pa-md text-subtitle2 grey-4">Next of Kin</div>
 
@@ -316,6 +334,7 @@ const address = ref("");
 const state = ref("");
 const country = ref("");
 const active = ref("");
+const verified_email = ref(false);
 const created_by = ref("");
 
 const $q = useQuasar();
@@ -349,6 +368,7 @@ const onSubmit = () => {
     state: state.value,
     country: country.value,
     active: active.value,
+    verified_email: verified_email.value,
     created_by: firstName + " " + lastName + " with code = " + _code,
   };
 

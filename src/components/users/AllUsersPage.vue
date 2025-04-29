@@ -197,6 +197,11 @@
                   sent
                   bg-color="amber-7"
                 />
+                <q-chat-message
+                  name="Verified Email?"
+                  :text="[selectedCustomerPopup1.verified_email]"
+                  bg-color="primary"
+                />
               </div>
             </div>
 
