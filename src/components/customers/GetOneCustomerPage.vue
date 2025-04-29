@@ -206,6 +206,7 @@
               <div class="col-12 col-md-6 q-pl-md">
                 <q-select
                   outlined
+                  readonly
                   v-model="the_data.gender"
                   :options="optionsGender"
                   hint="Gender *"
@@ -220,6 +221,7 @@
                   v-model="the_data.phone1"
                   type="tel"
                   outlined
+                  readonly
                   hint="Phone number *"
                   label="23481573763"
                   required
