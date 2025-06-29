@@ -9,12 +9,12 @@ import axios from "axios";
 // for each client)
 // const api = axios.create({ baseURL: "http://127.0.0.1:3000/api/v1" });
 // const base = "http://127.0.0.1:3000/api/v1";
-// const api = axios.create({ baseURL: "https://api.sixstarsdc.com.ng/api/v1" });
-// const base = "https://api.sixstarsdc.com.ng/api/v1";
-const api = axios.create({
-  baseURL: "https://six-stars.up.railway.app/api/v1",
-});
-const base = "https://six-stars.up.railway.app/api/v1";
+const api = axios.create({ baseURL: "https://api.sixstarsdc.com.ng/api/v1" });
+const base = "https://api.sixstarsdc.com.ng/api/v1";
+// const api = axios.create({
+//   baseURL: "https://six-stars.up.railway.app/api/v1",
+// });
+// const base = "https://six-stars.up.railway.app/api/v1";
 
 export default boot(({ app }) => {
   // for use inside Vue files (Options API) through this.$axios and this.$api

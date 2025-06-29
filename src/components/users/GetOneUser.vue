@@ -199,11 +199,11 @@ const onSubmit = () => {
         fixed0.value = false;
       }
     })
-    .catch(() => {
+    .catch((e) => {
       $q.notify({
         color: "negative",
         position: "bottom",
-        message: "Please Refresh",
+        message: e.response.data.message,
         icon: "report_problem",
       });
     });

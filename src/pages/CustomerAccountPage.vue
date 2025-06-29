@@ -2118,8 +2118,8 @@ const onSubmit = () => {
   });
 
   axios
-    // .get(`${base}/users/account/${phone_number.value}`)
-    .get(`http://127.0.0.1:3000/api/v1/users/account/${phone_number.value}`)
+    .get(`${base}/users/account/${phone_number.value}`)
+    // .get(`http://127.0.0.1:3000/api/v1/users/account/${phone_number.value}`)
     .then((response) => {
       _data.value = response.data.data.reverse();
       // console.log(_data.value, "ytui");
