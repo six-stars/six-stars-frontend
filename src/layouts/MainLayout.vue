@@ -133,7 +133,7 @@
             to=""
             @click="logOut"
           />
-          <q-fab-action
+          <!-- <q-fab-action
             square
             external-label
             label-position="left"
@@ -150,6 +150,15 @@
             color="primary"
             icon="fas fa-sync-alt"
             to="/process"
+          /> -->
+          <q-fab-action
+            square
+            external-label
+            label-position="left"
+            label="Profile"
+            color="primary"
+            icon="fa-solid fa-address-card"
+            to="/main"
           />
           <!-- <q-fab-action square external-label label-position="left" label="Referral" color="primary"
             icon="fas fa-user-friends" to="/referral" /> -->
@@ -197,13 +206,13 @@
           <div class="q-pa-md">
             <div class="q-gutter-y-md">
               <q-tabs v-model="tab" align="justify" class="text-primary">
-                <q-route-tab
+                <!-- <q-route-tab
                   to="/main"
                   :ripple="{ color: 'orange' }"
                   name="profile"
                   icon="fa-solid fa-address-card"
                   label="Profile"
-                />
+                /> -->
                 <q-route-tab
                   to="/customer"
                   :ripple="{ color: 'orange' }"
@@ -217,6 +226,20 @@
                   name="intake"
                   icon="local_laundry_service"
                   label="Intake"
+                />
+                <q-route-tab
+                  to="/process"
+                  :ripple="{ color: 'orange' }"
+                  name="process"
+                  icon="groups"
+                  label="Process"
+                />
+                <q-route-tab
+                  to="/payment"
+                  :ripple="{ color: 'orange' }"
+                  name="payment"
+                  icon="local_laundry_service"
+                  label="Payment"
                 />
               </q-tabs>
             </div>

@@ -3,7 +3,11 @@
   <div class="">
     <div class="row window-height window-width">
       <div class="col gt-sm">
-        <q-img alt="login image" src="~assets/login-img.png" class="fit">
+        <q-img
+          alt="login image"
+          src="~assets/login-img.png"
+          class="fit window-height"
+        >
           <div class="absolute-top bg-transparent">
             <q-item-section>
               <q-img

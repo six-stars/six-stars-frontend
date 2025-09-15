@@ -3,7 +3,11 @@
   <div class="">
     <div class="row window-width">
       <div class="col gt-sm">
-        <q-img alt="login image" src="~assets/login-img.png" class="fit">
+        <q-img
+          alt="login image"
+          src="~assets/login-img.png"
+          class="fit window-height"
+        >
           <div class="absolute-top bg-transparent">
             <q-item-section>
               <q-img
@@ -30,10 +34,10 @@
                   />
                 </div>
                 <q-card-section>
-                  <div class="text-h4 text-weight-bold q-pa-md text-primary">
+                  <!-- <div class="text-h4 text-weight-bold q-pa-md text-primary">
                     All Account
-                  </div>
-                  <div class="text-6 q-pl-md q-pr-md q-pb-sm text-primary">
+                  </div> -->
+                  <div class="text-6 q-pl-md q-pr-md text-primary">
                     See all your previous or current intake with Six-Stars.
                   </div>
                   <!-- </q-card-section>
@@ -63,7 +67,7 @@
                   </div>
                   <!-- </q-card-section>
                 <q-card-section> -->
-                  <q-scroll-area :style="{ height: '50vh' }">
+                  <q-scroll-area :style="{ height: '60vh' }">
                     <div
                       class="row"
                       style="
@@ -141,47 +145,65 @@
           <div>
             <q-dialog v-model="viewIntake">
               <q-card class="my-card" flat bordered>
-                <q-card-section>
-                  <div class="text-h6">Intake</div>
-                  <div class="text-subtitle2">
-                    Customer Name: {{ customer_name }}
+                <q-card-section class="row items-center q-pb-none">
+                  <div class="">
+                    <div class="text-h6">Intake</div>
+                    <div class="text-subtitle2">
+                      Customer Name:
+                      <q-badge class="bg-green">{{ customer_name }}</q-badge>
+                    </div>
                   </div>
+                  <q-space />
+                  <q-btn
+                    icon="close"
+                    color="red"
+                    flat
+                    round
+                    dense
+                    v-close-popup
+                  />
                 </q-card-section>
 
-                <q-markup-table>
-                  <thead>
-                    <tr>
-                      <th class="text-left">Name</th>
-                      <th class="text-right">Value</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr v-for="(value, key) in data_" :key="key">
-                      <td class="text-capitalize text-left">{{ key }}</td>
-                      <td
-                        v-if="key === 'Final Amount' || key === 'Balance'"
-                        class="text-capitalize text-right"
-                      >
-                        <q-badge> ₦ {{ value }} </q-badge>
-                      </td>
-                      <td
-                        v-else-if="key === 'Intake ID'"
-                        class="text-capitalize text-right"
-                      >
-                        <q-badge class="bg-orange"> {{ value }} </q-badge>
-                      </td>
-                      <td
-                        v-else-if="key === 'Deposit Type' || key === 'Deposit'"
-                        class="text-capitalize text-right"
-                      >
-                        <q-badge class="bg-green"> {{ value }} </q-badge>
-                      </td>
-                      <td v-else class="text-capitalize text-right">
-                        {{ value }}
-                      </td>
-                    </tr>
-                  </tbody>
-                </q-markup-table>
+                <q-separator />
+
+                <q-card-section style="max-height: 80vh" class="scroll">
+                  <q-markup-table>
+                    <thead>
+                      <tr>
+                        <th class="text-left">Name</th>
+                        <th class="text-right">Value</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr v-for="(value, key) in data_" :key="key">
+                        <td class="text-capitalize text-left">{{ key }}</td>
+                        <td
+                          v-if="key === 'Final Amount' || key === 'Balance'"
+                          class="text-capitalize text-right"
+                        >
+                          <q-badge> ₦ {{ value }} </q-badge>
+                        </td>
+                        <td
+                          v-else-if="key === 'Intake ID'"
+                          class="text-capitalize text-right"
+                        >
+                          <q-badge class="bg-orange"> {{ value }} </q-badge>
+                        </td>
+                        <td
+                          v-else-if="
+                            key === 'Deposit Type' || key === 'Deposit'
+                          "
+                          class="text-capitalize text-right"
+                        >
+                          <q-badge class="bg-green"> {{ value }} </q-badge>
+                        </td>
+                        <td v-else class="text-capitalize text-right">
+                          {{ value }}
+                        </td>
+                      </tr>
+                    </tbody>
+                  </q-markup-table>
+                </q-card-section>
               </q-card>
             </q-dialog>
           </div>
