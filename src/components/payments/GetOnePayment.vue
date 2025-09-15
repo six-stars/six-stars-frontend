@@ -135,12 +135,10 @@
 
           <q-separator dark />
 
-          <q-card-actions class="q-pa-md" v-show="show4">
-            <!-- <q-btn @click="onUpdate(data.intake_id)" flat
-              >Complete Payment</q-btn
-            > -->
+          <q-card-section class="q-pa-md" v-show="show4">
             <div class="column">
-              <div v-show="data.paid_status == false" class="col q-pl-md">
+              <!-- <div class="col q-pl-md"> -->
+              <div v-if="dataMore.paid_status == false" class="col q-pl-md">
                 <q-select
                   outlined
                   v-model="paid_type"
@@ -150,22 +148,28 @@
               </div>
               <div class="col q-pl-md q-mt-sm">
                 <q-input
+                  v-if="dataMore.customer_collected == ''"
                   outlined
                   v-model="customer_collected"
                   label="Collected by?"
-                  style="width: 480px"
                 />
               </div>
-              <div class="col q-mt-sm text-center">
-                <q-btn
-                  :disable="!customer_collected"
-                  class="bg-teal-9 text-white"
-                  flat
-                  @click="onUpdate(data.intake_id)"
-                  >Complete Payment</q-btn
-                >
-              </div>
             </div>
+          </q-card-section>
+          <q-card-actions class="q-pa-md" v-show="show4">
+            <div
+              v-if="dataMore.customer_collected == ''"
+              class="col q-mt-sm text-center"
+            >
+              <q-btn
+                :disable="!customer_collected"
+                class="bg-teal-9 text-white"
+                flat
+                @click="onUpdate(dataMore.intake_id)"
+                >Complete Payment</q-btn
+              >
+            </div>
+            <!-- </div> -->
           </q-card-actions>
         </q-card>
       </div>
